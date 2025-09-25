@@ -118,6 +118,15 @@ document.getElementById('list-funds2').addEventListener('click', () => {
   sendRaw({ type: 'list-lightning-funds2', data: {} });
 });
 
+// ---------- P2P Actions ----------
+document.getElementById('connect-nodes').addEventListener('click', () => {
+  sendRaw({ type: 'connect-peer', data: {} });
+});
+
+document.getElementById('list-peers').addEventListener('click', () => {
+  sendRaw({ type: 'list-peers', data: {} });
+});
+
 function sendRaw({ type, data }) {
   if (!ws || ws.readyState !== WebSocket.OPEN) { log('Not connected'); return; }
   const head = 'cli-' + Date.now() + '-' + Math.random().toString(36).slice(2,8);

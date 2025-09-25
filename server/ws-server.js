@@ -37,7 +37,6 @@ const wss = new WebSocket.Server({ port: PORT }, () => {
     console.log('Could not start Lightning daemon (node 2, maybe already running).');
   });
 
- 
 })();
 
 async function gracefulShutdown() {
@@ -144,8 +143,8 @@ function createMessageHead(senderId, receiverId) {
 
 function createResponse(originalMessage) {
   return {
-    head: createMessageHead(SERVER_ID, originalMessage.head[0]),
-    refs: { cause: originalMessage.head }
+    head: createMessageHead(SERVER_ID, originalMessage.head ? originalMessage.head[0] : '*'),
+    refs: { cause: originalMessage.head || null }
   };
 }
 
@@ -209,6 +208,30 @@ const on = {
       ws.send(JSON.stringify({
         ...response,
         type: 'fund-lightning-node-response',
+        data: result
+      }));
+    } catch (err) {
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'error',
+        data: { error: err.message || String(err) }
+      }));
+    }
+  },
+
+  'fund-lightning-node2': async (m, ws) => {
+    try {
+      const { address, blocks } = m.data;
+      if (!address || !blocks) {
+        throw new Error('address and blocks are required');
+      }
+      // same bitcoin funding helper; wallet.fundLightningNode uses bitcoin-cli
+      const result = await wallet.fundLightningNode(address, blocks);
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'fund-lightning-node2-response',
         data: result
       }));
     } catch (err) {
@@ -293,6 +316,50 @@ const on = {
         ...response,
         type: 'error', 
         data: { error: err.message || String(err) } 
+      }));
+    }
+  },
+
+  'connect-peer': async (m, ws) => {
+    try {
+      // First, get the info of node 2 to find its ID and port
+      const node2Info = await wallet.getInfoLightning2();
+      const peerId = node2Info.id;
+      const port = (node2Info.binding && node2Info.binding[0] && node2Info.binding[0].port) || 9736;
+
+      // Now, connect from node 1 to node 2
+      const result = await wallet.connectPeer(peerId, '127.0.0.1', port);
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'connect-peer-response',
+        data: result
+      }));
+    } catch (err) {
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'error',
+        data: { error: err.message || String(err) }
+      }));
+    }
+  },
+
+  'list-peers': async (m, ws) => {
+    try {
+      const result = await wallet.listPeers();
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'list-peers-response',
+        data: result
+      }));
+    } catch (err) {
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'error',
+        data: { error: err.message || String(err) }
       }));
     }
   },
