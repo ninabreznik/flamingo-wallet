@@ -10,6 +10,7 @@
     .row { display:flex; gap:8px; align-items:center; }
     .row > * { flex:1; }
     button { padding: 8px 10px; }
+    h2, h3 { margin-top: 20px; }
   </style>
 </head>
 <body>
@@ -34,11 +35,15 @@
     <button id="unsubscribe-status">Unsubscribe</button>
     <button id="resume">Resume (replay persisted)</button>
     <button id="getinfo-bitcoin">Get Bitcoin Info</button>
-    <button id="getinfo-lightning">Get Lightning Info</button>
   </div>
 
   <hr />
-  <h3>Fund Lightning Node</h3>
+  <h2>⚡ Lightning Node 1</h2>
+  <div style="margin-top:10px">
+    <button id="getinfo-lightning">Get Lightning Info</button>
+  </div>
+
+  <h3>Fund Lightning Node 1</h3>
   <div class="row">
     <button id="new-lightning-address">1. Get New Address</button>
     <input id="funding-address" placeholder="address will appear here" readonly />
@@ -49,6 +54,25 @@
   </div>
   <div style="margin-top:10px">
     <button id="list-funds">3. Verify Balance (List Funds)</button>
+  </div>
+
+  <hr />
+  <h2>⚡ Lightning Node 2</h2>
+  <div style="margin-top:10px">
+    <button id="getinfo-lightning2">Get Lightning Info (Node 2)</button>
+  </div>
+
+  <h3>Fund Lightning Node 2</h3>
+  <div class="row">
+    <button id="new-lightning-address2">1. Get New Address</button>
+    <input id="funding-address2" placeholder="address will appear here" readonly />
+  </div>
+  <div class="row">
+    <input id="funding-blocks2" type="number" value="101" placeholder="blocks to generate" />
+    <button id="fund-node2">2. Fund Address</button>
+  </div>
+  <div style="margin-top:10px">
+    <button id="list-funds2">3. Verify Balance (List Funds)</button>
   </div>
 
   <h3>Log</h3>

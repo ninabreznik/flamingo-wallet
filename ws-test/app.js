@@ -23,9 +23,15 @@ document.getElementById('connect').addEventListener('click', () => {
     try {
       const msg = JSON.parse(evt.data);
       log('RECV', msg);
-      if (msg.type === 'new-lightning-address-response' && msg.data && msg.data.bech32) {
+
+      // auto-fill address fields when new addr comes back
+      if (msg.type === 'new-lightning-address-response' && msg.data?.bech32) {
         document.getElementById('funding-address').value = msg.data.bech32;
       }
+      if (msg.type === 'new-lightning-address2-response' && msg.data?.bech32) {
+        document.getElementById('funding-address2').value = msg.data.bech32;
+      }
+
     } catch (e) {
       log('RECV (raw)', evt.data);
     }
@@ -62,7 +68,7 @@ function sendFromInputs() {
   log('SENT', msg);
 }
 
-// helper buttons
+// helper buttons for subscriptions and Bitcoin
 document.getElementById('subscribe-status').addEventListener('click', () => {
   sendRaw({ type: 'subscribe', data: { event: 'node-status' } });
 });
@@ -75,29 +81,41 @@ document.getElementById('resume').addEventListener('click', () => {
 document.getElementById('getinfo-bitcoin').addEventListener('click', () => {
   sendRaw({ type: 'getinfo-bitcoin', data: {} });
 });
+
+// ---------- Node 1 ----------
 document.getElementById('getinfo-lightning').addEventListener('click', () => {
   sendRaw({ type: 'getinfo-lightning', data: {} });
 });
 document.getElementById('new-lightning-address').addEventListener('click', () => {
   sendRaw({ type: 'new-lightning-address', data: {} });
 });
-
 document.getElementById('fund-node').addEventListener('click', () => {
   const address = document.getElementById('funding-address').value.trim();
   const blocks = document.getElementById('funding-blocks').value.trim();
-  if (!address) {
-    log('Please generate an address first.');
-    return;
-  }
-  if (!blocks || isNaN(parseInt(blocks, 10))) {
-    log('Please enter a valid number of blocks.');
-    return;
-  }
+  if (!address) { log('Please generate an address first.'); return; }
+  if (!blocks || isNaN(parseInt(blocks, 10))) { log('Please enter a valid number of blocks.'); return; }
   sendRaw({ type: 'fund-lightning-node', data: { address, blocks: parseInt(blocks, 10) } });
 });
-
 document.getElementById('list-funds').addEventListener('click', () => {
   sendRaw({ type: 'list-lightning-funds', data: {} });
+});
+
+// ---------- Node 2 ----------
+document.getElementById('getinfo-lightning2').addEventListener('click', () => {
+  sendRaw({ type: 'getinfo-lightning2', data: {} });
+});
+document.getElementById('new-lightning-address2').addEventListener('click', () => {
+  sendRaw({ type: 'new-lightning-address2', data: {} });
+});
+document.getElementById('fund-node2').addEventListener('click', () => {
+  const address = document.getElementById('funding-address2').value.trim();
+  const blocks = document.getElementById('funding-blocks2').value.trim();
+  if (!address) { log('Please generate an address first (Node2).'); return; }
+  if (!blocks || isNaN(parseInt(blocks, 10))) { log('Please enter a valid number of blocks.'); return; }
+  sendRaw({ type: 'fund-lightning-node', data: { address, blocks: parseInt(blocks, 10) } });
+});
+document.getElementById('list-funds2').addEventListener('click', () => {
+  sendRaw({ type: 'list-lightning-funds2', data: {} });
 });
 
 function sendRaw({ type, data }) {

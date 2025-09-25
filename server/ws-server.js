@@ -20,29 +20,43 @@ const wss = new WebSocket.Server({ port: PORT }, () => {
     await wallet.startBitcoin();
     console.log('Bitcoin daemon started or was already running.');
   } catch (e) {
-    // Ignore errors, it might be already running
     console.log('Could not start Bitcoin daemon (maybe already running).');
   }
 
-  try {
-    console.log('Attempting to start Lightning daemon...');
-    await wallet.startLightning();
-    console.log('Lightning daemon started or was already running.');
-  } catch (e) {
-    // Ignore errors, it might be already running
-    console.log('Could not start Lightning daemon (maybe already running).');
-  }
+  console.log('Attempting to start Lightning daemon (node 1)...');
+  wallet.startLightning().then(() => {
+    console.log('Lightning daemon (node 1) started.');
+  }).catch((e) => {
+    console.log('Could not start Lightning daemon (node 1, maybe already running).');
+  });
+
+  console.log('Attempting to start Lightning daemon (node 2)...');
+  wallet.startLightning2().then(() => {
+    console.log('Lightning daemon (node 2) started.');
+  }).catch((e) => {
+    console.log('Could not start Lightning daemon (node 2, maybe already running).');
+  });
+
+ 
 })();
 
 async function gracefulShutdown() {
   console.log('\nGracefully shutting down...');
 
   try {
-    console.log('Attempting to stop Lightning daemon...');
+    console.log('Attempting to stop Lightning daemon (node 1)...');
     await wallet.stopLightning();
-    console.log('Lightning daemon stopped.');
+    console.log('Lightning daemon (node 1) stopped.');
   } catch (e) {
-    console.log('Could not stop Lightning daemon (maybe not running or error).');
+    console.log('Could not stop Lightning daemon (node 1, maybe not running or error).');
+  }
+
+  try {
+    console.log('Attempting to stop Lightning daemon (node 2)...');
+    await wallet.stopLightning2();
+    console.log('Lightning daemon (node 2) stopped.');
+  } catch (e) {
+    console.log('Could not stop Lightning daemon (node 2, maybe not running or error).');
   }
 
   try {
@@ -165,6 +179,25 @@ const on = {
     }
   },
 
+  'new-lightning-address2': async (m, ws) => {
+    try {
+      const result = await wallet.newLightningAddress2();
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'new-lightning-address2-response',
+        data: result
+      }));
+    } catch (err) {
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'error',
+        data: { error: err.message || String(err) }
+      }));
+    }
+  },
+
   'fund-lightning-node': async (m, ws) => {
     try {
       const { address, blocks } = m.data;
@@ -207,6 +240,25 @@ const on = {
     }
   },
 
+  'list-lightning-funds2': async (m, ws) => {
+    try {
+      const result = await wallet.listLightningFunds2();
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'list-lightning-funds2-response',
+        data: result
+      }));
+    } catch (err) {
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'error',
+        data: { error: err.message || String(err) }
+      }));
+    }
+  },
+
   'getinfo-lightning': async (m, ws) => {
     try {
       const result = await wallet.getInfoLightning();
@@ -214,6 +266,25 @@ const on = {
       ws.send(JSON.stringify({ 
         ...response,
         type: 'getinfo-lightning-response', 
+        data: result 
+      }));
+    } catch (err) {
+      const response = createResponse(m);
+      ws.send(JSON.stringify({ 
+        ...response,
+        type: 'error', 
+        data: { error: err.message || String(err) } 
+      }));
+    }
+  },
+
+  'getinfo-lightning2': async (m, ws) => {
+    try {
+      const result = await wallet.getInfoLightning2();
+      const response = createResponse(m);
+      ws.send(JSON.stringify({ 
+        ...response,
+        type: 'getinfo-lightning2-response', 
         data: result 
       }));
     } catch (err) {
@@ -282,7 +353,6 @@ const on = {
       toSend = persisted;
     }
     
-    // Send each item with a new message ID
     toSend.forEach((item) => {
       const response = createResponse(m);
       ws.send(JSON.stringify({ 
@@ -292,7 +362,6 @@ const on = {
       }));
     });
 
-    // Send completion message
     const finalResponse = createResponse(m);
     ws.send(JSON.stringify({ 
       ...finalResponse,
@@ -327,22 +396,23 @@ function handleMessage(ws, m) {
 
 setInterval(async () => {
   try {
-    const [bInfo, lInfo] = await Promise.all([
+    const [bInfo, lInfo, lInfo2] = await Promise.all([
       wallet.getInfoBitcoin(),
       wallet.getInfoLightning(),
+      wallet.getInfoLightning2(),
     ]);
     const payload = {
       timestamp: Date.now(),
       bitcoin: bInfo,
       lightning: lInfo,
+      lightning2: lInfo2,
     };
     const s = Array.from(subscribers['node-status'] || []);
     s.forEach((ws) => {
       if (ws.readyState === WebSocket.OPEN) {
-        // For broadcasts, we set receiverId as '*'
         const msg = { 
           head: createMessageHead(SERVER_ID, '*', messageCounter++),
-          refs: {},  // no cause for broadcast messages
+          refs: {},  
           type: 'node-status', 
           data: payload 
         };

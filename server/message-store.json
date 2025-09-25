@@ -1996,5 +1996,575 @@
     "data": {},
     "ts": 1757778687748,
     "status": "stored"
+  },
+  {
+    "head": "cli-1758819787695-8bdw5m",
+    "refs": null,
+    "type": "getinfo-bitcoin",
+    "data": {},
+    "ts": 1758819787701,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758819800533-1lo2tw",
+    "refs": null,
+    "type": "getinfo-lightning",
+    "data": {},
+    "ts": 1758819800535,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758819881110-icsxhz",
+    "refs": null,
+    "type": "create-lightning-node",
+    "data": {
+      "nodeId": "node-2"
+    },
+    "ts": 1758819881112,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758819889653-se6dy7",
+    "refs": null,
+    "type": "list-lightning-nodes",
+    "data": {},
+    "ts": 1758819889653,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758820007220-lz1an0",
+    "refs": null,
+    "type": "getinfo-bitcoin",
+    "data": {},
+    "ts": 1758820007226,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758820008744-i29kde",
+    "refs": null,
+    "type": "getinfo-lightning",
+    "data": {},
+    "ts": 1758820008752,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758820010894-orwu7s",
+    "refs": null,
+    "type": "new-lightning-address",
+    "data": {},
+    "ts": 1758820010896,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758820016248-ds3vgo",
+    "refs": null,
+    "type": "fund-lightning-node",
+    "data": {
+      "address": "bcrt1qrpn5wmpuv9yadyvhw6preq67kky04gl5vwlq6p",
+      "blocks": 2
+    },
+    "ts": 1758820016252,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758820022177-dr3e7z",
+    "refs": null,
+    "type": "list-lightning-funds",
+    "data": {},
+    "ts": 1758820022180,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758833503343-wysww8",
+    "refs": null,
+    "type": "getinfo-bitcoin",
+    "data": {},
+    "ts": 1758833503346,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758833516361-iceond",
+    "refs": null,
+    "type": "getinfo-lightning-2",
+    "data": {},
+    "ts": 1758833516362,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758833569743-yubenm",
+    "refs": null,
+    "type": "new-lightning-address-2",
+    "data": {},
+    "ts": 1758833569744,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758833676041-7ah18k",
+    "refs": null,
+    "type": "getinfo-lightning-2",
+    "data": {},
+    "ts": 1758833676043,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758833720099-ydjfrm",
+    "refs": null,
+    "type": "getinfo-lightning",
+    "data": {},
+    "ts": 1758833720101,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758833721879-q75ip7",
+    "refs": null,
+    "type": "getinfo-lightning-2",
+    "data": {},
+    "ts": 1758833721880,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758833901614-jotcyy",
+    "refs": null,
+    "type": "getinfo-lightning-2",
+    "data": {},
+    "ts": 1758833901617,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758833919910-bm6rqo",
+    "refs": null,
+    "type": "getinfo-lightning",
+    "data": {},
+    "ts": 1758833919913,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758833921203-geqsmz",
+    "refs": null,
+    "type": "getinfo-lightning-2",
+    "data": {},
+    "ts": 1758833921204,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758835812128-5pwpp0",
+    "refs": null,
+    "type": "getinfo-lightning",
+    "data": {},
+    "ts": 1758835812134,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758835833201-l7ctmd",
+    "refs": null,
+    "type": "getinfo-lightning2",
+    "data": {},
+    "ts": 1758835833206,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758837181295-rn1b9l",
+    "refs": null,
+    "type": "getinfo-lightning2",
+    "data": {},
+    "ts": 1758837181298,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758837187236-dm79pv",
+    "refs": null,
+    "type": "getinfo-lightning",
+    "data": {},
+    "ts": 1758837187238,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758837756438-yo9mv9",
+    "refs": null,
+    "type": "getinfo-lightning",
+    "data": {},
+    "ts": 1758837756445,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758837761978-hjsnwp",
+    "refs": null,
+    "type": "getinfo-lightning2",
+    "data": {},
+    "ts": 1758837761983,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758837915162-3ysbp4",
+    "refs": null,
+    "type": "getinfo-lightning",
+    "data": {},
+    "ts": 1758837915165,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758837918206-gczlh3",
+    "refs": null,
+    "type": "getinfo-lightning2",
+    "data": {},
+    "ts": 1758837918210,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758839588845-3y9117",
+    "refs": null,
+    "type": "getinfo-lightning",
+    "data": {},
+    "ts": 1758839588850,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758839591655-vkffkc",
+    "refs": null,
+    "type": "getinfo-lightning2",
+    "data": {},
+    "ts": 1758839591660,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758839598228-i1sujb",
+    "refs": null,
+    "type": "getinfo-lightning",
+    "data": {},
+    "ts": 1758839598233,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758839606040-p6tkex",
+    "refs": null,
+    "type": "list-lightning-funds2",
+    "data": {},
+    "ts": 1758839606042,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758839615758-kduvym",
+    "refs": null,
+    "type": "list-lightning-funds2",
+    "data": {},
+    "ts": 1758839615761,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758839618153-k15liz",
+    "refs": null,
+    "type": "list-lightning-funds2",
+    "data": {},
+    "ts": 1758839618157,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758839622350-p4oe3o",
+    "refs": null,
+    "type": "list-lightning-funds",
+    "data": {},
+    "ts": 1758839622355,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758839777302-w8arzk",
+    "refs": null,
+    "type": "getinfo-lightning",
+    "data": {},
+    "ts": 1758839777306,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758839783448-0pkpki",
+    "refs": null,
+    "type": "getinfo-lightning2",
+    "data": {},
+    "ts": 1758839783451,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758839829701-56r7kk",
+    "refs": null,
+    "type": "getinfo-lightning",
+    "data": {},
+    "ts": 1758839829705,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758839833341-j76bw9",
+    "refs": null,
+    "type": "getinfo-lightning2",
+    "data": {},
+    "ts": 1758839833344,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758839977500-pmx2gz",
+    "refs": null,
+    "type": "getinfo-lightning",
+    "data": {},
+    "ts": 1758839977503,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758839981047-87dp48",
+    "refs": null,
+    "type": "getinfo-lightning2",
+    "data": {},
+    "ts": 1758839981049,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758839990262-tzf4e8",
+    "refs": null,
+    "type": "new-lightning-address",
+    "data": {},
+    "ts": 1758839990264,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758839998098-3nyg8q",
+    "refs": null,
+    "type": "fund-lightning-node",
+    "data": {
+      "address": "bcrt1qdetg4m509luelrr2348pqfepyjk84ayh99n38f",
+      "blocks": 1
+    },
+    "ts": 1758839998101,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840003267-56298m",
+    "refs": null,
+    "type": "list-lightning-funds",
+    "data": {},
+    "ts": 1758840003269,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840008845-gwgt76",
+    "refs": null,
+    "type": "new-lightning-address2",
+    "data": {},
+    "ts": 1758840008847,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840012912-l4gdcn",
+    "refs": null,
+    "type": "fund-lightning-node2",
+    "data": {
+      "address": "bcrt1qlwe80lgvhdsl02kvrvzmswscymfh9aac07mkhl",
+      "blocks": 1
+    },
+    "ts": 1758840012915,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840015124-glrynz",
+    "refs": null,
+    "type": "list-lightning-funds2",
+    "data": {},
+    "ts": 1758840015125,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840339029-54aagn",
+    "refs": null,
+    "type": "getinfo-lightning",
+    "data": {},
+    "ts": 1758840339033,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840342104-a5tccx",
+    "refs": null,
+    "type": "getinfo-lightning2",
+    "data": {},
+    "ts": 1758840342104,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840346291-kdndpi",
+    "refs": null,
+    "type": "new-lightning-address",
+    "data": {},
+    "ts": 1758840346294,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840349559-gu1jhx",
+    "refs": null,
+    "type": "fund-lightning-node",
+    "data": {
+      "address": "bcrt1q09p2s56905tn0jv57q6fnxtlfsghac8qy0tc26",
+      "blocks": 1
+    },
+    "ts": 1758840349560,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840354036-5qe35a",
+    "refs": null,
+    "type": "list-lightning-funds",
+    "data": {},
+    "ts": 1758840354039,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840363797-vtvhjw",
+    "refs": null,
+    "type": "new-lightning-address2",
+    "data": {},
+    "ts": 1758840363798,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840367269-id57fb",
+    "refs": null,
+    "type": "fund-lightning-node",
+    "data": {
+      "address": "bcrt1qqdj29rfah78zm4v8zu5g92m784w9l6uy6mshjc",
+      "blocks": 1
+    },
+    "ts": 1758840367272,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840369740-lvtvhf",
+    "refs": null,
+    "type": "list-lightning-funds2",
+    "data": {},
+    "ts": 1758840369743,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840406576-16n2tg",
+    "refs": null,
+    "type": "new-lightning-address2",
+    "data": {},
+    "ts": 1758840406580,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840410400-ufv3b7",
+    "refs": null,
+    "type": "fund-lightning-node",
+    "data": {
+      "address": "bcrt1qc5t8ypjjaxysjgmmc5hrm3uw75szpdvqn8ghg0",
+      "blocks": 12
+    },
+    "ts": 1758840410402,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840411959-4e6fo9",
+    "refs": null,
+    "type": "list-lightning-funds2",
+    "data": {},
+    "ts": 1758840411963,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840433609-hr7vpf",
+    "refs": null,
+    "type": "new-lightning-address",
+    "data": {},
+    "ts": 1758840433609,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840435510-avcby1",
+    "refs": null,
+    "type": "fund-lightning-node",
+    "data": {
+      "address": "bcrt1qvsg3gw039cjh6ustw7z9z7c2mdz59q7jrqkeyr",
+      "blocks": 1
+    },
+    "ts": 1758840435511,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840436573-vkzluf",
+    "refs": null,
+    "type": "list-lightning-funds",
+    "data": {},
+    "ts": 1758840436574,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840443203-ftwgj6",
+    "refs": null,
+    "type": "new-lightning-address2",
+    "data": {},
+    "ts": 1758840443203,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840445866-6m4vy6",
+    "refs": null,
+    "type": "fund-lightning-node",
+    "data": {
+      "address": "bcrt1qpa84wddrxt92gfkmhsmnsjcc0r3gfughaqwvv6",
+      "blocks": 1
+    },
+    "ts": 1758840445875,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840447253-5quljs",
+    "refs": null,
+    "type": "list-lightning-funds2",
+    "data": {},
+    "ts": 1758840447255,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840455529-qtuj1h",
+    "refs": null,
+    "type": "list-lightning-funds2",
+    "data": {},
+    "ts": 1758840455536,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840457996-nhc11k",
+    "refs": null,
+    "type": "list-lightning-funds2",
+    "data": {},
+    "ts": 1758840457997,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840458767-znw8ic",
+    "refs": null,
+    "type": "list-lightning-funds2",
+    "data": {},
+    "ts": 1758840458772,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840461596-k2j048",
+    "refs": null,
+    "type": "list-lightning-funds",
+    "data": {},
+    "ts": 1758840461600,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840462473-kt102n",
+    "refs": null,
+    "type": "list-lightning-funds",
+    "data": {},
+    "ts": 1758840462484,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758840463971-5xlre1",
+    "refs": null,
+    "type": "list-lightning-funds2",
+    "data": {},
+    "ts": 1758840463979,
+    "status": "stored"
   }
 ]
