@@ -82,6 +82,30 @@
     <button id="list-peers">Verify Peer Connection</button>
   </div>
 
+<hr />
+<h2>📡 Channel Operations</h2>
+
+<!-- Node1 -> Node2 -->
+<h3>Open Channel (Node1 → Node2)</h3>
+<div class="row">
+  <input id="channel-amount" type="number" value="1000000" placeholder="satoshis" />
+  <button id="open-channel">Open Channel (Node1 → Node2)</button>
+</div>
+
+<!-- Node2 -> Node1 -->
+<h3 style="margin-top:15px">Open Channel (Node2 → Node1)</h3>
+<div class="row">
+  <input id="channel-amount2" type="number" value="1000000" placeholder="satoshis" />
+  <button id="open-channel2">Open Channel (Node2 → Node1)</button>
+</div>
+
+<div style="margin-top:15px">
+  <button id="list-channels">List Channels</button>
+  <button id="list-funds-channel">Verify Channel Funds</button>
+</div>
+
+<hr />
+
   <h3>Log</h3>
   <div id="log"></div>
 

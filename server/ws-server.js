@@ -102,7 +102,6 @@ wss.on('connection', (ws) => {
   }));
 });
 
-
 function loadStore() {
   try {
     if (fs.existsSync(MESSAGE_STORE)) {
@@ -132,7 +131,6 @@ function persistMessage(m) {
   }
   saveStore();
 }
-
 
 const SERVER_ID = 'ws_server';
 let messageCounter = 0;
@@ -363,6 +361,106 @@ const on = {
       }));
     }
   },
+  //-------------
+   'open-channel': async (m, ws) => {
+    try {
+      const { satoshis } = m.data;
+      if (!satoshis) {
+        throw new Error('satoshis amount is required');
+      }
+
+      // Get Node 2's ID so Node 1 can open a channel to it
+      const node2Info = await wallet.getInfoLightning2();
+      const peerId = node2Info.id;
+
+      // Open channel from node 1 -> node 2
+      const result = await wallet.openChannel(peerId, satoshis);
+
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'open-channel-response',
+        data: result
+      }));
+    } catch (err) {
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'error',
+        data: { error: err.message || String(err) }
+      }));
+    }
+  },
+
+  'open-channel2': async (m, ws) => {
+    try {
+      const { satoshis } = m.data;
+      if (!satoshis) {
+        throw new Error('satoshis amount is required');
+      }
+
+      // Get Node 1's ID so Node 2 can open a channel to it
+      const node1Info = await wallet.getInfoLightning();
+      const peerId = node1Info.id;
+
+      // Open channel from node 2 -> node 1
+      const result = await wallet.openChannel2(peerId, satoshis);
+
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'open-channel2-response',
+        data: result
+      }));
+    } catch (err) {
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'error',
+        data: { error: err.message || String(err) }
+      }));
+    }
+  },
+//---------
+  //-------------
+  'list-channels': async (m, ws) => {
+    try {
+      const result = await wallet.listChannels();
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'list-channels-response',
+        data: result
+      }));
+    } catch (err) {
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'error',
+        data: { error: err.message || String(err) }
+      }));
+    }
+  },
+
+  'list-funds-channel': async (m, ws) => {
+    try {
+      const result = await wallet.verifyChannelFunds();
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'list-funds-channel-response',
+        data: result
+      }));
+    } catch (err) {
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'error',
+        data: { error: err.message || String(err) }
+      }));
+    }
+  },
+  //-------------
 
   'getinfo-bitcoin': async (m, ws) => {
     try {
@@ -460,7 +558,6 @@ function handleMessage(ws, m) {
   }
 }
 
-
 setInterval(async () => {
   try {
     const [bInfo, lInfo, lInfo2] = await Promise.all([
@@ -492,7 +589,6 @@ setInterval(async () => {
   }
 }, 10000);
 
-
 setInterval(() => {
   wss.clients.forEach((ws) => {
     if (!ws.isAlive) return ws.terminate();
@@ -500,3 +596,4 @@ setInterval(() => {
     ws.ping();
   });
 }, 30000);
+

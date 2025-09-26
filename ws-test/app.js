@@ -122,11 +122,44 @@ document.getElementById('list-funds2').addEventListener('click', () => {
 document.getElementById('connect-nodes').addEventListener('click', () => {
   sendRaw({ type: 'connect-peer', data: {} });
 });
-
 document.getElementById('list-peers').addEventListener('click', () => {
   sendRaw({ type: 'list-peers', data: {} });
 });
 
+// ---------- Channel Operations ----------
+document.getElementById('open-channel').addEventListener('click', () => {
+  const satoshis = document.getElementById('channel-amount').value.trim();
+  if (!satoshis || isNaN(parseInt(satoshis, 10))) {
+    log('Please enter a valid channel amount (satoshis).');
+    return;
+  }
+  sendRaw({ 
+    type: 'open-channel', 
+    data: { satoshis: parseInt(satoshis, 10) } 
+  });
+});
+
+document.getElementById('open-channel2').addEventListener('click', () => {
+  const satoshis = document.getElementById('channel-amount2').value.trim();
+  if (!satoshis || isNaN(parseInt(satoshis, 10))) {
+    log('Please enter a valid channel amount (satoshis).');
+    return;
+  }
+  sendRaw({ 
+    type: 'open-channel2', 
+    data: { satoshis: parseInt(satoshis, 10) } 
+  });
+});
+
+document.getElementById('list-channels').addEventListener('click', () => {
+  sendRaw({ type: 'list-channels', data: {} });
+});
+
+document.getElementById('list-funds-channel').addEventListener('click', () => {
+  sendRaw({ type: 'list-lightning-funds', data: {} });
+});
+
+// ---------- Helper ----------
 function sendRaw({ type, data }) {
   if (!ws || ws.readyState !== WebSocket.OPEN) { log('Not connected'); return; }
   const head = 'cli-' + Date.now() + '-' + Math.random().toString(36).slice(2,8);
@@ -134,3 +167,4 @@ function sendRaw({ type, data }) {
   ws.send(JSON.stringify(msg));
   log('SENT', msg);
 }
+

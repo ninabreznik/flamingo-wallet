@@ -3049,5 +3049,332 @@
     "data": {},
     "ts": 1758842907901,
     "status": "stored"
+  },
+  {
+    "head": "cli-1758905116866-y3lkrv",
+    "refs": null,
+    "type": "getinfo-lightning",
+    "data": {},
+    "ts": 1758905116869,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758905120511-xsby9o",
+    "refs": null,
+    "type": "getinfo-lightning2",
+    "data": {},
+    "ts": 1758905120513,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758905124497-6abvi6",
+    "refs": null,
+    "type": "connect-peer",
+    "data": {},
+    "ts": 1758905124500,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758905127279-ch0q6q",
+    "refs": null,
+    "type": "list-peers",
+    "data": {},
+    "ts": 1758905127282,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758905140106-s7hshk",
+    "refs": null,
+    "type": "getinfo-lightning2",
+    "data": {},
+    "ts": 1758905140107,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758905202764-rp3lqo",
+    "refs": null,
+    "type": "open-channel",
+    "data": {
+      "peerId": "0327bf2bd261aa0f3c52128e407a948a223e79d24e5b6328ce61b81efeb7c431d4",
+      "amount": 100
+    },
+    "ts": 1758905202768,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758905216464-f4ush9",
+    "refs": null,
+    "type": "open-channel",
+    "data": {
+      "peerId": "0327bf2bd261aa0f3c52128e407a948a223e79d24e5b6328ce61b81efeb7c431d4",
+      "amount": 1000001
+    },
+    "ts": 1758905216465,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758905226700-9au5gf",
+    "refs": null,
+    "type": "list-channels",
+    "data": {},
+    "ts": 1758905226701,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758905228654-azdl3i",
+    "refs": null,
+    "type": "list-lightning-funds",
+    "data": {},
+    "ts": 1758905228658,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758905260306-zr6w8a",
+    "refs": null,
+    "type": "open-channel",
+    "data": {
+      "peerId": "0327bf2bd261aa0f3c52128e407a948a223e79d24e5b6328ce61b81efeb7c431d4",
+      "amount": 1000001
+    },
+    "ts": 1758905260310,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758905626959-zl1yme",
+    "refs": null,
+    "type": "getinfo-lightning",
+    "data": {},
+    "ts": 1758905626962,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758905634146-l9ghz1",
+    "refs": null,
+    "type": "getinfo-lightning2",
+    "data": {},
+    "ts": 1758905634148,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758905644146-xaweko",
+    "refs": null,
+    "type": "open-channel",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1758905644147,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758905658778-qfz9jg",
+    "refs": null,
+    "type": "open-channel2",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1758905658788,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758905660994-k7yoyw",
+    "refs": null,
+    "type": "list-channels",
+    "data": {},
+    "ts": 1758905660998,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758905666812-q2umix",
+    "refs": null,
+    "type": "list-lightning-funds",
+    "data": {},
+    "ts": 1758905666816,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758906030405-tu0rrg",
+    "refs": null,
+    "type": "connect-peer",
+    "data": {},
+    "ts": 1758906030408,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758906033097-a6ymy6",
+    "refs": null,
+    "type": "list-peers",
+    "data": {},
+    "ts": 1758906033101,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758906038000-25qmz4",
+    "refs": null,
+    "type": "open-channel",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1758906038001,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758906044072-180zu6",
+    "refs": null,
+    "type": "open-channel2",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1758906044074,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758906045340-8nk73n",
+    "refs": null,
+    "type": "list-channels",
+    "data": {},
+    "ts": 1758906045344,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758906059467-cgvait",
+    "refs": null,
+    "type": "list-lightning-funds",
+    "data": {},
+    "ts": 1758906059471,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758906215352-29yciy",
+    "refs": null,
+    "type": "connect-peer",
+    "data": {},
+    "ts": 1758906215354,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758906216568-9wmttz",
+    "refs": null,
+    "type": "list-peers",
+    "data": {},
+    "ts": 1758906216569,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758906218046-cr8c3m",
+    "refs": null,
+    "type": "open-channel",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1758906218050,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758906349339-3xev8l",
+    "refs": null,
+    "type": "list-peers",
+    "data": {},
+    "ts": 1758906349343,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758906375610-sgrngd",
+    "refs": null,
+    "type": "list-channels",
+    "data": {},
+    "ts": 1758906375611,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758906391582-nc5kfa",
+    "refs": null,
+    "type": "list-lightning-funds",
+    "data": {},
+    "ts": 1758906391582,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758906747824-rz1thu",
+    "refs": null,
+    "type": "list-lightning-funds",
+    "data": {},
+    "ts": 1758906747826,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758906806838-uwr6vy",
+    "refs": null,
+    "type": "open-channel",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1758906806840,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758906825036-nxi5h2",
+    "refs": null,
+    "type": "open-channel2",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1758906825037,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758906828954-s02727",
+    "refs": null,
+    "type": "list-channels",
+    "data": {},
+    "ts": 1758906828966,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758906836928-adk0b1",
+    "refs": null,
+    "type": "list-lightning-funds",
+    "data": {},
+    "ts": 1758906836928,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758910867951-8jiaoj",
+    "refs": null,
+    "type": "list-channels",
+    "data": {},
+    "ts": 1758910867972,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758910873016-pqb720",
+    "refs": null,
+    "type": "list-lightning-funds",
+    "data": {},
+    "ts": 1758910873018,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758910948471-iqdgzz",
+    "refs": null,
+    "type": "getinfo-lightning",
+    "data": {},
+    "ts": 1758910948475,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758910950465-vz6p0u",
+    "refs": null,
+    "type": "list-channels",
+    "data": {},
+    "ts": 1758910950466,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1758910951796-3pfpfb",
+    "refs": null,
+    "type": "list-lightning-funds",
+    "data": {},
+    "ts": 1758910951802,
+    "status": "stored"
   }
 ]
