@@ -468,8 +468,8 @@ const on = {
 
 'create-invoice-node1': async (m, ws) => {
   try {
-    const { amountSats, label, description } = m.data;
-    const result = await wallet.createInvoiceNode1(amountSats, label, description);
+    const { amount, label, description } = m.data;
+    const result = await wallet.createInvoiceNode1(amount, label, description);
     const response = createResponse(m);
     ws.send(JSON.stringify({
       ...response,
@@ -550,8 +550,8 @@ const on = {
 
 'create-invoice-node2': async (m, ws) => {
   try {
-    const { amountSats, label, description } = m.data;
-    const result = await wallet.createInvoiceNode2(amountSats, label, description);
+    const { amount, label, description } = m.data;
+    const result = await wallet.createInvoiceNode2(amount, label, description);
     const response = createResponse(m);
     ws.send(JSON.stringify({
       ...response,

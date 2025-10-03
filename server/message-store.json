@@ -3376,5 +3376,248 @@
     "data": {},
     "ts": 1758910951802,
     "status": "stored"
+  },
+  {
+    "head": "cli-1759531590338-br4x6s",
+    "refs": null,
+    "type": "getinfo-lightning",
+    "data": {},
+    "ts": 1759531590348,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759531605246-qeh1lr",
+    "refs": null,
+    "type": "getinfo-lightning2",
+    "data": {},
+    "ts": 1759531605249,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759531650438-hqch1t",
+    "refs": null,
+    "type": "create-invoice-node1",
+    "data": {
+      "amount": 5,
+      "label": "inv1-1759531650438",
+      "description": "sending amount 5"
+    },
+    "ts": 1759531650441,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759531672603-5ybfmq",
+    "refs": null,
+    "type": "new-lightning-address2",
+    "data": {},
+    "ts": 1759531672604,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759531704010-4doft6",
+    "refs": null,
+    "type": "pay-invoice-node1",
+    "data": {
+      "bolt11": "bcrt1qf9p2majkfxwyhjnqrx6auhfdcl7udxshjqa94z"
+    },
+    "ts": 1759531704012,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759531751729-o7ch08",
+    "refs": null,
+    "type": "list-invoices-node1",
+    "data": {},
+    "ts": 1759531751730,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759531759068-fvkkdb",
+    "refs": null,
+    "type": "list-pays-node1",
+    "data": {},
+    "ts": 1759531759069,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759531764965-wldhdd",
+    "refs": null,
+    "type": "list-invoices-node2",
+    "data": {},
+    "ts": 1759531764966,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759531782736-0uksa7",
+    "refs": null,
+    "type": "list-pays-node2",
+    "data": {},
+    "ts": 1759531782737,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759531804182-2xuapm",
+    "refs": null,
+    "type": "create-invoice-node1",
+    "data": {
+      "amount": 5,
+      "label": "label",
+      "description": "sending amount 5"
+    },
+    "ts": 1759531804183,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759532162507-2g6ohw",
+    "refs": null,
+    "type": "new-lightning-address",
+    "data": {},
+    "ts": 1759532162508,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759532165382-63521m",
+    "refs": null,
+    "type": "fund-lightning-node",
+    "data": {
+      "address": "bcrt1q8u4j7mqj6npp70aq0mcwe5uzx4wrjxlpcaarjy",
+      "blocks": 101
+    },
+    "ts": 1759532165383,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759532169951-9gy9uf",
+    "refs": null,
+    "type": "list-lightning-funds2",
+    "data": {},
+    "ts": 1759532169954,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759532184025-qi3tsz",
+    "refs": null,
+    "type": "new-lightning-address2",
+    "data": {},
+    "ts": 1759532184026,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759532184896-axv2wx",
+    "refs": null,
+    "type": "fund-lightning-node2",
+    "data": {
+      "address": "bcrt1q7l8axprq0aw5y7s7qs7kplf8qup2v894uhc0q4",
+      "blocks": 101
+    },
+    "ts": 1759532184899,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759532188647-l4p09t",
+    "refs": null,
+    "type": "list-lightning-funds2",
+    "data": {},
+    "ts": 1759532188653,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759532216424-8wj70u",
+    "refs": null,
+    "type": "open-channel",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1759532216426,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759532227882-7ivfy3",
+    "refs": null,
+    "type": "list-channels",
+    "data": {},
+    "ts": 1759532227899,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759532282626-9ti2fn",
+    "refs": null,
+    "type": "create-invoice-node2",
+    "data": {
+      "amount": 5000,
+      "label": "labeltest",
+      "description": "descrp test"
+    },
+    "ts": 1759532282633,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759533041113-cemfko",
+    "refs": null,
+    "type": "create-invoice-node2",
+    "data": {
+      "amount": 5000,
+      "label": "test",
+      "description": "test"
+    },
+    "ts": 1759533041115,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759533094919-tccgzf",
+    "refs": null,
+    "type": "new-lightning-address2",
+    "data": {},
+    "ts": 1759533094923,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759533100107-vwaty8",
+    "refs": null,
+    "type": "fund-lightning-node2",
+    "data": {
+      "address": "bcrt1qgazfaa5jy4ck8rvmz5aljahva3gkr6l7tnhzj2",
+      "blocks": 1
+    },
+    "ts": 1759533100111,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759533126488-630fk4",
+    "refs": null,
+    "type": "create-invoice-node2",
+    "data": {
+      "amount": 5000,
+      "label": "test",
+      "description": "test"
+    },
+    "ts": 1759533126489,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759533197671-igw7mt",
+    "refs": null,
+    "type": "pay-invoice-node1",
+    "data": {
+      "bolt11": "lnbcrt50n1p5wqkzxsp5fcsddk87alvghygd5487dkk3jr379w6p4pf53fdtsqkt7wu5m8xqpp5y5gk292a4rk2tpsaqe8a3s58pg6fhktx08p8l8sala8swxp2wwlqdq8w3jhxaqxqyjw5qcqp2rzjqdgq0j4c7qte9ql5jj8l3wmv0kx8czpyyd7hsmpfmkr6xpkeje2szqq9luqqqpqqqqqqqqqpqqqqqzsqqc9qxpqysgqhswrcaxka5w3dugkg37jnu5ja8eptng9v9pqtcw5ed30jg4s5najse54l8cfyff6ut7ak3p3dgcgfngz7r9mltp4e3nvv0fyjjvrjvcpj6tvgz"
+    },
+    "ts": 1759533197671,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759533220598-8cj5pl",
+    "refs": null,
+    "type": "list-pays-node1",
+    "data": {},
+    "ts": 1759533220599,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759533236530-4igoy3",
+    "refs": null,
+    "type": "list-invoices-node2",
+    "data": {},
+    "ts": 1759533236530,
+    "status": "stored"
   }
 ]
