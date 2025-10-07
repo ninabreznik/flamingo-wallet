@@ -11,6 +11,8 @@
     .row > * { flex:1; }
     button { padding: 8px 10px; }
     h2, h3 { margin-top: 20px; }
+    fieldset { margin-top: 20px; border: 1px solid #ccc; padding: 10px; border-radius: 6px; }
+    legend { font-weight: bold; }
   </style>
 </head>
 <body>
@@ -56,6 +58,28 @@
     <button id="list-funds">3. Verify Balance (List Funds)</button>
   </div>
 
+  <!-- 🔥 NEW: Lightning Invoice/Payment for Node 1 -->
+  <fieldset>
+    <legend>⚡ Node 1 Invoices & Payments</legend>
+
+    <div class="row">
+      <input id="invoice-amount-node1" type="number" value="5000" placeholder="Amount in sats" />
+      <input id="invoice-label-node1" placeholder="Label (optional)" />
+      <input id="invoice-desc-node1" placeholder="Description" />
+      <button id="create-invoice-node1">Create Invoice</button>
+    </div>
+
+    <div class="row">
+      <input id="bolt11-node1" placeholder="bolt11 invoice here" />
+      <button id="pay-invoice-node1">Pay Invoice</button>
+    </div>
+
+    <div class="row">
+      <button id="list-invoices-node1">List Invoices</button>
+      <button id="list-pays-node1">List Payments</button>
+    </div>
+  </fieldset>
+
   <hr />
   <h2>⚡ Lightning Node 2</h2>
   <div style="margin-top:10px">
@@ -75,6 +99,28 @@
     <button id="list-funds2">3. Verify Balance (List Funds)</button>
   </div>
 
+  <!-- 🔥 NEW: Lightning Invoice/Payment for Node 2 -->
+  <fieldset>
+    <legend>⚡ Node 2 Invoices & Payments</legend>
+
+    <div class="row">
+      <input id="invoice-amount-node2" type="number" value="5000" placeholder="Amount in sats" />
+      <input id="invoice-label-node2" placeholder="Label (optional)" />
+      <input id="invoice-desc-node2" placeholder="Description" />
+      <button id="create-invoice-node2">Create Invoice</button>
+    </div>
+
+    <div class="row">
+      <input id="bolt11-node2" placeholder="bolt11 invoice here" />
+      <button id="pay-invoice-node2">Pay Invoice</button>
+    </div>
+
+    <div class="row">
+      <button id="list-invoices-node2">List Invoices</button>
+      <button id="list-pays-node2">List Payments</button>
+    </div>
+  </fieldset>
+
   <hr />
   <h2>Peer-to-Peer Actions</h2>
   <div class="row">
@@ -82,29 +128,29 @@
     <button id="list-peers">Verify Peer Connection</button>
   </div>
 
-<hr />
-<h2>📡 Channel Operations</h2>
+  <hr />
+  <h2>📡 Channel Operations</h2>
 
-<!-- Node1 -> Node2 -->
-<h3>Open Channel (Node1 → Node2)</h3>
-<div class="row">
-  <input id="channel-amount" type="number" value="1000000" placeholder="satoshis" />
-  <button id="open-channel">Open Channel (Node1 → Node2)</button>
-</div>
+  <!-- Node1 -> Node2 -->
+  <h3>Open Channel (Node1 → Node2)</h3>
+  <div class="row">
+    <input id="channel-amount" type="number" value="1000000" placeholder="satoshis" />
+    <button id="open-channel">Open Channel (Node1 → Node2)</button>
+  </div>
 
-<!-- Node2 -> Node1 -->
-<h3 style="margin-top:15px">Open Channel (Node2 → Node1)</h3>
-<div class="row">
-  <input id="channel-amount2" type="number" value="1000000" placeholder="satoshis" />
-  <button id="open-channel2">Open Channel (Node2 → Node1)</button>
-</div>
+  <!-- Node2 -> Node1 -->
+  <h3 style="margin-top:15px">Open Channel (Node2 → Node1)</h3>
+  <div class="row">
+    <input id="channel-amount2" type="number" value="1000000" placeholder="satoshis" />
+    <button id="open-channel2">Open Channel (Node2 → Node1)</button>
+  </div>
 
-<div style="margin-top:15px">
-  <button id="list-channels">List Channels</button>
-  <button id="list-funds-channel">Verify Channel Funds</button>
-</div>
+  <div style="margin-top:15px">
+    <button id="list-channels">List Channels</button>
+    <button id="list-funds-channel">Verify Channel Funds</button>
+  </div>
 
-<hr />
+  <hr />
 
   <h3>Log</h3>
   <div id="log"></div>

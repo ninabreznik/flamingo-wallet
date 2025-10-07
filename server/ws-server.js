@@ -462,6 +462,175 @@ const on = {
   },
   //-------------
 
+  // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//  Lightning Invoice + Payment Operations
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+'create-invoice-node1': async (m, ws) => {
+  try {
+    const { amountSats, label, description } = m.data;
+    const result = await wallet.createInvoiceNode1(amountSats, label, description);
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'create-invoice-node1-response',
+      data: result
+    }));
+  } catch (err) {
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'error',
+      data: { error: err.message || String(err) }
+    }));
+  }
+},
+
+'pay-invoice-node1': async (m, ws) => {
+  try {
+    const { bolt11 } = m.data;
+    const result = await wallet.payInvoiceNode1(bolt11);
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'pay-invoice-node1-response',
+      data: result
+    }));
+  } catch (err) {
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'error',
+      data: { error: err.message || String(err) }
+    }));
+  }
+},
+
+'list-invoices-node1': async (m, ws) => {
+  try {
+    const result = await wallet.listInvoicesNode1();
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'list-invoices-node1-response',
+      data: result
+    }));
+  } catch (err) {
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'error',
+      data: { error: err.message || String(err) }
+    }));
+  }
+},
+
+'list-pays-node1': async (m, ws) => {
+  try {
+    const result = await wallet.listPaysNode1();
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'list-pays-node1-response',
+      data: result
+    }));
+  } catch (err) {
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'error',
+      data: { error: err.message || String(err) }
+    }));
+  }
+},
+
+// ------------------------------------------------------------
+// Node 2
+// ------------------------------------------------------------
+
+'create-invoice-node2': async (m, ws) => {
+  try {
+    const { amountSats, label, description } = m.data;
+    const result = await wallet.createInvoiceNode2(amountSats, label, description);
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'create-invoice-node2-response',
+      data: result
+    }));
+  } catch (err) {
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'error',
+      data: { error: err.message || String(err) }
+    }));
+  }
+},
+
+'pay-invoice-node2': async (m, ws) => {
+  try {
+    const { bolt11 } = m.data;
+    const result = await wallet.payInvoiceNode2(bolt11);
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'pay-invoice-node2-response',
+      data: result
+    }));
+  } catch (err) {
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'error',
+      data: { error: err.message || String(err) }
+    }));
+  }
+},
+
+'list-invoices-node2': async (m, ws) => {
+  try {
+    const result = await wallet.listInvoicesNode2();
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'list-invoices-node2-response',
+      data: result
+    }));
+  } catch (err) {
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'error',
+      data: { error: err.message || String(err) }
+    }));
+  }
+},
+
+'list-pays-node2': async (m, ws) => {
+  try {
+    const result = await wallet.listPaysNode2();
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'list-pays-node2-response',
+      data: result
+    }));
+  } catch (err) {
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'error',
+      data: { error: err.message || String(err) }
+    }));
+  }
+},
+// ------------------------------------------------------------
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// END Lightning Invoice + Payment Operations
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
   'getinfo-bitcoin': async (m, ws) => {
     try {
       const result = await wallet.getInfoBitcoin();
