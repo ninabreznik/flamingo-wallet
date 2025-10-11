@@ -13,7 +13,9 @@ const wss = new WebSocket.Server({ port: PORT }, () => {
   console.log(` WS server running on ws://localhost:${PORT}`);
 });
 
+// ----------------------------------------------
 // Start daemons automatically
+// ----------------------------------------------
 (async () => {
   try {
     console.log('Attempting to start Bitcoin daemon...');
@@ -26,19 +28,28 @@ const wss = new WebSocket.Server({ port: PORT }, () => {
   console.log('Attempting to start Lightning daemon (node 1)...');
   wallet.startLightning().then(() => {
     console.log('Lightning daemon (node 1) started.');
-  }).catch((e) => {
-    console.log('Could not start Lightning daemon (node 1, maybe already running).');
+  }).catch(() => {
+    console.log('Could not start Lightning daemon (node 1).');
   });
 
   console.log('Attempting to start Lightning daemon (node 2)...');
   wallet.startLightning2().then(() => {
     console.log('Lightning daemon (node 2) started.');
-  }).catch((e) => {
-    console.log('Could not start Lightning daemon (node 2, maybe already running).');
+  }).catch(() => {
+    console.log('Could not start Lightning daemon (node 2).');
   });
 
+  console.log('Attempting to start Lightning daemon (node 3)...');
+  wallet.startLightning3().then(() => {
+    console.log('Lightning daemon (node 3) started.');
+  }).catch(() => {
+    console.log('Could not start Lightning daemon (node 3).');
+  });
 })();
 
+// ----------------------------------------------
+// Graceful Shutdown
+// ----------------------------------------------
 async function gracefulShutdown() {
   console.log('\nGracefully shutting down...');
 
@@ -47,7 +58,7 @@ async function gracefulShutdown() {
     await wallet.stopLightning();
     console.log('Lightning daemon (node 1) stopped.');
   } catch (e) {
-    console.log('Could not stop Lightning daemon (node 1, maybe not running or error).');
+    console.log('Could not stop Lightning daemon (node 1).');
   }
 
   try {
@@ -55,7 +66,15 @@ async function gracefulShutdown() {
     await wallet.stopLightning2();
     console.log('Lightning daemon (node 2) stopped.');
   } catch (e) {
-    console.log('Could not stop Lightning daemon (node 2, maybe not running or error).');
+    console.log('Could not stop Lightning daemon (node 2).');
+  }
+
+  try {
+    console.log('Attempting to stop Lightning daemon (node 3)...');
+    await wallet.stopLightning3();
+    console.log('Lightning daemon (node 3) stopped.');
+  } catch (e) {
+    console.log('Could not stop Lightning daemon (node 3).');
   }
 
   try {
@@ -63,7 +82,7 @@ async function gracefulShutdown() {
     await wallet.stopBitcoin();
     console.log('Bitcoin daemon stopped.');
   } catch (e) {
-    console.log('Could not stop Bitcoin daemon (maybe not running or error).');
+    console.log('Could not stop Bitcoin daemon.');
   }
 
   process.exit(0);
@@ -625,6 +644,131 @@ const on = {
     }));
   }
 },
+  // ----------------------------------------------
+  // Lightning Node 3 basic operations
+  // ----------------------------------------------
+  'getinfo-lightning3': async (m, ws) => {
+    try {
+      const result = await wallet.getInfoLightning3();
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'getinfo-lightning3-response',
+        data: result
+      }));
+    } catch (err) {
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'error',
+        data: { error: err.message || String(err) }
+      }));
+    }
+  },
+
+  'new-lightning-address3': async (m, ws) => {
+    try {
+      const result = await wallet.newLightningAddress3();
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'new-lightning-address3-response',
+        data: result
+      }));
+    } catch (err) {
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'error',
+        data: { error: err.message || String(err) }
+      }));
+    }
+  },
+
+  'fund-lightning-node3': async (m, ws) => {
+    try {
+      const { address, blocks } = m.data;
+      if (!address || !blocks) throw new Error('address and blocks are required');
+      const result = await wallet.fundLightningNode(address, blocks);
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'fund-lightning-node3-response',
+        data: result
+      }));
+    } catch (err) {
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'error',
+        data: { error: err.message || String(err) }
+      }));
+    }
+  },
+
+  'list-lightning-funds3': async (m, ws) => {
+    try {
+      const result = await wallet.listLightningFunds3();
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'list-lightning-funds3-response',
+        data: result
+      }));
+    } catch (err) {
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'error',
+        data: { error: err.message || String(err) }
+      }));
+    }
+  },
+
+  'list-peers3': async (m, ws) => {
+    try {
+      const result = await wallet.listPeers3();
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'list-peers3-response',
+        data: result
+      }));
+    } catch (err) {
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'error',
+        data: { error: err.message || String(err) }
+      }));
+    }
+  },
+
+  'open-channel3': async (m, ws) => {
+    try {
+      const { satoshis } = m.data;
+      if (!satoshis) throw new Error('satoshis amount is required');
+
+      // For setup: Node 3 opens a channel with Node 2
+      const node2Info = await wallet.getInfoLightning2();
+      const peerId = node2Info.id;
+
+      const result = await wallet.openChannel3(peerId, satoshis);
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'open-channel3-response',
+        data: result
+      }));
+    } catch (err) {
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'error',
+        data: { error: err.message || String(err) }
+      }));
+    }
+  },
 // ------------------------------------------------------------
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

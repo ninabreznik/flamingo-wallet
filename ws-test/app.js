@@ -32,6 +32,9 @@ document.getElementById('connect').addEventListener('click', () => {
       if (msg.type === 'new-lightning-address2-response' && msg.data?.bech32) {
         document.getElementById('funding-address2').value = msg.data.bech32;
       }
+      if (msg.type === 'new-lightning-address3-response' && msg.data?.bech32) {
+        document.getElementById('funding-address3').value = msg.data.bech32;
+      }
 
       // Auto-fill invoices when received
       if (msg.type === 'create-invoice-node1-response' && msg.data?.bolt11) {
@@ -172,7 +175,23 @@ document.getElementById('list-invoices-node2').addEventListener('click', () => {
 document.getElementById('list-pays-node2').addEventListener('click', () => {
   sendRaw({ type: 'list-pays-node2', data: {} });
 });
-
+// ---------------- Node 3 ----------------
+document.getElementById('getinfo-lightning3').addEventListener('click', () => {
+  sendRaw({ type: 'getinfo-lightning3', data: {} });
+});
+document.getElementById('new-lightning-address3').addEventListener('click', () => {
+  sendRaw({ type: 'new-lightning-address3', data: {} });
+});
+document.getElementById('fund-node3').addEventListener('click', () => {
+  const address = document.getElementById('funding-address3').value.trim();
+  const blocks = document.getElementById('funding-blocks3').value.trim();
+  if (!address) return log('Generate address first (Node3).');
+  if (!blocks || isNaN(parseInt(blocks, 10))) return log('Enter valid blocks.');
+  sendRaw({ type: 'fund-lightning-node3', data: { address, blocks: parseInt(blocks, 10) } });
+});
+document.getElementById('list-funds3').addEventListener('click', () => {
+  sendRaw({ type: 'list-lightning-funds3', data: {} });
+});
 // ---------------- P2P ----------------
 document.getElementById('connect-nodes').addEventListener('click', () => {
   sendRaw({ type: 'connect-peer', data: {} });
@@ -180,7 +199,9 @@ document.getElementById('connect-nodes').addEventListener('click', () => {
 document.getElementById('list-peers').addEventListener('click', () => {
   sendRaw({ type: 'list-peers', data: {} });
 });
-
+document.getElementById('list-peers3').addEventListener('click', () => {
+  sendRaw({ type: 'list-peers3', data: {} });
+});
 // ---------------- Channels ----------------
 document.getElementById('open-channel').addEventListener('click', () => {
   const satoshis = document.getElementById('channel-amount').value.trim();
@@ -191,6 +212,11 @@ document.getElementById('open-channel2').addEventListener('click', () => {
   const satoshis = document.getElementById('channel-amount2').value.trim();
   if (!satoshis || isNaN(parseInt(satoshis, 10))) return log('Enter valid amount.');
   sendRaw({ type: 'open-channel2', data: { satoshis: parseInt(satoshis, 10) } });
+});
+document.getElementById('open-channel3').addEventListener('click', () => {
+  const satoshis = document.getElementById('channel-amount3').value.trim();
+  if (!satoshis || isNaN(parseInt(satoshis, 10))) return log('Enter valid amount.');
+  sendRaw({ type: 'open-channel3', data: { satoshis: parseInt(satoshis, 10) } });
 });
 document.getElementById('list-channels').addEventListener('click', () => {
   sendRaw({ type: 'list-channels', data: {} });
