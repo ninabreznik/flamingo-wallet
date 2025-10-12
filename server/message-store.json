@@ -3619,5 +3619,562 @@
     "data": {},
     "ts": 1759533236530,
     "status": "stored"
+  },
+  {
+    "head": "cli-1759534060893-2dcmi6",
+    "refs": null,
+    "type": "list-lightning-funds",
+    "data": {},
+    "ts": 1759534060896,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759534190267-qtdl2j",
+    "refs": null,
+    "type": "list-invoices-node2",
+    "data": {},
+    "ts": 1759534190269,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759534441563-azdhfl",
+    "refs": null,
+    "type": "create-invoice-node2",
+    "data": {
+      "amount": 5000,
+      "label": "test2",
+      "description": "test2 for node 1"
+    },
+    "ts": 1759534441566,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759534488636-o7pjfz",
+    "refs": null,
+    "type": "pay-invoice-node1",
+    "data": {
+      "bolt11": "lnbcrt50n1p5wqhtfsp56dzf4ejjv25zk8tgrkprasp727dz4tv7vwdagh0xtttndtdej63spp5xmv72cl3d42rgzjz8yygxas65y2qy0sxa6umz7gq9xppfc03wpaqdq6w3jhxapjypnx7u3qdehkgefqxyxqyjw5qcqp2rzjqdgq0j4c7qte9ql5jj8l3wmv0kx8czpyyd7hsmpfmkr6xpkeje2szqq9luqqqpqqqqqqqqqpqqqqqzsqqc9qxpqysgqsuftda4uywdtfln2g9pe5jftscvx7w9f78dnnz3vc76rl59e7rchygkemy8parwa8p46r7rdhlf0e79qa4npxuq0ms47uq94ud9l85sqp24q7s"
+    },
+    "ts": 1759534488638,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759534512141-gw0zdj",
+    "refs": null,
+    "type": "list-pays-node1",
+    "data": {},
+    "ts": 1759534512142,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1759534535273-guzx60",
+    "refs": null,
+    "type": "list-invoices-node2",
+    "data": {},
+    "ts": 1759534535275,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760272555033-jqwzf0",
+    "refs": null,
+    "type": "getinfo-lightning3",
+    "data": {},
+    "ts": 1760272555038,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760272606871-2a6rjc",
+    "refs": null,
+    "type": "list-peers",
+    "data": {},
+    "ts": 1760272606874,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760272651825-v8cvc0",
+    "refs": null,
+    "type": "new-lightning-address3",
+    "data": {},
+    "ts": 1760272651830,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760272658555-t6s8mw",
+    "refs": null,
+    "type": "fund-lightning-node3",
+    "data": {
+      "address": "bcrt1q9cej729sdtlf7lwuc62ucqk4s6wcanf8h9wf87",
+      "blocks": 101
+    },
+    "ts": 1760272658556,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760272661318-7hq6he",
+    "refs": null,
+    "type": "list-lightning-funds3",
+    "data": {},
+    "ts": 1760272661319,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760272684133-mkw10f",
+    "refs": null,
+    "type": "list-lightning-funds3",
+    "data": {},
+    "ts": 1760272684137,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760272684581-cg022q",
+    "refs": null,
+    "type": "list-lightning-funds3",
+    "data": {},
+    "ts": 1760272684583,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760272684946-6m1j8j",
+    "refs": null,
+    "type": "list-lightning-funds3",
+    "data": {},
+    "ts": 1760272684949,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760272699693-q27tcm",
+    "refs": null,
+    "type": "getinfo-lightning3",
+    "data": {},
+    "ts": 1760272699694,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760272742037-6uhth5",
+    "refs": null,
+    "type": "list-lightning-funds",
+    "data": {},
+    "ts": 1760272742044,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760272745212-w9qhkx",
+    "refs": null,
+    "type": "list-lightning-funds3",
+    "data": {},
+    "ts": 1760272745221,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760272978725-cdukyu",
+    "refs": null,
+    "type": "getinfo-lightning3",
+    "data": {},
+    "ts": 1760272978725,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760272981909-qa7hy8",
+    "refs": null,
+    "type": "list-lightning-funds3",
+    "data": {},
+    "ts": 1760272981920,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760272991840-3rain6",
+    "refs": null,
+    "type": "list-lightning-funds",
+    "data": {},
+    "ts": 1760272991846,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760273136628-49jby5",
+    "refs": null,
+    "type": "list-lightning-funds3",
+    "data": {},
+    "ts": 1760273136636,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760273524720-it3ke3",
+    "refs": null,
+    "type": "list-lightning-funds3",
+    "data": {},
+    "ts": 1760273524723,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760273533408-wuelvr",
+    "refs": null,
+    "type": "new-lightning-address3",
+    "data": {},
+    "ts": 1760273533413,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760273534885-9utxgy",
+    "refs": null,
+    "type": "fund-lightning-node3",
+    "data": {
+      "address": "bcrt1q4qpxma43xf2xfewfeletc82ft0yzmqnd7uapmw",
+      "blocks": 1
+    },
+    "ts": 1760273534886,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760273536513-0flkjt",
+    "refs": null,
+    "type": "list-lightning-funds3",
+    "data": {},
+    "ts": 1760273536514,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760273560071-jez6yr",
+    "refs": null,
+    "type": "connect-peer",
+    "data": {},
+    "ts": 1760273560072,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760273581504-0hcrnl",
+    "refs": null,
+    "type": "getinfo-lightning3",
+    "data": {},
+    "ts": 1760273581506,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760273667891-ivqiwz",
+    "refs": null,
+    "type": "list-lightning-funds3",
+    "data": {},
+    "ts": 1760273667901,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760273735636-q3er8g",
+    "refs": null,
+    "type": "connect-peer",
+    "data": {},
+    "ts": 1760273735644,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760273742097-bvjzlv",
+    "refs": null,
+    "type": "list-peers",
+    "data": {},
+    "ts": 1760273742099,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760273754251-ro2iqg",
+    "refs": null,
+    "type": "connect-peer",
+    "data": {},
+    "ts": 1760273754262,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760273759311-4g44ri",
+    "refs": null,
+    "type": "list-peers",
+    "data": {},
+    "ts": 1760273759312,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760274137827-4ymfhj",
+    "refs": null,
+    "type": "list-lightning-funds3",
+    "data": {},
+    "ts": 1760274137828,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760274145663-c8p0ht",
+    "refs": null,
+    "type": "open-channel",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1760274145664,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760274159940-j0ljdn",
+    "refs": null,
+    "type": "open-channel3",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1760274159943,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760274163352-uihp9l",
+    "refs": null,
+    "type": "list-channels",
+    "data": {},
+    "ts": 1760274163352,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760274224623-126gch",
+    "refs": null,
+    "type": "list-lightning-funds",
+    "data": {},
+    "ts": 1760274224624,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760274253432-15d7py",
+    "refs": null,
+    "type": "list-peers3",
+    "data": {},
+    "ts": 1760274253433,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760274265779-rgyc8f",
+    "refs": null,
+    "type": "connect-node2-node3",
+    "data": {},
+    "ts": 1760274265784,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760274271388-l5ylqx",
+    "refs": null,
+    "type": "connect-node1-node3",
+    "data": {},
+    "ts": 1760274271397,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760274430629-v6lh4j",
+    "refs": null,
+    "type": "connect-peer",
+    "data": {},
+    "ts": 1760274430630,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760274438291-bil7zd",
+    "refs": null,
+    "type": "list-peers",
+    "data": {},
+    "ts": 1760274438291,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760274453146-5vp91m",
+    "refs": null,
+    "type": "getinfo-lightning3",
+    "data": {},
+    "ts": 1760274453147,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760274474152-mv8xum",
+    "refs": null,
+    "type": "connect-node2-node3",
+    "data": {},
+    "ts": 1760274474154,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760274917457-dmkc1g",
+    "refs": null,
+    "type": "connect-node2-node3",
+    "data": {},
+    "ts": 1760274917459,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760274924536-1955co",
+    "refs": null,
+    "type": "list-peers",
+    "data": {},
+    "ts": 1760274924539,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760274936105-fbpm0f",
+    "refs": null,
+    "type": "list-peers3",
+    "data": {},
+    "ts": 1760274936111,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760274957398-ckeop9",
+    "refs": null,
+    "type": "open-channel3",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1760274957403,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760274966104-wz8ir8",
+    "refs": null,
+    "type": "list-channels",
+    "data": {},
+    "ts": 1760274966117,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760274975620-c54ci8",
+    "refs": null,
+    "type": "list-lightning-funds",
+    "data": {},
+    "ts": 1760274975628,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760274984445-wok5ay",
+    "refs": null,
+    "type": "getinfo-lightning2",
+    "data": {},
+    "ts": 1760274984447,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760274997222-upsq87",
+    "refs": null,
+    "type": "connect-node1-node3",
+    "data": {},
+    "ts": 1760274997223,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760275002808-etrvma",
+    "refs": null,
+    "type": "list-peers3",
+    "data": {},
+    "ts": 1760275002820,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760275021462-b260pn",
+    "refs": null,
+    "type": "list-lightning-funds3",
+    "data": {},
+    "ts": 1760275021462,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760275030403-uhwk0h",
+    "refs": null,
+    "type": "new-lightning-address3",
+    "data": {},
+    "ts": 1760275030404,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760275033395-3ey5nl",
+    "refs": null,
+    "type": "fund-lightning-node3",
+    "data": {
+      "address": "bcrt1q4y907pr9s3cruk9xpfs7kawmgyq5w884rkhept",
+      "blocks": 1
+    },
+    "ts": 1760275033397,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760275034497-hp6zva",
+    "refs": null,
+    "type": "list-lightning-funds3",
+    "data": {},
+    "ts": 1760275034503,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760275202108-ccm92w",
+    "refs": null,
+    "type": "connect-node1-node3",
+    "data": {},
+    "ts": 1760275202118,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760275573891-h2vtkm",
+    "refs": null,
+    "type": "getinfo-lightning3",
+    "data": {},
+    "ts": 1760275573893,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760275580921-ys81m1",
+    "refs": null,
+    "type": "list-lightning-funds3",
+    "data": {},
+    "ts": 1760275580925,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760275593264-lfb5q3",
+    "refs": null,
+    "type": "connect-peer",
+    "data": {},
+    "ts": 1760275593265,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760275597331-mxkdrn",
+    "refs": null,
+    "type": "list-peers",
+    "data": {},
+    "ts": 1760275597332,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760275603626-47tcsy",
+    "refs": null,
+    "type": "connect-node2-node3",
+    "data": {},
+    "ts": 1760275603631,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760275622280-cz0h0d",
+    "refs": null,
+    "type": "connect-node1-node3",
+    "data": {},
+    "ts": 1760275622281,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760275631541-z2deff",
+    "refs": null,
+    "type": "list-peers3",
+    "data": {},
+    "ts": 1760275631552,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760275668888-0ufzcg",
+    "refs": null,
+    "type": "list-channels",
+    "data": {},
+    "ts": 1760275668889,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760275694724-1xbtll",
+    "refs": null,
+    "type": "list-lightning-funds",
+    "data": {},
+    "ts": 1760275694727,
+    "status": "stored"
   }
 ]

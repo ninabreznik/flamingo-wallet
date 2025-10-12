@@ -362,6 +362,52 @@ const on = {
     }
   },
 
+  'connect-node1-node3': async (m, ws) => {
+    try {
+      const node3Info = await wallet.getInfoLightning3();
+      const peerId = node3Info.id;
+      const port = (node3Info.binding && node3Info.binding[0] && node3Info.binding[0].port) || 9737;
+      const result = await wallet.connectPeer(peerId, '127.0.0.1', port);
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'connect-node1-node3-response',
+        data: result
+      }));
+    } catch (err) {
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'error',
+        data: { error: err.message || String(err) }
+      }));
+    }
+  },
+
+  'connect-node2-node3': async (m, ws) => {
+    try {
+      const node3Info = await wallet.getInfoLightning3();
+      const peerId = node3Info.id;
+      const port = (node3Info.binding && node3Info.binding[0] && node3Info.binding[0].port) || 9737;
+      // This should be called from node 2, so we need a new wallet method or adjust existing.
+      // Assuming a new method `connectPeer2` for clarity.
+      const result = await wallet.connectPeer2(peerId, '127.0.0.1', port);
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'connect-node2-node3-response',
+        data: result
+      }));
+    } catch (err) {
+      const response = createResponse(m);
+      ws.send(JSON.stringify({
+        ...response,
+        type: 'error',
+        data: { error: err.message || String(err) }
+      }));
+    }
+  },
+
   'list-peers': async (m, ws) => {
     try {
       const result = await wallet.listPeers();
@@ -751,7 +797,7 @@ const on = {
 
       // For setup: Node 3 opens a channel with Node 2
       const node2Info = await wallet.getInfoLightning2();
-      const peerId = node2Info.id;
+      const peerId = node2Info.id; // This should be node 2's ID
 
       const result = await wallet.openChannel3(peerId, satoshis);
       const response = createResponse(m);
@@ -909,4 +955,3 @@ setInterval(() => {
     ws.ping();
   });
 }, 30000);
-

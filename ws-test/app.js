@@ -199,7 +199,16 @@ document.getElementById('connect-nodes').addEventListener('click', () => {
 document.getElementById('list-peers').addEventListener('click', () => {
   sendRaw({ type: 'list-peers', data: {} });
 });
-document.getElementById('list-peers3').addEventListener('click', () => {
+
+document.getElementById('connect-node1-node3').addEventListener('click', () => {
+  sendRaw({ type: 'connect-node1-node3', data: {} });
+});
+
+document.getElementById('connect-node2-node3').addEventListener('click', () => {
+  sendRaw({ type: 'connect-node2-node3', data: {} });
+});
+
+document.getElementById('list-peers-node3').addEventListener('click', () => {
   sendRaw({ type: 'list-peers3', data: {} });
 });
 // ---------------- Channels ----------------
