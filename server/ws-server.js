@@ -816,6 +816,127 @@ const on = {
     }
   },
 // ------------------------------------------------------------
+// ------------------------------------------------------------
+// Lightning Node 3 - Invoice + Payment + Multi-hop Route Operations
+// ------------------------------------------------------------
+
+'create-invoice-node3': async (m, ws) => {
+  try {
+    const { amount, label, description } = m.data;
+    const result = await wallet.createInvoiceNode3(amount, label, description);
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'create-invoice-node3-response',
+      data: result
+    }));
+  } catch (err) {
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'error',
+      data: { error: err.message || String(err) }
+    }));
+  }
+},
+
+'pay-invoice-node3': async (m, ws) => {
+  try {
+    const { bolt11 } = m.data;
+    const result = await wallet.payInvoiceNode3(bolt11);
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'pay-invoice-node3-response',
+      data: result
+    }));
+  } catch (err) {
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'error',
+      data: { error: err.message || String(err) }
+    }));
+  }
+},
+
+'list-invoices-node3': async (m, ws) => {
+  try {
+    const result = await wallet.listInvoicesNode3();
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'list-invoices-node3-response',
+      data: result
+    }));
+  } catch (err) {
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'error',
+      data: { error: err.message || String(err) }
+    }));
+  }
+},
+
+'list-pays-node3': async (m, ws) => {
+  try {
+    const result = await wallet.listPaysNode3();
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'list-pays-node3-response',
+      data: result
+    }));
+  } catch (err) {
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'error',
+      data: { error: err.message || String(err) }
+    }));
+  }
+},
+
+'get-route-node1-to-node3': async (m, ws) => {
+  try {
+    const { destId, msat } = m.data;
+    if (!destId) throw new Error('destId is required');
+    const result = await wallet.getRouteNode1to3(destId, msat || 1000);
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'get-route-node1-to-node3-response',
+      data: result
+    }));
+  } catch (err) {
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'error',
+      data: { error: err.message || String(err) }
+    }));
+  }
+},
+
+'list-forwards-node2': async (m, ws) => {
+  try {
+    const result = await wallet.listForwardsNode2();
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'list-forwards-node2-response',
+      data: result
+    }));
+  } catch (err) {
+    const response = createResponse(m);
+    ws.send(JSON.stringify({
+      ...response,
+      type: 'error',
+      data: { error: err.message || String(err) }
+    }));
+  }
+},
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // END Lightning Invoice + Payment Operations

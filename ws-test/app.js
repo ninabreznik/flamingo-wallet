@@ -43,6 +43,9 @@ document.getElementById('connect').addEventListener('click', () => {
       if (msg.type === 'create-invoice-node2-response' && msg.data?.bolt11) {
         document.getElementById('bolt11-node2').value = msg.data.bolt11;
       }
+      if (msg.type === 'create-invoice-node3-response' && msg.data?.bolt11) {
+        document.getElementById('bolt11-node3').value = msg.data.bolt11;
+      }
 
     } catch (e) {
       log('RECV (raw)', evt.data);
@@ -175,6 +178,7 @@ document.getElementById('list-invoices-node2').addEventListener('click', () => {
 document.getElementById('list-pays-node2').addEventListener('click', () => {
   sendRaw({ type: 'list-pays-node2', data: {} });
 });
+
 // ---------------- Node 3 ----------------
 document.getElementById('getinfo-lightning3').addEventListener('click', () => {
   sendRaw({ type: 'getinfo-lightning3', data: {} });
@@ -192,6 +196,27 @@ document.getElementById('fund-node3').addEventListener('click', () => {
 document.getElementById('list-funds3').addEventListener('click', () => {
   sendRaw({ type: 'list-lightning-funds3', data: {} });
 });
+
+// Node3 Invoice/Payments 🆕
+document.getElementById('create-invoice-node3').addEventListener('click', () => {
+  const amount = parseInt(document.getElementById('invoice-amount-node3').value.trim(), 10);
+  const label = document.getElementById('invoice-label-node3').value.trim() || `inv3-${Date.now()}`;
+  const description = document.getElementById('invoice-desc-node3').value.trim() || 'Payment Request';
+  if (!amount || isNaN(amount)) return log('Invalid amount.');
+  sendRaw({ type: 'create-invoice-node3', data: { amount, label, description } });
+});
+document.getElementById('pay-invoice-node3').addEventListener('click', () => {
+  const bolt11 = document.getElementById('bolt11-node3').value.trim();
+  if (!bolt11) return log('Paste BOLT11 invoice first.');
+  sendRaw({ type: 'pay-invoice-node3', data: { bolt11 } });
+});
+document.getElementById('list-invoices-node3').addEventListener('click', () => {
+  sendRaw({ type: 'list-invoices-node3', data: {} });
+});
+document.getElementById('list-pays-node3').addEventListener('click', () => {
+  sendRaw({ type: 'list-pays-node3', data: {} });
+});
+
 // ---------------- P2P ----------------
 document.getElementById('connect-nodes').addEventListener('click', () => {
   sendRaw({ type: 'connect-peer', data: {} });
@@ -199,18 +224,16 @@ document.getElementById('connect-nodes').addEventListener('click', () => {
 document.getElementById('list-peers').addEventListener('click', () => {
   sendRaw({ type: 'list-peers', data: {} });
 });
-
 document.getElementById('connect-node1-node3').addEventListener('click', () => {
   sendRaw({ type: 'connect-node1-node3', data: {} });
 });
-
 document.getElementById('connect-node2-node3').addEventListener('click', () => {
   sendRaw({ type: 'connect-node2-node3', data: {} });
 });
-
 document.getElementById('list-peers-node3').addEventListener('click', () => {
   sendRaw({ type: 'list-peers3', data: {} });
 });
+
 // ---------------- Channels ----------------
 document.getElementById('open-channel').addEventListener('click', () => {
   const satoshis = document.getElementById('channel-amount').value.trim();
@@ -232,4 +255,16 @@ document.getElementById('list-channels').addEventListener('click', () => {
 });
 document.getElementById('list-funds-channel').addEventListener('click', () => {
   sendRaw({ type: 'list-lightning-funds', data: {} });
+});
+
+// ---------------- Multi-Hop Routing 🆕 ----------------
+document.getElementById('get-route-node1-to-node3').addEventListener('click', () => {
+  const dest = document.getElementById('dest-node3').value.trim();
+  const msatoshi = parseInt(document.getElementById('msat-node3').value.trim(), 10);
+  if (!dest) return log('Enter destination pubkey (Node3).');
+  if (!msatoshi || isNaN(msatoshi)) return log('Enter valid msatoshi amount.');
+  sendRaw({ type: 'get-route-node1-to-node3', data: { dest, msatoshi } });
+});
+document.getElementById('list-forwards-node2').addEventListener('click', () => {
+  sendRaw({ type: 'list-forwards-node2', data: {} });
 });

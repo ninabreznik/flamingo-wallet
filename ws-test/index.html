@@ -154,7 +154,7 @@
     <button id="list-funds-channel">Verify Channel Funds</button>
   </div>
 
-  <!-- 🆕 Node 3 Section (Initial Setup Only) -->
+  <!-- 🆕 Node 3 Section -->
   <hr />
   <h2>⚡ Lightning Node 3</h2>
   <div style="margin-top:10px">
@@ -173,6 +173,37 @@
   <div style="margin-top:10px">
     <button id="list-funds3">3. Verify Balance (List Funds)</button>
   </div>
+
+  <!-- 🆕 Node 3 Invoices & Multi-hop -->
+  <fieldset>
+    <legend>⚡ Node 3 Invoices & Payments</legend>
+    <div class="row">
+      <input id="invoice-amount-node3" type="number" value="5000" placeholder="Amount in sats" />
+      <input id="invoice-label-node3" placeholder="Label (optional)" />
+      <input id="invoice-desc-node3" placeholder="Description" />
+      <button id="create-invoice-node3">Create Invoice</button>
+    </div>
+    <div class="row">
+      <input id="bolt11-node3" placeholder="bolt11 invoice here" />
+      <button id="pay-invoice-node3">Pay Invoice</button>
+    </div>
+    <div class="row">
+      <button id="list-invoices-node3">List Invoices</button>
+      <button id="list-pays-node3">List Payments</button>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>🌐 Multi-Hop Routing</legend>
+    <div class="row">
+      <input id="dest-node3" placeholder="Destination PubKey (Node3)" />
+      <input id="msat-node3" type="number" value="1000" placeholder="Amount (msat)" />
+      <button id="get-route-node1-to-node3">Get Route (Node1 → Node3)</button>
+    </div>
+    <div class="row">
+      <button id="list-forwards-node2">List Forwards (Node 2)</button>
+    </div>
+  </fieldset>
 
   <hr />
   <h3>Log</h3>
