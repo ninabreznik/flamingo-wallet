@@ -4176,5 +4176,727 @@
     "data": {},
     "ts": 1760275694727,
     "status": "stored"
+  },
+  {
+    "head": "cli-1760551358187-98b071",
+    "refs": null,
+    "type": "getinfo-lightning3",
+    "data": {},
+    "ts": 1760551358190,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760551438966-d6ucf1",
+    "refs": null,
+    "type": "connect-peer",
+    "data": {},
+    "ts": 1760551438967,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760551450242-tjwtp1",
+    "refs": null,
+    "type": "connect-node2-node3",
+    "data": {},
+    "ts": 1760551450243,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760551457830-528p97",
+    "refs": null,
+    "type": "list-peers3",
+    "data": {},
+    "ts": 1760551457831,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760551477242-2zmryu",
+    "refs": null,
+    "type": "open-channel",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1760551477242,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760551493574-9jqrlp",
+    "refs": null,
+    "type": "open-channel3",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1760551493578,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760551515697-8iqkh9",
+    "refs": null,
+    "type": "list-channels",
+    "data": {},
+    "ts": 1760551515701,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760551601536-hcxnbl",
+    "refs": null,
+    "type": "create-invoice-node1",
+    "data": {
+      "amount": 5000,
+      "label": "inv1-1760551601536",
+      "description": "test"
+    },
+    "ts": 1760551601539,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760551626950-f40ux6",
+    "refs": null,
+    "type": "pay-invoice-node2",
+    "data": {
+      "bolt11": "lnbcrt50n1p5wlc43sp52ez605d65wxnrg8kx7r9m8jzyyrawnrh48qst96w4d6hf507dvmspp5fvada6pvahjw8sga4gg0807mlk8cw6lh7zg6kmnjpl6rrg3a80wqdq8w3jhxaqxqyjw5qcqp2rzjqvnm727jvx4q70zjz28yq7553g3ru7wjfedkx2xwvxupal4hcscagqq9luqqqqsqqqqqqqqpqqqqqzsqqc9qxpqysgq9gpppu6vufdszxs797d47485gn3a0lqn575cthc2w852yd5f3psjfw6p6zn33a6pa335rd0uwnr4jr0mqp3vevpnm9kgqmf30wlyphcp76q7vw"
+    },
+    "ts": 1760551626951,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760551650978-qls4ss",
+    "refs": null,
+    "type": "list-invoices-node1",
+    "data": {},
+    "ts": 1760551650984,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760551662781-uns4xf",
+    "refs": null,
+    "type": "list-pays-node2",
+    "data": {},
+    "ts": 1760551662786,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760551693142-t9ociq",
+    "refs": null,
+    "type": "pay-invoice-node2",
+    "data": {
+      "bolt11": "lnbcrt50n1p5wlc43sp52ez605d65wxnrg8kx7r9m8jzyyrawnrh48qst96w4d6hf507dvmspp5fvada6pvahjw8sga4gg0807mlk8cw6lh7zg6kmnjpl6rrg3a80wqdq8w3jhxaqxqyjw5qcqp2rzjqvnm727jvx4q70zjz28yq7553g3ru7wjfedkx2xwvxupal4hcscagqq9luqqqqsqqqqqqqqpqqqqqzsqqc9qxpqysgq9gpppu6vufdszxs797d47485gn3a0lqn575cthc2w852yd5f3psjfw6p6zn33a6pa335rd0uwnr4jr0mqp3vevpnm9kgqmf30wlyphcp76q7vw"
+    },
+    "ts": 1760551693144,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760551706288-kvc7tw",
+    "refs": null,
+    "type": "list-invoices-node2",
+    "data": {},
+    "ts": 1760551706290,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760551744155-p0tq4o",
+    "refs": null,
+    "type": "list-pays-node2",
+    "data": {},
+    "ts": 1760551744156,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760551794755-7reue0",
+    "refs": null,
+    "type": "new-lightning-address2",
+    "data": {},
+    "ts": 1760551794756,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760551796442-5v0o20",
+    "refs": null,
+    "type": "fund-lightning-node2",
+    "data": {
+      "address": "bcrt1qs9udfjyum25cx28hnnnwverr82udyc7suvup64",
+      "blocks": 101
+    },
+    "ts": 1760551796443,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760551812523-aabnzc",
+    "refs": null,
+    "type": "create-invoice-node3",
+    "data": {
+      "amount": 5,
+      "label": "node3test",
+      "description": "test node 3"
+    },
+    "ts": 1760551812525,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760551835957-if8c1v",
+    "refs": null,
+    "type": "pay-invoice-node2",
+    "data": {
+      "bolt11": "lnbcrt50p1p5wlcuysp5crs3n2l2rszjw4ufa2f9ddd8q4gu3fw34djyrntr2j44lxqvafgqpp524m8rvya38f8r786kt6rkmasnd0l9qr8ul2hmtm6s7sz66766kpsdqjw3jhxapqdehkgefqxvxqyjw5qcqp2rzjqvnm727jvx4q70zjz28yq7553g3ru7wjfedkx2xwvxupal4hcscagqq8juqqqqgqqqqqqqqpqqqqqzsqqc9qxpqysgqy478x8wunchngjdv9uy0yrmtv8tx2uepf5ucy99e7vejj8efzqskn03cttzwugz3fw88wccqk0edp0val5pau4x98ntsdkdce9u4yksqc3kr2d"
+    },
+    "ts": 1760551835958,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760551865896-kghntv",
+    "refs": null,
+    "type": "create-invoice-node3",
+    "data": {
+      "amount": 5000,
+      "label": "node3test",
+      "description": "test node 3 v2"
+    },
+    "ts": 1760551865902,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760551882106-nii7uq",
+    "refs": null,
+    "type": "new-lightning-address3",
+    "data": {},
+    "ts": 1760551882108,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760551883881-qju72j",
+    "refs": null,
+    "type": "fund-lightning-node3",
+    "data": {
+      "address": "bcrt1qvaqcyzcccp3ymtgy6w5qazm88e9jysm2zys4fw",
+      "blocks": 101
+    },
+    "ts": 1760551883882,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760551885153-n2h8br",
+    "refs": null,
+    "type": "list-lightning-funds3",
+    "data": {},
+    "ts": 1760551885156,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760551895274-yz7tlr",
+    "refs": null,
+    "type": "create-invoice-node3",
+    "data": {
+      "amount": 5000,
+      "label": "node3test",
+      "description": "test node 3 v3"
+    },
+    "ts": 1760551895279,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760551910320-cnkif6",
+    "refs": null,
+    "type": "pay-invoice-node2",
+    "data": {
+      "bolt11": "lnbcrt50n1p5wlc7hsp5m9kw2nrr2w8htcs5dlwhqe2qz94lxtugv630wnsvhuc8qcg0khqspp5fw9zckhzunkzl49e9ppyhs3wfz0wk37m8v2sxf0mrts9vl8e02lsdqhw3jhxapqdehkgefqxvs8vvcxqyjw5qcqp2rzjqvnm727jvx4q70zjz28yq7553g3ru7wjfedkx2xwvxupal4hcscagqq8juqqqqgqqqqqqqqpqqqqqzsqqc9qxpqysgqhj0edxr5gpauwku9t82l9dpyrwzuck3swzxgk6z0jlqx6rx5gyhrmneezr0c4l3n4wgkaq9clxcxc0frx0pcxwrc4uew4658r7m3smcq30wl56"
+    },
+    "ts": 1760551910321,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760551918377-j0jxib",
+    "refs": null,
+    "type": "pay-invoice-node1",
+    "data": {
+      "bolt11": "lnbcrt50n1p5wlc7hsp5m9kw2nrr2w8htcs5dlwhqe2qz94lxtugv630wnsvhuc8qcg0khqspp5fw9zckhzunkzl49e9ppyhs3wfz0wk37m8v2sxf0mrts9vl8e02lsdqhw3jhxapqdehkgefqxvs8vvcxqyjw5qcqp2rzjqvnm727jvx4q70zjz28yq7553g3ru7wjfedkx2xwvxupal4hcscagqq8juqqqqgqqqqqqqqpqqqqqzsqqc9qxpqysgqhj0edxr5gpauwku9t82l9dpyrwzuck3swzxgk6z0jlqx6rx5gyhrmneezr0c4l3n4wgkaq9clxcxc0frx0pcxwrc4uew4658r7m3smcq30wl56"
+    },
+    "ts": 1760551918377,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760552004389-9s4oih",
+    "refs": null,
+    "type": "getinfo-lightning3",
+    "data": {},
+    "ts": 1760552004401,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760552026929-vodo8o",
+    "refs": null,
+    "type": "get-route-node1-to-node3",
+    "data": {
+      "dest": "02e0da951c04e47a1a388ebcc9ddde8f07c769b4b470a5c8ea3668b2f66a2a6f0d",
+      "msatoshi": 5000000
+    },
+    "ts": 1760552026937,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760552031767-mlwuwd",
+    "refs": null,
+    "type": "list-forwards-node2",
+    "data": {},
+    "ts": 1760552031773,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760552298790-9wcik7",
+    "refs": null,
+    "type": "create-invoice-node3",
+    "data": {
+      "amount": 5000,
+      "label": "inv3-1760552298790",
+      "description": "1"
+    },
+    "ts": 1760552298795,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760552377265-2y2qed",
+    "refs": null,
+    "type": "create-invoice-node3",
+    "data": {
+      "amount": 5000,
+      "label": "inv3-1760552377265",
+      "description": "d1"
+    },
+    "ts": 1760552377269,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760552514047-79xq47",
+    "refs": null,
+    "type": "connect-peer",
+    "data": {},
+    "ts": 1760552514048,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760552518413-u1e8ip",
+    "refs": null,
+    "type": "connect-node2-node3",
+    "data": {},
+    "ts": 1760552518414,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760552525457-l30brz",
+    "refs": null,
+    "type": "open-channel",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1760552525458,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760552534482-tdpqz2",
+    "refs": null,
+    "type": "open-channel2",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1760552534483,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760552537937-c0j8b2",
+    "refs": null,
+    "type": "open-channel3",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1760552537940,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760553013442-ytx0zd",
+    "refs": null,
+    "type": "connect-peer",
+    "data": {},
+    "ts": 1760553013445,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760553017054-q3fhw5",
+    "refs": null,
+    "type": "connect-node2-node3",
+    "data": {},
+    "ts": 1760553017056,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760553024959-5yg2bd",
+    "refs": null,
+    "type": "open-channel",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1760553024967,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760553031171-xo8xq7",
+    "refs": null,
+    "type": "open-channel2",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1760553031172,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760553036516-zhumjh",
+    "refs": null,
+    "type": "open-channel3",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1760553036517,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760553062840-av3man",
+    "refs": null,
+    "type": "create-invoice-node3",
+    "data": {
+      "amount": 5000,
+      "label": "inv3-1760553062840",
+      "description": "des-test"
+    },
+    "ts": 1760553062843,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760553238749-e3zaaw",
+    "refs": null,
+    "type": "getinfo-lightning3",
+    "data": {},
+    "ts": 1760553238752,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760553345654-a3ug65",
+    "refs": null,
+    "type": "pay-invoice-node1",
+    "data": {
+      "bolt11": "lnbcrt50n1p5wl6rxsp5na84hcpl05yl5wzaphmxgdns72ykuf4332fzgq7tqd9u7v9seldqpp55j3swu4uqnnfe3hsqasv783s0w74yg29g7zfszss5yl30z6rkuxsdqdv3jhxtt5v4ehgxqyjw5qcqp2rzjqvnm727jvx4q70zjz28yq7553g3ru7wjfedkx2xwvxupal4hcscagqq8juqqqqgqqqqqqqqpqqqqqzsqqcrzjqvnm727jvx4q70zjz28yq7553g3ru7wjfedkx2xwvxupal4hcscagqq8l5qqqqsqqqqqqqqpqqqqqzsqqc9qxpqysgqf6vw49pn0ldwwrcylplnlem2zscrjvvyg5rr0net0t2vjjr0v6fx05t85322u64z0mm4gpnugj7aj4f0ecqppmp9wzhasd0085rcw7gpe5ms3u"
+    },
+    "ts": 1760553345658,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760553488760-inha7t",
+    "refs": null,
+    "type": "list-lightning-funds3",
+    "data": {},
+    "ts": 1760553488761,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760553589212-0e2hi8",
+    "refs": null,
+    "type": "open-channel3",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1760553589220,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760553603758-g21swz",
+    "refs": null,
+    "type": "getinfo-lightning3",
+    "data": {},
+    "ts": 1760553603759,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760553613977-yvidgo",
+    "refs": null,
+    "type": "open-channel3",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1760553613979,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760553681546-zu85jg",
+    "refs": null,
+    "type": "connect-peer",
+    "data": {},
+    "ts": 1760553681549,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760553682341-56r6ya",
+    "refs": null,
+    "type": "connect-node2-node3",
+    "data": {},
+    "ts": 1760553682343,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760553687936-1ikwzq",
+    "refs": null,
+    "type": "open-channel3",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1760553687937,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760553700504-qcksxn",
+    "refs": null,
+    "type": "open-channel",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1760553700506,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760553702227-mc7gzp",
+    "refs": null,
+    "type": "open-channel2",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1760553702228,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760553705636-sizr0f",
+    "refs": null,
+    "type": "open-channel3",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1760553705639,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760553761190-dje6xn",
+    "refs": null,
+    "type": "list-lightning-funds2",
+    "data": {},
+    "ts": 1760553761191,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760553941204-h1s3t6",
+    "refs": null,
+    "type": "list-lightning-funds2",
+    "data": {},
+    "ts": 1760553941213,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760553969307-kvqjr6",
+    "refs": null,
+    "type": "create-invoice-node3",
+    "data": {
+      "amount": 5000,
+      "label": "inv3-1760553969307",
+      "description": "desTest"
+    },
+    "ts": 1760553969308,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760554004084-hzl4zz",
+    "refs": null,
+    "type": "pay-invoice-node1",
+    "data": {
+      "bolt11": "lnbcrt50n1p5wl6l3sp5x9ka09mst6w4ex6w5y2tm5xsx27cdus4gekkcztw8fers698ewsspp5ffwz8jevkjkz7crc20ffxs8jhhh6s2njz9wh9ey0mvlnfl3m6gdsdqvv3jhx4r9wd6qxqyjw5qcqp2rzjqvnm727jvx4q70zjz28yq7553g3ru7wjfedkx2xwvxupal4hcscagqqgvgqqqpgqqqqqqqqpqqqqqzsqqc9qxpqysgqxrq6kwydy0kt5f46f5hrvagm5n8pzen49088zapx0un0j755537zfrv3lcwhkf8ahg8hg04srrkueujl7cx6lygfxptr0lzqpvfnz8qqxe870d"
+    },
+    "ts": 1760554004085,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760554212733-pzs0yo",
+    "refs": null,
+    "type": "list-pays-node1",
+    "data": {},
+    "ts": 1760554212738,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760554237914-3m8tkh",
+    "refs": null,
+    "type": "list-invoices-node3",
+    "data": {},
+    "ts": 1760554237915,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760554249566-tzjpwj",
+    "refs": null,
+    "type": "list-forwards-node2",
+    "data": {},
+    "ts": 1760554249572,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760554300949-nvyyl5",
+    "refs": null,
+    "type": "get-route-node1-to-node3",
+    "data": {
+      "dest": "02e0da951c04e47a1a388ebcc9ddde8f07c769b4b470a5c8ea3668b2f66a2a6f0d",
+      "msatoshi": 5000
+    },
+    "ts": 1760554300958,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760554308068-40qrlz",
+    "refs": null,
+    "type": "get-route-node1-to-node3",
+    "data": {
+      "dest": "02e0da951c04e47a1a388ebcc9ddde8f07c769b4b470a5c8ea3668b2f66a2a6f0d",
+      "msatoshi": 5000
+    },
+    "ts": 1760554308074,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760555258802-lb2nvy",
+    "refs": null,
+    "type": "list-pays-node1",
+    "data": {},
+    "ts": 1760555258802,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760555265745-mjfyc2",
+    "refs": null,
+    "type": "list-forwards-node2",
+    "data": {},
+    "ts": 1760555265746,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760555271297-4gntj9",
+    "refs": null,
+    "type": "get-route-node1-to-node3",
+    "data": {
+      "dest": "02e0da951c04e47a1a388ebcc9ddde8f07c769b4b470a5c8ea3668b2f66a2a6f0d",
+      "msatoshi": 5000
+    },
+    "ts": 1760555271308,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760555386674-xrz3y0",
+    "refs": null,
+    "type": "get-route-node1-to-node3",
+    "data": {
+      "dest": "7654f8y",
+      "msatoshi": 1000
+    },
+    "ts": 1760555386677,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760555424752-85xe12",
+    "refs": null,
+    "type": "getinfo-lightning",
+    "data": {},
+    "ts": 1760555424753,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760555425704-6iabf3",
+    "refs": null,
+    "type": "getinfo-lightning",
+    "data": {},
+    "ts": 1760555425706,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760555444534-0pnn2l",
+    "refs": null,
+    "type": "getinfo-lightning2",
+    "data": {},
+    "ts": 1760555444540,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760555448107-t9pcwz",
+    "refs": null,
+    "type": "get-route-node1-to-node3",
+    "data": {
+      "dest": "7654f8y",
+      "msatoshi": 1000
+    },
+    "ts": 1760555448109,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760556182857-rfa8l1",
+    "refs": null,
+    "type": "connect-peer",
+    "data": {},
+    "ts": 1760556182858,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760556184902-z1rc39",
+    "refs": null,
+    "type": "connect-node2-node3",
+    "data": {},
+    "ts": 1760556184908,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760556191377-zdmtiy",
+    "refs": null,
+    "type": "open-channel3",
+    "data": {
+      "satoshis": 1000000
+    },
+    "ts": 1760556191381,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760556201915-qsej9u",
+    "refs": null,
+    "type": "create-invoice-node3",
+    "data": {
+      "amount": 5000,
+      "label": "inv3-1760556201915",
+      "description": "node 2 test"
+    },
+    "ts": 1760556201915,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760556215412-v5n90t",
+    "refs": null,
+    "type": "pay-invoice-node2",
+    "data": {
+      "bolt11": "lnbcrt50n1p5wla9fsp5hjye8lu8xk6sjzy5ge4ua44a99hkp4vjnxvua6rlwfj0rq338hpspp505j2gavzczhx5mgr3shw9wg2u4yfdsvvxs8e7twqessnkcvhjdvsdqjdehkgefqxgs8getnwsxqyjw5qcqp2rzjqvnm727jvx4q70zjz28yq7553g3ru7wjfedkx2xwvxupal4hcscagqqgvgqqqpgqqqqqqqqpqqqqqzsqqc9qxpqysgqugq3yvrz6ll5t24ks96erm6u8cdc20cc3mmj8mxrj3l5sv7mwvrhn03t95euyq2xe72an3l3pn36lxr2q5t6xdcpjev36x2ffpkjulgq08cekn"
+    },
+    "ts": 1760556215418,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760556222568-8zjjjk",
+    "refs": null,
+    "type": "list-pays-node2",
+    "data": {},
+    "ts": 1760556222570,
+    "status": "stored"
+  },
+  {
+    "head": "cli-1760556230698-z1ltiz",
+    "refs": null,
+    "type": "list-invoices-node3",
+    "data": {},
+    "ts": 1760556230700,
+    "status": "stored"
   }
 ]

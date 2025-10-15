@@ -796,10 +796,10 @@ const on = {
       if (!satoshis) throw new Error('satoshis amount is required');
 
       // For setup: Node 3 opens a channel with Node 2
-      const node2Info = await wallet.getInfoLightning2();
-      const peerId = node2Info.id; // This should be node 2's ID
+      const node3Info = await wallet.getInfoLightning3();
+      const peerId = node3Info.id; // This should be node 3's ID to send to node 2's channel
 
-      const result = await wallet.openChannel3(peerId, satoshis);
+      const result = await wallet.openChannel2(peerId, satoshis);
       const response = createResponse(m);
       ws.send(JSON.stringify({
         ...response,
@@ -901,8 +901,10 @@ const on = {
 'get-route-node1-to-node3': async (m, ws) => {
   try {
     const { destId, msat } = m.data;
-    if (!destId) throw new Error('destId is required');
-    const result = await wallet.getRouteNode1to3(destId, msat || 1000);
+    const node3Info = await wallet.getInfoLightning3();
+    const peerId = node3Info.id; // This should be node 3's ID 
+    // if (!destId) throw new Error('destId is required');
+    const result = await wallet.getRouteNode1to3(peerId, msat || 1000);
     const response = createResponse(m);
     ws.send(JSON.stringify({
       ...response,
