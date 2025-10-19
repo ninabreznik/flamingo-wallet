@@ -121,6 +121,10 @@ wss.on('connection', (ws) => {
   }));
 });
 
+  ws.send(JSON.stringify({ head: null, refs: null, type: 'welcome', data: { msg: 'connected' } }));
+});
+
+
 function loadStore() {
   try {
     if (fs.existsSync(MESSAGE_STORE)) {
@@ -1046,6 +1050,74 @@ setInterval(async () => {
       wallet.getInfoBitcoin(),
       wallet.getInfoLightning(),
       wallet.getInfoLightning2(),
+
+async function handleMessage(ws, m) {
+  const { type, head, refs, data } = m;
+
+  try {
+    switch (type) {
+      case 'echo':
+        ws.send(JSON.stringify({ head, refs, type: 'echo-response', data }));
+        break;
+
+      case 'getinfo-lightning': {
+        const result = await wallet.getInfoLightning();
+        ws.send(JSON.stringify({ head, refs, type: 'getinfo-lightning-response', data: result }));
+        break;
+      }
+
+      case 'getinfo-bitcoin': {
+        const result = await wallet.getInfoBitcoin();
+        ws.send(JSON.stringify({ head, refs, type: 'getinfo-bitcoin-response', data: result }));
+        break;
+      }
+
+      case 'subscribe': {
+        const ev = data && data.event ? data.event : 'node-status';
+        subscribers[ev] = subscribers[ev] || new Set();
+        subscribers[ev].add(ws);
+        ws.send(JSON.stringify({ head, refs, type: 'subscribe-response', data: { subscribed: ev } }));
+        break;
+      }
+
+      case 'unsubscribe': {
+        const ev = data && data.event ? data.event : 'node-status';
+        if (subscribers[ev]) subscribers[ev].delete(ws);
+        ws.send(JSON.stringify({ head, refs, type: 'unsubscribe-response', data: { unsubscribed: ev } }));
+        break;
+      }
+
+      case 'resume': {
+        const sinceHead = data && data.sinceHead;
+        let toSend;
+        if (sinceHead) {
+          const sinceMsg = persisted.find((p) => p.head === sinceHead);
+          const sinceTs = sinceMsg ? sinceMsg.ts : 0;
+          toSend = persisted.filter((p) => p.ts > sinceTs);
+        } else {
+          toSend = persisted;
+        }
+        toSend.forEach((item) => {
+          ws.send(JSON.stringify({ head: item.head, refs: item.refs, type: 'resume-item', data: item.data || item }));
+        });
+        ws.send(JSON.stringify({ head, refs, type: 'resume-complete', data: { count: toSend.length } }));
+        break;
+      }
+
+      default:
+        ws.send(JSON.stringify({ head, refs, type: 'error', data: { error: 'unknown type: ' + type } }));
+    }
+  } catch (err) {
+    ws.send(JSON.stringify({ head, refs, type: 'error', data: { error: err.message || String(err) } }));
+  }
+}
+
+
+setInterval(async () => {
+  try {
+    const [bInfo, lInfo] = await Promise.all([
+      wallet.getInfoBitcoin(),
+      wallet.getInfoLightning(),
     ]);
     const payload = {
       timestamp: Date.now(),
@@ -1062,6 +1134,8 @@ setInterval(async () => {
           type: 'node-status', 
           data: payload 
         };
+        const head = 'srv-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8);
+        const msg = { head, refs: null, type: 'node-status', data: payload };
         ws.send(JSON.stringify(msg));
         persistMessage(msg);
       }
@@ -1070,6 +1144,7 @@ setInterval(async () => {
     console.error('node-status ticker error', e);
   }
 }, 10000);
+
 
 setInterval(() => {
   wss.clients.forEach((ws) => {

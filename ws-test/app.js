@@ -90,6 +90,7 @@ function sendRaw({ type, data }) {
 }
 
 // ---------------- Bitcoin ----------------
+// helper buttons
 document.getElementById('subscribe-status').addEventListener('click', () => {
   sendRaw({ type: 'subscribe', data: { event: 'node-status' } });
 });
@@ -268,3 +269,14 @@ document.getElementById('get-route-node1-to-node3').addEventListener('click', ()
 document.getElementById('list-forwards-node2').addEventListener('click', () => {
   sendRaw({ type: 'list-forwards-node2', data: {} });
 });
+document.getElementById('getinfo-lightning').addEventListener('click', () => {
+  sendRaw({ type: 'getinfo-lightning', data: {} });
+});
+
+function sendRaw({ type, data }) {
+  if (!ws || ws.readyState !== WebSocket.OPEN) { log('Not connected'); return; }
+  const head = 'cli-' + Date.now() + '-' + Math.random().toString(36).slice(2,8);
+  const msg = { head, refs: null, type, data };
+  ws.send(JSON.stringify(msg));
+  log('SENT', msg);
+}
