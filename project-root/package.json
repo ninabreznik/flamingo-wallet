@@ -1,0 +1,16 @@
+{
+  "name": "trenz-minimal",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "start-backend": "node lib/server.js",
+    "start-cli": "node lib/cli.js",
+    "start-web": "budo lib/web.js:bundle.js --open --live"
+  },
+  "dependencies": {
+    "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "budo": "^11.8.4"
+  }
+}
