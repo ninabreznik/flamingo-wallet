@@ -11,7 +11,7 @@ const WS_PORT = process.env.WS_PORT || 8080;
 const BITCOIN_RPCPORT = process.env.BITCOIN_RPCPORT || 18443;
 const BITCOIN_RPCUSER = process.env.BITCOIN_RPCUSER || 'rpcuser';
 const BITCOIN_RPCPASSWORD = process.env.BITCOIN_RPCPASSWORD || 'rpcpassword';
-const LIGHTNING_DIR = process.env.LIGHTNING_DATADIR || './lightning-node';
+const LIGHTNING_DIR = process.env.LIGHTNING_DIR_4 || './lightning-node';
 
 // small exec helper
 export function runCommand(cmd, opts = {}) {
@@ -25,11 +25,11 @@ export function runCommand(cmd, opts = {}) {
   });
 }
 
-// API handler(s)
+// API handler
 async function lightning_listfunds() {
-  // Use lightning-cli and explicitly set --lightning-dir so it finds the socket/dir
+
   const cmd = `lightning-cli --network=regtest --lightning-dir=${LIGHTNING_DIR} listfunds`;
-  try {
+ try {
     const { stdout } = await runCommand(cmd);
     let parsed = null;
     try {
@@ -37,15 +37,43 @@ async function lightning_listfunds() {
     } catch (err) {
       return { status: 'error', log: stdout, error: 'parse_error:' + err.message };
     }
+
     const outputs = parsed.outputs || [];
-    const satTotal = outputs.reduce((acc, o) => acc + (Number(o.value) || 0), 0);
-    return { status: 'success', log: stdout, data: { raw: parsed, balance_sats: satTotal, balance_btc: (satTotal/1e8) + ' BTC' } };
+
+    const satTotal = outputs.reduce((acc, o) => {
+      if (o.amount_msat !== undefined && o.amount_msat !== null) {
+        
+        const raw = String(o.amount_msat);
+        const num = raw.endsWith('msat') ? Number(raw.replace(/msat$/, '')) : Number(raw);
+        if (!Number.isNaN(num)) return acc + Math.floor(num / 1000);
+      }
+      if (o.amount !== undefined && o.amount !== null) {
+        const n = Number(o.amount);
+        if (!Number.isNaN(n)) return acc + Math.floor(n);
+      }
+
+      if (o.value !== undefined && o.value !== null) {
+        const n = Number(o.value);
+        if (!Number.isNaN(n)) return acc + Math.floor(n);
+      }
+
+      return acc;
+    }, 0);
+
+    return {
+      status: 'success',
+      log: stdout,
+      data: {
+        raw: parsed,
+        balance_sats: satTotal,
+        balance_btc: (satTotal / 1e8) + ' BTC'
+      }
+    };
   } catch (err) {
     return { status: 'error', log: err.message || String(err) };
   }
 }
 
-// central router
 async function handleMessage(msg) {
   if (!msg || !msg.head || !msg.type) {
     throw new Error('invalid-message: missing head/type');
