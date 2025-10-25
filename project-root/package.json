@@ -1,11 +1,14 @@
 {
   "name": "flamingo-wallet-minimal",
   "version": "0.1.0",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
+    "start": "budo lib/web.js --live --open",
     "start-backend": "node lib/server.js",
     "start-cli": "node lib/cli.js",
-    "start-web": "node lib/web.js"
+    "start-env": "node scripts/startAll.js",
+    "stop-env": "node scripts/stopAll.js",
+    "lint": "standardx --fix"
   },
   "dependencies": {
     "dotenv": "^17.2.3",
@@ -15,5 +18,13 @@
   "devDependencies": {
     "budo": "^11.8.4",
     "http-server": "^14.1.1"
+  },
+  "standardx": {
+    "env": ["node"],
+    "ignore": ["node_modules", "dist"],
+    "globals": [],
+    "rules": {
+      "camelcase": "off"
+    }
   }
 }
