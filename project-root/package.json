@@ -8,7 +8,7 @@
     "start-cli": "node lib/cli.js",
     "start-env": "node scripts/startAll.js",
     "stop-env": "node scripts/stopAll.js",
-    "lint": "standardx --fix"
+    "lint": "standardx --fix --eslint"
   },
   "dependencies": {
     "dotenv": "^17.2.3",
@@ -17,14 +17,20 @@
   },
   "devDependencies": {
     "budo": "^11.8.4",
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "standardx": "^8.0.0"
   },
-  "standardx": {
-    "env": ["node"],
-    "ignore": ["node_modules", "dist"],
-    "globals": [],
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "browser": true,
+      "es2021": true
+    },
+    "extends": ["standard"],
     "rules": {
-      "camelcase": "off"
-    }
+      "camelcase": "off",
+      "no-unused-vars": ["off"]
+    },
+    "ignorePatterns": ["node_modules", "dist", "scripts"]
   }
 }

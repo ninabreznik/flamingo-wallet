@@ -1,5 +1,5 @@
 // lib/web.js
-const wsUrl = 'ws://localhost:8080';
+const wsUrl = 'ws://localhost:8080'
 
 document.body.innerHTML = `
   <style>
@@ -16,41 +16,41 @@ document.body.innerHTML = `
   <section id="outputs"></section>
   <h3>Raw Response</h3>
   <pre id="raw"></pre>
-`;
+`
 
-const name = 'frontend';
-const to = 'backend';
-let mid = 0;
-const wait = {};
-let ws;
+const name = 'frontend'
+const to = 'backend'
+let mid = 0
+const wait = {}
+let ws
 
-function connect() {
-  ws = new WebSocket(wsUrl);
+function connect () {
+  ws = new WebSocket(wsUrl)
 
-  const statusEl = document.getElementById('status');
-  const balanceEl = document.getElementById('balance');
-  const outputsEl = document.getElementById('outputs');
-  const rawEl = document.getElementById('raw');
+  const statusEl = document.getElementById('status')
+  const balanceEl = document.getElementById('balance')
+  const outputsEl = document.getElementById('outputs')
+  const rawEl = document.getElementById('raw')
 
   ws.onopen = () => {
-    statusEl.textContent = `✅ Connected to ${wsUrl}`;
-    statusEl.style.color = 'green';
+    statusEl.textContent = `✅ Connected to ${wsUrl}`
+    statusEl.style.color = 'green'
 
     send('lightning-listfunds', {}, (m) => {
-      const data = m.data?.data;
+      const data = m.data?.data
       if (!data) {
-        rawEl.textContent = 'No data received';
-        return;
+        rawEl.textContent = 'No data received'
+        return
       }
 
       balanceEl.innerHTML = `
         <div><strong>Balance (BTC):</strong> ${data.balance_btc}</div>
         <div><strong>Balance (sats):</strong> ${data.balance_sats.toLocaleString()}</div>
-      `;
+      `
 
-      const outputs = data.raw?.outputs || [];
+      const outputs = data.raw?.outputs || []
       if (outputs.length === 0) {
-        outputsEl.innerHTML = '<i>No on-chain outputs found.</i>';
+        outputsEl.innerHTML = '<i>No on-chain outputs found.</i>'
       } else {
         const rows = outputs
           .map((o, i) => `
@@ -62,7 +62,7 @@ function connect() {
               <td>${o.blockheight || '-'}</td>
             </tr>`
           )
-          .join('');
+          .join('')
         outputsEl.innerHTML = `
           <table>
             <thead>
@@ -70,42 +70,42 @@ function connect() {
             </thead>
             <tbody>${rows}</tbody>
           </table>
-        `;
+        `
       }
 
-      rawEl.textContent = JSON.stringify(m, null, 2);
-    });
-  };
+      rawEl.textContent = JSON.stringify(m, null, 2)
+    })
+  }
 
   ws.onclose = () => {
-    statusEl.textContent = '❌ Disconnected — retrying...';
-    statusEl.style.color = 'red';
-    setTimeout(connect, 2000);
-  };
+    statusEl.textContent = '❌ Disconnected — retrying...'
+    statusEl.style.color = 'red'
+    setTimeout(connect, 2000)
+  }
 
   ws.onerror = (err) => {
-    console.error('WebSocket error', err);
-    statusEl.textContent = '⚠️ WebSocket Error — see console';
-    statusEl.style.color = 'orange';
-  };
+    console.error('WebSocket error', err)
+    statusEl.textContent = '⚠️ WebSocket Error — see console'
+    statusEl.style.color = 'orange'
+  }
 
   ws.onmessage = (ev) => {
-    const m = JSON.parse(ev.data);
-    const causeKey = m.refs?.cause?.join(',');
+    const m = JSON.parse(ev.data)
+    const causeKey = m.refs?.cause?.join(',')
     if (causeKey && wait[causeKey]) {
-      const h = wait[causeKey];
-      delete wait[causeKey];
-      return h(m);
+      const h = wait[causeKey]
+      delete wait[causeKey]
+      return h(m)
     }
-    console.log('unsolicited', m);
-  };
+    console.log('unsolicited', m)
+  }
 }
 
-function send(type, data, handler) {
-  const head = [name, to, mid++];
-  const msg = { head, type, data };
-  wait[head.join(',')] = handler;
-  ws.send(JSON.stringify(msg));
+function send (type, data, handler) {
+  const head = [name, to, mid++]
+  const msg = { head, type, data }
+  wait[head.join(',')] = handler
+  ws.send(JSON.stringify(msg))
 }
 
-connect();
+connect()
