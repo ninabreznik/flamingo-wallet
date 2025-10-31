@@ -11,8 +11,11 @@ const BITCOIN_RPCPORT = process.env.BITCOIN_RPCPORT || 18443
 const BITCOIN_RPCUSER = process.env.BITCOIN_RPCUSER || 'rpcuser'
 const BITCOIN_RPCPASSWORD = process.env.BITCOIN_RPCPASSWORD || 'rpcpassword'
 const LIGHTNING_DIR = process.env.LIGHTNING_DIR_4 || './lightning-node'
+const NETWORK = process.env.BITCOIN_NETWORK || 'regtest'
 
-// helper
+// -----------------------------------------------------------------------------
+// 🧰 Helpers
+// -----------------------------------------------------------------------------
 function runCommand (cmd, opts = {}) {
   return new Promise((resolve, reject) => {
     exec(cmd, { maxBuffer: 10 * 1024 * 1024, ...opts }, (err, stdout, stderr) => {
@@ -22,9 +25,27 @@ function runCommand (cmd, opts = {}) {
   })
 }
 
-// listfunds handler
+function btcRpc (method, params = []) {
+  const cmd = `bitcoin-cli -regtest -rpcuser=${BITCOIN_RPCUSER} -rpcpassword=${BITCOIN_RPCPASSWORD} -rpcport=${BITCOIN_RPCPORT} ${method} ${params.join(' ')}`
+  return runCommand(cmd)
+}
+
+// -----------------------------------------------------------------------------
+// ⚡ Lightning functions
+// -----------------------------------------------------------------------------
+async function lightning_getinfo () {
+  const cmd = `lightning-cli --network=${NETWORK} --lightning-dir=${LIGHTNING_DIR} getinfo`
+  try {
+    const { stdout } = await runCommand(cmd)
+    const parsed = JSON.parse(stdout)
+    return { status: 'success', data: parsed }
+  } catch (err) {
+    return { status: 'error', error: err.message }
+  }
+}
+
 async function lightning_listfunds () {
-  const cmd = `lightning-cli --network=regtest --lightning-dir=${LIGHTNING_DIR} listfunds`
+  const cmd = `lightning-cli --network=${NETWORK} --lightning-dir=${LIGHTNING_DIR} listfunds`
   try {
     const { stdout } = await runCommand(cmd)
     const parsed = JSON.parse(stdout)
@@ -38,7 +59,6 @@ async function lightning_listfunds () {
 
     return {
       status: 'success',
-      log: stdout,
       data: {
         raw: parsed,
         balance_sats: satTotal,
@@ -46,55 +66,123 @@ async function lightning_listfunds () {
       }
     }
   } catch (err) {
-    return { status: 'error', log: err.message }
+    return { status: 'error', error: err.message }
   }
 }
 
+async function lightning_createinvoice (amount, label, desc = '') {
+  const cmd = `lightning-cli --network=${NETWORK} --lightning-dir=${LIGHTNING_DIR} invoice ${amount} ${label} "${desc}"`
+  try {
+    const { stdout } = await runCommand(cmd)
+    return { status: 'success', data: JSON.parse(stdout) }
+  } catch (err) {
+    return { status: 'error', error: err.message }
+  }
+}
+
+async function lightning_payinvoice (bolt11) {
+  const cmd = `lightning-cli --network=${NETWORK} --lightning-dir=${LIGHTNING_DIR} pay ${bolt11}`
+  try {
+    const { stdout } = await runCommand(cmd)
+    return { status: 'success', data: JSON.parse(stdout) }
+  } catch (err) {
+    return { status: 'error', error: err.message }
+  }
+}
+
+async function lightning_listinvoices () {
+  const cmd = `lightning-cli --network=${NETWORK} --lightning-dir=${LIGHTNING_DIR} listinvoices`
+  try {
+    const { stdout } = await runCommand(cmd)
+    return { status: 'success', data: JSON.parse(stdout) }
+  } catch (err) {
+    return { status: 'error', error: err.message }
+  }
+}
+
+async function lightning_listpayments () {
+  const cmd = `lightning-cli --network=${NETWORK} --lightning-dir=${LIGHTNING_DIR} listpays`
+  try {
+    const { stdout } = await runCommand(cmd)
+    return { status: 'success', data: JSON.parse(stdout) }
+  } catch (err) {
+    return { status: 'error', error: err.message }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// ₿ Bitcoin functions
+// -----------------------------------------------------------------------------
+async function bitcoin_newaddress () {
+  try {
+    const { stdout } = await btcRpc('getnewaddress')
+    return { status: 'success', data: stdout.trim() }
+  } catch (err) {
+    return { status: 'error', error: err.message }
+  }
+}
+
+async function bitcoin_getbalance () {
+  try {
+    const { stdout } = await btcRpc('getbalance')
+    return { status: 'success', data: parseFloat(stdout.trim()) }
+  } catch (err) {
+    return { status: 'error', error: err.message }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// 🔄 WebSocket handler
+// -----------------------------------------------------------------------------
 async function handleMessage (msg, ws, server) {
   const [by, to, mid] = msg.head || []
   const intent = msg.type
 
-  // 🛑 handle daemon stop
+  // stop daemon
   if (intent === 'daemon-stop') {
     console.log('🛑 Received stop signal from CLI — shutting down...')
     ws.send(JSON.stringify({
       head: ['backend', by, mid],
-      refs: { cause: msg.head },
       type: 'daemon-stop:response',
       data: { status: 'ok' }
     }))
-
-    setTimeout(() => {
-      server.close(() => {
-        console.log('✅ Backend daemon stopped.')
-        process.exit(0)
-      })
-    }, 300)
+    setTimeout(() => server.close(() => process.exit(0)), 300)
     return
   }
 
-  // ⚡ handle listfunds
-  if (intent === 'lightning-listfunds') {
-    const payload = await lightning_listfunds()
+  // map of actions
+  const actions = {
+    'lightning-getinfo': lightning_getinfo,
+    'lightning-listfunds': lightning_listfunds,
+    'lightning-createinvoice': async () => lightning_createinvoice(msg.data.amount, msg.data.label, msg.data.desc),
+    'lightning-payinvoice': async () => lightning_payinvoice(msg.data.bolt11),
+    'lightning-listinvoices': lightning_listinvoices,
+    'lightning-listpayments': lightning_listpayments,
+    'bitcoin-newaddress': bitcoin_newaddress,
+    'bitcoin-getbalance': bitcoin_getbalance
+  }
+
+  const fn = actions[intent]
+  if (!fn) {
     ws.send(JSON.stringify({
       head: ['backend', by, mid],
-      refs: { cause: msg.head },
-      type: 'lightning-listfunds:response',
-      data: payload
+      type: `${intent}:response`,
+      data: { status: 'error', error: `unknown_type: ${intent}` }
     }))
     return
   }
 
-  // unknown type
+  const payload = await fn()
   ws.send(JSON.stringify({
     head: ['backend', by, mid],
-    refs: { cause: msg.head },
     type: `${intent}:response`,
-    data: { status: 'error', error: `unknown_type: ${intent}` }
+    data: payload
   }))
 }
 
-// WebSocket server setup
+// -----------------------------------------------------------------------------
+// 🚀 WebSocket server setup
+// -----------------------------------------------------------------------------
 const wss = new WebSocketServer({ port: Number(WS_PORT) })
 console.log(`🚀 Backend daemon listening on ws://localhost:${WS_PORT}`)
 

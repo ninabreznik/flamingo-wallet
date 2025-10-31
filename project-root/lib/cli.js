@@ -8,8 +8,10 @@ const name = 'cli'
 const to = 'backend'
 let mid = 0
 const wait = new Map()
-
 const cmd = process.argv[2] || 'run'
+const arg1 = process.argv[3]
+const arg2 = process.argv[4]
+const arg3 = process.argv[5]
 
 // --- Check if daemon is running ---
 function isPortInUse (port) {
@@ -42,7 +44,7 @@ function send (ws, type, data, handler) {
   ws.send(JSON.stringify(msg))
 }
 
-// --- Main command flow ---
+// --- Command dispatcher ---
 async function run () {
   const running = await isPortInUse(8080)
 
@@ -66,7 +68,6 @@ async function run () {
     })
     setTimeout(() => {
       console.log('⏱️ Timeout: backend stopped.')
-      ws.terminate?.()
       process.exit(0)
     }, 3000)
     return
@@ -78,9 +79,30 @@ async function run () {
   // give daemon a second to start up
   setTimeout(() => {
     const ws = new WebSocket(url)
+
     ws.on('open', () => {
       console.log('connected to backend at', url)
-      send(ws, 'lightning-listfunds', {}, (m) => {
+
+      const actions = {
+        'funds': { type: 'lightning-listfunds', data: {} },
+        'getinfo': { type: 'lightning-getinfo', data: {} },
+        'createinvoice': { type: 'lightning-createinvoice', data: { amount: arg1, label: arg2 || 'test', desc: arg3 || '' } },
+        'payinvoice': { type: 'lightning-payinvoice', data: { bolt11: arg1 } },
+        'listinvoices': { type: 'lightning-listinvoices', data: {} },
+        'listpayments': { type: 'lightning-listpayments', data: {} },
+        'newaddress': { type: 'bitcoin-newaddress', data: {} },
+        'walletbalance': { type: 'bitcoin-getbalance', data: {} },
+        'run': { type: 'lightning-listfunds', data: {} }
+      }
+
+      const action = actions[cmd]
+      if (!action) {
+        console.log(`❌ Unknown command: ${cmd}`)
+        ws.close()
+        process.exit(1)
+      }
+
+      send(ws, action.type, action.data, (m) => {
         console.log('--- response received ---')
         console.log(JSON.stringify(m, null, 2))
         ws.close()

@@ -3,11 +3,10 @@
   "version": "0.1.0",
   "type": "commonjs",
   "scripts": {
-    "start": "budo lib/web.js --live --open",
-    "start-backend": "node lib/server.js",
-    "start-cli": "node lib/cli.js",
-    "start-env": "node scripts/startAll.js",
-    "stop-env": "node scripts/stopAll.js",
+    "start": "budo lib/web.js --live --open",     
+    "node": "node lib/cli.js",                   
+    "env:start": "node scripts/startAll.js",      
+    "env:stop": "node scripts/stopAll.js",       
     "lint": "standardx --fix --eslint"
   },
   "dependencies": {
@@ -17,7 +16,6 @@
   },
   "devDependencies": {
     "budo": "^11.8.4",
-    "http-server": "^14.1.1",
     "standardx": "^8.0.0"
   },
   "eslintConfig": {
@@ -29,7 +27,7 @@
     "extends": ["standard"],
     "rules": {
       "camelcase": "off",
-      "no-unused-vars": ["off"]
+      "no-unused-vars": "off"
     },
     "ignorePatterns": ["node_modules", "dist", "scripts"]
   }
