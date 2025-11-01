@@ -70,45 +70,6 @@ async function lightning_listfunds () {
   }
 }
 
-async function lightning_createinvoice (amount, label, desc = '') {
-  const cmd = `lightning-cli --network=${NETWORK} --lightning-dir=${LIGHTNING_DIR} invoice ${amount} ${label} "${desc}"`
-  try {
-    const { stdout } = await runCommand(cmd)
-    return { status: 'success', data: JSON.parse(stdout) }
-  } catch (err) {
-    return { status: 'error', error: err.message }
-  }
-}
-
-async function lightning_payinvoice (bolt11) {
-  const cmd = `lightning-cli --network=${NETWORK} --lightning-dir=${LIGHTNING_DIR} pay ${bolt11}`
-  try {
-    const { stdout } = await runCommand(cmd)
-    return { status: 'success', data: JSON.parse(stdout) }
-  } catch (err) {
-    return { status: 'error', error: err.message }
-  }
-}
-
-async function lightning_listinvoices () {
-  const cmd = `lightning-cli --network=${NETWORK} --lightning-dir=${LIGHTNING_DIR} listinvoices`
-  try {
-    const { stdout } = await runCommand(cmd)
-    return { status: 'success', data: JSON.parse(stdout) }
-  } catch (err) {
-    return { status: 'error', error: err.message }
-  }
-}
-
-async function lightning_listpayments () {
-  const cmd = `lightning-cli --network=${NETWORK} --lightning-dir=${LIGHTNING_DIR} listpays`
-  try {
-    const { stdout } = await runCommand(cmd)
-    return { status: 'success', data: JSON.parse(stdout) }
-  } catch (err) {
-    return { status: 'error', error: err.message }
-  }
-}
 
 // -----------------------------------------------------------------------------
 // ₿ Bitcoin functions
@@ -138,6 +99,8 @@ async function handleMessage (msg, ws, server) {
   const [by, to, mid] = msg.head || []
   const intent = msg.type
 
+  console.log('📩 Received from CLI:', intent)
+
   // stop daemon
   if (intent === 'daemon-stop') {
     console.log('🛑 Received stop signal from CLI — shutting down...')
@@ -154,10 +117,6 @@ async function handleMessage (msg, ws, server) {
   const actions = {
     'lightning-getinfo': lightning_getinfo,
     'lightning-listfunds': lightning_listfunds,
-    'lightning-createinvoice': async () => lightning_createinvoice(msg.data.amount, msg.data.label, msg.data.desc),
-    'lightning-payinvoice': async () => lightning_payinvoice(msg.data.bolt11),
-    'lightning-listinvoices': lightning_listinvoices,
-    'lightning-listpayments': lightning_listpayments,
     'bitcoin-newaddress': bitcoin_newaddress,
     'bitcoin-getbalance': bitcoin_getbalance
   }

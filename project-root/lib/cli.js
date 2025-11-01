@@ -40,7 +40,8 @@ function startDaemon () {
 function send (ws, type, data, handler) {
   const head = [name, to, mid++]
   const msg = { head, type, data }
-  wait.set(head.join(','), handler)
+  const key = `backend,${name},${head[2]}` // expected reply head from backend
+  wait.set(key, handler)
   ws.send(JSON.stringify(msg))
 }
 
@@ -64,6 +65,7 @@ async function run () {
       send(ws, 'daemon-stop', {}, (m) => {
         console.log('✅ Backend confirmed stop:', m.data.status)
         ws.close()
+        process.exit(0)
       })
     })
     setTimeout(() => {
@@ -76,7 +78,6 @@ async function run () {
   // Default behavior: connect to backend or start if missing
   if (!running) startDaemon()
 
-  // give daemon a second to start up
   setTimeout(() => {
     const ws = new WebSocket(url)
 
@@ -84,15 +85,11 @@ async function run () {
       console.log('connected to backend at', url)
 
       const actions = {
-        'funds': { type: 'lightning-listfunds', data: {} },
-        'getinfo': { type: 'lightning-getinfo', data: {} },
-        'createinvoice': { type: 'lightning-createinvoice', data: { amount: arg1, label: arg2 || 'test', desc: arg3 || '' } },
-        'payinvoice': { type: 'lightning-payinvoice', data: { bolt11: arg1 } },
-        'listinvoices': { type: 'lightning-listinvoices', data: {} },
-        'listpayments': { type: 'lightning-listpayments', data: {} },
-        'newaddress': { type: 'bitcoin-newaddress', data: {} },
-        'walletbalance': { type: 'bitcoin-getbalance', data: {} },
-        'run': { type: 'lightning-listfunds', data: {} }
+        funds: { type: 'lightning-listfunds', data: {} },
+        getinfo: { type: 'lightning-getinfo', data: {} },
+        newaddress: { type: 'bitcoin-newaddress', data: {} },
+        walletbalance: { type: 'bitcoin-getbalance', data: {} },
+        run: { type: 'lightning-listfunds', data: {} }
       }
 
       const action = actions[cmd]
@@ -106,19 +103,21 @@ async function run () {
         console.log('--- response received ---')
         console.log(JSON.stringify(m, null, 2))
         ws.close()
+        process.exit(0)
       })
     })
 
     ws.on('message', (raw) => {
       const m = JSON.parse(raw.toString())
-      const cause = m.refs?.cause
-      const key = cause ? cause.join(',') : null
+      const key = m.head ? m.head.join(',') : null
       if (key && wait.has(key)) {
-        const h = wait.get(key)
+        const handler = wait.get(key)
         wait.delete(key)
-        return h(m)
+        handler(m)
       }
     })
+
+    ws.on('close', () => process.exit(0))
   }, running ? 0 : 1000)
 }
 

@@ -190,9 +190,8 @@ log('Waiting for bitcoind RPC...')
   }
 
   log('')
-  log("Run 'npm run start-backend' to start backend.")
-  log("Run 'npm run start-cli' to interact with nodes.")
+  log("Run 'npm run node' to start backend and interact with nodes.")
   log('')
-  log("To stop all services, run 'npm run stop-env'.")
+  log("To stop all services, run 'npm run env:stop'.")
   log('')
 })()

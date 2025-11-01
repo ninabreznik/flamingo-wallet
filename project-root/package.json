@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "type": "commonjs",
   "scripts": {
-    "start": "budo lib/web.js --live --open",     
-    "node": "node lib/cli.js",                   
+    "start": "budo lib/web.js --live --open",  
+    "node": "node lib/cli.js",                    
     "env:start": "node scripts/startAll.js",      
-    "env:stop": "node scripts/stopAll.js",       
+    "env:stop": "node scripts/stopAll.js",        
     "lint": "standardx --fix --eslint"
   },
   "dependencies": {
