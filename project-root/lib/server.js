@@ -2,7 +2,13 @@
 const { exec } = require('child_process')
 const { WebSocketServer } = require('ws')
 const path = require('path')
-const dotenv = require('dotenv')
+try {
+  process.env = require('./env.json')
+} catch {
+  process.env = { PORT: '8080' } // fallback defaults
+}
+console.log('env:', process.env)
+
 
 dotenv.config({ path: path.resolve(process.cwd(), '.env') })
 

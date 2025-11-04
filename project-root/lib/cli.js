@@ -1,124 +1,128 @@
+#!/usr/bin/env node
+
 // lib/cli.js
-const { spawn } = require('child_process')
+
+const bitcoind = require('./cli/bitcoind')
+const lightningd = require('./cli/lightningd')
+const websocketd = require('./cli/websocketd')
+const { execSync } = require('child_process')
 const WebSocket = require('ws')
 const net = require('net')
+const path = require('path')
 
 const url = 'ws://localhost:8080'
 const name = 'cli'
 const to = 'backend'
 let mid = 0
 const wait = new Map()
-const cmd = process.argv[2] || 'run'
+
+const cmd = process.argv[2]
 const arg1 = process.argv[3]
 const arg2 = process.argv[4]
 const arg3 = process.argv[5]
 
-// --- Check if daemon is running ---
-function isPortInUse (port) {
-  return new Promise((resolve) => {
+// --- helpers ---
+function isPortInUse(port) {
+  return new Promise(resolve => {
     const socket = net.createConnection(port, '127.0.0.1')
-    socket.once('connect', () => {
-      socket.end()
-      resolve(true)
-    })
+    socket.once('connect', () => { socket.end(); resolve(true) })
     socket.once('error', () => resolve(false))
   })
 }
 
-// --- Spawn backend as daemon ---
-function startDaemon () {
-  console.log('🚀 Starting backend daemon...')
-  const subprocess = spawn('node', ['lib/server.js'], {
-    detached: true,
-    stdio: 'ignore'
-  })
-  subprocess.unref()
-  console.log('✅ Backend daemon started in background (pid:', subprocess.pid, ')')
-}
-
-// --- Send message over websocket ---
-function send (ws, type, data, handler) {
+function send(ws, type, data, handler) {
   const head = [name, to, mid++]
   const msg = { head, type, data }
-  const key = `backend,${name},${head[2]}` // expected reply head from backend
+  const key = `backend,${name},${head[2]}`
   wait.set(key, handler)
   ws.send(JSON.stringify(msg))
 }
 
-// --- Command dispatcher ---
-async function run () {
-  const running = await isPortInUse(8080)
+// --- main logic ---
+async function main() {
+  switch (cmd) {
+    case 'start':
+      console.log('=== Starting all services ===')
+      await bitcoind.start()
+      await lightningd.start()
+      websocketd.start()
+      console.log('✅ All services started.')
+      break
 
-  if (cmd === 'status') {
-    console.log(running ? '✅ Backend is running' : '❌ Backend not running')
-    process.exit(0)
-  }
+    case 'stop':
+      console.log('=== Stopping all services ===')
+      await lightningd.stop()
+      await bitcoind.stop()
+      websocketd.stop()
+      console.log('✅ All services stopped.')
+      break
 
-  if (cmd === 'stop') {
-    if (!running) {
-      console.log('⚠️ Backend is not running.')
-      process.exit(0)
-    }
-    console.log('🛑 Sending stop signal to backend...')
-    const ws = new WebSocket(url)
-    ws.on('open', () => {
-      send(ws, 'daemon-stop', {}, (m) => {
-        console.log('✅ Backend confirmed stop:', m.data.status)
-        ws.close()
+    case 'status':
+      console.log('=== Checking process status ===')
+      try {
+        const btc = execSync('pgrep -x bitcoind || true').toString().trim()
+        const lnd = execSync('pgrep -x lightningd || true').toString().trim()
+        const ws = execSync('pgrep -f lib/server.js || true').toString().trim()
+
+        console.log(`bitcoind: ${btc ? '🟢 running' : '🔴 stopped'}`)
+        console.log(`lightningd: ${lnd ? '🟢 running' : '🔴 stopped'}`)
+        console.log(`websocketd: ${ws ? '🟢 running' : '🔴 stopped'}`)
+      } catch (e) {
+        console.error('Error checking status:', e.message)
+      }
+      break
+
+    default: {
+      if (!cmd) {
+        console.log('Usage:')
+        console.log('  npm run cli start   # starts bitcoind, lightningd, backend')
+        console.log('  npm run cli stop    # stops everything')
+        console.log('  npm run cli status  # shows status of all daemons')
+        console.log('  npm run cli <funds|getinfo|newaddress|walletbalance>')
         process.exit(0)
-      })
-    })
-    setTimeout(() => {
-      console.log('⏱️ Timeout: backend stopped.')
-      process.exit(0)
-    }, 3000)
-    return
-  }
-
-  // Default behavior: connect to backend or start if missing
-  if (!running) startDaemon()
-
-  setTimeout(() => {
-    const ws = new WebSocket(url)
-
-    ws.on('open', () => {
-      console.log('connected to backend at', url)
-
-      const actions = {
-        funds: { type: 'lightning-listfunds', data: {} },
-        getinfo: { type: 'lightning-getinfo', data: {} },
-        newaddress: { type: 'bitcoin-newaddress', data: {} },
-        walletbalance: { type: 'bitcoin-getbalance', data: {} },
-        run: { type: 'lightning-listfunds', data: {} }
       }
 
-      const action = actions[cmd]
-      if (!action) {
-        console.log(`❌ Unknown command: ${cmd}`)
-        ws.close()
+      const running = await isPortInUse(8080)
+      if (!running) {
+        console.log('⚠️ Backend not running. Start it with "npm run cli start" first.')
         process.exit(1)
       }
 
-      send(ws, action.type, action.data, (m) => {
-        console.log('--- response received ---')
-        console.log(JSON.stringify(m, null, 2))
-        ws.close()
-        process.exit(0)
+      const ws = new WebSocket(url)
+      ws.on('open', () => {
+        const actions = {
+          funds: { type: 'lightning-listfunds', data: {} },
+          getinfo: { type: 'lightning-getinfo', data: {} },
+          newaddress: { type: 'bitcoin-newaddress', data: {} },
+          walletbalance: { type: 'bitcoin-getbalance', data: {} }
+        }
+
+        const action = actions[cmd]
+        if (!action) {
+          console.log(`❌ Unknown command: ${cmd}`)
+          ws.close()
+          process.exit(1)
+        }
+
+        send(ws, action.type, action.data, (m) => {
+          console.log('--- response received ---')
+          console.log(JSON.stringify(m, null, 2))
+          ws.close()
+          process.exit(0)
+        })
       })
-    })
 
-    ws.on('message', (raw) => {
-      const m = JSON.parse(raw.toString())
-      const key = m.head ? m.head.join(',') : null
-      if (key && wait.has(key)) {
-        const handler = wait.get(key)
-        wait.delete(key)
-        handler(m)
-      }
-    })
-
-    ws.on('close', () => process.exit(0))
-  }, running ? 0 : 1000)
+      ws.on('message', (raw) => {
+        const m = JSON.parse(raw.toString())
+        const key = m.head ? m.head.join(',') : null
+        if (key && wait.has(key)) {
+          const handler = wait.get(key)
+          wait.delete(key)
+          handler(m)
+        }
+      })
+    }
+  }
 }
 
-run()
+main()

@@ -4,7 +4,13 @@
  */
 
 const { execSync } = require('child_process')
-require('dotenv').config()
+try {
+  process.env = require('./env.json')
+} catch {
+  process.env = { PORT: '8080' } // fallback defaults
+}
+console.log('env:', process.env)
+
 
 function log (msg) {
   console.log(msg)

@@ -3,7 +3,13 @@
 const { execSync, spawnSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-require('dotenv').config()
+try {
+  process.env = require('./env.json')
+} catch {
+  process.env = { PORT: '8080' } // fallback defaults
+}
+console.log('env:', process.env)
+
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 const log = (msg) => console.log(msg)

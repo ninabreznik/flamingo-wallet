@@ -3,18 +3,19 @@
   "version": "0.1.0",
   "type": "commonjs",
   "scripts": {
-    "start": "budo lib/web.js --live --open",  
-    "node": "node lib/cli.js",                    
-    "env:start": "node scripts/startAll.js",      
-    "env:stop": "node scripts/stopAll.js",        
-    "lint": "standardx --fix --eslint"
-  },
-  "dependencies": {
-    "dotenv": "^17.2.3",
-    "open": "^10.2.0",
+  "start": "budo lib/web.js:bundle.js --live --open",
+  "build": "browserify lib/web.js > bundle.js",
+  "cli": "node lib/cli.js",
+  "lint": "standardx --fix --eslint"
+},
+"bin": {
+  "fw": "node lib/cli.js"
+},
+ "dependencies": {
     "ws": "^8.16.0"
   },
   "devDependencies": {
+    "browserify": "^17.0.0",
     "budo": "^11.8.4",
     "standardx": "^8.0.0"
   },
