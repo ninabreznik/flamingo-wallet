@@ -1,7 +1,7 @@
 // lib/web.js
 const wsUrl = 'ws://localhost:8080'
 
-// --- UI layout ---
+
 document.body.innerHTML = `
   <style>
     body {
@@ -20,6 +20,7 @@ document.body.innerHTML = `
     table { border-collapse: collapse; width: 100%; margin-top: 10px; }
     th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
     #status { margin-bottom: 12px; font-weight: 500; }
+    .node-selector { margin: 10px 0 0 6px; } /* Style for new node selector */
   </style>
 
   <h1>⚡ Flamingo Wallet Dashboard</h1>
@@ -27,12 +28,26 @@ document.body.innerHTML = `
 
   <section id="node-info">
     <h2>Node Info</h2>
+    
+    <div class="node-selector" id="getinfo-selector">
+      <label><input type="radio" name="node-getinfo" value="node4" checked> Node 4</label>
+      <label><input type="radio" name="node-getinfo" value="node5"> Node 5</label>
+      <label><input type="radio" name="node-getinfo" value="node6"> Node 6</label>
+    </div>
+    
     <button id="btn-getinfo">Refresh Info</button>
     <div id="info-content"><i>No data yet</i></div>
   </section>
 
   <section id="wallet-balance">
     <h2>Wallet Balance</h2>
+
+    <div class="node-selector" id="listfunds-selector">
+      <label><input type="radio" name="node-listfunds" value="node4" checked> Node 4</label>
+      <label><input type="radio" name="node-listfunds" value="node5"> Node 5</label>
+      <label><input type="radio" name="node-listfunds" value="node6"> Node 6</label>
+    </div>
+
     <button id="btn-listfunds">Refresh Balance</button>
     <div id="balance-content"><i>No data yet</i></div>
   </section>
@@ -101,13 +116,14 @@ function send (type, data, handler) {
   ws.send(JSON.stringify(msg))
 }
 
-// --- UI Button Handlers ---
+
 function setupButtons () {
   const rawEl = document.getElementById('raw')
 
-  // lightning-getinfo
   document.getElementById('btn-getinfo').onclick = () => {
-    send('lightning-getinfo', {}, (m) => {
+  
+    const nodeId = document.querySelector('input[name="node-getinfo"]:checked').value
+    send('lightning-getinfo', { nodeId }, (m) => {
       const d = m.data?.data || {}
       document.getElementById('info-content').innerHTML = `
         <div><b>Alias:</b> ${d.alias || '-'}</div>
@@ -119,9 +135,12 @@ function setupButtons () {
     })
   }
 
-  // lightning-listfunds
+
   document.getElementById('btn-listfunds').onclick = () => {
-    send('lightning-listfunds', {}, (m) => {
+  
+    const nodeId = document.querySelector('input[name="node-listfunds"]:checked').value
+   
+    send('lightning-listfunds', { nodeId }, (m) => {
       const d = m.data?.data
       document.getElementById('balance-content').innerHTML = `
         <div><b>Balance:</b> ${d?.balance_btc || '0 BTC'}</div>
@@ -131,7 +150,6 @@ function setupButtons () {
     })
   }
 
-  // bitcoin-newaddress
   document.getElementById('btn-newaddress').onclick = () => {
     send('bitcoin-newaddress', {}, (m) => {
       const addr = m.data?.data || '(not returned)'
@@ -140,7 +158,6 @@ function setupButtons () {
     })
   }
 
-  // bitcoin-getbalance
   document.getElementById('btn-getbalance').onclick = () => {
     send('bitcoin-getbalance', {}, (m) => {
       const bal = m.data?.data

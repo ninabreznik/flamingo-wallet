@@ -2,9 +2,9 @@
 
 // lib/cli.js
 
-const bitcoind = require('./cli/bitcoind')
-const lightningd = require('./cli/lightningd')
-const websocketd = require('./cli/websocketd')
+const bitcoind = require('./node_modules/bitcoind')
+const lightningd = require('./node_modules/lightningd')
+const websocketd = require('./node_modules/websocketd')
 const { execSync } = require('child_process')
 const WebSocket = require('ws')
 const net = require('net')
@@ -45,7 +45,8 @@ async function main() {
       console.log('=== Starting all services ===')
       await bitcoind.start()
       await lightningd.start()
-      websocketd.start()
+      // --- ADD AWAIT HERE ---
+      await websocketd.start() 
       console.log('✅ All services started.')
       break
 

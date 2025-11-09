@@ -3,21 +3,38 @@ const { exec } = require('child_process')
 const { WebSocketServer } = require('ws')
 const path = require('path')
 try {
-  process.env = require('./env.json')
-} catch {
-  process.env = { PORT: '8080' } // fallback defaults
+  process.env = require('../env.json')
+} catch (e) {
+  console.error('Failed to load env.json. Make sure it is in the project root.', e.message)
+  process.env = { PORT: '8080' } 
 }
 console.log('env:', process.env)
 
-
-dotenv.config({ path: path.resolve(process.cwd(), '.env') })
 
 const WS_PORT = process.env.WS_PORT || 8080
 const BITCOIN_RPCPORT = process.env.BITCOIN_RPCPORT || 18443
 const BITCOIN_RPCUSER = process.env.BITCOIN_RPCUSER || 'rpcuser'
 const BITCOIN_RPCPASSWORD = process.env.BITCOIN_RPCPASSWORD || 'rpcpassword'
-const LIGHTNING_DIR = process.env.LIGHTNING_DIR_4 || './lightning-node'
 const NETWORK = process.env.BITCOIN_NETWORK || 'regtest'
+
+
+const {
+  LIGHTNING_DIR_4,
+  LIGHTNING_DIR_5,
+  LIGHTNING_DIR_6,
+  BITCOIN_CLI_BIN,
+  LIGHTNING_CLI_BIN
+} = process.env
+
+
+const BITCOIN_CLI = BITCOIN_CLI_BIN || '/usr/local/bin/bitcoin-cli'
+const LIGHTNING_CLI = LIGHTNING_CLI_BIN || '/usr/local/bin/lightning-cli'
+
+const LIGHTNING_DIRS = {
+  'node4': LIGHTNING_DIR_4 || '/Users/a1707/lightning4',
+  'node5': LIGHTNING_DIR_5 || '/Users/a1707/lightning5',
+  'node6': LIGHTNING_DIR_6 || '/Users/a1707/lightning6'
+}
 
 // -----------------------------------------------------------------------------
 // 🧰 Helpers
@@ -32,15 +49,21 @@ function runCommand (cmd, opts = {}) {
 }
 
 function btcRpc (method, params = []) {
-  const cmd = `bitcoin-cli -regtest -rpcuser=${BITCOIN_RPCUSER} -rpcpassword=${BITCOIN_RPCPASSWORD} -rpcport=${BITCOIN_RPCPORT} ${method} ${params.join(' ')}`
+  const cmd = `${BITCOIN_CLI} -regtest -rpcuser=${BITCOIN_RPCUSER} -rpcpassword=${BITCOIN_RPCPASSWORD} -rpcport=${BITCOIN_RPCPORT} ${method} ${params.join(' ')}`
   return runCommand(cmd)
 }
 
 // -----------------------------------------------------------------------------
 // ⚡ Lightning functions
 // -----------------------------------------------------------------------------
-async function lightning_getinfo () {
-  const cmd = `lightning-cli --network=${NETWORK} --lightning-dir=${LIGHTNING_DIR} getinfo`
+//  Functions now accept a 'data' object to get the nodeId
+async function lightning_getinfo (data = {}) {
+  const nodeId = data.nodeId || 'node4' // Default to node4
+  const dir = LIGHTNING_DIRS[nodeId]
+  if (!dir) return { status: 'error', error: `Unknown node ID: ${nodeId}` }
+
+  //  Use the absolute LIGHTNING_CLI path and correct dir
+  const cmd = `${LIGHTNING_CLI} --network=${NETWORK} --lightning-dir=${dir} getinfo`
   try {
     const { stdout } = await runCommand(cmd)
     const parsed = JSON.parse(stdout)
@@ -50,8 +73,12 @@ async function lightning_getinfo () {
   }
 }
 
-async function lightning_listfunds () {
-  const cmd = `lightning-cli --network=${NETWORK} --lightning-dir=${LIGHTNING_DIR} listfunds`
+async function lightning_listfunds (data = {}) {
+  const nodeId = data.nodeId || 'node4' // Default to node4
+  const dir = LIGHTNING_DIRS[nodeId]
+  if (!dir) return { status: 'error', error: `Unknown node ID: ${nodeId}` }
+
+  const cmd = `${LIGHTNING_CLI} --network=${NETWORK} --lightning-dir=${dir} listfunds`
   try {
     const { stdout } = await runCommand(cmd)
     const parsed = JSON.parse(stdout)
@@ -78,7 +105,7 @@ async function lightning_listfunds () {
 
 
 // -----------------------------------------------------------------------------
-// ₿ Bitcoin functions
+// ₿ Bitcoin functions (These are fine, as they talk to one bitcoind)
 // -----------------------------------------------------------------------------
 async function bitcoin_newaddress () {
   try {
@@ -104,22 +131,15 @@ async function bitcoin_getbalance () {
 async function handleMessage (msg, ws, server) {
   const [by, to, mid] = msg.head || []
   const intent = msg.type
+  const data = msg.data 
 
-  console.log('📩 Received from CLI:', intent)
+  console.log(`📩 Received from ${by}:`, intent, data || '')
 
-  // stop daemon
+
   if (intent === 'daemon-stop') {
-    console.log('🛑 Received stop signal from CLI — shutting down...')
-    ws.send(JSON.stringify({
-      head: ['backend', by, mid],
-      type: 'daemon-stop:response',
-      data: { status: 'ok' }
-    }))
-    setTimeout(() => server.close(() => process.exit(0)), 300)
-    return
+    console.log('🚨 Stopping backend daemon as requested...')
   }
 
-  // map of actions
   const actions = {
     'lightning-getinfo': lightning_getinfo,
     'lightning-listfunds': lightning_listfunds,
@@ -129,15 +149,10 @@ async function handleMessage (msg, ws, server) {
 
   const fn = actions[intent]
   if (!fn) {
-    ws.send(JSON.stringify({
-      head: ['backend', by, mid],
-      type: `${intent}:response`,
-      data: { status: 'error', error: `unknown_type: ${intent}` }
-    }))
-    return
   }
 
-  const payload = await fn()
+  //  Pass the 'data' payload to the action function
+  const payload = await fn(data) 
   ws.send(JSON.stringify({
     head: ['backend', by, mid],
     type: `${intent}:response`,
