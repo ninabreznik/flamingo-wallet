@@ -2,9 +2,9 @@
 
 // lib/cli.js
 
-const bitcoind = require('./node_modules/bitcoind')
-const lightningd = require('./node_modules/lightningd')
-const websocketd = require('./node_modules/websocketd')
+const bitcoind = require('bitcoind')
+const lightningd = require('lightningd')
+const websocketd = require('websocketd') 
 const { execSync } = require('child_process')
 const WebSocket = require('ws')
 const net = require('net')
@@ -63,7 +63,8 @@ async function main() {
       try {
         const btc = execSync('pgrep -x bitcoind || true').toString().trim()
         const lnd = execSync('pgrep -x lightningd || true').toString().trim()
-        const ws = execSync('pgrep -f lib/server.js || true').toString().trim()
+        // UPDATED: pgrep now looks for the new process path
+        const ws = execSync('pgrep -f lib/node_modules/websocketd/daemon.js || true').toString().trim()
 
         console.log(`bitcoind: ${btc ? '🟢 running' : '🔴 stopped'}`)
         console.log(`lightningd: ${lnd ? '🟢 running' : '🔴 stopped'}`)
