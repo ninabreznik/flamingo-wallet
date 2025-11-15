@@ -127,6 +127,50 @@ document.body.innerHTML = `
 
     </div>
 
+    <div class="grid-column" id="col-ln-pay">
+
+      <section id="ln-receive">
+        <h2>📥 Create LN Invoice (Receive)</h2>
+        <div class="node-selector" id="ln-create-selector">
+          <label>Node:</label>
+          <label><input type="radio" name="node-create-inv" value="node4" checked> N4</label>
+          <label><input type="radio" name="node-create-inv" value="node5"> N5</label>
+          <label><input type="radio" name="node-create-inv" value="node6"> N6</label>
+        </div>
+        <div class="input-group">
+          <label for="ln-create-msat">Amount (msat):</label>
+          <input type="number" id="ln-create-msat" placeholder="50000">
+        </div>
+        <div class="input-group">
+          <label for="ln-create-desc">Description:</label>
+          <input type="text" id="ln-create-desc" placeholder="Coffee">
+        </div>
+        <button id="btn-create-ln-invoice">Create Invoice</button>
+        <div id="create-ln-content" style="margin-top: 10px; word-break: break-all;">
+          <i>Invoice will appear here...</i>
+        </div>
+      </section>
+
+      <section id="ln-send">
+        <h2>💸 Pay LN Invoice (Send)</h2>
+        <div class="node-selector" id="ln-pay-selector">
+          <label>Node:</label>
+          <label><input type="radio" name="node-pay-inv" value="node4" checked> N4</label>
+          <label><input type="radio" name="node-pay-inv" value="node5"> N5</label>
+          <label><input type="radio" name="node-pay-inv" value="node6"> N6</label>
+        </div>
+        <div class="input-group">
+          <label for="ln-pay-string" style="display: block; margin-bottom: 4px;">Invoice (bolt11):</label>
+          <input type="text" id="ln-pay-string" placeholder="lnbcrt500u..." style="width: 100%;">
+        </div>
+        <button id="btn-pay-ln-invoice">Pay Invoice</button>
+        <div id="pay-ln-content" style="margin-top: 10px;">
+          <i>Payment status will appear here...</i>
+        </div>
+      </section>
+
+    </div>
+
     <div class="grid-column" id="col-tools">
 
       <section id="node-info">
@@ -144,8 +188,8 @@ document.body.innerHTML = `
         <h2>⚡ Lightning Wallet Balance</h2>
         <div class="node-selector" id="listfunds-selector">
           <label><input type="radio" name="node-ln-balance" value="node4" checked> Node 4</label>
-          <label><input type="radio" name="node-ln-balance" value="node5"> Node 5</label>
-          <label><input type="radio" name="node-ln-balance" value="node6"> Node 6</label>
+          <label><input type="radio" name="node-ln-balance" value="node5"> N5</label>
+          <label><input type="radio" name="node-ln-balance" value="node6"> N6</label>
         </div>
         <button id="btn-listfunds">Refresh LN Balance</button>
         <div id="balance-content"><i>No data yet</i></div>
@@ -160,6 +204,40 @@ document.body.innerHTML = `
         </div>
         <button id="btn-list-ln">Refresh LN Invoices</button>
         <div id="ln-history-content" class="history-container"><i>No data yet</i></div>
+      </section>
+
+      <section id="channel-management">
+        <h2>🔗 Channel Management</h2>
+        <div class="node-selector" id="channel-selector">
+          <label>Node:</label>
+          <label><input type="radio" name="node-channel" value="node4" checked> N4</label>
+          <label><input type="radio" name="node-channel" value="node5"> N5</label>
+          <label><input type="radio" name="node-channel" value="node6"> N6</label>
+        </div>
+        
+        <div class="input-group" style="background: #f0f0f0; padding: 10px; border-radius: 4px;">
+          <label style="min-width: 100%; margin-bottom: 5px;">0. Fund a Node (On-Chain):</label>
+          <button id="btn-ln-newaddr">Get New Address (for selected node)</button>
+          <div id="ln-address-content" style="margin-top: 10px; font-weight: bold; word-break: break-all;"></div>
+          <small>1. Get address. 2. Send BTC to it. 3. Mine blocks. 4. Then fund channel.</small>
+        </div>
+        <hr style="border:0; border-top: 1px solid #eee; margin: 15px 0;">
+
+        <div class="input-group">
+          <label for="peer-id">Peer ID@Host:Port</label>
+          <input type="text" id="peer-id" placeholder="Click 'Refresh Info' on a node to fill this" style="width: 100%; transition: background 0.2s;">
+        </div>
+        <button id="btn-connect-peer">1. Connect Peer</button>
+        
+        <div class="input-group" style="margin-top: 15px;">
+          <label for="fund-amount">Amount (sats):</label>
+          <input type="number" id="fund-amount" placeholder="200000">
+        </div>
+        <button id="btn-fund-channel">2. Fund Channel</button>
+        
+        <hr style="border:0; border-top: 1px solid #eee; margin: 15px 0;">
+        <button id="btn-list-peers">List Current Peers</button>
+        <div id="channel-content" style="margin-top: 10px;"><i></i></div>
       </section>
 
       <section id="utilities">
@@ -185,7 +263,9 @@ document.body.innerHTML = `
       </section>
 
     </div>
-  </div> <section id="tx-lookup">
+  </div> 
+  
+  <section id="tx-lookup">
     <h2>🔎 Transaction Lookup / Validation</h2>
     <div class="input-group">
       <label for="tx-hash">TXID / P-Hash:</label>
@@ -230,7 +310,7 @@ document.body.innerHTML = `
 
   <h3>Raw Backend Response</h3>
   <pre id="raw"></pre>
-`
+`;
 
 // --- WebSocket Setup ---
 const name = 'frontend'
@@ -280,7 +360,6 @@ function send (type, data, handler) {
   ws.send(JSON.stringify(msg))
 }
 
-// --- Helper function to copy text to clipboard ---
 function copyToClipboard (text, el) {
   navigator.clipboard.writeText(text).then(() => {
     const originalText = el.textContent
@@ -291,10 +370,9 @@ function copyToClipboard (text, el) {
   })
 }
 
-// --- Helper function to populate the history lists ---
 function populateHistoryList(containerId, items, idField, descField) {
   const container = document.getElementById(containerId)
-  container.innerHTML = '' // Clear old content
+  container.innerHTML = ''
   
   if (!items || items.length === 0) {
     container.innerHTML = '<i>No history found.</i>'
@@ -313,7 +391,6 @@ function populateHistoryList(containerId, items, idField, descField) {
     idEl.className = 'history-item-id'
     idEl.textContent = `${id.substring(0, 20)}...`
     
-    // Click to copy the ID AND paste it into the lookup box
     idEl.onclick = () => {
       lookupInput.value = id
       copyToClipboard(id, idEl)
@@ -340,6 +417,19 @@ function setupButtons () {
         <div><b>Version:</b> ${d.version || '-'}</div>
         <div><b>Network:</b> ${d.network || '-'}</div>
       `
+      
+      if (d.id && d.binding && d.binding.length > 0) {
+        const addr = d.binding.find(b => b.type === 'ipv4') || d.binding.find(b => b.type === 'ipv6');
+        if (addr) {
+          const connectString = `${d.id}@${addr.address}:${addr.port}`;
+          const peerIdEl = document.getElementById('peer-id');
+          peerIdEl.value = connectString;
+          
+          peerIdEl.style.background = '#e6ffed';
+          setTimeout(() => { peerIdEl.style.background = ''; }, 1000);
+        }
+      }
+      
       rawEl.textContent = JSON.stringify(m, null, 2)
     })
   }
@@ -430,6 +520,178 @@ function setupButtons () {
     })
   }
 
+  // --- Button (NEW): Create LN Invoice ---
+  document.getElementById('btn-create-ln-invoice').onclick = () => {
+    const data = {
+      userId: document.querySelector('input[name="node-create-inv"]:checked').value,
+      amount_msat: parseInt(document.getElementById('ln-create-msat').value, 10),
+      description: document.getElementById('ln-create-desc').value
+    };
+    const contentEl = document.getElementById('create-ln-content');
+    const payInputEl = document.getElementById('ln-pay-string');
+    const validateHashInputEl = document.getElementById('validate-hash');
+
+    if (!data.amount_msat || !data.description) {
+      contentEl.innerHTML = `❌ <b>Error:</b> Amount and Description are required.`;
+      return;
+    }
+
+    contentEl.textContent = 'Creating invoice...';
+    send('create_ln_invoice', data, (m) => {
+      const d = m.data;
+      if (d.status === 'success') {
+        const bolt11 = d.data.bolt11;
+        const payment_hash = d.data.payment_hash;
+        
+        contentEl.innerHTML = `
+          <div><b>P-Hash:</b> <span id="new-p-hash" style="cursor: pointer; color: #0056b3;" title="Click to copy and fill validate box">${payment_hash.substring(0, 40)}...</span></div>
+          <div><b>Invoice:</b> <span id="new-invoice-string" style="cursor: pointer; color: #0056b3;" title="Click to copy and fill pay box">${bolt11.substring(0, 60)}...</span></div>
+        `;
+        
+        document.getElementById('new-p-hash').onclick = (e) => {
+          validateHashInputEl.value = payment_hash;
+          copyToClipboard(payment_hash, e.target);
+        };
+        
+        document.getElementById('new-invoice-string').onclick = (e) => {
+          payInputEl.value = bolt11;
+          copyToClipboard(bolt11, e.target);
+        };
+        
+      } else {
+        contentEl.innerHTML = `❌ <b>Error:</b> ${d.error}`;
+      }
+      rawEl.textContent = JSON.stringify(m, null, 2);
+    });
+  };
+  
+  // --- Button (NEW): Pay LN Invoice ---
+  document.getElementById('btn-pay-ln-invoice').onclick = () => {
+    const data = {
+      userId: document.querySelector('input[name="node-pay-inv"]:checked').value,
+      invoice_string: document.getElementById('ln-pay-string').value
+    };
+    const contentEl = document.getElementById('pay-ln-content');
+    const lookupHashInputEl = document.getElementById('tx-hash');
+
+    if (!data.invoice_string) {
+      contentEl.innerHTML = `❌ <b>Error:</b> Invoice string is required.`;
+      return;
+    }
+
+    contentEl.textContent = 'Sending payment...';
+    send('pay_ln_invoice', data, (m) => {
+      const d = m.data;
+      if (d.status === 'pending' || d.status === 'success') { 
+        const payment_hash = d.data.payment_hash;
+        contentEl.innerHTML = `⌛ <b>Payment sending...</b> P-Hash: ${payment_hash.substring(0, 40)}...`;
+        lookupHashInputEl.value = payment_hash; 
+      } else {
+        contentEl.innerHTML = `❌ <b>Error:</b> ${d.error}`;
+      }
+      rawEl.textContent = JSON.stringify(m, null, 2);
+    });
+  };
+
+  // --- Button (NEW): Get LN New Address ---
+  document.getElementById('btn-ln-newaddr').onclick = () => {
+    const data = {
+      userId: document.querySelector('input[name="node-channel"]:checked').value
+    };
+    const contentEl = document.getElementById('ln-address-content');
+    contentEl.textContent = 'Getting address...';
+    
+    send('lightning_newaddress', data, (m) => {
+      const d = m.data;
+      if (d.status === 'success') {
+        contentEl.textContent = d.data;
+        document.getElementById('send-btc-addr').value = d.data;
+      } else {
+        contentEl.innerHTML = `❌ <b>Error:</b> ${d.error}`;
+      }
+      rawEl.textContent = JSON.stringify(m, null, 2);
+    });
+  };
+
+  // --- Button (NEW): List Peers ---
+  document.getElementById('btn-list-peers').onclick = () => {
+    const data = {
+      userId: document.querySelector('input[name="node-channel"]:checked').value
+    };
+    const contentEl = document.getElementById('channel-content');
+    contentEl.textContent = 'Listing peers...';
+    
+    send('list_peers', data, (m) => {
+      const d = m.data;
+      if (d.status === 'success') {
+        contentEl.textContent = `Found ${d.data.length} peers. See raw response for details.`;
+      } else {
+        contentEl.innerHTML = `❌ <b>Error:</b> ${d.error}`;
+      }
+      rawEl.textContent = JSON.stringify(m, null, 2);
+    });
+  };
+
+  // --- Button (NEW): Connect Peer ---
+  document.getElementById('btn-connect-peer').onclick = () => {
+    const data = {
+      userId: document.querySelector('input[name="node-channel"]:checked').value,
+      peer_address: document.getElementById('peer-id').value
+    };
+    const contentEl = document.getElementById('channel-content');
+
+    if (!data.peer_address) {
+       contentEl.innerHTML = `❌ <b>Error:</b> Peer ID@Host:Port is required.`;
+       return;
+    }
+    contentEl.textContent = 'Connecting...';
+    
+    send('connect_node', data, (m) => {
+      const d = m.data;
+      if (d.status === 'success') {
+        contentEl.innerHTML = `✅ <b>Connected!</b> Peer ID: ${d.data.id}`;
+      } else {
+        contentEl.innerHTML = `❌ <b>Error:</b> ${d.error}`;
+      }
+      rawEl.textContent = JSON.stringify(m, null, 2);
+    });
+  };
+
+  // --- Button (NEW): Fund Channel ---
+  document.getElementById('btn-fund-channel').onclick = () => {
+    const fullPeerString = document.getElementById('peer-id').value;
+    const peer_id_only = fullPeerString.split('@')[0];
+    const contentEl = document.getElementById('channel-content');
+    
+    if (!peer_id_only || fullPeerString.indexOf('@') === -1) {
+         contentEl.innerHTML = `❌ <b>Error:</b> Full Peer ID@Host:Port string is required in the box.`;
+         return;
+    }
+
+    const data = {
+      userId: document.querySelector('input[name="node-channel"]:checked').value,
+      peer_id: peer_id_only,
+      amount_sats: parseInt(document.getElementById('fund-amount').value, 10)
+    };
+
+    if (!data.peer_id || !data.amount_sats) {
+       contentEl.innerHTML = `❌ <b>Error:</b> Peer ID and Amount are required.`;
+       return;
+    }
+    contentEl.textContent = 'Funding channel...';
+    
+    send('fund_channel', data, (m) => {
+      const d = m.data;
+      if (d.status === 'success') {
+        contentEl.innerHTML = `✅ <b>Channel funding initiated!</b> TXID: ${d.data.txid}`;
+        document.getElementById('tx-hash').value = d.data.txid;
+      } else {
+        contentEl.innerHTML = `❌ <b>Error:</b> ${d.error}`;
+      }
+      rawEl.textContent = JSON.stringify(m, null, 2);
+    });
+  };
+
   // --- Button 9: Lookup BTC TX ---
   document.getElementById('btn-lookup-btc').onclick = () => {
     const tx_id = document.getElementById('tx-hash').value
@@ -500,7 +762,6 @@ function setupButtons () {
       const d = m.data;
       if (d.status === 'success') {
         contentEl.innerHTML = `✅ <b>Success!</b> TXID: ${d.data.tx_id}`;
-        // Auto-fill the lookup box
         document.getElementById('tx-hash').value = d.data.tx_id;
       } else {
         contentEl.innerHTML = `❌ <b>Error:</b> ${d.error}`;
@@ -509,10 +770,7 @@ function setupButtons () {
     });
   };
 
-  // --- Button 13: Send LN ---
-  // REMOVED AS REQUESTED
 
-  
   // --- Button 14: Validate BTC ---
   document.getElementById('btn-validate-btc').onclick = () => {
     const data = {
@@ -544,7 +802,8 @@ function setupButtons () {
   document.getElementById('btn-validate-ln').onclick = () => {
     const data = {
       payment_hash: document.getElementById('validate-hash').value,
-      amount_msat: parseInt(document.getElementById('validate-amount').value, 10) || null
+      amount_msat: parseInt(document.getElementById('validate-amount').value, 10) || null,
+      userId: document.querySelector('input[name="node-tx-lookup"]:checked').value
     };
     const contentEl = document.getElementById('validate-content');
 
@@ -561,7 +820,7 @@ function setupButtons () {
       } else if (d.status === 'pending') {
         contentEl.innerHTML = `⌛ <b>Pending:</b> Invoice status is '${d.data.status}'.`;
       } else {
-        contentEl.innerHTML = `❌ <b>Error:</b> ${d.error}`;
+        contentEl.innerHTML = `❌ <b>Error:</b> ${d.error} (on ${data.userId})`;
       }
       rawEl.textContent = JSON.stringify(m, null, 2);
     });
@@ -573,7 +832,7 @@ function setupButtons () {
     const contentEl = document.getElementById('mine-blocks-content');
     
     contentEl.textContent = `Mining ${num_blocks} block(s)...`;
-    send('bitcoin_mine_blocks', { num_blocks }, (m) => {
+    send('btc_mine_blocks_regtest', { num_blocks }, (m) => {
       const d = m.data;
       if (d.status === 'success') {
         contentEl.innerHTML = `✅ <b>Success!</b> Mined ${d.data.blocks_mined} block(s).`;
