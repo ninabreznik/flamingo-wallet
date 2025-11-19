@@ -80,6 +80,28 @@ document.body.innerHTML = `
       padding: 8px;
       margin-top: 10px;
     }
+    
+    /* NEW STYLES FOR HUB SECTION */
+    .hub-box {
+      border: 1px solid #e83e8c;
+      background: #fff0f6;
+      padding: 10px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+    .hub-status {
+      margin-top: 5px;
+      font-size: 0.9em;
+      font-weight: bold;
+    }
+      /* LIQUIDITY MONITOR STYLES */
+    .liq-container { margin-top: 10px; background: #eee; height: 24px; border-radius: 12px; overflow: hidden; display: flex; border: 1px solid #ddd; }
+    .liq-out { background: #28a745; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.75em; transition: width 0.5s; }
+    .liq-in { background: #17a2b8; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.75em; transition: width 0.5s; }
+    .health-tag { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 0.8em; margin-left: 5px; font-weight: bold; }
+    .health-ok { background: #d4edda; color: #155724; }
+    .health-warn { background: #fff3cd; color: #856404; }
+    .health-bad { background: #f8d7da; color: #721c24; }
   </style>
 
   <h1>⚡ Flamingo Wallet Dashboard</h1>
@@ -173,6 +195,64 @@ document.body.innerHTML = `
 
     <div class="grid-column" id="col-tools">
 
+      <section id="flamingo-hub">
+        <h2>🦩 Flamingo Hub & Business Logic</h2>
+        
+        <div class="hub-box">
+          <strong>1. User Onboarding</strong><br>
+          <small>Simulates "One Click" Connect: User (N4) -> Hub (N5)</small>
+          <br>
+          <button id="btn-hub-connect" style="background: #e83e8c; color: white; border: none;">Connect to Hub</button>
+          <div id="hub-connect-status" class="hub-status"></div>
+        </div>
+
+        <div class="hub-box" style="background: #fff3cd; border-color: #ffecb5;">
+          <strong>2. Admin: Setup Routes</strong><br>
+          <small>Simulates World: Hub (N5) -> Merchant (N6)</small>
+          <br>
+          <button id="btn-admin-setup">⚙️ Setup Backend Routes</button>
+          <div id="admin-setup-status" class="hub-status"></div>
+        </div>
+
+        <div class="hub-box" style="background: #d4edda; border-color: #c3e6cb;">
+          <strong>3. Verify Revenue Model</strong><br>
+          <small>Pays N4 -> N5 -> N6. Checks N5 for routing fees.</small>
+          <br>
+          <button id="btn-verify-revenue">💰 Verify Fees</button>
+          <div id="revenue-status" class="hub-status"></div>
+        </div>
+
+        <div class="hub-box" style="background: #e2e6ea; border-color: #adb5bd;">
+          <strong>4. Liquidity Automagic</strong>
+          <div class="node-selector" style="margin-bottom: 5px;">
+             <small>Check Node:</small> 
+             <label><input type="radio" name="node-liq" value="node4" checked> N4</label>
+             <label><input type="radio" name="node-liq" value="node5"> N5</label>
+          </div>
+          <button id="btn-refresh-liq" style="width: 100%;">Refresh Health Report</button>
+          
+          <div class="liq-container">
+            <div id="bar-out" class="liq-out" style="width: 50%">Out</div>
+            <div id="bar-in" class="liq-in" style="width: 50%">In</div>
+          </div>
+          
+          <div id="liq-details" style="margin-top: 8px; font-size: 0.9em;"></div>
+          
+          <div id="liq-fix-area" style="display:none; margin-top: 10px; border-top: 1px solid #ccc; padding-top: 5px;">
+             <div id="liq-msg" style="color: #721c24; font-weight: bold; font-size: 0.9em; margin-bottom: 5px;"></div>
+             <button id="btn-req-inbound" style="width: 100%; background: #17a2b8; color: white;">🔧 Auto-Fix: Request Inbound</button>
+             <div id="inbound-status"></div>
+          </div>
+        </div>
+
+        <div class="hub-box" style="background: #f8d7da; border-color: #f5c6cb;">
+          <strong>5. Reset / Teardown</strong><br>
+          <small>Close all channels to restart test.</small>
+          <br>
+          <button id="btn-reset-world" style="background: #dc3545; color: white; border:none;">🧨 Reset World</button>
+          <div id="reset-status" class="hub-status"></div>
+        </div>
+      </section>
       <section id="node-info">
         <h2>ℹ️ Lightning Node Info</h2>
         <div class="node-selector" id="getinfo-selector">
@@ -405,6 +485,63 @@ function populateHistoryList(containerId, items, idField, descField) {
 
 function setupButtons () {
   const rawEl = document.getElementById('raw')
+  
+  // --- NEW: FLAMINGO HUB BUTTONS ---
+  
+  // 1. Connect to Hub
+  document.getElementById('btn-hub-connect').onclick = () => {
+    const el = document.getElementById('hub-connect-status');
+    el.textContent = 'Connecting to Hub...';
+    // Note: 'open_channel_flamingo' maps to open_channel_with_default_peer backend
+    send('open_channel_flamingo', { userId: 'node4' }, (m) => {
+      if (m.data.status === 'success') {
+        el.innerHTML = `<span style="color:green">${m.data.data.message}</span>`;
+        if (m.data.data.txid) el.innerHTML += `<br><small>TXID: ${m.data.data.txid.substr(0,10)}...</small>`;
+      } else {
+        el.innerHTML = `<span style="color:red">${m.data.error}</span>`;
+      }
+      rawEl.textContent = JSON.stringify(m, null, 2);
+    });
+  }
+
+  // 2. Admin Setup Routes
+  document.getElementById('btn-admin-setup').onclick = () => {
+    const el = document.getElementById('admin-setup-status');
+    el.textContent = 'Setting up routes...';
+    // Note: 'admin_setup_hub' maps to admin_setup_hub_routing backend
+    send('admin_setup_hub', {}, (m) => {
+      if (m.data.status === 'success') {
+         el.innerHTML = `<span style="color:green">✅ ${m.data.data.message}</span>`;
+      } else {
+         el.innerHTML = `<span style="color:red">${m.data.error}</span>`;
+      }
+      rawEl.textContent = JSON.stringify(m, null, 2);
+    });
+  }
+
+  // 3. Verify Revenue
+  document.getElementById('btn-verify-revenue').onclick = () => {
+    const el = document.getElementById('revenue-status');
+    el.textContent = 'Simulating payment...';
+    // Note: 'verify_revenue' maps to verify_revenue_model backend
+    send('verify_revenue', { amount_msat: 50000 }, (m) => {
+      const d = m.data.data;
+      if (m.data.status === 'success') {
+         el.innerHTML = `
+           <span style="color:green"><b>VERIFIED</b></span><br>
+           Route: ${d.payment_route}<br>
+           Fee: <b>${d.fee_earned_msat} msat</b>
+         `;
+      } else if (m.data.status === 'warning') {
+         el.innerHTML = `<span style="color:orange">⚠️ ${m.data.data.message}</span>`;
+      } else {
+         el.innerHTML = `<span style="color:red">❌ ${m.data.error}</span>`;
+      }
+      rawEl.textContent = JSON.stringify(m, null, 2);
+    });
+  }
+  
+  // ---------------------------------
 
   // --- Button 1: Get Info ---
   document.getElementById('btn-getinfo').onclick = () => {
@@ -825,6 +962,88 @@ function setupButtons () {
       rawEl.textContent = JSON.stringify(m, null, 2);
     });
   };
+// 4. Reset World
+  document.getElementById('btn-reset-world').onclick = () => {
+    const el = document.getElementById('reset-status');
+    el.textContent = 'Running Diagnostic Reset...';
+    
+    send('admin_reset_world', {}, (m) => {
+      const d = m.data.data || {};
+      
+      // Build a mini log viewer
+      let logHtml = `<div style="max-height: 100px; overflow-y: auto; background: #333; color: #eee; font-size: 0.8em; padding: 5px; margin-top: 5px; border-radius: 4px;">`;
+      if (d.logs) {
+        d.logs.forEach(line => logHtml += `<div>${line}</div>`);
+      }
+      logHtml += `</div>`;
+
+      if (m.data.status === 'success') {
+         el.innerHTML = `<span style="color:darkred"><b>${d.message}</b></span>${logHtml}`;
+      } else {
+         el.innerHTML = `<span style="color:red">${m.data.error}</span>${logHtml}`;
+      }
+      
+      document.getElementById('raw').textContent = JSON.stringify(m, null, 2);
+    });
+  };
+  
+  // --- NEW: LIQUIDITY MONITOR LOGIC ---
+  document.getElementById('btn-refresh-liq').onclick = () => {
+    const userId = document.querySelector('input[name="node-liq"]:checked').value;
+    send('get_liquidity_report', { userId }, (m) => {
+      const d = m.data.data;
+      if (m.data.status === 'success') {
+        const total = d.outbound_sats + d.inbound_sats;
+        const outPct = total ? Math.round((d.outbound_sats / total) * 100) : 0;
+        const inPct = total ? Math.round((d.inbound_sats / total) * 100) : 0;
+
+        // Update Bars
+        const barOut = document.getElementById('bar-out');
+        const barIn = document.getElementById('bar-in');
+        barOut.style.width = `${outPct}%`; barOut.textContent = outPct > 10 ? `Out ${outPct}%` : '';
+        barIn.style.width = `${inPct}%`; barIn.textContent = inPct > 10 ? `In ${inPct}%` : '';
+
+        // Update Text Details
+        const health = d.health;
+        let badgeClass = health.status === 'HEALTHY' ? 'health-ok' : 'health-bad';
+        if (health.status === 'LOW_INBOUND' || health.status === 'LOW_OUTBOUND') badgeClass = 'health-warn';
+
+        document.getElementById('liq-details').innerHTML = `
+          <div><b>Total:</b> ${d.total_capacity_sats.toLocaleString()} sats</div>
+          <div><b>Outbound (Send):</b> ${d.outbound_sats.toLocaleString()}</div>
+          <div><b>Inbound (Recv):</b> ${d.inbound_sats.toLocaleString()}</div>
+          <div style="margin-top:5px;">Status: <span class="health-tag ${badgeClass}">${health.status}</span></div>
+        `;
+
+        // Logic to Show/Hide the "Fix" Button
+        const fixArea = document.getElementById('liq-fix-area');
+        if (health.action_required && health.status === 'LOW_INBOUND') {
+           fixArea.style.display = 'block';
+           document.getElementById('liq-msg').textContent = `⚠️ ${health.message}`;
+        } else {
+           fixArea.style.display = 'none';
+        }
+      }
+      document.getElementById('raw').textContent = JSON.stringify(m, null, 2);
+    });
+  };
+
+  // --- NEW: REQUEST INBOUND (THE AUTOMAGIC FIXER) ---
+  document.getElementById('btn-req-inbound').onclick = () => {
+    document.getElementById('inbound-status').textContent = 'Requesting...';
+    send('request_inbound_liquidity', { userId: 'node4', amount_sats: 500000 }, (m) => {
+      const d = m.data;
+      if (d.status === 'success') {
+         document.getElementById('inbound-status').innerHTML = `<span style="color:green">✅ ${d.data.message}</span>`;
+         // Auto-refresh the report after 2 seconds to show the green bar
+         setTimeout(() => document.getElementById('btn-refresh-liq').click(), 2000); 
+      } else {
+         document.getElementById('inbound-status').innerHTML = `<span style="color:red">${d.error}</span>`;
+      }
+      document.getElementById('raw').textContent = JSON.stringify(m, null, 2);
+    });
+  };
+
   
   // --- Button 16: Mine Blocks ---
   document.getElementById('btn-mine-blocks').onclick = () => {
@@ -846,5 +1065,6 @@ function setupButtons () {
     });
   };
 }
+
 
 connect()
