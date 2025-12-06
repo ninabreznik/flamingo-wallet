@@ -16,3 +16,15 @@ Pre-req:
 
 6. Bundle with: npm run start-web
 (Requires budo installed; optional.)
+
+---
+
+## 🐳 Running with Docker (Recommended)
+You can run the entire project without installing local dependencies.
+
+1. **Start**:
+   ```bash
+   docker compose up --build
+   ```
+2. **Open**: [http://localhost:9966](http://localhost:9966)
+3. **Stop**: Press `Ctrl+C` or run `docker compose down`.

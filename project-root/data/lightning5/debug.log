@@ -1,0 +1,42 @@
+2025-12-06T23:21:01.213Z INFO    lightningd: Creating configuration directory /data/lightning5/regtest
+2025-12-06T23:21:01.230Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2025-12-06T23:21:01.237Z INFO    lightningd: Creating database
+2025-12-06T23:21:01.278Z UNUSUAL hsmd: HSM: created new hsm_secret file
+2025-12-06T23:21:01.287Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2025-12-06T23:21:01.307Z INFO    plugin-bookkeeper: Creating database
+2025-12-06T23:21:01.308Z INFO    plugin-chanbackup: Creating Emergency Recovery
+2025-12-06T23:21:01.309Z INFO    lightningd: --------------------------------------------------
+2025-12-06T23:21:01.309Z INFO    lightningd: Server started with public key 0343cc20d3d324033a7330eb4e36dc25efa2b4cacf9794005431f5c1741e8c44e3, alias LIGHTNINGWAFFLE (color #0343cc) and lightningd v23.08.1
+2025-12-06T23:21:01.480Z INFO    plugin-bookkeeper: account wallet not found, adding along with new balance
+2025-12-06T23:21:32.917Z UNUSUAL 03b624acbd05e75a3dd795946ed3075986b661eb5982b124c6cb771704e8ebb29d-chan#1: Ignoring fee limits!
+2025-12-06T23:21:32.920Z INFO    plugin-chanbackup: Updating the SCB
+2025-12-06T23:21:32.991Z UNUSUAL 02cee96364075389cd3a8f52ccbb3601165dc2fa58267d88acb1837a86915e24b1-chan#2: Ignoring fee limits!
+2025-12-06T23:21:32.997Z INFO    plugin-chanbackup: Updating the SCB
+2025-12-06T23:21:35.086Z UNUSUAL 02cee96364075389cd3a8f52ccbb3601165dc2fa58267d88acb1837a86915e24b1-chan#3: Ignoring fee limits!
+2025-12-06T23:21:35.090Z INFO    plugin-chanbackup: Updating the SCB
+2025-12-06T23:22:01.631Z INFO    03b624acbd05e75a3dd795946ed3075986b661eb5982b124c6cb771704e8ebb29d-chan#1: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+2025-12-06T23:22:02.147Z INFO    02cee96364075389cd3a8f52ccbb3601165dc2fa58267d88acb1837a86915e24b1-chan#2: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+2025-12-06T23:22:02.153Z INFO    02cee96364075389cd3a8f52ccbb3601165dc2fa58267d88acb1837a86915e24b1-chan#3: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+
+
+
+
+2025-12-06T23:28:38.599Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2025-12-06T23:28:38.611Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2025-12-06T23:28:38.623Z INFO    lightningd: --------------------------------------------------
+2025-12-06T23:28:38.623Z INFO    lightningd: Server started with public key 0343cc20d3d324033a7330eb4e36dc25efa2b4cacf9794005431f5c1741e8c44e3, alias LIGHTNINGWAFFLE (color #0343cc) and lightningd v23.08.1
+2025-12-06T23:28:38.661Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+498999834000msat/-0msat) (account wallet) Logging journal entry.
+2025-12-06T23:28:39.602Z UNUSUAL 03b624acbd05e75a3dd795946ed3075986b661eb5982b124c6cb771704e8ebb29d-chan#1: Ignoring fee limits!
+2025-12-06T23:28:40.230Z UNUSUAL 02cee96364075389cd3a8f52ccbb3601165dc2fa58267d88acb1837a86915e24b1-chan#2: Ignoring fee limits!
+2025-12-06T23:28:40.232Z UNUSUAL 02cee96364075389cd3a8f52ccbb3601165dc2fa58267d88acb1837a86915e24b1-chan#3: Ignoring fee limits!
+
+
+
+
+2025-12-06T23:36:52.078Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2025-12-06T23:36:52.090Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2025-12-06T23:36:52.103Z INFO    lightningd: --------------------------------------------------
+2025-12-06T23:36:52.103Z INFO    lightningd: Server started with public key 0343cc20d3d324033a7330eb4e36dc25efa2b4cacf9794005431f5c1741e8c44e3, alias LIGHTNINGWAFFLE (color #0343cc) and lightningd v23.08.1
+2025-12-06T23:36:52.865Z UNUSUAL 03b624acbd05e75a3dd795946ed3075986b661eb5982b124c6cb771704e8ebb29d-chan#1: Ignoring fee limits!
+2025-12-06T23:36:54.055Z UNUSUAL 02cee96364075389cd3a8f52ccbb3601165dc2fa58267d88acb1837a86915e24b1-chan#2: Ignoring fee limits!
+2025-12-06T23:36:54.057Z UNUSUAL 02cee96364075389cd3a8f52ccbb3601165dc2fa58267d88acb1837a86915e24b1-chan#3: Ignoring fee limits!

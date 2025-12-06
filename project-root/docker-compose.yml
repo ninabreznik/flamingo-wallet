@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    volumes:
+      - ./data:/data
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "9966:9966" # Web UI
+      - "8080:8080" # WebSocket API
+    environment:
+      - ENV_FILE=/app/env.docker.json
+    command: >
+      bash -c "npm install && npm run cli start & npm run start"

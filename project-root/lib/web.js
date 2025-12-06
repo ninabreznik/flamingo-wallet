@@ -15,13 +15,13 @@ function copyToClipboard(text, el) {
     if (el) {
       const originalText = el.innerHTML // Use innerHTML to preserve tags if any
       const originalWidth = el.offsetWidth // Prevent jumping
-      
+
       el.style.width = `${originalWidth}px`
       el.style.textAlign = 'center'
       el.textContent = 'Copied!'
-      
-      setTimeout(() => { 
-        el.innerHTML = originalText 
+
+      setTimeout(() => {
+        el.innerHTML = originalText
         el.style.width = ''
         el.style.textAlign = ''
       }, 1000)
@@ -32,30 +32,30 @@ function copyToClipboard(text, el) {
 }
 
 // Global handler for history clicks
-window.handleHistoryClick = function(el, id, type) {
+window.handleHistoryClick = function (el, id, type) {
   // 1. Copy to Clipboard (Fail safely if API missing)
   // If clicked from table (el exists), show "Copied!". If from daily log row, pass null.
-  const isTableClick = el && el.tagName === 'SPAN'; 
+  const isTableClick = el && el.tagName === 'SPAN';
   copyToClipboard(id, isTableClick ? el : null);
 
   // 2. Fill Inputs
   // We populate 'lookup-id' because both Lookup and Validate buttons read from it.
   const lookupInput = document.getElementById('lookup-id');
-  if(lookupInput) lookupInput.value = id;
+  if (lookupInput) lookupInput.value = id;
 
   // 3. Scroll to Lookup Section
   const lookupContainer = document.getElementById('lookup-container');
-  if(lookupContainer) lookupContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  if (lookupContainer) lookupContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
   // 4. Auto-Trigger Lookup
   // Use a small timeout to allow the DOM value to settle
   setTimeout(() => {
     if (type === 'BTC') {
-       const btn = document.getElementById('btn-lookup-btc');
-       if(btn) btn.click();
+      const btn = document.getElementById('btn-lookup-btc');
+      if (btn) btn.click();
     } else {
-       const btn = document.getElementById('btn-lookup-ln');
-       if(btn) btn.click();
+      const btn = document.getElementById('btn-lookup-ln');
+      if (btn) btn.click();
     }
   }, 100);
 };
@@ -369,6 +369,8 @@ document.body.innerHTML = `
           <div class="input-group">
             <label for="send-btc-addr">Recipient Address:</label>
             <input type="text" id="send-btc-addr" placeholder="bcrt1q...">
+            <button id="btn-check-btc-addr" style="margin-top:5px; font-size:0.8em; cursor:pointer;">🔍 Validate Address</button>
+            <div id="check-btc-addr-res" style="font-size:0.85em; margin-top:2px;"></div>
           </div>
           <div class="input-group">
             <label for="send-btc-amount">Amount (BTC):</label>
@@ -444,10 +446,50 @@ document.body.innerHTML = `
           <div class="input-group">
             <label for="ln-pay-string">Invoice (bolt11):</label>
             <input type="text" id="ln-pay-string" placeholder="lnbcrt500u..." style="font-family:monospace;">
+            <button id="btn-decode-pay" style="margin-top:5px; font-size:0.8em; cursor:pointer;">🔍 Decode Invoice</button>
+            <div id="decode-pay-res" style="font-size:0.85em; margin-top:2px;"></div>
           </div>
           <button id="btn-pay-ln-invoice" style="width:100%; background:#e83e8c; color:white; border:none;">Pay Invoice</button>
           <div id="pay-ln-content" style="margin-top: 10px;"></div>
         </section>
+
+        <!-- IDENTITY / TOOLS -->
+        <div class="card">
+          <h2>🔐 Identity Tools</h2>
+          
+          <!-- Sign Message -->
+          <div style="border-bottom:1px solid #eee; padding-bottom:10px; margin-bottom:10px;">
+            <h3>Sign Message</h3>
+            <div class="input-group">
+                <label>Node:</label>
+                <div class="radio-group">
+                  <label><input type="radio" name="node-sign" value="node4" checked> Node 4</label>
+                  <label><input type="radio" name="node-sign" value="node5"> Node 5</label>
+                  <label><input type="radio" name="node-sign" value="node6"> Node 6</label>
+                </div>
+            </div>
+            <div class="input-group">
+              <input type="text" id="sign-msg-input" placeholder="Enter message to sign...">
+              <button id="btn-sign-msg" style="margin-top:5px; width:100%;">✍️ Sign Message</button>
+            </div>
+            <div id="sign-msg-res" style="font-family:monospace; font-size:0.8em; background:#f4f4f4; padding:5px; display:none; overflow-x:auto;"></div>
+          </div>
+
+          <!-- Verify Message -->
+          <div>
+            <h3>Verify Signature</h3>
+            <div class="input-group">
+              <label>Message:</label>
+              <input type="text" id="verify-msg-input" placeholder="Original message">
+            </div>
+            <div class="input-group">
+              <label>Signature (zbase):</label>
+              <input type="text" id="verify-sig-input" placeholder="The signature string...">
+            </div>
+            <button id="btn-verify-msg" style="width:100%; background:#17a2b8; color:white; border:none;">🔍 Verify Signature</button>
+            <div id="verify-msg-res" style="margin-top:10px;"></div>
+          </div>
+        </div>
          <section>
             <h2>📖 Transaction List</h2>
             <div class="node-selector">
@@ -601,13 +643,13 @@ document.body.innerHTML = `
 // --- JAVASCRIPT ---
 
 // Tab Switching Logic
-window.openTab = function(tabName) {
+window.openTab = function (tabName) {
   const contents = document.getElementsByClassName('tab-content');
   for (let i = 0; i < contents.length; i++) contents[i].classList.remove('active');
   const btns = document.getElementsByClassName('tab-btn');
   for (let i = 0; i < btns.length; i++) btns[i].classList.remove('active');
   document.getElementById(tabName).classList.add('active');
-  if(event && event.target) event.target.classList.add('active');
+  if (event && event.target) event.target.classList.add('active');
 }
 
 // WebSocket Setup
@@ -617,7 +659,7 @@ let mid = 0
 const wait = new Map()
 let ws
 
-function connect () {
+function connect() {
   ws = new WebSocket(wsUrl)
   const statusEl = document.getElementById('status')
 
@@ -650,7 +692,7 @@ function connect () {
   }
 }
 
-function send (type, data, handler) {
+function send(type, data, handler) {
   const head = [name, to, mid++]
   const msg = { head, type, data }
   const expectedKey = ['backend', name, head[2]].join(',')
@@ -680,12 +722,12 @@ function populateHistoryList(containerId, items, idField, descField) {
     const idEl = document.createElement('span')
     idEl.className = 'history-item-id' // kept for styling
     idEl.textContent = `${id.substring(0, 20)}...`
-    
+
     // Use the global handler for these simple lists too, assuming type based on container
     const isLn = containerId.includes('ln');
     idEl.onclick = () => window.handleHistoryClick(idEl, id, isLn ? 'LN' : 'BTC');
     idEl.style.color = '#0056b3'; idEl.style.cursor = 'pointer';
-    
+
     itemEl.appendChild(idEl)
     itemEl.append(` - ${desc}`)
     container.appendChild(itemEl)
@@ -695,14 +737,14 @@ function populateHistoryList(containerId, items, idField, descField) {
 // Helper: Format Satoshis
 const fmtSats = (msat) => Math.floor(msat / 1000).toLocaleString();
 
-function setupButtons () {
-  
+function setupButtons() {
+
   // 1. Refresh All History Data
   document.getElementById('btn-refresh-all-hist').onclick = () => {
     const userId = document.querySelector('input[name="hist-user"]:checked').value;
     const rawEl = document.getElementById('raw-history');
     const tableBody = document.getElementById('full-history-body');
-    
+
     tableBody.innerHTML = '<tr><td colspan="7" style="text-align:center;">Loading...</td></tr>';
 
     // A. Get Summary Stats
@@ -720,13 +762,13 @@ function setupButtons () {
     send('get_transaction_history', { userId, limit: 50 }, (m) => {
       rawEl.textContent = JSON.stringify(m, null, 2);
       tableBody.innerHTML = '';
-      
+
       if (m.data.status === 'success' && m.data.data.length > 0) {
         m.data.data.forEach(tx => {
           const isBtc = tx.type === 'BTC';
           const isIn = tx.direction === 'IN';
           const dateStr = new Date(tx.timestamp * 1000).toLocaleString();
-          
+
           const row = document.createElement('tr');
           row.innerHTML = `
             <td><span class="tx-type-tag ${isBtc ? 'tag-btc' : 'tag-ln'}">${tx.type}</span></td>
@@ -735,7 +777,7 @@ function setupButtons () {
             <td style="font-weight:bold;">${tx.direction}</td>
             <td class="${isIn ? 'amt-in' : 'amt-out'}">${isIn ? '+' : '-'}${fmtSats(tx.amount_msat)}</td>
             <td>${tx.status}</td>
-            <td><span class="clickable-id" onclick="window.handleHistoryClick(this, '${tx.id}', '${tx.type}')">${tx.id.substring(0,8)}...</span></td>
+            <td><span class="clickable-id" onclick="window.handleHistoryClick(this, '${tx.id}', '${tx.type}')">${tx.id.substring(0, 8)}...</span></td>
           `;
           tableBody.appendChild(row);
         });
@@ -753,35 +795,35 @@ function setupButtons () {
     const rawEl = document.getElementById('raw-history');
 
     if (!dateVal) { resDiv.innerHTML = '<span style="color:red">Please select a date.</span>'; return; }
-    
+
     resDiv.innerHTML = 'Searching...';
-    
+
     send('get_daily_transactions', { userId, date: dateVal }, (m) => {
       rawEl.textContent = JSON.stringify(m, null, 2);
       resDiv.innerHTML = '';
-      
+
       if (m.data.status === 'success' && m.data.data.length > 0) {
-         m.data.data.forEach(tx => {
-            const div = document.createElement('div');
-            div.style.borderBottom = '1px solid #eee';
-            div.style.padding = '8px';
-            div.style.cursor = 'pointer';
-            div.className = 'history-item';
-            
-            // Pass null for 'el' so we don't replace row text with "Copied!", but still trigger lookup
-            div.onclick = () => window.handleHistoryClick(null, tx.id, tx.type);
-            
-            div.innerHTML = `
+        m.data.data.forEach(tx => {
+          const div = document.createElement('div');
+          div.style.borderBottom = '1px solid #eee';
+          div.style.padding = '8px';
+          div.style.cursor = 'pointer';
+          div.className = 'history-item';
+
+          // Pass null for 'el' so we don't replace row text with "Copied!", but still trigger lookup
+          div.onclick = () => window.handleHistoryClick(null, tx.id, tx.type);
+
+          div.innerHTML = `
                 <div style="display:flex; justify-content:space-between;">
-                  <span><b>${new Date(tx.timestamp*1000).toLocaleTimeString()}</b> <span class="tx-type-tag ${tx.type==='BTC'?'tag-btc':'tag-ln'}">${tx.type}</span></span>
+                  <span><b>${new Date(tx.timestamp * 1000).toLocaleTimeString()}</b> <span class="tx-type-tag ${tx.type === 'BTC' ? 'tag-btc' : 'tag-ln'}">${tx.type}</span></span>
                   <span>${tx.direction === 'IN' ? '📥' : '💸'} <b>${fmtSats(tx.amount_msat)}</b> sat</span>
                 </div>
-                <div style="font-size:0.8em; color:#666; margin-top:2px;">ID: ${tx.id.substring(0,20)}...</div>
+                <div style="font-size:0.8em; color:#666; margin-top:2px;">ID: ${tx.id.substring(0, 20)}...</div>
             `;
-            resDiv.appendChild(div);
-         });
+          resDiv.appendChild(div);
+        });
       } else {
-         resDiv.textContent = 'No transactions found for this date.';
+        resDiv.textContent = 'No transactions found for this date.';
       }
     });
   };
@@ -791,31 +833,31 @@ function setupButtons () {
     const tx_id = document.getElementById('lookup-id').value;
     const resEl = document.getElementById('res-lookup');
     const rawEl = document.getElementById('raw-history');
-    
-    if (!tx_id) { 
-        resEl.style.display = 'block';
-        resEl.textContent = 'Error: ID required'; 
-        return; 
+
+    if (!tx_id) {
+      resEl.style.display = 'block';
+      resEl.textContent = 'Error: ID required';
+      return;
     }
-    
+
     resEl.style.display = 'block';
     resEl.innerHTML = '⏳ Looking up BTC TX...';
-    
+
     send('get_tx_details_from_btcnode', { tx_id }, (m) => {
       rawEl.textContent = JSON.stringify(m, null, 2);
       const data = m.data?.data;
       if (data) {
-          resEl.innerHTML = `
+        resEl.innerHTML = `
             <div style="margin-bottom:5px;"><strong style="color:#e83e8c;">✅ BTC Transaction Found</strong></div>
             <div style="display:grid; grid-template-columns: auto 1fr; gap:5px 15px;">
                 <b>ID:</b> <span style="font-family:monospace;">${data.txid ? data.txid : tx_id}</span>
                 <b>Amount:</b> ${data.amount || 'N/A'} BTC
                 <b>Confs:</b> ${data.confirmations !== undefined ? data.confirmations : '0'}
-                <b>Time:</b> ${data.time ? new Date(data.time*1000).toLocaleString() : 'N/A'}
+                <b>Time:</b> ${data.time ? new Date(data.time * 1000).toLocaleString() : 'N/A'}
             </div>
           `;
       } else {
-          resEl.innerHTML = `<span style="color:red">❌ Transaction not found.</span>`;
+        resEl.innerHTML = `<span style="color:red">❌ Transaction not found.</span>`;
       }
     });
   };
@@ -825,80 +867,80 @@ function setupButtons () {
     const userId = document.querySelector('input[name="hist-user"]:checked').value;
     const resEl = document.getElementById('res-lookup');
     const rawEl = document.getElementById('raw-history');
-    
-    if (!payment_hash) { 
-        resEl.style.display = 'block';
-        resEl.textContent = 'Error: Hash required'; 
-        return; 
+
+    if (!payment_hash) {
+      resEl.style.display = 'block';
+      resEl.textContent = 'Error: Hash required';
+      return;
     }
 
     resEl.style.display = 'block';
     resEl.innerHTML = '⏳ Looking up LN Invoice...';
-    
+
     send('get_tx_details_from_lnnode', { userId, payment_hash }, (m) => {
       rawEl.textContent = JSON.stringify(m, null, 2);
       const d = m.data?.data;
       if (d) {
-          const status = d.status || (d.payment_hash ? 'Found' : 'Unknown');
-          const amt = d.amount_msat || d.amount_received_msat || '0';
-          resEl.innerHTML = `
+        const status = d.status || (d.payment_hash ? 'Found' : 'Unknown');
+        const amt = d.amount_msat || d.amount_received_msat || '0';
+        resEl.innerHTML = `
             <div style="margin-bottom:5px;"><strong style="color:#6f42c1;">⚡ Lightning Record</strong></div>
             <div style="display:grid; grid-template-columns: auto 1fr; gap:5px 15px;">
                 <b>Status:</b> <span style="text-transform:uppercase; font-weight:bold;">${status}</span>
                 <b>Amount:</b> ${fmtSats(amt)} sats
                 <b>Desc:</b> ${d.description || '-'}
-                <b>Hash:</b> <span style="font-family:monospace;">${payment_hash.substring(0,20)}...</span>
+                <b>Hash:</b> <span style="font-family:monospace;">${payment_hash.substring(0, 20)}...</span>
             </div>
           `;
       } else {
-          resEl.innerHTML = `<span style="color:red">❌ Invoice/Payment not found on ${userId}.</span>`;
+        resEl.innerHTML = `<span style="color:red">❌ Invoice/Payment not found on ${userId}.</span>`;
       }
     });
   };
 
   // 4. Validation in History Tab
   document.getElementById('btn-validate-btc').onclick = () => {
-      const tx_id = document.getElementById('lookup-id').value;
-      const amt = parseFloat(document.getElementById('validate-amt').value);
-      const resEl = document.getElementById('res-lookup');
-      const rawEl = document.getElementById('raw-history');
-      resEl.style.display = 'block';
+    const tx_id = document.getElementById('lookup-id').value;
+    const amt = parseFloat(document.getElementById('validate-amt').value);
+    const resEl = document.getElementById('res-lookup');
+    const rawEl = document.getElementById('raw-history');
+    resEl.style.display = 'block';
 
-      send('validate_btc_payment', { tx_id, amount: amt }, (m) => {
-         const d = m.data;
-         if (d.status === 'success') resEl.innerHTML = `<span style="color:green">✅ <b>VALID:</b> Received ${d.data.receivedAmount} BTC (${d.data.confirmations} confs)</span>`;
-         else if (d.status === 'pending') resEl.innerHTML = `<span style="color:orange">⏳ <b>PENDING:</b> ${d.data.confirmations} confirmations</span>`;
-         else resEl.innerHTML = `<span style="color:red">❌ <b>INVALID:</b> ${d.error}</span>`;
-         rawEl.textContent = JSON.stringify(m, null, 2);
-      });
+    send('validate_btc_payment', { tx_id, amount: amt }, (m) => {
+      const d = m.data;
+      if (d.status === 'success') resEl.innerHTML = `<span style="color:green">✅ <b>VALID:</b> Received ${d.data.receivedAmount} BTC (${d.data.confirmations} confs)</span>`;
+      else if (d.status === 'pending') resEl.innerHTML = `<span style="color:orange">⏳ <b>PENDING:</b> ${d.data.confirmations} confirmations</span>`;
+      else resEl.innerHTML = `<span style="color:red">❌ <b>INVALID:</b> ${d.error}</span>`;
+      rawEl.textContent = JSON.stringify(m, null, 2);
+    });
   };
 
   document.getElementById('btn-validate-ln').onclick = () => {
-      const payment_hash = document.getElementById('lookup-id').value;
-      const amt = parseInt(document.getElementById('validate-amt').value, 10);
-      const userId = document.querySelector('input[name="hist-user"]:checked').value;
-      const resEl = document.getElementById('res-lookup');
-      const rawEl = document.getElementById('raw-history');
-      resEl.style.display = 'block';
+    const payment_hash = document.getElementById('lookup-id').value;
+    const amt = parseInt(document.getElementById('validate-amt').value, 10);
+    const userId = document.querySelector('input[name="hist-user"]:checked').value;
+    const resEl = document.getElementById('res-lookup');
+    const rawEl = document.getElementById('raw-history');
+    resEl.style.display = 'block';
 
-      send('validate_ln_payment', { payment_hash, amount_msat: amt, userId }, (m) => {
-         const d = m.data;
-         if (d.status === 'success') resEl.innerHTML = `<span style="color:green">✅ <b>VALID:</b> Invoice is PAID.</span>`;
-         else if (d.status === 'pending') resEl.innerHTML = `<span style="color:orange">⏳ <b>PENDING:</b> Status is '${d.data.status}'.</span>`;
-         else resEl.innerHTML = `<span style="color:red">❌ <b>INVALID:</b> ${d.error}</span>`;
-         rawEl.textContent = JSON.stringify(m, null, 2);
-      });
+    send('validate_ln_payment', { payment_hash, amount_msat: amt, userId }, (m) => {
+      const d = m.data;
+      if (d.status === 'success') resEl.innerHTML = `<span style="color:green">✅ <b>VALID:</b> Invoice is PAID.</span>`;
+      else if (d.status === 'pending') resEl.innerHTML = `<span style="color:orange">⏳ <b>PENDING:</b> Status is '${d.data.status}'.</span>`;
+      else resEl.innerHTML = `<span style="color:red">❌ <b>INVALID:</b> ${d.error}</span>`;
+      rawEl.textContent = JSON.stringify(m, null, 2);
+    });
   };
 
 
   // --- EXISTING HANDLERS (Preserved) ---
-  
+
   document.getElementById('btn-hub-connect').onclick = () => {
     const el = document.getElementById('hub-connect-status');
     el.textContent = 'Connecting...';
     send('open_channel_flamingo', { userId: 'node4' }, (m) => {
       if (m.data.status === 'success') {
-        el.innerHTML = `<span style="color:green">${m.data.data.message}</span><br><small>TXID: ${m.data.data.txid.substr(0,10)}...</small>`;
+        el.innerHTML = `<span style="color:green">${m.data.data.message}</span><br><small>TXID: ${m.data.data.txid.substr(0, 10)}...</small>`;
       } else {
         el.innerHTML = `<span style="color:red">${m.data.error}</span>`;
       }
@@ -922,16 +964,16 @@ function setupButtons () {
     send('verify_revenue', { amount_msat: 50000 }, (m) => {
       const d = m.data.data;
       if (m.data.status === 'success') {
-         el.innerHTML = `<span style="color:green"><b>VERIFIED</b></span><br>Fee: <b>${d.fee_earned_msat} msat</b>`;
+        el.innerHTML = `<span style="color:green"><b>VERIFIED</b></span><br>Fee: <b>${d.fee_earned_msat} msat</b>`;
       } else if (m.data.status === 'warning') {
-         el.innerHTML = `<span style="color:orange">⚠️ ${m.data.data.message}</span>`;
+        el.innerHTML = `<span style="color:orange">⚠️ ${m.data.data.message}</span>`;
       } else {
-         el.innerHTML = `<span style="color:red">❌ ${m.data.error}</span>`;
+        el.innerHTML = `<span style="color:red">❌ ${m.data.error}</span>`;
       }
       document.getElementById('raw-hub').textContent = JSON.stringify(m, null, 2);
     });
   }
-  
+
   document.getElementById('btn-getinfo').onclick = () => {
     const nodeId = document.querySelector('input[name="node-getinfo"]:checked').value
     send('lightning-getinfo', { nodeId }, (m) => {
@@ -947,7 +989,7 @@ function setupButtons () {
         if (addr) {
           const connectString = `${d.id}@${addr.address}:${addr.port}`;
           const peerIdEl = document.getElementById('peer-id');
-          if(peerIdEl) peerIdEl.value = connectString;
+          if (peerIdEl) peerIdEl.value = connectString;
         }
       }
       getActiveRaw().textContent = JSON.stringify(m, null, 2)
@@ -965,7 +1007,7 @@ function setupButtons () {
       getActiveRaw().textContent = JSON.stringify(m, null, 2)
     })
   }
-  
+
   document.getElementById('btn-getbalance').onclick = () => {
     send('get_btc_balance', {}, (m) => {
       const bal = m.data?.data?.btc
@@ -1004,7 +1046,7 @@ function setupButtons () {
       document.getElementById('raw-tools').textContent = JSON.stringify(m, null, 2)
     })
   }
-  
+
   document.getElementById('btn-list-btc').onclick = () => {
     document.getElementById('btc-history-content').innerHTML = '<i>Loading...</i>'
     send('list_btc_transactions', {}, (m) => {
@@ -1017,7 +1059,7 @@ function setupButtons () {
       document.getElementById('raw-bitcoin').textContent = JSON.stringify(m, null, 2)
     })
   }
-  
+
   document.getElementById('btn-list-ln').onclick = () => {
     const userId = document.querySelector('input[name="node-history"]:checked').value
     document.getElementById('ln-history-content').innerHTML = '<i>Loading...</i>'
@@ -1051,8 +1093,8 @@ function setupButtons () {
           <div><b>Invoice:</b> <span id="new-inv" style="cursor:pointer; color:#0056b3;">${d.data.bolt11.substring(0, 60)}...</span></div>
         `;
         document.getElementById('new-inv').onclick = (e) => {
-           payInputEl.value = d.data.bolt11;
-           copyToClipboard(d.data.bolt11, e.target);
+          payInputEl.value = d.data.bolt11;
+          copyToClipboard(d.data.bolt11, e.target);
         };
       } else {
         contentEl.innerHTML = `❌ <b>Error:</b> ${d.error}`;
@@ -1060,7 +1102,7 @@ function setupButtons () {
       document.getElementById('raw-lightning').textContent = JSON.stringify(m, null, 2);
     });
   };
-  
+
   document.getElementById('btn-pay-ln-invoice').onclick = () => {
     const data = {
       userId: document.querySelector('input[name="node-pay-inv"]:checked').value,
@@ -1072,7 +1114,7 @@ function setupButtons () {
     contentEl.textContent = 'Sending payment...';
     send('pay_ln_invoice', data, (m) => {
       const d = m.data;
-      if (d.status === 'pending' || d.status === 'success') { 
+      if (d.status === 'pending' || d.status === 'success') {
         contentEl.innerHTML = `⌛ <b>Payment sending...</b> P-Hash: ${d.data.payment_hash.substring(0, 20)}...`;
       } else {
         contentEl.innerHTML = `❌ <b>Error:</b> ${d.error}`;
@@ -1149,6 +1191,7 @@ function setupButtons () {
       amount_btc: parseFloat(document.getElementById('send-btc-amount').value),
       fee_rate_sats_per_vb: parseInt(document.getElementById('send-btc-fee').value, 10)
     };
+
     const contentEl = document.getElementById('send-btc-content');
     if (!data.recipient_address || !data.amount_btc) { contentEl.innerHTML = `❌ <b>Error:</b> Fields missing.`; return; }
 
@@ -1161,6 +1204,124 @@ function setupButtons () {
     });
   };
 
+  document.getElementById('btn-check-btc-addr').onclick = () => {
+    const addr = document.getElementById('send-btc-addr').value;
+    const resEl = document.getElementById('check-btc-addr-res');
+    resEl.innerHTML = 'Checking...';
+    send('validate_btc_address', { address: addr }, (m) => {
+      const d = m.data;
+      if (d.status === 'success') {
+        const v = d.data;
+        if (v.isvalid) {
+          resEl.innerHTML = `<span style="color:green">✅ Valid Address</span>`;
+        } else {
+          resEl.innerHTML = `<span style="color:red">❌ Invalid Address</span>`;
+        }
+      } else {
+        resEl.innerHTML = `<span style="color:red">Error: ${d.error}</span>`;
+      }
+    });
+  };
+
+  document.getElementById('btn-decode-pay').onclick = () => {
+    const inv = document.getElementById('ln-pay-string').value;
+    const userId = document.querySelector('input[name="node-pay-inv"]:checked').value;
+    const resEl = document.getElementById('decode-pay-res');
+
+    if (!inv) { resEl.innerHTML = 'Empty string'; return; }
+
+    resEl.innerHTML = 'Decoding...';
+    send('decode_ln_invoice', { invoice_string: inv, userId }, (m) => {
+      const d = m.data;
+      if (d.status === 'success') {
+        const info = d.data;
+        let payeeDisplay = info.payee || 'Unknown';
+        if (info._alias) {
+          // Format: "02abc... (Node4)"
+          payeeDisplay += ` <b>(${info._alias})</b>`;
+        }
+
+        resEl.innerHTML = `
+              <div style="background:#eee; padding:5px; margin-top:5px; border-radius:3px; word-break:break-all;">
+                <div><b>Pay to Node:</b> ${payeeDisplay}</div>
+                <div><b>Description:</b> ${info.description || 'No desc'}</div>
+                <div><b>Amount:</b> ${info.amount_msat} msat</div>
+                <div><b>Expiry:</b> ${info.expiry}s</div>
+              </div>
+            `;
+      } else {
+        resEl.innerHTML = `<span style="color:red">Error: ${d.error}</span>`;
+      }
+    });
+  }
+
+  // Identity Tools Handlers
+  const signBtn = document.getElementById('btn-sign-msg');
+  if (signBtn) {
+    signBtn.onclick = () => {
+      const msg = document.getElementById('sign-msg-input').value;
+      const userId = document.querySelector('input[name="node-sign"]:checked').value;
+      const resEl = document.getElementById('sign-msg-res');
+
+      if (!msg) { alert('Please enter a message'); return; }
+
+      resEl.style.display = 'block';
+      resEl.textContent = 'Signing...';
+
+      send('sign_message', { message: msg, userId }, (m) => {
+        const d = m.data;
+        if (d.status === 'success') {
+          resEl.style.color = '#333';
+          resEl.textContent = d.data.zbase; // The signature
+        } else {
+          resEl.style.color = 'red';
+          resEl.textContent = `Error: ${d.error}`;
+        }
+        // Show raw output in the Hub tab's raw area (or general if applicable)
+        const rawEl = document.getElementById('raw-hub') || document.getElementById('raw-bitcoin');
+        if (rawEl) rawEl.textContent = JSON.stringify(m, null, 2);
+      });
+    };
+  }
+
+  const verifyBtn = document.getElementById('btn-verify-msg');
+  if (verifyBtn) {
+    verifyBtn.onclick = () => {
+      const msg = document.getElementById('verify-msg-input').value;
+      const sig = document.getElementById('verify-sig-input').value;
+      const resEl = document.getElementById('verify-msg-res');
+
+      if (!msg || !sig) { resEl.innerHTML = '<span style="color:red">Missing fields</span>'; return; }
+
+      resEl.innerHTML = 'Verifying...';
+      send('verify_message', { message: msg, signature: sig }, (m) => {
+        const d = m.data;
+        if (d.status === 'success') {
+          const v = d.data;
+          if (v.verified) {
+            const signer = v._alias ? `${v._alias} (${v.pubkey.substr(0, 8)}...)` : v.pubkey;
+            resEl.innerHTML = `
+                   <div style="background:#d4edda; color:#155724; padding:10px; border-radius:3px;">
+                     <b>✅ Valid Signature!</b><br>
+                     Signed by: <b>${signer}</b>
+                   </div>
+                 `;
+          } else {
+            resEl.innerHTML = `<div style="background:#f8d7da; color:#721c24; padding:10px; border-radius:3px;">
+                  <b>❌ Invalid Signature</b><br>
+                  <small>${v.raw_error || ''}</small>
+               </div>`;
+          }
+        } else {
+          resEl.innerHTML = `<span style="color:red">Error: ${d.error}</span>`;
+        }
+
+        const rawEl = document.getElementById('raw-hub') || document.getElementById('raw-bitcoin');
+        if (rawEl) rawEl.textContent = JSON.stringify(m, null, 2);
+      });
+    };
+  }
+
   document.getElementById('btn-reset-world').onclick = () => {
     const el = document.getElementById('reset-status');
     el.textContent = 'Running Diagnostic Reset...';
@@ -1171,7 +1332,7 @@ function setupButtons () {
       document.getElementById('raw-hub').textContent = JSON.stringify(m, null, 2);
     });
   };
-  
+
   document.getElementById('btn-refresh-liq').onclick = () => {
     const userId = document.querySelector('input[name="node-liq"]:checked').value;
     send('get_liquidity_report', { userId }, (m) => {
@@ -1199,10 +1360,10 @@ function setupButtons () {
 
         const fixArea = document.getElementById('liq-fix-area');
         if (health.action_required && health.status === 'LOW_INBOUND') {
-           fixArea.style.display = 'block';
-           document.getElementById('liq-msg').textContent = `⚠️ ${health.message}`;
+          fixArea.style.display = 'block';
+          document.getElementById('liq-msg').textContent = `⚠️ ${health.message}`;
         } else {
-           fixArea.style.display = 'none';
+          fixArea.style.display = 'none';
         }
       }
       document.getElementById('raw-hub').textContent = JSON.stringify(m, null, 2);
@@ -1214,15 +1375,15 @@ function setupButtons () {
     send('request_inbound_liquidity', { userId: 'node4', amount_sats: 500000 }, (m) => {
       const d = m.data;
       if (d.status === 'success') {
-         document.getElementById('inbound-status').innerHTML = `<span style="color:green">✅ ${d.data.message}</span>`;
-         setTimeout(() => document.getElementById('btn-refresh-liq').click(), 2000); 
+        document.getElementById('inbound-status').innerHTML = `<span style="color:green">✅ ${d.data.message}</span>`;
+        setTimeout(() => document.getElementById('btn-refresh-liq').click(), 2000);
       } else {
-         document.getElementById('inbound-status').innerHTML = `<span style="color:red">${d.error}</span>`;
+        document.getElementById('inbound-status').innerHTML = `<span style="color:red">${d.error}</span>`;
       }
       document.getElementById('raw-hub').textContent = JSON.stringify(m, null, 2);
     });
   };
-  
+
   document.getElementById('btn-mine-blocks').onclick = () => {
     const num_blocks = parseInt(document.getElementById('num-blocks').value, 10) || 1;
     const contentEl = document.getElementById('mine-blocks-content');

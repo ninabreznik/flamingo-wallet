@@ -1,14 +1,25 @@
 #!/usr/bin/env node
+const path = require('path')
+
+try {
+  const envPath = process.env.ENV_FILE || '../env.json'
+  if (path.isAbsolute(envPath)) {
+    Object.assign(process.env, require(envPath))
+  } else {
+    Object.assign(process.env, require(path.resolve(__dirname, envPath)))
+  }
+} catch (e) {
+  // ignore if file missing, env vars might be set otherwise
+}
 
 // lib/cli.js
 
 const bitcoind = require('bitcoind')
 const lightningd = require('lightningd')
-const websocketd = require('websocketd') 
+const websocketd = require('websocketd')
 const { execSync } = require('child_process')
 const WebSocket = require('ws')
 const net = require('net')
-const path = require('path')
 
 const url = 'ws://localhost:8080'
 const name = 'cli'
@@ -46,7 +57,7 @@ async function main() {
       await bitcoind.start()
       await lightningd.start()
       // --- ADD AWAIT HERE ---
-      await websocketd.start() 
+      await websocketd.start()
       console.log('✅ All services started.')
       break
 
