@@ -221,6 +221,7 @@ document.body.innerHTML = `
     <button class="tab-btn" onclick="openTab('tab-lightning')">⚡ Lightning</button>
     <button class="tab-btn" onclick="openTab('tab-channels')">🔗 Channels</button>
     <button class="tab-btn" onclick="openTab('tab-hub')">🦩 Flamingo Hub</button>
+    <button class="tab-btn" onclick="openTab('tab-contacts')">📇 Contacts</button>
     <button class="tab-btn" onclick="openTab('tab-tools')">🛠️ Utilities</button>
   </div>
 
@@ -613,6 +614,36 @@ document.body.innerHTML = `
     <pre id="raw-hub" class="raw-log"></pre>
   </div>
 
+  <div id="tab-contacts" class="tab-content">
+      <div class="two-col-grid">
+        <section>
+           <h2>➕ Add Contact</h2>
+           <div class="input-group">
+                <label>Name / Alias:</label>
+                <input type="text" id="contact-name" placeholder="e.g. Alice">
+           </div>
+           <div class="input-group">
+                <label>Address (BTC / Lightning):</label>
+                <input type="text" id="contact-address" placeholder="bcrt1q... or lnbc...">
+           </div>
+           <div class="input-group">
+                <label>Note (Optional):</label>
+                <input type="text" id="contact-note" placeholder="Coffee shop wallet...">
+           </div>
+           <button id="btn-save-contact" style="width:100%; background:#28a745; color:white;">Save Contact</button>
+           <div id="save-contact-res" style="margin-top:10px;"></div>
+        </section>
+
+        <section>
+           <h2>📇 Saved Contacts</h2>
+           <button id="btn-refresh-contacts" style="margin-bottom:10px;">🔄 Refresh List</button>
+           <div id="contacts-list" style="max-height: 400px; overflow-y: auto; background: #fafafa; border: 1px solid #eee; padding: 5px;">
+               <i>Loading...</i>
+           </div>
+        </section>
+      </div>
+  </div>
+
   <div id="tab-tools" class="tab-content">
      <div class="two-col-grid">
       <section id="utilities">
@@ -649,7 +680,18 @@ window.openTab = function (tabName) {
   const btns = document.getElementsByClassName('tab-btn');
   for (let i = 0; i < btns.length; i++) btns[i].classList.remove('active');
   document.getElementById(tabName).classList.add('active');
-  if (event && event.target) event.target.classList.add('active');
+  document.getElementById(tabName).classList.add('active');
+  if (event && event.target) {
+    event.target.classList.add('active');
+  }
+
+  // Auto-load contacts when entering the tab
+  if (tabName === 'tab-contacts') {
+    setTimeout(() => {
+      const btn = document.getElementById('btn-refresh-contacts');
+      if (btn) btn.click();
+    }, 100);
+  }
 }
 
 // WebSocket Setup
@@ -1207,13 +1249,29 @@ function setupButtons() {
   document.getElementById('btn-check-btc-addr').onclick = () => {
     const addr = document.getElementById('send-btc-addr').value;
     const resEl = document.getElementById('check-btc-addr-res');
+
+    if (!addr) { resEl.innerHTML = ''; return; }
+
     resEl.innerHTML = 'Checking...';
     send('validate_btc_address', { address: addr }, (m) => {
       const d = m.data;
       if (d.status === 'success') {
         const v = d.data;
         if (v.isvalid) {
-          resEl.innerHTML = `<span style="color:green">✅ Valid Address</span>`;
+          // Valid address - check if we know this person
+          send('contact_list', {}, (cm) => {
+            let matchName = null;
+            if (cm.data.status === 'success') {
+              const found = cm.data.data.find(c => c.address === addr);
+              if (found) matchName = found.name;
+            }
+
+            if (matchName) {
+              resEl.innerHTML = `<span style="color:green">✅ Valid Address (Matches: <b>${matchName}</b>)</span>`;
+            } else {
+              resEl.innerHTML = `<span style="color:green">✅ Valid Address</span>`;
+            }
+          });
         } else {
           resEl.innerHTML = `<span style="color:red">❌ Invalid Address</span>`;
         }
@@ -1399,6 +1457,110 @@ function setupButtons() {
       document.getElementById('raw-bitcoin').textContent = JSON.stringify(m, null, 2);
     });
   };
+
+  // -------------------------
+  // 📇 CONTACTS LOGIC
+  // -------------------------
+  const btnSave = document.getElementById('btn-save-contact');
+  if (btnSave) {
+    btnSave.onclick = () => {
+      const name = document.getElementById('contact-name').value;
+      const address = document.getElementById('contact-address').value;
+      const note = document.getElementById('contact-note').value;
+      const res = document.getElementById('save-contact-res');
+
+      if (!name || !address) {
+        res.innerHTML = '<span style="color:red">Name and Address are required.</span>';
+        return;
+      }
+
+      // Detect type simply by prefix
+      let type = 'Unspecified';
+      if (address.toLowerCase().startsWith('bc') || address.toLowerCase().startsWith('1') || address.toLowerCase().startsWith('3')) type = 'BTC';
+      if (address.toLowerCase().startsWith('ln')) type = 'LN';
+
+      res.innerHTML = 'Saving...';
+
+      send('contact_add', { name, address, type, note }, (m) => {
+        if (m.data.status === 'success') {
+          res.innerHTML = '<span style="color:green">✅ Contact Saved!</span>';
+          document.getElementById('contact-name').value = '';
+          document.getElementById('contact-address').value = '';
+          document.getElementById('contact-note').value = '';
+          // Refresh list
+          document.getElementById('btn-refresh-contacts').click();
+        } else {
+          res.innerHTML = `<span style="color:red">❌ Error: ${m.data.error}</span>`;
+        }
+      });
+    };
+  }
+
+  const btnRefresh = document.getElementById('btn-refresh-contacts');
+  if (btnRefresh) {
+    btnRefresh.onclick = () => {
+      const list = document.getElementById('contacts-list');
+      list.innerHTML = '<i>Refreshing...</i>';
+
+      send('contact_list', {}, (m) => {
+        if (m.data.status === 'success') {
+          const contacts = m.data.data;
+          list.innerHTML = '';
+
+          if (contacts.length === 0) {
+            list.innerHTML = '<i>No contacts saved yet.</i>';
+            return;
+          }
+
+          contacts.forEach(c => {
+            const el = document.createElement('div');
+            el.style.borderBottom = '1px solid #eee';
+            el.style.padding = '8px';
+            el.style.background = '#fff';
+            el.style.marginBottom = '5px';
+            el.style.borderRadius = '4px';
+
+            const badgeColor = c.type === 'BTC' ? '#fff3cd' : (c.type === 'LN' ? '#d1ecf1' : '#eee');
+            const badgeText = c.type === 'BTC' ? '#856404' : (c.type === 'LN' ? '#0c5460' : '#555');
+
+            el.innerHTML = `
+                    <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+                        <div>
+                            <strong style="font-size:1.1em;">${c.name}</strong>
+                            <span style="background:${badgeColor}; color:${badgeText}; padding:2px 6px; border-radius:4px; font-size:0.75em; font-weight:bold; margin-left:5px;">${c.type}</span>
+                            <div style="font-size:0.85em; color:#666; margin-top:2px;">${c.note || ''}</div>
+                            <div style="font-family:monospace; font-size:0.8em; color:#333; margin-top:4px; word-break:break-all; cursor:pointer; color:#007bff;" onclick="navigator.clipboard.writeText('${c.address}'); alert('Copied!');" title="Click to Copy">
+                                ${c.address}
+                            </div>
+                        </div>
+                        <button class="btn-delete-contact" data-id="${c.id}" style="background:#dc3545; color:white; border:none; font-size:0.7em; padding:2px 6px;">Del</button>
+                    </div>
+                  `;
+            list.appendChild(el);
+          });
+
+          // Attach delete handlers
+          document.querySelectorAll('.btn-delete-contact').forEach(btn => {
+            btn.onclick = (e) => {
+              const id = e.target.getAttribute('data-id');
+              if (confirm('Delete this contact?')) {
+                send('contact_delete', { id }, (delM) => {
+                  if (delM.data.status === 'success') {
+                    document.getElementById('btn-refresh-contacts').click();
+                  } else {
+                    alert('Failed to delete: ' + delM.data.error);
+                  }
+                });
+              }
+            };
+          });
+
+        } else {
+          list.innerHTML = `<span style="color:red">Error loading contacts: ${m.data.error}</span>`;
+        }
+      });
+    };
+  }
 }
 
 connect()

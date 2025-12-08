@@ -32,3 +32,30 @@
 2025-12-06T23:36:52.865Z UNUSUAL 0343cc20d3d324033a7330eb4e36dc25efa2b4cacf9794005431f5c1741e8c44e3-chan#1: Ignoring fee limits!
 2025-12-06T23:46:38.269Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 6msat is below exemption threshold, allowing a maximum fee of 5000msat
 2025-12-06T23:46:38.274Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 30, Destination 02cee96364075389cd3a8f52ccbb3601165dc2fa58267d88acb1837a86915e24b1 has 2 channels, assuming 15 HTLCs per channel
+
+
+
+
+2025-12-07T21:04:25.348Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2025-12-07T21:04:25.424Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2025-12-07T21:04:25.437Z INFO    lightningd: --------------------------------------------------
+2025-12-07T21:04:25.437Z INFO    lightningd: Server started with public key 03b624acbd05e75a3dd795946ed3075986b661eb5982b124c6cb771704e8ebb29d, alias LOUDFIRE (color #03b624) and lightningd v23.08.1
+2025-12-07T21:04:27.323Z UNUSUAL 0343cc20d3d324033a7330eb4e36dc25efa2b4cacf9794005431f5c1741e8c44e3-chan#1: Ignoring fee limits!
+
+
+
+
+2025-12-08T21:07:16.699Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2025-12-08T21:07:16.840Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2025-12-08T21:07:16.856Z INFO    lightningd: --------------------------------------------------
+2025-12-08T21:07:16.857Z INFO    lightningd: Server started with public key 03b624acbd05e75a3dd795946ed3075986b661eb5982b124c6cb771704e8ebb29d, alias LOUDFIRE (color #03b624) and lightningd v23.08.1
+2025-12-08T21:07:18.553Z UNUSUAL 0343cc20d3d324033a7330eb4e36dc25efa2b4cacf9794005431f5c1741e8c44e3-chan#1: Ignoring fee limits!
+
+
+
+
+2025-12-08T21:18:28.438Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2025-12-08T21:18:28.450Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2025-12-08T21:18:28.461Z INFO    lightningd: --------------------------------------------------
+2025-12-08T21:18:28.461Z INFO    lightningd: Server started with public key 03b624acbd05e75a3dd795946ed3075986b661eb5982b124c6cb771704e8ebb29d, alias LOUDFIRE (color #03b624) and lightningd v23.08.1
+2025-12-08T21:18:30.306Z UNUSUAL 0343cc20d3d324033a7330eb4e36dc25efa2b4cacf9794005431f5c1741e8c44e3-chan#1: Ignoring fee limits!

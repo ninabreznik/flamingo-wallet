@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1765230509258",
+    "name": "Bob (On-Chain)",
+    "address": "bcrt1q64udvcag859744c2qz4m52alvvy4zdyuddplcn",
+    "type": "BTC",
+    "note": "Bob's on chain BTC address",
+    "created_at": 1765230509258
+  },
+  {
+    "id": "1765233690091",
+    "name": "Alex - freelancer",
+    "address": "bcrt1q5yakzljclm7ap26r77dmz6xudw0agjf7gtfejy",
+    "type": "BTC",
+    "note": "address of BTC for Alex",
+    "created_at": 1765233690091
+  }
+]
