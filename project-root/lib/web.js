@@ -375,7 +375,10 @@ document.body.innerHTML = `
           </div>
           <div class="input-group">
             <label for="send-btc-amount">Amount (BTC):</label>
-            <input type="number" id="send-btc-amount" step="0.00000001" placeholder="0.01">
+            <div style="display:flex;">
+                <input type="number" id="send-btc-amount" step="0.00000001" placeholder="0.01" style="flex:1;">
+                <button id="btn-send-max" style="margin-left:5px; background:#6f42c1; color:white; border:none;">Max</button>
+            </div>
           </div>
           <div class="input-group">
             <label for="send-btc-fee">Fee (sats/vB):</label>
@@ -1055,6 +1058,25 @@ function setupButtons() {
       const bal = m.data?.data?.btc
       document.getElementById('btc-balance-value').innerHTML = `<b>Balance:</b> ${bal} BTC`
       getActiveRaw().textContent = JSON.stringify(m, null, 2)
+    })
+  }
+
+  document.getElementById('btn-send-max').onclick = () => {
+    send('calculate_max_btc_send', {}, (m) => {
+      const d = m.data?.data;
+      if (m.data.status === 'success') {
+        document.getElementById('send-btc-amount').value = d.max_send_btc;
+        document.getElementById('send-btc-content').innerHTML = `
+           <div style="font-size:0.85em; color:green;">
+              ✅ Set to Max Sendable<br>
+              Balance: ${d.balance_btc} BTC<br>
+              Est. Fee: ${d.estimated_fee_btc.toFixed(8)} BTC
+           </div>
+         `;
+      } else {
+        document.getElementById('send-btc-content').innerHTML = `<span style="color:red">Error: ${m.data.error}</span>`;
+      }
+      document.getElementById('raw-bitcoin').textContent = JSON.stringify(m, null, 2);
     })
   }
 
