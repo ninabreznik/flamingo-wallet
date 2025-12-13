@@ -14,5 +14,13 @@
     "type": "BTC",
     "note": "address of BTC for Alex",
     "created_at": 1765233690091
+  },
+  {
+    "id": "1765642757562",
+    "name": "Node 6",
+    "address": "02cee96364075389cd3a8f52ccbb3601165dc2fa58267d88acb1837a86915e24b1",
+    "type": "NodeID",
+    "note": "Node 6 id",
+    "created_at": 1765642757562
   }
 ]

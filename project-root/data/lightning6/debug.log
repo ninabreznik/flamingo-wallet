@@ -76,3 +76,35 @@
 2025-12-10T21:48:44.091Z INFO    lightningd: Server started with public key 02cee96364075389cd3a8f52ccbb3601165dc2fa58267d88acb1837a86915e24b1, alias UNITEDSQUIRREL (color #02cee9) and lightningd v23.08.1
 2025-12-10T21:48:44.834Z UNUSUAL 0343cc20d3d324033a7330eb4e36dc25efa2b4cacf9794005431f5c1741e8c44e3-chan#1: Ignoring fee limits!
 2025-12-10T21:48:44.836Z UNUSUAL 0343cc20d3d324033a7330eb4e36dc25efa2b4cacf9794005431f5c1741e8c44e3-chan#2: Ignoring fee limits!
+
+
+
+
+2025-12-13T15:51:28.534Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2025-12-13T15:51:28.549Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2025-12-13T15:51:28.561Z INFO    lightningd: --------------------------------------------------
+2025-12-13T15:51:28.561Z INFO    lightningd: Server started with public key 02cee96364075389cd3a8f52ccbb3601165dc2fa58267d88acb1837a86915e24b1, alias UNITEDSQUIRREL (color #02cee9) and lightningd v23.08.1
+2025-12-13T15:51:29.344Z UNUSUAL 0343cc20d3d324033a7330eb4e36dc25efa2b4cacf9794005431f5c1741e8c44e3-chan#1: Ignoring fee limits!
+2025-12-13T15:51:29.345Z UNUSUAL 0343cc20d3d324033a7330eb4e36dc25efa2b4cacf9794005431f5c1741e8c44e3-chan#2: Ignoring fee limits!
+
+
+
+
+2025-12-13T15:52:02.502Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2025-12-13T15:52:02.514Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2025-12-13T15:52:02.526Z INFO    lightningd: --------------------------------------------------
+2025-12-13T15:52:02.526Z INFO    lightningd: Server started with public key 02cee96364075389cd3a8f52ccbb3601165dc2fa58267d88acb1837a86915e24b1, alias UNITEDSQUIRREL (color #02cee9) and lightningd v23.08.1
+2025-12-13T15:52:03.910Z UNUSUAL 0343cc20d3d324033a7330eb4e36dc25efa2b4cacf9794005431f5c1741e8c44e3-chan#1: Ignoring fee limits!
+2025-12-13T15:52:03.912Z UNUSUAL 0343cc20d3d324033a7330eb4e36dc25efa2b4cacf9794005431f5c1741e8c44e3-chan#2: Ignoring fee limits!
+2025-12-13T15:54:02.077Z INFO    plugin-keysend: Inserting a new invoice for keysend with payment_hash cb3174dc839ac0ce43e7b17da8791a62f5d051bb5cf9ae78ca871519d82c87a8
+2025-12-13T15:54:02.085Z INFO    plugin-keysend: Resolving incoming HTLC with preimage for payment_hash cb3174dc839ac0ce43e7b17da8791a62f5d051bb5cf9ae78ca871519d82c87a8 provided in the onion payload.
+2025-12-13T15:54:02.087Z INFO    lightningd: Resolved invoice 'keysend-1765641242.077685138' with amount 100000msat in 1 htlcs
+2025-12-13T16:03:57.943Z INFO    plugin-keysend: Inserting a new invoice for keysend with payment_hash 3efbf031f8d10be47a85ed2e351be1f58bcf5e335b9a948dbbd69c336ffa8926
+2025-12-13T16:03:57.951Z INFO    plugin-keysend: Resolving incoming HTLC with preimage for payment_hash 3efbf031f8d10be47a85ed2e351be1f58bcf5e335b9a948dbbd69c336ffa8926 provided in the onion payload.
+2025-12-13T16:03:57.953Z INFO    lightningd: Resolved invoice 'keysend-1765641837.943883470' with amount 120000msat in 1 htlcs
+2025-12-13T16:18:40.352Z INFO    plugin-keysend: Inserting a new invoice for keysend with payment_hash 66c1ea4ae29c50228ee1b8254cc8552ba51b93dc03e6c7c1ebf448f8abaa9db5
+2025-12-13T16:18:40.359Z INFO    plugin-keysend: Resolving incoming HTLC with preimage for payment_hash 66c1ea4ae29c50228ee1b8254cc8552ba51b93dc03e6c7c1ebf448f8abaa9db5 provided in the onion payload.
+2025-12-13T16:18:40.362Z INFO    lightningd: Resolved invoice 'keysend-1765642720.352359211' with amount 90000msat in 1 htlcs
+2025-12-13T16:20:01.905Z INFO    plugin-keysend: Inserting a new invoice for keysend with payment_hash 2adc2cb6f734ec560953b37bafde6766a90fdac6ee7b5e478e0df9a6660ad017
+2025-12-13T16:20:01.913Z INFO    plugin-keysend: Resolving incoming HTLC with preimage for payment_hash 2adc2cb6f734ec560953b37bafde6766a90fdac6ee7b5e478e0df9a6660ad017 provided in the onion payload.
+2025-12-13T16:20:01.915Z INFO    lightningd: Resolved invoice 'keysend-1765642801.905356305' with amount 500000msat in 1 htlcs

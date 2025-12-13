@@ -68,3 +68,25 @@
 2025-12-10T21:48:43.372Z INFO    lightningd: --------------------------------------------------
 2025-12-10T21:48:43.372Z INFO    lightningd: Server started with public key 03b624acbd05e75a3dd795946ed3075986b661eb5982b124c6cb771704e8ebb29d, alias LOUDFIRE (color #03b624) and lightningd v23.08.1
 2025-12-10T21:48:44.405Z UNUSUAL 0343cc20d3d324033a7330eb4e36dc25efa2b4cacf9794005431f5c1741e8c44e3-chan#1: Ignoring fee limits!
+
+
+
+
+2025-12-13T15:51:27.541Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2025-12-13T15:51:27.612Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2025-12-13T15:51:27.626Z INFO    lightningd: --------------------------------------------------
+2025-12-13T15:51:27.626Z INFO    lightningd: Server started with public key 03b624acbd05e75a3dd795946ed3075986b661eb5982b124c6cb771704e8ebb29d, alias LOUDFIRE (color #03b624) and lightningd v23.08.1
+2025-12-13T15:51:29.229Z UNUSUAL 0343cc20d3d324033a7330eb4e36dc25efa2b4cacf9794005431f5c1741e8c44e3-chan#1: Ignoring fee limits!
+
+
+
+
+2025-12-13T15:52:01.478Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2025-12-13T15:52:01.490Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2025-12-13T15:52:01.502Z INFO    lightningd: --------------------------------------------------
+2025-12-13T15:52:01.502Z INFO    lightningd: Server started with public key 03b624acbd05e75a3dd795946ed3075986b661eb5982b124c6cb771704e8ebb29d, alias LOUDFIRE (color #03b624) and lightningd v23.08.1
+2025-12-13T15:52:03.168Z UNUSUAL 0343cc20d3d324033a7330eb4e36dc25efa2b4cacf9794005431f5c1741e8c44e3-chan#1: Ignoring fee limits!
+2025-12-13T15:54:00.702Z INFO    plugin-keysend: cmd 34 partid 0: Payment fee constraint 500msat is below exemption threshold, allowing a maximum fee of 5000msat
+2025-12-13T16:03:56.563Z INFO    plugin-keysend: cmd 34 partid 0: Payment fee constraint 600msat is below exemption threshold, allowing a maximum fee of 5000msat
+2025-12-13T16:18:38.953Z INFO    plugin-keysend: cmd 34 partid 0: Payment fee constraint 450msat is below exemption threshold, allowing a maximum fee of 5000msat
+2025-12-13T16:20:00.499Z INFO    plugin-keysend: cmd 34 partid 0: Payment fee constraint 2500msat is below exemption threshold, allowing a maximum fee of 5000msat

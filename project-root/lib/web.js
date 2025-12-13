@@ -457,6 +457,32 @@ document.body.innerHTML = `
           <div id="pay-ln-content" style="margin-top: 10px;"></div>
         </section>
 
+        <section id="ln-keysend">
+           <h2>💬 Chat Pay (Keysend)</h2>
+           <div class="node-selector">
+              <label>Sender Node:</label>
+              <label><input type="radio" name="node-keysend" value="node4" checked> N4</label>
+              <label><input type="radio" name="node-keysend" value="node5"> N5</label>
+              <label><input type="radio" name="node-keysend" value="node6"> N6</label>
+           </div>
+           <div class="input-group">
+              <label>Select Contact (Node ID):</label>
+              <select id="keysend-contact-select" style="width:100%; padding:8px; margin-bottom:5px;">
+                  <option value="">-- Select Contact --</option>
+              </select>
+           </div>
+           <div class="input-group">
+              <label>Destination Pubkey:</label>
+              <input type="text" id="keysend-pubkey" placeholder="03abc... (66 hex chars)" style="font-family:monospace;">
+           </div>
+           <div class="input-group">
+              <label>Amount (sats):</label>
+              <input type="number" id="keysend-amount" placeholder="1000">
+           </div>
+           <button id="btn-keysend" style="width:100%; background:#6610f2; color:white; border:none;">Send Instantly (Keysend)</button>
+           <div id="keysend-content" style="margin-top: 10px; font-size: 0.9em;"></div>
+        </section>
+
         <!-- IDENTITY / TOOLS -->
         <div class="card">
           <h2>🔐 Identity Tools</h2>
@@ -1500,6 +1526,7 @@ function setupButtons() {
       let type = 'Unspecified';
       if (address.toLowerCase().startsWith('bc') || address.toLowerCase().startsWith('1') || address.toLowerCase().startsWith('3')) type = 'BTC';
       if (address.toLowerCase().startsWith('ln')) type = 'LN';
+      if (/^[0-9a-fA-F]{66}$/.test(address)) type = 'NodeID';
 
       res.innerHTML = 'Saving...';
 
@@ -1581,6 +1608,99 @@ function setupButtons() {
           list.innerHTML = `<span style="color:red">Error loading contacts: ${m.data.error}</span>`;
         }
       });
+    };
+  }
+  // 💬 CHAT PAY / KEYSEND
+  const btnKeysend = document.getElementById('btn-keysend');
+  if (btnKeysend) {
+    btnKeysend.onclick = () => {
+      const data = {
+        userId: document.querySelector('input[name="node-keysend"]:checked').value,
+        destination_pubkey: document.getElementById('keysend-pubkey').value,
+        amount_sats: parseInt(document.getElementById('keysend-amount').value, 10)
+      };
+      const contentEl = document.getElementById('keysend-content');
+
+      if (!data.destination_pubkey || !data.amount_sats) {
+        contentEl.innerHTML = '❌ <b>Error:</b> Pubkey and Amount required.';
+        return;
+      }
+
+      contentEl.textContent = 'Sending keysend...';
+
+      send('keysend_ln_payment', data, (m) => {
+        const d = m.data;
+        if (d.status === 'success') {
+          contentEl.innerHTML = `
+               <div style="background:#d4edda; color:#155724; padding:10px; border-radius:3px; word-break: break-all;">
+                  <b>✅ Sent Instantly!</b><br>
+                  Preimage: <span style="font-family:monospace; font-size:0.8em">${d.data.payment_preimage}</span>
+               </div>`;
+        } else {
+          contentEl.innerHTML = `<span style="color:red">❌ Error: ${d.error}</span>`;
+        }
+        if (document.getElementById('raw-lightning')) {
+          document.getElementById('raw-lightning').textContent = JSON.stringify(m, null, 2);
+        }
+      });
+    };
+  }
+
+  // Helper to populate Keysend contacts dropdown
+  const refreshKeysendContacts = () => {
+    const selectEl = document.getElementById('keysend-contact-select');
+    if (!selectEl) return;
+
+    selectEl.innerHTML = '<option value="">Loading...</option>';
+
+    send('contact_list', {}, (m) => {
+      if (m.data.status === 'success') {
+        const contacts = m.data.data.filter(c => c.type === 'NodeID');
+        selectEl.innerHTML = '<option value="">-- Select Contact --</option>';
+
+        if (contacts.length === 0) {
+          const opt = document.createElement('option');
+          opt.disabled = true;
+          opt.text = '(No NodeID contacts found)';
+          selectEl.appendChild(opt);
+          return;
+        }
+
+        contacts.forEach(c => {
+          const opt = document.createElement('option');
+          opt.value = c.address; // The Node ID
+          opt.text = `${c.name} (${c.address.substring(0, 10)}...)`;
+          selectEl.appendChild(opt);
+        });
+
+        // If we just saved a contact (refresh triggered), maybe auto-select? 
+        // For now, keep it simple.
+      } else {
+        selectEl.innerHTML = '<option>Error loading contacts</option>';
+      }
+    });
+  };
+
+  // Trigger load
+  refreshKeysendContacts();
+  // Also hook into the main Contact Refresh button to update this list too
+  const btnRefreshContacts = document.getElementById('btn-refresh-contacts');
+  if (btnRefreshContacts) {
+    const originalOnClick = btnRefreshContacts.onclick;
+    btnRefreshContacts.onclick = (e) => {
+      if (originalOnClick) originalOnClick(e);
+      refreshKeysendContacts();
+    };
+  }
+
+  // Handle Selection
+  const selectKeysend = document.getElementById('keysend-contact-select');
+  if (selectKeysend) {
+    selectKeysend.onchange = (e) => {
+      const val = e.target.value;
+      if (val) {
+        document.getElementById('keysend-pubkey').value = val;
+      }
     };
   }
 }
