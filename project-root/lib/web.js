@@ -554,6 +554,16 @@ document.body.innerHTML = `
         </div>
 
         <div>
+           <h3>Step 0.5: Network Search</h3>
+           <div class="input-group">
+             <label>Search Node (Alias or ID)</label>
+             <input type="text" id="net-search-query" placeholder="e.g. Alice, 02abc...">
+           </div>
+           <button id="btn-network-search" style="width:100%; background:#6f42c1; color:white;">Search Network</button>
+           <div id="net-search-res" style="margin-top:10px; max-height:200px; overflow-y:auto; background:#fff; border:1px solid #eee;"></div>
+        </div>
+
+        <div>
            <h3>Step 1: Connect Peer</h3>
            <div class="input-group">
              <label for="peer-id">Peer ID@Host:Port</label>
@@ -1239,6 +1249,82 @@ function setupButtons() {
     });
   };
 
+  document.getElementById('btn-network-search').onclick = () => {
+    const query = document.getElementById('net-search-query').value;
+    const userId = document.querySelector('input[name="node-channel"]:checked').value;
+    const resEl = document.getElementById('net-search-res');
+
+    if (!query) { resEl.innerHTML = '<span style="color:red">Enter a search term.</span>'; return; }
+
+    resEl.innerHTML = '<i>Searching graph...</i>';
+    send('network_node_search', { userId, query }, (m) => {
+      const d = m.data;
+      if (d.status === 'success') {
+        const nodes = d.data || [];
+        if (nodes.length === 0) {
+          resEl.innerHTML = '<i>No nodes found.</i>';
+        } else {
+          resEl.innerHTML = '';
+          nodes.forEach(n => {
+            const hasAddress = (n.addresses && n.addresses.length > 0);
+            const row = document.createElement('div');
+            row.style.padding = '8px';
+            row.style.borderBottom = '1px solid #eee';
+            row.style.fontSize = '0.85em';
+
+            row.innerHTML = `
+                  <div style="font-weight:bold; color:#333;">${n.alias || 'Unknown'} <span style="font-weight:normal; color:#888;">(${n.color || '#000'})</span></div>
+                  <div style="font-family:monospace; color:#555; font-size:0.8em; overflow:hidden; text-overflow:ellipsis;">${n.nodeid}</div>
+                  <div style="display:flex; align-items:center; gap:10px; margin-top:4px;">
+                      <button class="btn-connect-result" style="padding:2px 8px; background:${hasAddress ? '#e2e6ea' : '#fff3cd'}; border:1px solid #ccc;">
+                          ${hasAddress ? 'Connect' : 'Connect (Need Addr)'}
+                      </button>
+                      ${!hasAddress ? '<span style="color:orange; font-size:0.8em;">⚠️ Address unknown</span>' : ''}
+                  </div>
+              `;
+
+            // "Connect" clicks just fill the input for the next step
+            row.querySelector('.btn-connect-result').onclick = () => {
+              // We need the address (host:port). listnodes often returns 'addresses' array
+              // format: [ { type: 'ipv4', address: '1.2.3.4', port: 9735 }, ... ]
+              let addrString = n.nodeid; // Fallback to just ID (might fail if no gossip)
+              let found = false;
+
+              if (hasAddress) {
+                const ipv4 = n.addresses.find(a => a.type === 'ipv4') || n.addresses[0];
+                if (ipv4) {
+                  addrString = `${n.nodeid}@${ipv4.address}:${ipv4.port}`;
+                  found = true;
+                }
+              }
+
+              document.getElementById('peer-id').value = addrString;
+
+              // Visual feedback
+              const pInput = document.getElementById('peer-id');
+              const oldBg = pInput.style.background;
+              pInput.style.background = found ? '#d4edda' : '#fff3cd'; // Green if full address, Yellow if just ID
+              setTimeout(() => { pInput.style.background = oldBg; }, 1000);
+
+              // Scroll to input
+              pInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+              if (!found) {
+                // Optional: Alert user
+                alert(`Warning: No public address found for ${n.alias || 'this node'}. You must manually append '@host:port' to the Peer ID before connecting.`);
+              }
+            };
+
+            resEl.appendChild(row);
+          });
+        }
+      } else {
+        resEl.innerHTML = `<span style="color:red">Error: ${d.error}</span>`;
+      }
+      document.getElementById('raw-channels').textContent = JSON.stringify(m, null, 2);
+    });
+  };
+
   document.getElementById('btn-connect-peer').onclick = () => {
     const data = {
       userId: document.querySelector('input[name="node-channel"]:checked').value,
@@ -1378,7 +1464,25 @@ function setupButtons() {
         const d = m.data;
         if (d.status === 'success') {
           resEl.style.color = '#333';
-          resEl.textContent = d.data.zbase; // The signature
+          resEl.innerHTML = `
+            <div style="margin-bottom:5px; color:green;"><b>✅ Signed Successfully!</b></div>
+            
+            <div style="font-weight:bold; margin-top:5px;">Signature (Share this):</div>
+            <div style="background:#e9ecef; padding:8px; border-radius:4px; word-break:break-all; font-family:monospace; cursor:pointer; border:1px solid #ced4da;" onclick="copyToClipboard('${d.data.zbase}', this)" title="Click to Copy">
+              ${d.data.zbase}
+            </div>
+
+            <div style="display:flex; gap:10px; margin-top:5px;">
+               <div style="flex:1;">
+                 <div style="font-weight:bold; font-size:0.9em;">Recovery ID:</div>
+                 <div style="font-family:monospace;">${d.data.recid}</div>
+               </div>
+               <div style="flex:3;">
+                 <div style="font-weight:bold; font-size:0.9em;">Hex Signature:</div>
+                 <div style="font-family:monospace; font-size:0.8em; color:#666; word-break:break-all;">${d.data.signature}</div>
+               </div>
+            </div>
+          `;
         } else {
           resEl.style.color = 'red';
           resEl.textContent = `Error: ${d.error}`;
