@@ -139,3 +139,39 @@
 2025-12-15T14:03:31.231Z UNUSUAL 03b624acbd05e75a3dd795946ed3075986b661eb5982b124c6cb771704e8ebb29d-chan#1: Ignoring fee limits!
 2025-12-15T14:03:32.088Z UNUSUAL 02cee96364075389cd3a8f52ccbb3601165dc2fa58267d88acb1837a86915e24b1-chan#2: Ignoring fee limits!
 2025-12-15T14:03:32.090Z UNUSUAL 02cee96364075389cd3a8f52ccbb3601165dc2fa58267d88acb1837a86915e24b1-chan#3: Ignoring fee limits!
+
+
+
+
+2025-12-19T14:23:32.064Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2025-12-19T14:23:32.075Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2025-12-19T14:23:32.087Z INFO    lightningd: --------------------------------------------------
+2025-12-19T14:23:32.087Z INFO    lightningd: Server started with public key 0343cc20d3d324033a7330eb4e36dc25efa2b4cacf9794005431f5c1741e8c44e3, alias LIGHTNINGWAFFLE (color #0343cc) and lightningd v23.08.1
+2025-12-19T14:23:32.912Z UNUSUAL 03b624acbd05e75a3dd795946ed3075986b661eb5982b124c6cb771704e8ebb29d-chan#1: Ignoring fee limits!
+2025-12-19T14:23:33.586Z UNUSUAL 02cee96364075389cd3a8f52ccbb3601165dc2fa58267d88acb1837a86915e24b1-chan#2: Ignoring fee limits!
+2025-12-19T14:23:33.588Z UNUSUAL 02cee96364075389cd3a8f52ccbb3601165dc2fa58267d88acb1837a86915e24b1-chan#3: Ignoring fee limits!
+
+
+
+
+2025-12-19T14:31:18.049Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2025-12-19T14:31:18.062Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2025-12-19T14:31:18.073Z INFO    lightningd: --------------------------------------------------
+2025-12-19T14:31:18.073Z INFO    lightningd: Server started with public key 0343cc20d3d324033a7330eb4e36dc25efa2b4cacf9794005431f5c1741e8c44e3, alias LIGHTNINGWAFFLE (color #0343cc) and lightningd v23.08.1
+2025-12-19T14:31:18.994Z UNUSUAL 03b624acbd05e75a3dd795946ed3075986b661eb5982b124c6cb771704e8ebb29d-chan#1: Ignoring fee limits!
+2025-12-19T14:31:19.362Z UNUSUAL 02cee96364075389cd3a8f52ccbb3601165dc2fa58267d88acb1837a86915e24b1-chan#2: Ignoring fee limits!
+2025-12-19T14:31:19.363Z UNUSUAL 02cee96364075389cd3a8f52ccbb3601165dc2fa58267d88acb1837a86915e24b1-chan#3: Ignoring fee limits!
+2025-12-19T14:31:34.284Z INFO    03b624acbd05e75a3dd795946ed3075986b661eb5982b124c6cb771704e8ebb29d-chan#1: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
+2025-12-19T14:31:34.297Z INFO    03b624acbd05e75a3dd795946ed3075986b661eb5982b124c6cb771704e8ebb29d-chan#1: State changed from CHANNELD_SHUTTING_DOWN to CLOSINGD_SIGEXCHANGE
+2025-12-19T14:31:34.314Z INFO    03b624acbd05e75a3dd795946ed3075986b661eb5982b124c6cb771704e8ebb29d-closingd-chan#1: performing quickclose in range 195sat-1000000sat
+2025-12-19T14:31:34.316Z INFO    03b624acbd05e75a3dd795946ed3075986b661eb5982b124c6cb771704e8ebb29d-chan#1: State changed from CLOSINGD_SIGEXCHANGE to CLOSINGD_COMPLETE
+
+
+
+
+2025-12-19T14:41:45.088Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2025-12-19T14:41:45.110Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2025-12-19T14:41:45.130Z INFO    lightningd: --------------------------------------------------
+2025-12-19T14:41:45.130Z INFO    lightningd: Server started with public key 0343cc20d3d324033a7330eb4e36dc25efa2b4cacf9794005431f5c1741e8c44e3, alias LIGHTNINGWAFFLE (color #0343cc) and lightningd v23.08.1
+2025-12-19T14:41:47.011Z UNUSUAL 02cee96364075389cd3a8f52ccbb3601165dc2fa58267d88acb1837a86915e24b1-chan#2: Ignoring fee limits!
+2025-12-19T14:41:47.013Z UNUSUAL 02cee96364075389cd3a8f52ccbb3601165dc2fa58267d88acb1837a86915e24b1-chan#3: Ignoring fee limits!

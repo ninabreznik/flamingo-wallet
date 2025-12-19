@@ -642,10 +642,22 @@ document.body.innerHTML = `
         <br>
         <div class="hub-box" style="background: #f8d7da; border-color: #f5c6cb;">
           <strong>🧨 Danger Zone</strong><br>
-          <small>Close all channels to restart test.</small>
+          <small>To restart test.</small>
           <br>
           <button id="btn-reset-world" style="background: #dc3545; color: white; border:none; width:100%">Reset World</button>
           <div id="reset-status" class="hub-status"></div>
+        </div>
+
+        <div class="hub-box" style="background: #f8d7da; border-color: #f5c6cb; border-width: 3px;">
+          <strong>🚨 EMERGENCY DRAIN</strong><br>
+          <small>Close all channels & sweep everything to backup address.</small>
+          <br>
+          <div class="input-group" style="margin-top:5px;">
+             <label>Backup Address (BTC):</label>
+             <input type="text" id="drain-backup-addr" placeholder="bcrt1q...">
+          </div>
+          <button id="btn-emergency-drain" style="background: #721c24; color: white; border:none; width:100%; font-weight:bold;">⚠️ DRAIN ALL FUNDS ⚠️</button>
+          <div id="drain-status" class="hub-status" style="white-space: pre-wrap;"></div>
         </div>
       </section>
     </div>
@@ -1115,6 +1127,42 @@ function setupButtons() {
       document.getElementById('raw-bitcoin').textContent = JSON.stringify(m, null, 2);
     })
   }
+
+  document.getElementById('btn-reset-world').addEventListener('click', () => {
+    if (!confirm('Are you sure you want to CLOSE ALL CHANNELS and reset?')) return
+
+    document.getElementById('reset-status').innerText = 'Resetting... check terminal for logs.'
+    send('admin_reset_world', {}, (res) => {
+      if (res.data.status === 'error') {
+        document.getElementById('reset-status').innerText = 'Error: ' + res.data.error
+      } else {
+        document.getElementById('reset-status').innerText = '✅ ' + res.data.data.message
+      }
+    })
+  })
+
+  document.getElementById('btn-emergency-drain').addEventListener('click', () => {
+    const addr = document.getElementById('drain-backup-addr').value
+    if (!addr) return alert('Please enter a backup address.')
+
+    if (!confirm('⚠️ EXTREME DANGER ⚠️\n\nThis will CLOSE ALL CHANNELS and SEND ALL FUNDS to the backup address.\n\nAre you sure?')) return
+
+    const statusEl = document.getElementById('drain-status')
+    statusEl.innerText = '⏳ Draining... This may take a moment...'
+
+    // Determine userId from a selector or default to node4 (User)
+    // For safety/testing, we assume Node4 is the main user wallet
+    const userId = 'node4'
+
+    send('emergency_drain', { userId, backup_address: addr }, (res) => {
+      if (res.data.status === 'error') {
+        statusEl.innerText = '❌ Error: ' + res.data.error
+      } else {
+        const d = res.data.data
+        statusEl.innerText = `✅ DONE!\nClosed Channels: ${d.closed_channels}\nWithdraw TXID: ${d.withdraw_txid || 'N/A'}\n\nLogs:\n${d.logs.join('\n')}`
+      }
+    })
+  })
 
   document.getElementById('btn-newaddress').onclick = () => {
     send('bitcoin-newaddress', {}, (m) => {
