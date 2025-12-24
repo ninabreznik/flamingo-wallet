@@ -12,6 +12,7 @@
     "fw": "node lib/cli.js"
   },
   "dependencies": {
+    "bip39": "^3.1.0",
     "ws": "^8.16.0"
   },
   "devDependencies": {

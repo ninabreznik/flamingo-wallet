@@ -9,7 +9,6 @@ try {
     Object.assign(process.env, require(path.resolve(__dirname, envPath)))
   }
 } catch (e) {
-  // ignore if file missing, env vars might be set otherwise
 }
 
 // lib/cli.js
@@ -69,12 +68,25 @@ async function main() {
       console.log('✅ All services stopped.')
       break
 
+    case 'reset':
+      console.log('=== ⚠️ RESETTING ALL CHIAN DATA ⚠️ ===')
+      try {
+        await lightningd.stop()
+        await bitcoind.stop()
+
+        await lightningd.reset()
+        await bitcoind.reset()
+        console.log('✅ All data wiped. Run "npm run cli start" to start fresh.')
+      } catch (e) {
+        console.error('Error during reset:', e.message)
+      }
+      break
+
     case 'status':
       console.log('=== Checking process status ===')
       try {
         const btc = execSync('pgrep -x bitcoind || true').toString().trim()
         const lnd = execSync('pgrep -x lightningd || true').toString().trim()
-        // UPDATED: pgrep now looks for the new process path
         const ws = execSync('pgrep -f lib/node_modules/websocketd/daemon.js || true').toString().trim()
 
         console.log(`bitcoind: ${btc ? '🟢 running' : '🔴 stopped'}`)
@@ -137,5 +149,21 @@ async function main() {
     }
   }
 }
+
+// Handle graceful shutdown for Docker signals
+const handleShutdown = async (signal) => {
+  console.log(`\nReceived ${signal}. Shutting down gracefully...`)
+  try {
+    await lightningd.stop()
+    await bitcoind.stop()
+    if (cmd === 'start') websocketd.stop()
+  } catch (e) {
+    console.error('Error during shutdown:', e.message)
+  }
+  process.exit(0)
+}
+
+process.on('SIGINT', () => handleShutdown('SIGINT'))
+process.on('SIGTERM', () => handleShutdown('SIGTERM'))
 
 main()

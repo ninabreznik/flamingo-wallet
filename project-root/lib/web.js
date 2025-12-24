@@ -216,6 +216,7 @@ document.body.innerHTML = `
 
   <div class="tab-nav">
     <button class="tab-btn active" onclick="openTab('tab-overview')">📊 Overview</button>
+    <button class="tab-btn" onclick="openTab('tab-wallet')">🔐 Wallet Setup</button>
     <button class="tab-btn" onclick="openTab('tab-history')">📜 History</button>
     <button class="tab-btn" onclick="openTab('tab-bitcoin')">₿ Bitcoin</button>
     <button class="tab-btn" onclick="openTab('tab-lightning')">⚡ Lightning</button>
@@ -226,6 +227,7 @@ document.body.innerHTML = `
   </div>
 
   <div id="tab-overview" class="tab-content active">
+    <!-- ... existing overview content ... -->
     <div class="two-col-grid">
       <div>
         <section id="node-info">
@@ -260,6 +262,54 @@ document.body.innerHTML = `
     </div>
     <span class="raw-label">Raw Output (Overview)</span>
     <pre id="raw-overview" class="raw-log"></pre>
+  </div>
+
+  <div id="tab-wallet" class="tab-content">
+    <div class="two-col-grid">
+        <!-- CREATE WALLET -->
+        <section>
+            <h2>🆕 Create New Wallet</h2>
+            <p style="font-size:0.9em; color:#666; margin-top:0;">Generate a new reliable identity for Node 4.</p>
+            
+            <div style="background:#fff3cd; color:#856404; padding:10px; border-radius:4px; font-size:0.9em; margin-bottom:15px;">
+                <strong> Warning:</strong> Creating a new wallet will generate a new mnemonic and 
+                <strong>WIPE</strong> the existing node data to ensure a clean state.
+            </div>
+
+            <button id="btn-create-wallet" class="primary" style="width:100%; background:#007bff;">Generate New Wallet</button>
+
+            <div id="create-wallet-res" style="display:none; margin-top:15px; background:#f8f9fa; padding:15px; border-radius:6px; border:1px solid #ddd;">
+                <label style="font-weight:bold; color:#d63384; display:block; margin-bottom:5px;">🔐 Your New Mnemonic (SAVE THIS!):</label>
+                <div id="new-mnemonic-display" style="font-family:monospace; font-size:1.1em; background:#fff; padding:10px; border:1px solid #ccc; user-select:all; line-height:1.4em;"></div>
+                <br>
+                <small style="color:#555;">The node has been restarted with this new identity.</small>
+            </div>
+        </section>
+
+        <!-- RECOVER WALLET -->
+        <section>
+            <h2>📥 Import Existing Wallet</h2>
+            <p style="font-size:0.9em; color:#666; margin-top:0;">Restore Node 4 from a 12-word mnemonic.</p>
+
+            <div class="input-group">
+                <label>Mnemonic Phrase (12 words):</label>
+                <textarea id="import-mnemonic" rows="3" style="width:100%; padding:8px; border:1px solid #ccc; border-radius:4px;" placeholder="witch collapse practice feed shame open despair creek road again ice least"></textarea>
+            </div>
+
+            <div style="background:#f8d7da; color:#721c24; padding:10px; border-radius:4px; font-size:0.9em; margin-bottom:15px;">
+                <strong>Destructive Action:</strong> Importing a wallet will <strong>DELETE</strong> all current data on Node 4 and restart it.
+            </div>
+            
+            <div style="margin-bottom:10px;">
+                <label><input type="checkbox" id="confirm-import"> I understand this will wipe my current node data.</label>
+            </div>
+
+            <button id="btn-import-wallet" style="width:100%; background:#dc3545; color:white; opacity:0.6; pointer-events:none;">Recover & Reset Node</button>
+            <div id="import-wallet-res" style="margin-top:10px;"></div>
+        </section>
+    </div>
+    <span class="raw-label">Raw Output (Wallet)</span>
+    <pre id="raw-wallet" class="raw-log"></pre>
   </div>
 
   <div id="tab-history" class="tab-content">
@@ -1855,6 +1905,71 @@ function setupButtons() {
       }
     };
   }
+
+  // --- WALLET SETUP LISTENERS ---
+  const btnCreateWallet = document.getElementById('btn-create-wallet');
+  if (btnCreateWallet) {
+    btnCreateWallet.addEventListener('click', () => {
+      if (!confirm('Are you sure? This will WIPE the current Node 4 data and restart it.')) return;
+
+      const out = getActiveRaw();
+      out.textContent = 'Generating wallet and restarting nodes... please wait...';
+
+      send('initialize_node_wallet', { action: 'create' }, (res) => {
+        out.textContent = JSON.stringify(res, null, 2);
+
+        const payload = res.data;
+        if (payload && payload.status === 'success') {
+          const container = document.getElementById('create-wallet-res');
+          const display = document.getElementById('new-mnemonic-display');
+          container.style.display = 'block';
+          display.textContent = payload.data.mnemonic;
+          alert('Wallet Created Successfully! Node ID updated.');
+        } else {
+          alert('Error creating wallet: ' + (payload ? payload.error : 'Unknown error'));
+        }
+      });
+    });
+  }
+
+  const checkImport = document.getElementById('confirm-import');
+  const btnImport = document.getElementById('btn-import-wallet');
+  if (checkImport && btnImport) {
+    checkImport.addEventListener('change', (e) => {
+      if (e.target.checked) {
+        btnImport.style.opacity = '1';
+        btnImport.style.pointerEvents = 'auto';
+      } else {
+        btnImport.style.opacity = '0.6';
+        btnImport.style.pointerEvents = 'none';
+      }
+    });
+
+    btnImport.addEventListener('click', () => {
+      const mnemonic = document.getElementById('import-mnemonic').value.trim();
+      if (!mnemonic) { alert('Please enter a mnemonic.'); return; }
+
+      const out = getActiveRaw();
+      out.textContent = 'Recovering wallet and restarting nodes... please wait...';
+      document.getElementById('import-wallet-res').textContent = 'Processing...';
+
+      send('initialize_node_wallet', { action: 'recover', mnemonic: mnemonic }, (res) => {
+        out.textContent = JSON.stringify(res, null, 2);
+
+        const payload = res.data;
+        if (payload && payload.status === 'success') {
+          document.getElementById('import-wallet-res').innerHTML = '<span style="color:green; font-weight:bold;">✅ Recovery Successful! Node ID restored.</span>';
+          alert('Wallet Recovered! Node ID: ' + payload.data.nodeId);
+        } else {
+          document.getElementById('import-wallet-res').innerHTML = `<span style="color:red; font-weight:bold;">❌ Error: ${payload ? payload.error : 'Unknown error'}</span>`;
+        }
+      });
+    });
+  }
 }
 
+// Start Main Logic
 connect()
+
+// Auto-fill network search if coming effectively from a deep link logic (conceptually)
+// Not needed for this task but good practice to keep init clean.
