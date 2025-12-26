@@ -251,3 +251,55 @@
 2025-12-24T03:50:02.716Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
 2025-12-24T03:50:02.731Z INFO    lightningd: --------------------------------------------------
 2025-12-24T03:50:02.731Z INFO    lightningd: Server started with public key 02fd389be06f1e36e4ea6b93ee0dcdd7d6b6680d0e6a82d0d212a1fc2c2bfbb8b0, alias ANGRYSPAWN (color #02fd38) and lightningd v23.08.1
+
+
+
+
+2025-12-26T21:38:32.369Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2025-12-26T21:38:32.392Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2025-12-26T21:38:32.397Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2025-12-26T21:38:32.413Z INFO    lightningd: --------------------------------------------------
+2025-12-26T21:38:32.413Z INFO    lightningd: Server started with public key 02fd389be06f1e36e4ea6b93ee0dcdd7d6b6680d0e6a82d0d212a1fc2c2bfbb8b0, alias ANGRYSPAWN (color #02fd38) and lightningd v23.08.1
+
+
+
+
+2025-12-26T21:41:51.098Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2025-12-26T21:41:51.119Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2025-12-26T21:41:51.122Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2025-12-26T21:41:51.145Z INFO    lightningd: --------------------------------------------------
+2025-12-26T21:41:51.145Z INFO    lightningd: Server started with public key 02fd389be06f1e36e4ea6b93ee0dcdd7d6b6680d0e6a82d0d212a1fc2c2bfbb8b0, alias ANGRYSPAWN (color #02fd38) and lightningd v23.08.1
+
+
+
+
+2025-12-26T21:48:48.453Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2025-12-26T21:48:48.476Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2025-12-26T21:48:48.479Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2025-12-26T21:48:48.501Z INFO    lightningd: --------------------------------------------------
+2025-12-26T21:48:48.501Z INFO    lightningd: Server started with public key 02fd389be06f1e36e4ea6b93ee0dcdd7d6b6680d0e6a82d0d212a1fc2c2bfbb8b0, alias ANGRYSPAWN (color #02fd38) and lightningd v23.08.1
+2025-12-26T21:49:41.065Z UNUSUAL lightningd: Bitcoin backend now synced.
+
+
+
+
+2025-12-26T21:54:22.391Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2025-12-26T21:54:22.414Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2025-12-26T21:54:22.442Z INFO    lightningd: --------------------------------------------------
+2025-12-26T21:54:22.442Z INFO    lightningd: Server started with public key 02fd389be06f1e36e4ea6b93ee0dcdd7d6b6680d0e6a82d0d212a1fc2c2bfbb8b0, alias ANGRYSPAWN (color #02fd38) and lightningd v23.08.1
+
+
+
+
+2025-12-26T21:54:50.390Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2025-12-26T21:54:50.412Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2025-12-26T21:54:50.439Z INFO    lightningd: --------------------------------------------------
+2025-12-26T21:54:50.439Z INFO    lightningd: Server started with public key 02fd389be06f1e36e4ea6b93ee0dcdd7d6b6680d0e6a82d0d212a1fc2c2bfbb8b0, alias ANGRYSPAWN (color #02fd38) and lightningd v23.08.1
+
+
+
+
+2025-12-26T21:55:23.198Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2025-12-26T21:55:23.218Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2025-12-26T21:55:23.245Z INFO    lightningd: --------------------------------------------------
+2025-12-26T21:55:23.245Z INFO    lightningd: Server started with public key 02fd389be06f1e36e4ea6b93ee0dcdd7d6b6680d0e6a82d0d212a1fc2c2bfbb8b0, alias ANGRYSPAWN (color #02fd38) and lightningd v23.08.1

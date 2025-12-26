@@ -17735,3 +17735,835 @@ CTransaction(hash=123dfc7dee, ver=2, vin.size=1, vout.size=2, nLockTime=107)
 2025-12-24T03:48:18Z [regtestwallet] AddToWallet f5d12750f7c4e4fffb98d94e7fd7cb706e161bac37b0d3c868b162afdee0fcd1  new
 2025-12-24T03:48:18Z [regtestwallet] AddToWallet 4976dbf051bc3094fa33d3513fb52c5b81fa76059814cdbd9f7cb5ef1d182b91  new
 2025-12-24T03:48:18Z [regtestwallet] AddToWallet 679557edc7e811ed03af9d5c3263bf5e491ff8726de40cf1bc24641735ed64d7  new
+
+
+
+
+
+2025-12-26T21:38:30Z Bitcoin Core version v25.0.0 (release build)
+2025-12-26T21:38:30Z Using the 'arm_shani(1way,2way)' SHA256 implementation
+2025-12-26T21:38:30Z Default data directory /root/.bitcoin
+2025-12-26T21:38:30Z Using data directory /data/bitcoin/regtest
+2025-12-26T21:38:30Z Config file: /data/bitcoin/bitcoin.conf (not found, skipping)
+2025-12-26T21:38:30Z Command-line arg: daemon=""
+2025-12-26T21:38:30Z Command-line arg: datadir="/data/bitcoin"
+2025-12-26T21:38:30Z Command-line arg: fallbackfee="0.0002"
+2025-12-26T21:38:30Z Command-line arg: regtest=""
+2025-12-26T21:38:30Z Command-line arg: rpcallowip="127.0.0.1"
+2025-12-26T21:38:30Z Command-line arg: rpcpassword=****
+2025-12-26T21:38:30Z Command-line arg: rpcport="18443"
+2025-12-26T21:38:30Z Command-line arg: rpcuser=****
+2025-12-26T21:38:30Z Using at most 125 automatic connections (1048576 file descriptors available)
+2025-12-26T21:38:30Z Using 16 MiB out of 16 MiB requested for signature cache, able to store 524288 elements
+2025-12-26T21:38:30Z Using 16 MiB out of 16 MiB requested for script execution cache, able to store 524288 elements
+2025-12-26T21:38:30Z Script verification uses 9 additional threads
+2025-12-26T21:38:30Z scheduler thread start
+2025-12-26T21:38:30Z WARNING: option -rpcallowip was specified without -rpcbind; this doesn't usually make sense
+2025-12-26T21:38:30Z Binding RPC on address ::1 port 18443
+2025-12-26T21:38:30Z [libevent:warning] getaddrinfo: address family for nodename not supported
+2025-12-26T21:38:30Z Binding RPC on address ::1 port 18443 failed.
+2025-12-26T21:38:30Z Binding RPC on address 127.0.0.1 port 18443
+2025-12-26T21:38:30Z [http] creating work queue of depth 16
+2025-12-26T21:38:30Z Config options rpcuser and rpcpassword will soon be deprecated. Locally-run instances may remove rpcuser to use cookie-based auth, or may be replaced with rpcauth. Please see share/rpcauth for rpcauth auth generation.
+2025-12-26T21:38:30Z [http] starting 4 worker threads
+2025-12-26T21:38:30Z Using wallet directory /data/bitcoin/regtest/wallets
+2025-12-26T21:38:30Z init message: Verifying wallet(s)…
+2025-12-26T21:38:30Z Using /16 prefix for IP bucketing
+2025-12-26T21:38:30Z init message: Loading P2P addresses…
+2025-12-26T21:38:30Z Loaded 0 addresses from peers.dat  0ms
+2025-12-26T21:38:30Z init message: Loading banlist…
+2025-12-26T21:38:30Z SetNetworkActive: true
+2025-12-26T21:38:30Z Failed to read fee estimates from /data/bitcoin/regtest/fee_estimates.dat. Continue anyway.
+2025-12-26T21:38:30Z Cache configuration:
+2025-12-26T21:38:30Z * Using 2.0 MiB for block index database
+2025-12-26T21:38:30Z * Using 8.0 MiB for chain state database
+2025-12-26T21:38:30Z * Using 440.0 MiB for in-memory UTXO set (plus up to 286.1 MiB of unused mempool space)
+2025-12-26T21:38:30Z init message: Loading block index…
+2025-12-26T21:38:30Z Validating signatures for all blocks.
+2025-12-26T21:38:30Z Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000000000
+2025-12-26T21:38:30Z Opening LevelDB in /data/bitcoin/regtest/blocks/index
+2025-12-26T21:38:30Z Opened LevelDB successfully
+2025-12-26T21:38:30Z Using obfuscation key for /data/bitcoin/regtest/blocks/index: 0000000000000000
+2025-12-26T21:38:30Z LoadBlockIndexDB: last block file = 0
+2025-12-26T21:38:30Z LoadBlockIndexDB: last block file info: CBlockFileInfo(blocks=108, size=27998, heights=0...107, time=2011-02-02...2025-12-24)
+2025-12-26T21:38:30Z Checking all blk files are present...
+2025-12-26T21:38:30Z Initializing chainstate Chainstate [ibd] @ height -1 (null)
+2025-12-26T21:38:30Z Opening LevelDB in /data/bitcoin/regtest/chainstate
+2025-12-26T21:38:30Z Opened LevelDB successfully
+2025-12-26T21:38:30Z Using obfuscation key for /data/bitcoin/regtest/chainstate: 8cf9b26268d43ad5
+2025-12-26T21:38:30Z [snapshot] allocating all cache to the IBD chainstate
+2025-12-26T21:38:30Z Opening LevelDB in /data/bitcoin/regtest/chainstate
+2025-12-26T21:38:30Z Opened LevelDB successfully
+2025-12-26T21:38:30Z Using obfuscation key for /data/bitcoin/regtest/chainstate: 8cf9b26268d43ad5
+2025-12-26T21:38:30Z [Chainstate [ibd] @ height -1 (null)] resized coinsdb cache to 8.0 MiB
+2025-12-26T21:38:30Z [Chainstate [ibd] @ height -1 (null)] resized coinstip cache to 440.0 MiB
+2025-12-26T21:38:30Z init message: Verifying blocks…
+2025-12-26T21:38:30Z  block index              20ms
+2025-12-26T21:38:30Z Setting NODE_NETWORK on non-prune mode
+2025-12-26T21:38:30Z loadblk thread start
+2025-12-26T21:38:30Z UpdateTip: new best=0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206 height=0 version=0x00000001 log2_work=1.000000 tx=1 date='2011-02-02T23:16:42Z' progress=1.000000 cache=0.0MiB(0txo)
+2025-12-26T21:38:30Z UpdateTip: new best=127acbc242b1397fdc0fcce0106716b4f506255f8679169922f2ef2d900a4425 height=1 version=0x20000000 log2_work=2.000000 tx=2 date='2025-12-24T02:45:37Z' progress=1.000000 cache=0.0MiB(1txo)
+2025-12-26T21:38:30Z block tree size = 108
+2025-12-26T21:38:30Z nBestHeight = 1
+2025-12-26T21:38:30Z torcontrol thread start
+2025-12-26T21:38:30Z UpdateTip: new best=7d1f36522b46d64626b9b28eb3f129a2946b5f229db0b8a2367b13c0690ddde9 height=2 version=0x20000000 log2_work=2.584963 tx=3 date='2025-12-24T02:45:38Z' progress=1.000000 cache=0.0MiB(2txo)
+2025-12-26T21:38:30Z Bound to 127.0.0.1:18445
+2025-12-26T21:38:30Z Bound to [::]:18444
+2025-12-26T21:38:30Z Bound to 0.0.0.0:18444
+2025-12-26T21:38:30Z UpdateTip: new best=68a01a2f56942e3339a5498e5138b3a26b89830d74b067fce4e11705067d0791 height=3 version=0x20000000 log2_work=3.000000 tx=4 date='2025-12-24T02:45:38Z' progress=1.000000 cache=0.0MiB(3txo)
+2025-12-26T21:38:30Z UpdateTip: new best=64d99fbc526382e613b54d3da411f167d5c2665658d9341bdcbe83821f489f7e height=4 version=0x20000000 log2_work=3.321928 tx=5 date='2025-12-24T02:45:39Z' progress=1.000000 cache=0.0MiB(4txo)
+2025-12-26T21:38:30Z 0 block-relay-only anchors will be tried for connections.
+2025-12-26T21:38:30Z init message: Starting network threads…
+2025-12-26T21:38:30Z net thread start
+2025-12-26T21:38:30Z dnsseed thread start
+2025-12-26T21:38:30Z Loading addresses from DNS seed dummySeed.invalid.
+2025-12-26T21:38:30Z msghand thread start
+2025-12-26T21:38:30Z addcon thread start
+2025-12-26T21:38:30Z UpdateTip: new best=7524f5bf95123d3f576de668a2ecd3bc0b2d10c19f9d735ae4f9210cc14113e2 height=5 version=0x20000000 log2_work=3.584963 tx=6 date='2025-12-24T02:45:39Z' progress=1.000000 cache=0.0MiB(5txo)
+2025-12-26T21:38:30Z opencon thread start
+2025-12-26T21:38:30Z UpdateTip: new best=0f3443a7397fab5a6711cb4f4be70b66e2799df1ac234d0d69721f2d7a2282a3 height=6 version=0x20000000 log2_work=3.807355 tx=7 date='2025-12-24T02:45:39Z' progress=1.000000 cache=0.0MiB(6txo)
+2025-12-26T21:38:30Z init message: Done loading
+2025-12-26T21:38:30Z UpdateTip: new best=4d8adeded2014aca79dd96cba0ca68675898ef093e64b0be9d6f72fcd230d9ac height=7 version=0x20000000 log2_work=4.000000 tx=8 date='2025-12-24T02:45:39Z' progress=1.000000 cache=0.0MiB(7txo)
+2025-12-26T21:38:30Z UpdateTip: new best=1617fc0fac79a7579361a9581f278b3143e2234664d678c6659d4dc599b36cf5 height=8 version=0x20000000 log2_work=4.169925 tx=9 date='2025-12-24T02:45:40Z' progress=1.000000 cache=0.0MiB(8txo)
+2025-12-26T21:38:30Z UpdateTip: new best=738169338d63a4ee6674342d02d8e53dc2d7bf4b6877c14c67780d7ab9402349 height=9 version=0x20000000 log2_work=4.321928 tx=10 date='2025-12-24T02:45:40Z' progress=1.000000 cache=0.0MiB(9txo)
+2025-12-26T21:38:30Z UpdateTip: new best=7418b76c3602d9ebf6014777b031f08a39520e19e8f6fd858b2affb0c9f309e6 height=10 version=0x20000000 log2_work=4.459432 tx=11 date='2025-12-24T02:45:40Z' progress=1.000000 cache=0.0MiB(10txo)
+2025-12-26T21:38:30Z UpdateTip: new best=0ebad4c243013861d203cf3ede3c67fc3c3f06111329134a184f8061123e2497 height=11 version=0x20000000 log2_work=4.584963 tx=12 date='2025-12-24T02:45:40Z' progress=1.000000 cache=0.0MiB(11txo)
+2025-12-26T21:38:30Z UpdateTip: new best=5662da7727cb4c264f52721b4c84226d7b36663f930b031b46b0275e55b348e3 height=12 version=0x20000000 log2_work=4.700440 tx=13 date='2025-12-24T02:45:40Z' progress=1.000000 cache=0.0MiB(12txo)
+2025-12-26T21:38:30Z UpdateTip: new best=6d3365a36a5996c6d64183d8fe428e26a0b86a426607784161337f9ed91b2f20 height=13 version=0x20000000 log2_work=4.807355 tx=14 date='2025-12-24T02:45:40Z' progress=1.000000 cache=0.0MiB(13txo)
+2025-12-26T21:38:30Z UpdateTip: new best=3a7651c467c75d022ca0e22261f917d135337ca42c5c07b2bc46b6426ec2fe68 height=14 version=0x20000000 log2_work=4.906891 tx=15 date='2025-12-24T02:45:41Z' progress=1.000000 cache=0.0MiB(14txo)
+2025-12-26T21:38:30Z UpdateTip: new best=6473fe3affc8cb1df63328b8c88c167a66b99f0520e037770ca2da8a1ddbbab8 height=15 version=0x20000000 log2_work=5.000000 tx=16 date='2025-12-24T02:45:41Z' progress=1.000000 cache=0.0MiB(15txo)
+2025-12-26T21:38:30Z UpdateTip: new best=0c20023f91fd801fb0a28db8be5b638a60e15749bc261f0225c273c59c3b1c67 height=16 version=0x20000000 log2_work=5.087463 tx=17 date='2025-12-24T02:45:41Z' progress=1.000000 cache=0.0MiB(16txo)
+2025-12-26T21:38:30Z UpdateTip: new best=50ef84f33e59d9aadeac37bb264541e1dc05c398750d5067e96d440706eac817 height=17 version=0x20000000 log2_work=5.169925 tx=18 date='2025-12-24T02:45:41Z' progress=1.000000 cache=0.0MiB(17txo)
+2025-12-26T21:38:30Z UpdateTip: new best=20a7e505e2dd38b707f8855dbde8d3c9e17c8e61cad5021e723d21788e7dfec1 height=18 version=0x20000000 log2_work=5.247928 tx=19 date='2025-12-24T02:45:41Z' progress=1.000000 cache=0.0MiB(18txo)
+2025-12-26T21:38:30Z 0 addresses found from DNS seeds
+2025-12-26T21:38:30Z dnsseed thread exit
+2025-12-26T21:38:30Z UpdateTip: new best=451273a4629d264674bc3b896cd68c200c014df9d6e7ec50411eb8fc049102ad height=19 version=0x20000000 log2_work=5.321928 tx=20 date='2025-12-24T02:45:41Z' progress=1.000000 cache=0.0MiB(19txo)
+2025-12-26T21:38:30Z UpdateTip: new best=71c583d759d79b5f85535ae6ec23d9a23999e500cc41621f07ec40d0a3d00f3b height=20 version=0x20000000 log2_work=5.392317 tx=21 date='2025-12-24T02:45:42Z' progress=1.000000 cache=0.0MiB(20txo)
+2025-12-26T21:38:30Z UpdateTip: new best=3d75cbb899ffe79b5b27288e4f90eee0bed1fb366d4eb21e5dbf89c5bd0ff39d height=21 version=0x20000000 log2_work=5.459432 tx=22 date='2025-12-24T02:45:42Z' progress=1.000000 cache=0.0MiB(21txo)
+2025-12-26T21:38:30Z UpdateTip: new best=34cab92a178bc97393895811da49d46c15c04e863f3a956f98feb2f5e2a64610 height=22 version=0x20000000 log2_work=5.523562 tx=23 date='2025-12-24T02:45:42Z' progress=1.000000 cache=0.0MiB(22txo)
+2025-12-26T21:38:30Z UpdateTip: new best=7c9fc35d6a71318763f8cadb758dab9434572e425c249eb9f79176dfcccd112a height=23 version=0x20000000 log2_work=5.584963 tx=24 date='2025-12-24T02:45:42Z' progress=1.000000 cache=0.0MiB(23txo)
+2025-12-26T21:38:30Z UpdateTip: new best=44b5f6615a5b81b7b02110503cd5c793bf1f4fc8e8a0ba5be3a9b5252d0c3519 height=24 version=0x20000000 log2_work=5.643856 tx=25 date='2025-12-24T02:45:42Z' progress=1.000000 cache=0.0MiB(24txo)
+2025-12-26T21:38:30Z UpdateTip: new best=079160d712890a98d72baad91bce4c739303732a4bd15cd128ff7a3234810044 height=25 version=0x20000000 log2_work=5.700440 tx=26 date='2025-12-24T02:45:42Z' progress=1.000000 cache=0.0MiB(25txo)
+2025-12-26T21:38:30Z UpdateTip: new best=0197653af64d292ca570d175e4fc11224c5a22105c21a99b4b883736acc58ac2 height=26 version=0x20000000 log2_work=5.754888 tx=27 date='2025-12-24T02:45:43Z' progress=1.000000 cache=0.0MiB(26txo)
+2025-12-26T21:38:30Z UpdateTip: new best=24a0d7245b5213f67d04d1b8741e2a8cc861bc74d5546202643ee9ed3b6bbd8d height=27 version=0x20000000 log2_work=5.807355 tx=28 date='2025-12-24T02:45:43Z' progress=1.000000 cache=0.0MiB(27txo)
+2025-12-26T21:38:30Z UpdateTip: new best=5e6385a2fe5833a0ab611dc831cb5601ad5a9b2fb1332f4f58dcee8fe9a8e4fb height=28 version=0x20000000 log2_work=5.857981 tx=29 date='2025-12-24T02:45:43Z' progress=1.000000 cache=0.0MiB(28txo)
+2025-12-26T21:38:30Z UpdateTip: new best=6090ebe097533de66c8adfbc0bfa8630b050d7f201aeb40d86f98fd7ae0ea152 height=29 version=0x20000000 log2_work=5.906891 tx=30 date='2025-12-24T02:45:43Z' progress=1.000000 cache=0.0MiB(29txo)
+2025-12-26T21:38:30Z UpdateTip: new best=4d0ae27ac8e38bd9d5b343a2c99a5a8151d9809b5a28f2f626f6ef09d42aed1e height=30 version=0x20000000 log2_work=5.954196 tx=31 date='2025-12-24T02:45:43Z' progress=1.000000 cache=0.0MiB(30txo)
+2025-12-26T21:38:30Z UpdateTip: new best=45d2dc091068ccc8487df60e3f96529db00590fb6181f96977dd94f7ccfc03a4 height=31 version=0x20000000 log2_work=6.000000 tx=32 date='2025-12-24T02:45:43Z' progress=1.000000 cache=0.0MiB(31txo)
+2025-12-26T21:38:30Z UpdateTip: new best=4f94d368931abb29a99ffc6b4790dda26f7a948a28dd7937cbf341ef21a1a4f4 height=32 version=0x20000000 log2_work=6.044394 tx=33 date='2025-12-24T02:45:44Z' progress=1.000000 cache=0.0MiB(32txo)
+2025-12-26T21:38:30Z UpdateTip: new best=450bfadd593d12aafc12f0e7aa3b0b45eed3360f60fef36b962191e7c9923132 height=33 version=0x20000000 log2_work=6.087463 tx=34 date='2025-12-24T02:45:44Z' progress=1.000000 cache=0.0MiB(33txo)
+2025-12-26T21:38:30Z UpdateTip: new best=7c58eb86eb851d33b75911169ce33e296fdd2603d1d4070a55385b1e903a883a height=34 version=0x20000000 log2_work=6.129283 tx=35 date='2025-12-24T02:45:44Z' progress=1.000000 cache=0.0MiB(34txo)
+2025-12-26T21:38:30Z UpdateTip: new best=466b93be38cc2da98e0cbb66f33ab9475b0712b95bafdd1582992e1241680f4b height=35 version=0x20000000 log2_work=6.169925 tx=36 date='2025-12-24T02:45:44Z' progress=1.000000 cache=0.0MiB(35txo)
+2025-12-26T21:38:30Z UpdateTip: new best=4740c53fb178dbc41a5b111fc44621c3a2da81d3b5f52d6464aa972d309062f4 height=36 version=0x20000000 log2_work=6.209453 tx=37 date='2025-12-24T02:45:44Z' progress=1.000000 cache=0.0MiB(36txo)
+2025-12-26T21:38:30Z UpdateTip: new best=48d9100a78ef15bcd10c486e6ec7142e5920c60496ba3a31c3e215399e5ca2d7 height=37 version=0x20000000 log2_work=6.247928 tx=38 date='2025-12-24T02:45:44Z' progress=1.000000 cache=0.0MiB(37txo)
+2025-12-26T21:38:30Z UpdateTip: new best=0cc3e0ea0caaf5dd30aafd4df13ee8feffe6bd9c54641884b2c5d34fbfe8d9e7 height=38 version=0x20000000 log2_work=6.285402 tx=39 date='2025-12-24T02:45:45Z' progress=1.000000 cache=0.0MiB(38txo)
+2025-12-26T21:38:30Z UpdateTip: new best=1595aaffedba916193050850df0341e52e56c78d199d85a75ebf3822dcafabc2 height=39 version=0x20000000 log2_work=6.321928 tx=40 date='2025-12-24T02:45:45Z' progress=1.000000 cache=0.0MiB(39txo)
+2025-12-26T21:38:30Z UpdateTip: new best=60d09b70e5ac3524935da3e107d23134d5e6073fd3bb9b4e5eb9e91cf5002223 height=40 version=0x20000000 log2_work=6.357552 tx=41 date='2025-12-24T02:45:45Z' progress=1.000000 cache=0.0MiB(40txo)
+2025-12-26T21:38:30Z UpdateTip: new best=41f138f09a916896be643f7e93fbc28bdfa92f2ad285fe7640d35d503837c327 height=41 version=0x20000000 log2_work=6.392317 tx=42 date='2025-12-24T02:45:45Z' progress=1.000000 cache=0.0MiB(41txo)
+2025-12-26T21:38:30Z UpdateTip: new best=68711074135f023003e3605f0ae9ae0162d9b0c3651cacd5e15322613b3247db height=42 version=0x20000000 log2_work=6.426265 tx=43 date='2025-12-24T02:45:45Z' progress=1.000000 cache=0.0MiB(42txo)
+2025-12-26T21:38:30Z UpdateTip: new best=7f5df57a8751cdea318b237278e42f6c3085001468dcbcc7d523e94a02fd6794 height=43 version=0x20000000 log2_work=6.459432 tx=44 date='2025-12-24T02:45:45Z' progress=1.000000 cache=0.0MiB(43txo)
+2025-12-26T21:38:30Z UpdateTip: new best=4def1297f6e72f531547a8289cdc09a438258c7bf72c16fe04ef854ec2b7e4a6 height=44 version=0x20000000 log2_work=6.491853 tx=45 date='2025-12-24T02:45:46Z' progress=1.000000 cache=0.0MiB(44txo)
+2025-12-26T21:38:30Z UpdateTip: new best=6d2cc19867d7a59147283d32eaf67d29ecf41fe3c3051f1380fb56be108c108d height=45 version=0x20000000 log2_work=6.523562 tx=46 date='2025-12-24T02:45:46Z' progress=1.000000 cache=0.0MiB(45txo)
+2025-12-26T21:38:30Z UpdateTip: new best=2ae8b635b5a3a0e950e5c3f3359e1240d6d1ae654b3d88d21cd4baed79b42700 height=46 version=0x20000000 log2_work=6.554589 tx=47 date='2025-12-24T02:45:46Z' progress=1.000000 cache=0.0MiB(46txo)
+2025-12-26T21:38:30Z UpdateTip: new best=55772301bfe2b62dfe82bea5d9618f0390c46c511781dcf67e1538fb14c782d6 height=47 version=0x20000000 log2_work=6.584963 tx=48 date='2025-12-24T02:45:46Z' progress=1.000000 cache=0.0MiB(47txo)
+2025-12-26T21:38:30Z UpdateTip: new best=6676835b6fe34f27b39e129451f3506c0f9421aedd3b6cef9da164273ecc5652 height=48 version=0x20000000 log2_work=6.614710 tx=49 date='2025-12-24T02:45:46Z' progress=1.000000 cache=0.0MiB(48txo)
+2025-12-26T21:38:30Z UpdateTip: new best=6e2c427047e3cc90e88e1b8a619ce86e3c7cbedcb5ef79e26791ad84a69cbb4a height=49 version=0x20000000 log2_work=6.643856 tx=50 date='2025-12-24T02:45:46Z' progress=1.000000 cache=0.0MiB(49txo)
+2025-12-26T21:38:30Z UpdateTip: new best=60c2cf4f25f2e76cb9021c75aa865d2620c4bc4bd8b7d779aa190b43bd080b7c height=50 version=0x20000000 log2_work=6.672425 tx=51 date='2025-12-24T02:45:47Z' progress=1.000000 cache=0.0MiB(50txo)
+2025-12-26T21:38:30Z UpdateTip: new best=2ebb7a4c2272a0875bee66cf6113497c55c82f189c788ba618268b5c06c0d6cc height=51 version=0x20000000 log2_work=6.700440 tx=52 date='2025-12-24T02:45:47Z' progress=1.000000 cache=0.0MiB(51txo)
+2025-12-26T21:38:30Z UpdateTip: new best=1f70212b21a92a225ad8c6cc4e55af7ca45c1af02fb3aa8798f2d57420742120 height=52 version=0x20000000 log2_work=6.727920 tx=53 date='2025-12-24T02:45:47Z' progress=1.000000 cache=0.0MiB(52txo)
+2025-12-26T21:38:30Z UpdateTip: new best=6742635f01d23fdc94c7194347bb577b00a9cc191c3b606eeae96956f2646520 height=53 version=0x20000000 log2_work=6.754888 tx=54 date='2025-12-24T02:45:47Z' progress=1.000000 cache=0.0MiB(53txo)
+2025-12-26T21:38:30Z UpdateTip: new best=0039a1e61735b47fa3a52debd2d69f5c1f5af1161d78eca90c921dae4e645691 height=54 version=0x20000000 log2_work=6.781360 tx=55 date='2025-12-24T02:45:47Z' progress=1.000000 cache=0.0MiB(54txo)
+2025-12-26T21:38:30Z UpdateTip: new best=0387cccbb75140b51a3163491c97cdcabb07fe88412918f9a55b3d98d7ca40b2 height=55 version=0x20000000 log2_work=6.807355 tx=56 date='2025-12-24T02:45:47Z' progress=1.000000 cache=0.0MiB(55txo)
+2025-12-26T21:38:30Z UpdateTip: new best=7f87ae8e5e1bb7edc49fe96a6cfcbfc2bd756fd26a962270c23f23a4bfbdfef6 height=56 version=0x20000000 log2_work=6.832890 tx=57 date='2025-12-24T02:45:48Z' progress=1.000000 cache=0.0MiB(56txo)
+2025-12-26T21:38:30Z UpdateTip: new best=4698cd7989d1f2e7df6d19c3ec9834ada962f4fd87a06abd598c9b523e00f5f1 height=57 version=0x20000000 log2_work=6.857981 tx=58 date='2025-12-24T02:45:48Z' progress=1.000000 cache=0.0MiB(57txo)
+2025-12-26T21:38:30Z UpdateTip: new best=791aea4a589a4ec235ee88f463d9de1fef4647fdc924c300aaae5755489f3bd7 height=58 version=0x20000000 log2_work=6.882643 tx=59 date='2025-12-24T02:45:48Z' progress=1.000000 cache=0.0MiB(58txo)
+2025-12-26T21:38:30Z UpdateTip: new best=1251ef27cab4d9f75b48d018c07027c375e3beac1faef00164770d6b7c7bb08b height=59 version=0x20000000 log2_work=6.906891 tx=60 date='2025-12-24T02:45:48Z' progress=1.000000 cache=0.0MiB(59txo)
+2025-12-26T21:38:30Z UpdateTip: new best=53e71281ba1aba203f89558d2d3f16a8cb36c4db3873b778d86f62d82ebe27bd height=60 version=0x20000000 log2_work=6.930737 tx=61 date='2025-12-24T02:45:48Z' progress=1.000000 cache=0.0MiB(60txo)
+2025-12-26T21:38:30Z UpdateTip: new best=72a134c022b59462b885c20b34cff47bd0f31673282e1c84f88d5b146897d6f1 height=61 version=0x20000000 log2_work=6.954196 tx=62 date='2025-12-24T02:45:48Z' progress=1.000000 cache=0.0MiB(61txo)
+2025-12-26T21:38:30Z UpdateTip: new best=1f78ea0bb43db6d6415456a96f8e7620876cf01f7051f1048a2e2d2d1657e15f height=62 version=0x20000000 log2_work=6.977280 tx=63 date='2025-12-24T02:45:49Z' progress=1.000000 cache=0.0MiB(62txo)
+2025-12-26T21:38:30Z UpdateTip: new best=3a3113fc3e5c5ae4d277057ba4597a17ff5ec274d957881fb28f5057761b986c height=63 version=0x20000000 log2_work=7.000000 tx=64 date='2025-12-24T02:45:49Z' progress=1.000000 cache=0.0MiB(63txo)
+2025-12-26T21:38:30Z UpdateTip: new best=47342fd5b22c227ab4fc1fcc61f4ca06487ffeead60d7d8c99a81b658789804b height=64 version=0x20000000 log2_work=7.022368 tx=65 date='2025-12-24T02:45:49Z' progress=1.000000 cache=0.0MiB(64txo)
+2025-12-26T21:38:30Z UpdateTip: new best=54a1ad22b8c01242e7942aa511ce53d207128d86ca02c5923672d8966dfc6601 height=65 version=0x20000000 log2_work=7.044394 tx=66 date='2025-12-24T02:45:49Z' progress=1.000000 cache=0.0MiB(65txo)
+2025-12-26T21:38:30Z UpdateTip: new best=37d329e11ad41b7e85c55321c862e10fe586cd49c29ed962d43729b659340776 height=66 version=0x20000000 log2_work=7.066089 tx=67 date='2025-12-24T02:45:49Z' progress=1.000000 cache=0.0MiB(66txo)
+2025-12-26T21:38:30Z UpdateTip: new best=2041bb4572ccd32af3575a93fa202bc7c639a13b2915b707547304c997701369 height=67 version=0x20000000 log2_work=7.087463 tx=68 date='2025-12-24T02:45:49Z' progress=1.000000 cache=0.0MiB(67txo)
+2025-12-26T21:38:30Z UpdateTip: new best=682855c3d5e43f93ac46e6d94fe4dac9b7cb3434963d9c8722e366a67cb7b32f height=68 version=0x20000000 log2_work=7.108524 tx=69 date='2025-12-24T02:45:50Z' progress=1.000000 cache=0.0MiB(68txo)
+2025-12-26T21:38:30Z UpdateTip: new best=75741483e806e568604aff7533b8096e74a5b2cff9536bf0ff986d02398c47af height=69 version=0x20000000 log2_work=7.129283 tx=70 date='2025-12-24T02:45:50Z' progress=1.000000 cache=0.0MiB(69txo)
+2025-12-26T21:38:30Z UpdateTip: new best=2b91ab42f3e61240db5d908a0b1a9fcfaa3064ca37049dd5a0c9e042892a67bd height=70 version=0x20000000 log2_work=7.149747 tx=71 date='2025-12-24T02:45:50Z' progress=1.000000 cache=0.0MiB(70txo)
+2025-12-26T21:38:30Z UpdateTip: new best=1960ea0ffef88854fea4ba9d9e13c2f49f7f063bbcddd7bb5a92a0cdc396cb5c height=71 version=0x20000000 log2_work=7.169925 tx=72 date='2025-12-24T02:45:50Z' progress=1.000000 cache=0.0MiB(71txo)
+2025-12-26T21:38:30Z UpdateTip: new best=31076de0b84f935847d8b5d5602007549a3a53f4491ac67e7f665f6b0476b4d7 height=72 version=0x20000000 log2_work=7.189825 tx=73 date='2025-12-24T02:45:50Z' progress=1.000000 cache=0.0MiB(72txo)
+2025-12-26T21:38:30Z UpdateTip: new best=513d092fd83d6fd7a4d3cef5c864c4e9fd2e8e469ae4eae75487d31784c38013 height=73 version=0x20000000 log2_work=7.209453 tx=74 date='2025-12-24T02:45:50Z' progress=1.000000 cache=0.0MiB(73txo)
+2025-12-26T21:38:30Z UpdateTip: new best=37b6b4cf730746f4b09bd65a9c6f9d4394e183e3a468feb159062a1ee20b06b7 height=74 version=0x20000000 log2_work=7.228819 tx=75 date='2025-12-24T02:45:51Z' progress=1.000000 cache=0.0MiB(74txo)
+2025-12-26T21:38:30Z UpdateTip: new best=6b4aa44d307ad57f27afee962648d296747443b080a2c5c94663ff208b7d8ab6 height=75 version=0x20000000 log2_work=7.247928 tx=76 date='2025-12-24T02:45:51Z' progress=1.000000 cache=0.0MiB(75txo)
+2025-12-26T21:38:30Z UpdateTip: new best=6403c8d8d3efe5a4b42f6b1825dbe3af502b4dcc196362635a83eda12c9c04fb height=76 version=0x20000000 log2_work=7.266787 tx=77 date='2025-12-24T02:45:51Z' progress=1.000000 cache=0.0MiB(76txo)
+2025-12-26T21:38:30Z UpdateTip: new best=4ff5f5ca6ac46ec7bd578beaa95b4d59ae8ec37d3387eb03fa711fde6cf5ce4e height=77 version=0x20000000 log2_work=7.285402 tx=78 date='2025-12-24T02:45:51Z' progress=1.000000 cache=0.0MiB(77txo)
+2025-12-26T21:38:30Z UpdateTip: new best=1358b81c1f8ec8c5b97c3a865771ea3a4efda8f78da3104472ca66b7fc0b0aed height=78 version=0x20000000 log2_work=7.303781 tx=79 date='2025-12-24T02:45:51Z' progress=1.000000 cache=0.0MiB(78txo)
+2025-12-26T21:38:30Z UpdateTip: new best=4aeeb11aa8dd98a3c320660ef28e2b0c6f249776a537c87cf704129265c41f8d height=79 version=0x20000000 log2_work=7.321928 tx=80 date='2025-12-24T02:45:51Z' progress=1.000000 cache=0.0MiB(79txo)
+2025-12-26T21:38:30Z UpdateTip: new best=0560e9282751b7022873f508f80749cf374df6b2f53f3935c90aab5cdc043560 height=80 version=0x20000000 log2_work=7.339850 tx=81 date='2025-12-24T02:45:52Z' progress=1.000000 cache=0.0MiB(80txo)
+2025-12-26T21:38:30Z UpdateTip: new best=21e146efccec73dc16c93436accb8ae0a31d758c78866e7c12f7ff7186aaf20a height=81 version=0x20000000 log2_work=7.357552 tx=82 date='2025-12-24T02:45:52Z' progress=1.000000 cache=0.0MiB(81txo)
+2025-12-26T21:38:30Z UpdateTip: new best=2dc8307bc087e87c39315e69296e37f5db721649c550f2b67479c6c9aa7609cb height=82 version=0x20000000 log2_work=7.375039 tx=83 date='2025-12-24T02:45:52Z' progress=1.000000 cache=0.0MiB(82txo)
+2025-12-26T21:38:30Z UpdateTip: new best=11eadb2ecad0b4b144ce0567b910e97e6bb389f010c1a2c0ca63b6317d9a610b height=83 version=0x20000000 log2_work=7.392317 tx=84 date='2025-12-24T02:45:52Z' progress=1.000000 cache=0.0MiB(83txo)
+2025-12-26T21:38:30Z UpdateTip: new best=7675ac7e42a93337be7b97766c40527616938c9951af7d4bd669b9f7051172e9 height=84 version=0x20000000 log2_work=7.409391 tx=85 date='2025-12-24T02:45:52Z' progress=1.000000 cache=0.0MiB(84txo)
+2025-12-26T21:38:30Z UpdateTip: new best=4056cbcd0a0de912d43b205603c4c48a735a1d511b1511cc4375578b8166755e height=85 version=0x20000000 log2_work=7.426265 tx=86 date='2025-12-24T02:45:52Z' progress=1.000000 cache=0.0MiB(85txo)
+2025-12-26T21:38:30Z UpdateTip: new best=67d6ca76275ef1d07902e992c1c5577e1eb3174bfeae353a19c7662fed1747fb height=86 version=0x20000000 log2_work=7.442943 tx=87 date='2025-12-24T02:45:53Z' progress=1.000000 cache=0.0MiB(86txo)
+2025-12-26T21:38:30Z UpdateTip: new best=506137b98a2b7b98cf9c443763fbed7229185a9c01ebccc0cd670d5f860a65b1 height=87 version=0x20000000 log2_work=7.459432 tx=88 date='2025-12-24T02:45:53Z' progress=1.000000 cache=0.0MiB(87txo)
+2025-12-26T21:38:30Z UpdateTip: new best=750610818148093ba636490e40495a68ea1f388b884ab284814274e4bd5ff315 height=88 version=0x20000000 log2_work=7.475733 tx=89 date='2025-12-24T02:45:53Z' progress=1.000000 cache=0.0MiB(88txo)
+2025-12-26T21:38:30Z UpdateTip: new best=449ac7e63fda0a5d6f7ba311a1aa7fe80537f2a397b31b99eb2d9983d1ea68db height=89 version=0x20000000 log2_work=7.491853 tx=90 date='2025-12-24T02:45:53Z' progress=1.000000 cache=0.0MiB(89txo)
+2025-12-26T21:38:30Z UpdateTip: new best=793f2d6a69858e4b2f8cff82a9e39860d23841f94c91f53925f00432665c1cb7 height=90 version=0x20000000 log2_work=7.507795 tx=91 date='2025-12-24T02:45:53Z' progress=1.000000 cache=0.0MiB(90txo)
+2025-12-26T21:38:30Z UpdateTip: new best=49827331c66d2d70e3e7d9a5261d70c9d95408e29edaa72a04db6db8f4daf5ea height=91 version=0x20000000 log2_work=7.523562 tx=92 date='2025-12-24T02:45:53Z' progress=1.000000 cache=0.0MiB(91txo)
+2025-12-26T21:38:30Z UpdateTip: new best=23bde6161da472fbabc17f69ffa21d0f62c8bfc8ac92d7a47c333e5e0eea3910 height=92 version=0x20000000 log2_work=7.539159 tx=93 date='2025-12-24T02:45:54Z' progress=1.000000 cache=0.0MiB(92txo)
+2025-12-26T21:38:30Z UpdateTip: new best=7ce6f7153a03e9e290fbae7e479ada175bd5cb7dc7303218def39c231455d198 height=93 version=0x20000000 log2_work=7.554589 tx=94 date='2025-12-24T02:45:54Z' progress=1.000000 cache=0.0MiB(93txo)
+2025-12-26T21:38:30Z UpdateTip: new best=501beb114d9bcf80b35dae99bfd375549ab77fb1bbb9a5c5b3886a8e7ab59695 height=94 version=0x20000000 log2_work=7.569856 tx=95 date='2025-12-24T02:45:54Z' progress=1.000000 cache=0.0MiB(94txo)
+2025-12-26T21:38:30Z UpdateTip: new best=44807eef965135c2b66160c804f7cf6b705ae71dd8de930d53471542c30fc517 height=95 version=0x20000000 log2_work=7.584963 tx=96 date='2025-12-24T02:45:54Z' progress=1.000000 cache=0.0MiB(95txo)
+2025-12-26T21:38:30Z UpdateTip: new best=3930580623d0b575dc001ed4c0ff2ae2a94a5de0ee7fbeed423d0db89febf5b1 height=96 version=0x20000000 log2_work=7.599913 tx=97 date='2025-12-24T02:45:54Z' progress=1.000000 cache=0.0MiB(96txo)
+2025-12-26T21:38:30Z UpdateTip: new best=70faa8262a6794fa50f26abc71e092197ee745522f444e54bf62b4c086c72c9c height=97 version=0x20000000 log2_work=7.614710 tx=98 date='2025-12-24T02:45:54Z' progress=1.000000 cache=0.0MiB(97txo)
+2025-12-26T21:38:30Z UpdateTip: new best=4f47444f28e6dd0fa480a72ec9b5495c7e73a6e53877aca1b9a08ef152743760 height=98 version=0x20000000 log2_work=7.629357 tx=99 date='2025-12-24T02:45:55Z' progress=1.000000 cache=0.0MiB(98txo)
+2025-12-26T21:38:30Z UpdateTip: new best=29ca5b6f6bdc930310ff5403ff945afdf14b10bab523be215c6446556f13039e height=99 version=0x20000000 log2_work=7.643856 tx=100 date='2025-12-24T02:45:55Z' progress=1.000000 cache=0.0MiB(99txo)
+2025-12-26T21:38:30Z UpdateTip: new best=31b30a2ea3aed72f7f2245ed580e1e9d86de376f0197316dfaad7c3bf688f7c8 height=100 version=0x20000000 log2_work=7.658211 tx=101 date='2025-12-24T02:45:55Z' progress=1.000000 cache=0.0MiB(100txo)
+2025-12-26T21:38:30Z UpdateTip: new best=514d804ebb51e6a05042765eff4869feb44bb2d3154c4691aa4a1714eca50929 height=101 version=0x20000000 log2_work=7.672425 tx=102 date='2025-12-24T02:45:55Z' progress=1.000000 cache=0.0MiB(101txo)
+2025-12-26T21:38:30Z UpdateTip: new best=0b73b93b5e283c01777260fcfb68db4fb03c87bb862ab21feb5f761baf9a531a height=102 version=0x20000000 log2_work=7.686501 tx=104 date='2025-12-24T02:55:13Z' progress=1.000000 cache=0.0MiB(104txo)
+2025-12-26T21:38:30Z UpdateTip: new best=358df59ae4ecec0d72111fb0c06981a8570236c88df496c0f3dd7a0f223eaf06 height=103 version=0x20000000 log2_work=7.700440 tx=105 date='2025-12-24T02:55:13Z' progress=1.000000 cache=0.0MiB(105txo)
+2025-12-26T21:38:30Z UpdateTip: new best=3a13d4915643822eeb07a998dbdff7aa988e356ee56675c5cad1a1685d8c633d height=104 version=0x20000000 log2_work=7.714246 tx=106 date='2025-12-24T02:55:13Z' progress=1.000000 cache=0.0MiB(106txo)
+2025-12-26T21:38:30Z UpdateTip: new best=1ce4a930ab1cc45e1575acbfcdbd8e8c27f709d26918eaaf4c6911c098b5c8bc height=105 version=0x20000000 log2_work=7.727920 tx=107 date='2025-12-24T02:55:13Z' progress=1.000000 cache=0.0MiB(107txo)
+2025-12-26T21:38:30Z UpdateTip: new best=12a9e46743fcd06683fd7c6feb41236a418b498ea40522bb09614bd6d13ec99c height=106 version=0x20000000 log2_work=7.741467 tx=108 date='2025-12-24T02:55:13Z' progress=1.000000 cache=0.0MiB(108txo)
+2025-12-26T21:38:30Z UpdateTip: new best=3f55a76227c966533c95bc76ed93b8e744034738163fac9338db9812e86448e1 height=107 version=0x20000000 log2_work=7.754888 tx=109 date='2025-12-24T02:55:13Z' progress=1.000000 cache=0.0MiB(109txo)
+2025-12-26T21:38:30Z Failed to open mempool file from disk. Continuing anyway.
+2025-12-26T21:38:30Z loadblk thread exit
+2025-12-26T21:38:31Z Using SQLite Version 3.38.5
+2025-12-26T21:38:31Z Using wallet /data/bitcoin/regtest/wallets/regtestwallet
+2025-12-26T21:38:31Z init message: Loading wallet…
+2025-12-26T21:38:31Z [regtestwallet] Wallet file version = 10500, last client version = 250000
+2025-12-26T21:38:31Z [regtestwallet] Setting spkMan to active: id = 7bc956a0f808c1a859dacf12d7f0e9319339828f06774e81d71553bebd4de300, type = legacy, internal = false
+2025-12-26T21:38:31Z [regtestwallet] Setting spkMan to active: id = 983a5b8dc82777edb3f58bc24a5b2b8508b3e3c1f104a462508a144bc4771cc0, type = p2sh-segwit, internal = false
+2025-12-26T21:38:31Z [regtestwallet] Setting spkMan to active: id = fb8fbebba0b6a75780eef2def8178d1953bb5b7887bc86baaf5ee7617df3140a, type = bech32, internal = false
+2025-12-26T21:38:31Z [regtestwallet] Setting spkMan to active: id = 259628c74e27795d1eccc49e8a82891a97280e11a8088100944474d93892de2e, type = bech32m, internal = false
+2025-12-26T21:38:31Z [regtestwallet] Setting spkMan to active: id = ff7e278b55707d7f0ff908d9b5025665d5a42ddd0926e89b6b875cae569b7217, type = legacy, internal = true
+2025-12-26T21:38:31Z [regtestwallet] Setting spkMan to active: id = a7469f1856d9fe17a272efaca8ea1c186ae9917e49372a721d26ddb17027f1d5, type = p2sh-segwit, internal = true
+2025-12-26T21:38:31Z [regtestwallet] Setting spkMan to active: id = 4485f1ab98bc90f5a5252c38bd2b34338cf15c8581d9d168b13e05269ec4719c, type = bech32, internal = true
+2025-12-26T21:38:31Z [regtestwallet] Setting spkMan to active: id = 94ab30a0a8ac5e9bb0eb7f115c1956f58597b76dd1250ff4dd428e45fbc67047, type = bech32m, internal = true
+2025-12-26T21:38:31Z [regtestwallet] Keys: 8 plaintext, 0 encrypted, 0 w/ metadata, 8 total. Unknown wallet records: 0
+2025-12-26T21:38:31Z [regtestwallet] Wallet completed loading in             448ms
+2025-12-26T21:38:31Z init message: Rescanning…
+2025-12-26T21:38:31Z [regtestwallet] Rescanning last 106 blocks (from block 1)...
+2025-12-26T21:38:31Z [regtestwallet] Rescan started from block 127acbc242b1397fdc0fcce0106716b4f506255f8679169922f2ef2d900a4425... (slow variant inspecting all blocks)
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 3a74c8c679f9fa23bd3bedb40a1fb21b7dc97b43073b212098179e25b723de8a  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 7fe8b8b219af14a70b2bf6d69a67e46c1cd8aff9968ba72d4d4a4a3bea17ea4a  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 5364d1dd6ef145a6966f8f6baed7730d9bb3d5e209c12100260612a64690a9e0  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 67f121ce226be39fb6d32e96ff026602ea6202be34a0b9cde7cca650e0cb094e  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 672a6074d9803e2ef19e1392cd66d80980076525623c7f93c7d38888dd8e9341  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 5004dbc40cc468a58ed65f5a936efed794809aa54762a55e6d9a1a28b9e5712c  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 78d5b6ac7980ff0451840cd6c9eb31ac669fa9f498f1a49a12be85fe5ca91203  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 70f0363dc204c49af156dee59941ef7fa5a30fb4525533baee6f1310f8a2cc08  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 25424b6ed1590c3e27a3c2fb0e39991a08fb30e351abcddb04e0c8650d3ef28a  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet c9ada202db1ad4befe235fe5140e824b0b2645eec4dc9f20a65603b98496d442  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet d5c090d30a28775f845bddf8ecda90e317ffca5256760df2ae4b25fd82dacd45  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 408cdc3c00aa6fa6fa4047316fa4a02adeb3f3b15ee37dbfaabac8aee108c0cf  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet b01555f4eafb027eb80adfcf868e2f979ad827f0b438551ad9f1e4676c34b965  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 9197f3b59045f5e569d9e42eb8e3170b0c3a60b0e2e43257e7f073eb4337fa7b  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet dda1242a845112030919c73d976fa226258d40f75c9a008a99adeeafb754ab81  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 39db3a9dfdab5e068e76856c64d8ff5ef63a0939c336b995b31ab0b4da78cfa5  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 0e920dc57dd4b54c93657fbb1169620b8ea1f51677c5c44f08ba46be2a0e0e5d  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 0c2a00473067197a47983510f4e300ee3227cce37c3ebd691549547b1ec66424  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 461d3c6691071437a1f6b78aba8049520afe7ce905e82462493e63837f23494d  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 8ecd68e89c174d232d26e53a735de5e409e62765eb7a83a3ec35bd49047e49cf  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 3f4b866be54464b05af592477ed332102445003286f6f4a5004db6a1f4c929b4  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 4c4cdb8d5cc085dd6da587b4310c0d084bd0310ab87a667d16e98c59f17f93ca  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 46a3ec01e9585019daf17cb46fa8b8cd1205f6016be9496129ddf56c811d1aa0  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet c506025898280b65a985a7c623622dc3b2fc808a099742cf5a3383dcf5d5a65e  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 56c874b06add87cc80c2cfa7397c3aca3902719b21e4115aa83a0ef6e267fc80  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 96a110f0f5fcab0c7bae1586af05c5adca557525c2d78025958d67ff77146d51  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet f6b0fdcba2a9ee66212cde09768b7a5ca8cd90091afeea925d88e5d6b400df1b  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 8c43d02854fd720cde99522f0bafaa25bd59cd8e0965c6ffa4ed1a18e121b7d0  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 06956bb5151b5c9c40a2f1cff4ba6fc3c0d82c95dce977963d261dd93ae96026  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 10681e2d622dbac57227bf94a166bacb58c75c5d1baecaa94928a382b901c5a8  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet af39aa0835a7cb570b51838c5c7f7106a808066f21441936e6b55231cfcc78c0  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 55079c17674085d035cf8e903001ff83643457996503d198167f92dcc57981f3  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet e78b04f7c0e0be7afff768ee4bd6df6fcb0892550693b5bb5830e094b502823c  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet d9c4dbef1028c198479a2c51ab9e85571b712c2d41c369874263540df5ca5dc8  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 56e7b367aa947b99e97f82be22e3e26256fd9946de042b8662b95c8cdae185e7  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 77243e194f0541257ba5c8186e400161fc2050fdeaaf63640a2778e63c90d8cd  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 31b086cde2b381d98854f1372931989c011d3321cd2b1b26093cbbdf692b57d3  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet b756bf25268c18b55fff82f8637bb878775798593bf9d94a8961a36a5425ddd4  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 7d2bc373a0c920f8316587c0042120e6669a24397b46c4dbbe9246df863af422  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet f259634504a5be9cf6dd1c3cb10bfe0369ee41b8676438067b2429cf4f213aaa  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet b509b3be3d59dc936b834a11887989377daf70085ccecda08b0ee2cc8b61dc3b  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 1a4f73d8457f12ccee4efbef520fdb2c37947e9eebe7964b2755a886b9197aa5  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 685d801874cc0b16671aa238029770916ed60d405761f6754dde95f5c9483dca  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 46df2d8a73ae6a1a617530bec8b93673804f2e94ac1bc7463e09ba009369ff09  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet f89c894c93e93f5e1b8c102b5692cbad11a862f84be69b882a21dd82cba4d7eb  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet ea15153bd924fb302d6f4fc41c20149ad0fb4e3cc5fa22d0dffa65a2e5f1f7d7  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 069367727ae63642dff5a85853b2597cd6e809d5c22cc33f07d1e2c6cc8eaae1  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 3174a731f94df252b3b92494f5416f8d30c4c6370fed9844f93a4a30ee5dc242  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet b789fdc87562b15d9c4cf05cd94dfcc3f0f20ac7860fac1d8e5e2988f7766dfa  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 3cc3ceb083e7059dc4ce1b121ba5e79dc0517b20de5ca3124e669e0fb7be55f1  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet d69351330bb909d95fefae75a7252a5af3367e673ec6968fd368da868ccb1d7f  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 1d4dc5b81c461e3bc1c89ad7a7b396a6c998162d3c32ab269a417404f81cc18d  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet d4576ee873f047b6effa09e0977a816dc842bf5c2f672ca5cf463dc13651fc12  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 3001690b0f8206f6b8c0d0f169b8bc32b344a5235c66aeddb9b8cec117a4704f  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet b0e40bad2b317a38225db30d060a1fdf8084befb29468cbd7b77d4c218876964  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 9e8107e65c13780005d37e54dc05a775c452b23209d565eaed48966a596866c0  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 9330ac2e72d5c3d878bae0079a6555e35742b6a937fe885dade100771a64be56  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 550a9ba3554f0cfa163a2cfea8c93dec6de79dc8b5aa99c20cfbbb79238f545b  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet b17cdebef83d2462e73ee0ef621679095f1cd3d0b3e16370330121750be618fe  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 9469de1f03ba12fd5f433301ba34fee260c441492344c6b0077d179d9854417e  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 9d77ebb00a5889c7b556676bf60007556a3faee2c3dfa3904394b91547af2981  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 0c69f056972d76184f4a54dd4aef530b8c5593d31aa59f359afeaa42dd1aa0df  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 40c385320171f22156e20e1cd61e17a1bd04bb74988ec566436d98712152662d  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet fb27b6addc41ea16987c651c66e4467fd51d0302536dff51d035fc06243fea3e  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 2748d10598970b0502450e9dd47f94ab3bbef304d29133fb228abf312192c60c  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 8680ea590b1f620c0f3323bcfc0fd69aad578faa530a7904c9a969fcaae2d543  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet dca9e665c13402f482c50fa86b270cea52a6e477f9d044af2dc2ad5f8bf3ecfa  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet b1b139534b7e325c87e7b84993e021ba705a9970da7adb214705cd00b912603c  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 60f328573611869480a101acce97419eba84e9143d92303304a4134df0248b9c  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 70cb9ec07a900f76ccbcb6fedc0c99a32298cd21425c6d4258e3097520108076  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet f0933771e0d9b4cc60f49db75c328d35bc1eb85bd619deeff0cdcd692f875807  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 51a393a0070a087685f51ff4e467e8710de47f395c20abeac42c62aad7ae3840  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet c3bf15e603c0a8a5e1426611af8d26e5fa5c00f6d8769fbf59cc9af4152b84f7  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet c631b53ab5974e84578321b63c5d6e016d9417f031cfa0af0034f3d3b4403c93  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 7f98a9a02a08728f96a99914a3e0e0f384c696f3832b321524b81efa141d3057  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 45a92dea030e23d1406ac30a9a2f785c7046e15dd07eee3e23bbe5be5aa20eb5  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 163e7ba9c608b075c363c9ffe2a13de6d14427740424804ca9ecba714421fd37  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet dc79bb54b8a6e1bb640c983639e9e68a23a27d93190ebffb206f9ed071aa8e89  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 9680fd71b047a689dfcf7b39adda79b735eb5cf756c86bf55033a08861660479  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet efc21fe4ac9b68dfa3c360f913c543c8d0a3eae5cc68448ed765e5a9fc40d107  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 4daa95ff31260bd9fd8ff4fdab91d318f6a61451d47d957efd534ed23ae68f1f  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 7be4bd6290f25392b3a6011d9ee765c05106df4b4ff79f4a327b180ed32aa118  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet a580812e8854135aebac12dcf5f2457ae272d52a50a599b3fedea591c2664cdb  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 2130e13c3a7cbafc86b8ef3f40cf50bee692c64766861eb7710ca89c583e7897  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 7b96cb10f7046f26d1d1014dc7883f623a632ab752c318ab5000e68e572c69d9  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet b989a77464fcdff3f8b19f3858f1cc1cf7e43a1bc150085f1caaf0afd99aa6b5  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 703cecae5a9e52a0b47d92bf8b130a27a1bca7335753bd079f0c0c4479f8f15b  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 3484c6f3b3c3b1a3906a8c56e6341461b1b305f567150c392b7b12fd6de42a22  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet db64c0b0ecd390caaeeb5bb6f436816406b141c0d64a35971bef0283da20e7f5  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet b4bae886f158cf5e369ead14432139bbcf5acceda22b3cc987ae264bee3caaf8  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet a65f6b5bbf6f870e7fcdde6f8c5604ae8130b97847bfe1d5d2af7e3fd6646d5b  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 360e7e66be092757ffab416da1bfe3ad8f7ee7854dcc1d0d967ac0e90568d366  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 33e61167bd5532783fc54ebd6d3df17fd8f986ada53833c926b0850a51b45097  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 45624fd227fe8af1dcb65c8868faa4b1a6047c9172d8c62672d055380edb1365  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 4b63f96d410eb47134955f8223b923a24015519ecd4b02846497ebdfcb04020b  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet ce906e085dd2e7600dab73701e76d23aeeeb3f85b7d5dd504e3aac80b3096503  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 10172f720aabd89a5fb4d5b471d24c2510c0c0f1d64372a3ff7d73529af14a4a  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet f4e6c1bf8f86e203021ec03ad0df66cbdb5dbc20480a9fd86a1e8b68ebb6f762  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 69e130ac621f0a7e2bc00fb5aa7cec10c59b141d159650745fe2e5a8c9b60c18  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 0bc5103bec67a6abc8622ff056c5dd343caa231b9107e5d9490fa704f2040f53  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 366a447d816c122f8c7c21600566ca2eb27ac95a0c33863e15ef042be121b345  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet d9cdca052f5f56816f714f30780256472fb22961d634b32a1d9c8f1069704b92  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet eb69e4c20a6017bcfcdbbcc3353852b86ac8b30d230fd86e6724344c775dbc1f  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet ef1885615f236f7ac016eebec063decf8010f1002456d3b935f6e487dac6471a  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet c549654121f636193b68dd9b29e194e7b446350d18ea8bdd2cde9a96f95e6d79  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet ffb6b1b40bc719765dedf7381942a5f5abce993938e30de6e99d40711d2ae43f  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 9b3fb8a05620f9339f2425763a7cd7a45c3ebbfeb07e6a53f4acc5f108917f6f  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet d411a12b1af1f362eec6b8395aad210825ab9f52168cf3d89ca6187289168990  
+2025-12-26T21:38:31Z [regtestwallet] Scanning current mempool transactions.
+2025-12-26T21:38:31Z [regtestwallet] Rescan completed in             194ms
+2025-12-26T21:38:31Z [regtestwallet] setKeyPool.size() = 8000
+2025-12-26T21:38:31Z [regtestwallet] mapWallet.size() = 3420
+2025-12-26T21:38:31Z [regtestwallet] m_address_book.size() = 73
+2025-12-26T21:38:31Z [regtestwallet] Submitting wtx d1cbf182352ba4b639130b765372c0db676b6eff0a9b109bc41074f7da0c2d91 to mempool for relay
+2025-12-26T21:38:31Z [regtestwallet] Submitting wtx fa7dc97557bfd57e586cd63a3bd59db49b2ddfaf8ab55a2507463fceffee12a3 to mempool for relay
+2025-12-26T21:38:31Z [regtestwallet] Submitting wtx e6620809a1d822b34854c570bb31b4d50768c36fe9a05519369ed52dec3bf049 to mempool for relay
+2025-12-26T21:38:31Z [regtestwallet] Submitting wtx 3d58c59c3b0997e0f4b808df961790a81d410d5266faf72de4f425b74490e14e to mempool for relay
+2025-12-26T21:38:31Z [regtestwallet] Submitting wtx e98288ef618fb3f366c376aec7397f93dc0e6364d68d2ba99a5bb66e52b412be to mempool for relay
+2025-12-26T21:38:31Z [regtestwallet] Submitting wtx 264be8053cdc63f819824e9cd5d7d428d100894569cc9035d835b93461f82e26 to mempool for relay
+2025-12-26T21:38:31Z [regtestwallet] Submitting wtx c322dad3d945be2b225c8202fc8a8af123a236a5e0e424626fa1f001cc5994d7 to mempool for relay
+2025-12-26T21:38:31Z [regtestwallet] Submitting wtx 9b4884cb2044144b17d09141a8ce2fa95779e9667c7ed6f7e346b5e2d3cf221a to mempool for relay
+2025-12-26T21:38:31Z [regtestwallet] Submitting wtx cc133d224e18516e0ed306f44fcc583502013c5f69f5a9c1452ea9628df34a7d to mempool for relay
+2025-12-26T21:38:31Z [regtestwallet] Submitting wtx d9658ebba520ad21236efb0d4a6470ba01516caa2df8d22f1f8a2f7e23bd546c to mempool for relay
+2025-12-26T21:38:31Z [regtestwallet] Submitting wtx 0bbfd465a3945fb94cdd158672b65a938bd434b6d296aec4b87dae389885e642 to mempool for relay
+2025-12-26T21:38:31Z [regtestwallet] Submitting wtx 83011fa6a8d0a0401b2a2aa6060844e3d62413c2ecbd222fbaebc24dbd8f5dc7 to mempool for relay
+2025-12-26T21:38:31Z [regtestwallet] Submitting wtx 62b4e36fb8519f8e5d695ff110512532c6a813b081d9e9150cbc0364b14e099f to mempool for relay
+2025-12-26T21:38:31Z [regtestwallet] Submitting wtx 0001feeea83f8e52709eda1896af69166af416ae8259360e1b9a33afb2b32cd2 to mempool for relay
+2025-12-26T21:38:31Z [regtestwallet] Submitting wtx 08549cec1cc426bfe5f2d48635f7661b099e093a94037cb3b6ebe28788365841 to mempool for relay
+2025-12-26T21:38:31Z [regtestwallet] Submitting wtx 90e0d3c28932191360abd3a96947170921d351879e65c802249373a4309158fa to mempool for relay
+2025-12-26T21:38:31Z [regtestwallet] Submitting wtx a1ffcbd5adef7d685e16246b10ad035c7ef75555604aad96240847e85d3b5656 to mempool for relay
+2025-12-26T21:38:31Z [regtestwallet] Submitting wtx 01a15fd72551a89bb167e5c7eb3cf2627d60cc19e4bfbe05532a202312c850bd to mempool for relay
+2025-12-26T21:38:31Z [regtestwallet] Submitting wtx aac637de7e45442bcaaeb749d504dade14b6dd50cb25926dfb3bdbd7a92b4dac to mempool for relay
+2025-12-26T21:38:31Z [regtestwallet] Submitting wtx cefd2aacad773d9e5b21de6353617954552bf50c0991205c31c56319c1cc3cc6 to mempool for relay
+2025-12-26T21:38:31Z [regtestwallet] Submitting wtx ce38d34cdb703c4b66c7709e611989483f78c6c20314899c73a86dff44f8a2bf to mempool for relay
+2025-12-26T21:38:31Z [regtestwallet] Submitting wtx 61d4fcbc1be7cab7f9d6992d17c965d2b74c4d830c0a9622e3251cb0ccf77567 to mempool for relay
+2025-12-26T21:38:31Z [regtestwallet] Submitting wtx 123dfc7dee79700d7de9c5ec657c1f985db3b1da092b4c2eb37546cbb39b390a to mempool for relay
+2025-12-26T21:38:31Z [regtestwallet] ResubmitWalletTransactions: resubmit 1 unconfirmed transactions
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 123dfc7dee79700d7de9c5ec657c1f985db3b1da092b4c2eb37546cbb39b390a  
+2025-12-26T21:38:31Z [regtestwallet] AddToWallet 123dfc7dee79700d7de9c5ec657c1f985db3b1da092b4c2eb37546cbb39b390a  
+2025-12-26T21:39:31Z Adding fixed seeds as 60 seconds have passed and addrman is empty for at least one reachable network
+2025-12-26T21:39:31Z Added 0 fixed seeds from reachable networks.
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 1449 txs: 1 fees: 1410 sigops 401
+2025-12-26T21:49:39Z Leaving InitialBlockDownload (latching to false)
+2025-12-26T21:49:39Z UpdateTip: new best=7871727f499cb7a7d4fabf10cce28d309099884572a77db00c31ff277d1135a4 height=108 version=0x20000000 log2_work=7.768184 tx=111 date='2025-12-26T21:49:39Z' progress=1.000000 cache=0.0MiB(111txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=46ff052587dc981ec63786cf8a714394659d4c8c613c626e7cbac3a1d877b974 height=109
+2025-12-26T21:49:39Z UpdateTip: new best=46ff052587dc981ec63786cf8a714394659d4c8c613c626e7cbac3a1d877b974 height=109 version=0x20000000 log2_work=7.781360 tx=112 date='2025-12-26T21:49:39Z' progress=1.000000 cache=0.0MiB(112txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=40177255fa0f3b9bd092c409623ec68f80a7404b485b3c741d81aad86e8b49c2 height=110
+2025-12-26T21:49:39Z UpdateTip: new best=40177255fa0f3b9bd092c409623ec68f80a7404b485b3c741d81aad86e8b49c2 height=110 version=0x20000000 log2_work=7.794416 tx=113 date='2025-12-26T21:49:39Z' progress=1.000000 cache=0.0MiB(113txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=7413a399c8916e3d16d35b476553b59618c1dab273f0567841f411673b5165b2 height=111
+2025-12-26T21:49:39Z UpdateTip: new best=7413a399c8916e3d16d35b476553b59618c1dab273f0567841f411673b5165b2 height=111 version=0x20000000 log2_work=7.807355 tx=114 date='2025-12-26T21:49:39Z' progress=1.000000 cache=0.0MiB(114txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=79de9b3760e2e9ca7929bc3ee9abc324bbd7f8dd481b62bb3d2992f95515e0e6 height=112
+2025-12-26T21:49:39Z UpdateTip: new best=79de9b3760e2e9ca7929bc3ee9abc324bbd7f8dd481b62bb3d2992f95515e0e6 height=112 version=0x20000000 log2_work=7.820179 tx=115 date='2025-12-26T21:49:39Z' progress=1.000000 cache=0.0MiB(115txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=2c82ee60fa88b4cc9c37db5c49397681f7837b5614689c547d09d37db6bbfbf9 height=113
+2025-12-26T21:49:39Z UpdateTip: new best=2c82ee60fa88b4cc9c37db5c49397681f7837b5614689c547d09d37db6bbfbf9 height=113 version=0x20000000 log2_work=7.832890 tx=116 date='2025-12-26T21:49:39Z' progress=1.000000 cache=0.0MiB(116txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=04a84605a6ea364665f925065c2296f69f6a5f7eedfde906cd2eaf1cbf67d621 height=114
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet c3dc108215ad3a73c2aa016b33b2de568f9ac625c4c8e44e7d919ed85be126c5  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 123dfc7dee79700d7de9c5ec657c1f985db3b1da092b4c2eb37546cbb39b390a  update
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 7d5a9da1018997b3dee2cf22f58de4daa2e67af23aa4e5a1ce2aebf42d1544e1  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 2720dfb7e23849ee6b3ab50fb908d7fdbcd082e93be4a0672d35a511ffc41c7d  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet a6ed289b7160f1a84dda84803df27eac37f2532d81d84207c369ca48a6785ae3  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet d6e9a76a401f47d71dc70d23dcc207e97888f1db5e49571727c1838fea63acda  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet da2e7d4ed0edb343a31ac175f29aa29f13abce02641c6f46c6e084e94bb6eae1  new
+2025-12-26T21:49:39Z UpdateTip: new best=04a84605a6ea364665f925065c2296f69f6a5f7eedfde906cd2eaf1cbf67d621 height=114 version=0x20000000 log2_work=7.845490 tx=117 date='2025-12-26T21:49:40Z' progress=1.000000 cache=0.0MiB(117txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=05e5aab0d2e9fd61a3254f597539f799d1fc5748b81a35bd7aa558764dd16af2 height=115
+2025-12-26T21:49:39Z UpdateTip: new best=05e5aab0d2e9fd61a3254f597539f799d1fc5748b81a35bd7aa558764dd16af2 height=115 version=0x20000000 log2_work=7.857981 tx=118 date='2025-12-26T21:49:40Z' progress=1.000000 cache=0.0MiB(118txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=5d5a6b2d4f9c26a729c43c0361a45c67f8b62838fb8ea56998a3084a0bd0aeb2 height=116
+2025-12-26T21:49:39Z UpdateTip: new best=5d5a6b2d4f9c26a729c43c0361a45c67f8b62838fb8ea56998a3084a0bd0aeb2 height=116 version=0x20000000 log2_work=7.870365 tx=119 date='2025-12-26T21:49:40Z' progress=1.000000 cache=0.0MiB(119txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=13a8a0eaeb69b939c5905473eaf68c6cc231188834c35951e460d96068d3ed95 height=117
+2025-12-26T21:49:39Z UpdateTip: new best=13a8a0eaeb69b939c5905473eaf68c6cc231188834c35951e460d96068d3ed95 height=117 version=0x20000000 log2_work=7.882643 tx=120 date='2025-12-26T21:49:40Z' progress=1.000000 cache=0.0MiB(120txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=4fa2b2e8484080b9cede2ea8319d0928250a4eda68316902a757327a3f63fbb1 height=118
+2025-12-26T21:49:39Z UpdateTip: new best=4fa2b2e8484080b9cede2ea8319d0928250a4eda68316902a757327a3f63fbb1 height=118 version=0x20000000 log2_work=7.894818 tx=121 date='2025-12-26T21:49:40Z' progress=1.000000 cache=0.0MiB(121txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=6d2b9b1b6e6db23ae0a3938824a0c19ba5e3fec1749aaa3894929f05f8b6bb34 height=119
+2025-12-26T21:49:39Z UpdateTip: new best=6d2b9b1b6e6db23ae0a3938824a0c19ba5e3fec1749aaa3894929f05f8b6bb34 height=119 version=0x20000000 log2_work=7.906891 tx=122 date='2025-12-26T21:49:40Z' progress=1.000000 cache=0.0MiB(122txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=0603c910baca9e7172a515bf0caa2c4670d73dae3f635ec7c6c1bbbbb7ed1f9f height=120
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet c6da67036322cfcb7e7642fee862b2411c3028642b210577f599cc5de4f21424  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 6b16dbb5b4ce2eb257c4c18223b996af0bd1846b555e6788a16ba53592577927  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 8ad4462e02d55c92b38790df1585c05dc2d63f53daeacaba40228923ffbf91cf  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 09d0711218a0064c789b1210166bd32b6e0412dfabe630a39e9a2a609d387bb7  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 12082ec6c9647329453a9f82daba13b89096eda37a4dcc7b1b0bfb2293161682  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 5b635881be8697cb58685bbd834d0f26c887a5df67be329b0c8a2ce4cb142fc9  new
+2025-12-26T21:49:39Z UpdateTip: new best=0603c910baca9e7172a515bf0caa2c4670d73dae3f635ec7c6c1bbbbb7ed1f9f height=120 version=0x20000000 log2_work=7.918863 tx=123 date='2025-12-26T21:49:41Z' progress=1.000000 cache=0.0MiB(123txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=10d0fa212fabf4ffa82b6ba41cbd6d634c296976f225e9c9d1da60706269b1d3 height=121
+2025-12-26T21:49:39Z UpdateTip: new best=10d0fa212fabf4ffa82b6ba41cbd6d634c296976f225e9c9d1da60706269b1d3 height=121 version=0x20000000 log2_work=7.930737 tx=124 date='2025-12-26T21:49:41Z' progress=1.000000 cache=0.0MiB(124txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=2727975a5152941ee41318963ed06f9db90aec4ae23caa167191e17846966059 height=122
+2025-12-26T21:49:39Z UpdateTip: new best=2727975a5152941ee41318963ed06f9db90aec4ae23caa167191e17846966059 height=122 version=0x20000000 log2_work=7.942515 tx=125 date='2025-12-26T21:49:41Z' progress=1.000000 cache=0.0MiB(125txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=4506d746b66bb8104bc8a95b834d2db640ae4902cbbb111d9c294f2b4083e6b7 height=123
+2025-12-26T21:49:39Z UpdateTip: new best=4506d746b66bb8104bc8a95b834d2db640ae4902cbbb111d9c294f2b4083e6b7 height=123 version=0x20000000 log2_work=7.954196 tx=126 date='2025-12-26T21:49:41Z' progress=1.000000 cache=0.0MiB(126txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=704dd5943061e34b45ba4616d6adb72657c23bd68f2e6ab7bea42fb3aa4bfa63 height=124
+2025-12-26T21:49:39Z UpdateTip: new best=704dd5943061e34b45ba4616d6adb72657c23bd68f2e6ab7bea42fb3aa4bfa63 height=124 version=0x20000000 log2_work=7.965784 tx=127 date='2025-12-26T21:49:41Z' progress=1.000000 cache=0.0MiB(127txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=2c300325a13d812b956acbfd787ff7f916c122156bb640455522da95aa3e5eb0 height=125
+2025-12-26T21:49:39Z UpdateTip: new best=2c300325a13d812b956acbfd787ff7f916c122156bb640455522da95aa3e5eb0 height=125 version=0x20000000 log2_work=7.977280 tx=128 date='2025-12-26T21:49:41Z' progress=1.000000 cache=0.0MiB(128txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=138276a2cf2ab4fc37df1771171bc03332c26f0e558a2615386adaac6dd60c96 height=126
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet f3e087f16318815174a798b58aa7bc53ccefd3f1252ef3a1950c613f1c2ec9c1  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 6331d775a06a5a076ac6e6337ab49f36ba3a141aa08446eb6ee9d7e361768474  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 05a84c013daab1dec511e00f799bbb73a4607a5cd7b20696c4804ae606b789e3  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 7367e4a132a8b37d0a26098aac9f224659af2f6df3577e8745f6bcdc49e69b0c  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet b6f948902ba1a52493a89c6c84a26386e88f6ff8f62bb962096900079c002b45  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 5ca42ae2fa8fe32f30319ba4ffadfdf026667f563e7e6bab2cf0d23c95b49209  new
+2025-12-26T21:49:39Z UpdateTip: new best=138276a2cf2ab4fc37df1771171bc03332c26f0e558a2615386adaac6dd60c96 height=126 version=0x20000000 log2_work=7.988685 tx=129 date='2025-12-26T21:49:42Z' progress=1.000000 cache=0.0MiB(129txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 888 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=76bedeb04e9f626302a0e1889b033cac416ebf4a20b533e4f90e267a55036db5 height=127
+2025-12-26T21:49:39Z UpdateTip: new best=76bedeb04e9f626302a0e1889b033cac416ebf4a20b533e4f90e267a55036db5 height=127 version=0x20000000 log2_work=8.000000 tx=130 date='2025-12-26T21:49:42Z' progress=1.000000 cache=0.0MiB(130txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=55707749797ff1a8d94ae6389ab3491541cff204768279c74462a4a42dbca87a height=128
+2025-12-26T21:49:39Z UpdateTip: new best=55707749797ff1a8d94ae6389ab3491541cff204768279c74462a4a42dbca87a height=128 version=0x20000000 log2_work=8.011227 tx=131 date='2025-12-26T21:49:42Z' progress=1.000000 cache=0.0MiB(131txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=4246d3da812301e2e45468ace2202208c6f1cbfa7bace4ea791750733fecd4bd height=129
+2025-12-26T21:49:39Z UpdateTip: new best=4246d3da812301e2e45468ace2202208c6f1cbfa7bace4ea791750733fecd4bd height=129 version=0x20000000 log2_work=8.022368 tx=132 date='2025-12-26T21:49:42Z' progress=1.000000 cache=0.0MiB(132txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=3806da1d5251c3bb145c615968ca0910976252ae72a74d4d24f58361da7953eb height=130
+2025-12-26T21:49:39Z UpdateTip: new best=3806da1d5251c3bb145c615968ca0910976252ae72a74d4d24f58361da7953eb height=130 version=0x20000000 log2_work=8.033423 tx=133 date='2025-12-26T21:49:42Z' progress=1.000000 cache=0.0MiB(133txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=5b570b03a43dd47fb07fed753acc0c6c1e3143fa7a602f680ac7f035ef2e492b height=131
+2025-12-26T21:49:39Z UpdateTip: new best=5b570b03a43dd47fb07fed753acc0c6c1e3143fa7a602f680ac7f035ef2e492b height=131 version=0x20000000 log2_work=8.044394 tx=134 date='2025-12-26T21:49:42Z' progress=1.000000 cache=0.0MiB(134txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=78c2ca571666499e14b11427106c90c03c008c06054996aaa1a7616da08f52be height=132
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 089691fc54e1b1e1e62136a91482517d79ef7e14eede34f2ddc4a1a171c35cd2  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 38dbfd883af5401a7de76fde3821244a9f9715339da91198f49ec00ceff497bb  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet d9965d7a67b55afbfd147995177c7b639b92c4e970c0f8c1c53bf9beeba08ec0  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 2fd07c48e31c856622d993ba81b7e29f5e04af2f85e42df8d7f4a74d17b85c3f  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 6cc65cab5e0be94fc33911f201e1a627b0ce3b5c432b22803ea1eb667851fae7  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 9edabd2fc5d7ffca24600b832ef6dca3d4e65448546ec7982b74632826bed1dd  new
+2025-12-26T21:49:39Z UpdateTip: new best=78c2ca571666499e14b11427106c90c03c008c06054996aaa1a7616da08f52be height=132 version=0x20000000 log2_work=8.055282 tx=135 date='2025-12-26T21:49:43Z' progress=1.000000 cache=0.0MiB(135txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=35057664ab8ec2697618a8f39e62407edbec32639ddf65571859586f2bc0740a height=133
+2025-12-26T21:49:39Z UpdateTip: new best=35057664ab8ec2697618a8f39e62407edbec32639ddf65571859586f2bc0740a height=133 version=0x20000000 log2_work=8.066089 tx=136 date='2025-12-26T21:49:43Z' progress=1.000000 cache=0.0MiB(136txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=37ddef524b3705ac84b738acbe09e96e2b412f3eaf18d1cec00114c23ab22c7a height=134
+2025-12-26T21:49:39Z UpdateTip: new best=37ddef524b3705ac84b738acbe09e96e2b412f3eaf18d1cec00114c23ab22c7a height=134 version=0x20000000 log2_work=8.076816 tx=137 date='2025-12-26T21:49:43Z' progress=1.000000 cache=0.0MiB(137txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=4e24207f51ff511b29784124eaab0b247fd1f90dbbbc3d054fa60dda873d802f height=135
+2025-12-26T21:49:39Z UpdateTip: new best=4e24207f51ff511b29784124eaab0b247fd1f90dbbbc3d054fa60dda873d802f height=135 version=0x20000000 log2_work=8.087463 tx=138 date='2025-12-26T21:49:43Z' progress=1.000000 cache=0.0MiB(138txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=455c300e251473680ed85363e568a87dc167277e5c5e52652a05c8966484db3c height=136
+2025-12-26T21:49:39Z UpdateTip: new best=455c300e251473680ed85363e568a87dc167277e5c5e52652a05c8966484db3c height=136 version=0x20000000 log2_work=8.098032 tx=139 date='2025-12-26T21:49:43Z' progress=1.000000 cache=0.0MiB(139txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=63f2738dd1bbd1a2b875b3efc509c603af64162d0ec580cf045e2862c90f9b97 height=137
+2025-12-26T21:49:39Z UpdateTip: new best=63f2738dd1bbd1a2b875b3efc509c603af64162d0ec580cf045e2862c90f9b97 height=137 version=0x20000000 log2_work=8.108524 tx=140 date='2025-12-26T21:49:43Z' progress=1.000000 cache=0.0MiB(140txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=033ab02766c35be87ab872319a2bce38959a1c9d706243a73382e37229c95aa6 height=138
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 9f3c475b0a585a251d47ba06ad2160d24cc223dc50c4e52bf2a99d9ffc3d8bf8  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet b90454b486d563253f8e6197e062e6c88f7f0cdcfeccbef0e4dbcbc6c73586ec  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 3bff09b46541a83052c2f4ea6598c8592d8504caa5dcaa711624f1fab595ddce  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 203d6a9de13ce0d12a2c769451d459050684e8bff717cce044877a1d98a01018  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet fda78f346885e4d87a6606bb502c10f7d3014061c3d6f27e49514879762b4229  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 873f58b49b012a3bf9c5122f861ea516246e103186dd0fd60b9308f55a545c78  new
+2025-12-26T21:49:39Z UpdateTip: new best=033ab02766c35be87ab872319a2bce38959a1c9d706243a73382e37229c95aa6 height=138 version=0x20000000 log2_work=8.118941 tx=141 date='2025-12-26T21:49:44Z' progress=1.000000 cache=0.0MiB(141txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=2b044a752d36f9a72c215f548b13168db44f9ecb189b2abb9c402ad38088c093 height=139
+2025-12-26T21:49:39Z UpdateTip: new best=2b044a752d36f9a72c215f548b13168db44f9ecb189b2abb9c402ad38088c093 height=139 version=0x20000000 log2_work=8.129283 tx=142 date='2025-12-26T21:49:44Z' progress=1.000000 cache=0.0MiB(142txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=7b5c37e8653efe60fea2ef0da56e1efeebee004368ecfa4f7766691950f8dc8b height=140
+2025-12-26T21:49:39Z UpdateTip: new best=7b5c37e8653efe60fea2ef0da56e1efeebee004368ecfa4f7766691950f8dc8b height=140 version=0x20000000 log2_work=8.139551 tx=143 date='2025-12-26T21:49:44Z' progress=1.000000 cache=0.0MiB(143txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=5c9c1134c0baf678d207eefc7680e96ff6a0b82530663c950dea2619d3d475a2 height=141
+2025-12-26T21:49:39Z UpdateTip: new best=5c9c1134c0baf678d207eefc7680e96ff6a0b82530663c950dea2619d3d475a2 height=141 version=0x20000000 log2_work=8.149747 tx=144 date='2025-12-26T21:49:44Z' progress=1.000000 cache=0.0MiB(144txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=242309c4efcf5735e451c2ea8fdead30b66716e3c731d0f1af15fc2e8372ba7c height=142
+2025-12-26T21:49:39Z UpdateTip: new best=242309c4efcf5735e451c2ea8fdead30b66716e3c731d0f1af15fc2e8372ba7c height=142 version=0x20000000 log2_work=8.159871 tx=145 date='2025-12-26T21:49:44Z' progress=1.000000 cache=0.0MiB(145txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=49a37af7f916084a69a2d8df48da61d0367665bfa20a1aa46a8ecb81e7af36f6 height=143
+2025-12-26T21:49:39Z UpdateTip: new best=49a37af7f916084a69a2d8df48da61d0367665bfa20a1aa46a8ecb81e7af36f6 height=143 version=0x20000000 log2_work=8.169925 tx=146 date='2025-12-26T21:49:44Z' progress=1.000000 cache=0.0MiB(146txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=41116eadfa92157daae740abcc4753fb8dda91985279fa3795a5412f5531e4d6 height=144
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet c8ab90c3ffa06a6b767906a2b26666825df242c90dc349d676e7cceecd98f962  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 78d8ef5823f15234f6aa503a3f009c1ae7e284a91eb22caa34fc016fc0e5a5aa  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet d64c75f1d67dcb6ac7d256fc758d4a7c8c6777ad4211395a5279466946450bb0  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 1a6ec6d57869d2ce8aad81764287394dd2fc9615da89f4bb05a79642b02503cb  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 9459635a5285826a9fc6656ebe175278b8c93e6deb816e6a8e023b3b11597e0a  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet c1bd05461a7fcd74824b1fbc691ac1bb5cf530ef8035f2c2e291b87f308ada3e  new
+2025-12-26T21:49:39Z UpdateTip: new best=41116eadfa92157daae740abcc4753fb8dda91985279fa3795a5412f5531e4d6 height=144 version=0x30000000 log2_work=8.179909 tx=147 date='2025-12-26T21:49:45Z' progress=1.000000 cache=0.0MiB(147txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=0de297fd847804bb0a85722835b4b71e2ad34a7067649cc1e150610b6a3f10ce height=145
+2025-12-26T21:49:39Z UpdateTip: new best=0de297fd847804bb0a85722835b4b71e2ad34a7067649cc1e150610b6a3f10ce height=145 version=0x30000000 log2_work=8.189825 tx=148 date='2025-12-26T21:49:45Z' progress=1.000000 cache=0.0MiB(148txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=7d60deec1c2898f186cdcd7edfe28659016336b2c11ffd0257c6dcc32a0b2ac9 height=146
+2025-12-26T21:49:39Z UpdateTip: new best=7d60deec1c2898f186cdcd7edfe28659016336b2c11ffd0257c6dcc32a0b2ac9 height=146 version=0x30000000 log2_work=8.199672 tx=149 date='2025-12-26T21:49:45Z' progress=1.000000 cache=0.0MiB(149txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=16b7d8aa9e22690a4eb55c584454af9369c01b8964428667a731ccf673e05f9d height=147
+2025-12-26T21:49:39Z UpdateTip: new best=16b7d8aa9e22690a4eb55c584454af9369c01b8964428667a731ccf673e05f9d height=147 version=0x30000000 log2_work=8.209453 tx=150 date='2025-12-26T21:49:45Z' progress=1.000000 cache=0.0MiB(150txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=4197033d53f763792a48e82edb1b9e08a02d509b9358ddedce262732959bbb04 height=148
+2025-12-26T21:49:39Z UpdateTip: new best=4197033d53f763792a48e82edb1b9e08a02d509b9358ddedce262732959bbb04 height=148 version=0x30000000 log2_work=8.219169 tx=151 date='2025-12-26T21:49:45Z' progress=1.000000 cache=0.0MiB(151txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=2b74dac1538131bcffbe7eaccccf01999b6e08f4c031ce92b997580cabdd76c3 height=149
+2025-12-26T21:49:39Z UpdateTip: new best=2b74dac1538131bcffbe7eaccccf01999b6e08f4c031ce92b997580cabdd76c3 height=149 version=0x30000000 log2_work=8.228819 tx=152 date='2025-12-26T21:49:45Z' progress=1.000000 cache=0.0MiB(152txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=7d733106a86c6ef159b63df7680dc399ed511d676cad2958cc4e3599bb4d072c height=150
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet edffa82f6c691f969be09005a792067cdfa824cf753652330b626b16a9ee7c4c  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 0d03dd62a567717ca97752cfd78dd542cd425f14634da105624e021d6ebfedca  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 352311441b55fdcc8a75c3b7674a1108843b5d1249c9006e30ce9bfefca399e8  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 40bee226b21a23fa5349df29979f2d83ab835b8dce4aec46b285660efb83e0b5  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 0f610063e35fc28694df596611ddf97230654f42729dde692450f9effd7d12f6  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 8554cd63255e7168cb7ac3f4c62fa6f744473d8b7cfdafc6c078f7eaa0983a16  new
+2025-12-26T21:49:39Z UpdateTip: new best=7d733106a86c6ef159b63df7680dc399ed511d676cad2958cc4e3599bb4d072c height=150 version=0x30000000 log2_work=8.238405 tx=153 date='2025-12-26T21:49:46Z' progress=1.000000 cache=0.0MiB(153txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=2cbca9994c1c042209f0c560741e798c447b7e5afbf2e51632393e04bb96d7d1 height=151
+2025-12-26T21:49:39Z UpdateTip: new best=2cbca9994c1c042209f0c560741e798c447b7e5afbf2e51632393e04bb96d7d1 height=151 version=0x30000000 log2_work=8.247928 tx=154 date='2025-12-26T21:49:46Z' progress=1.000000 cache=0.0MiB(154txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=31eecd788e258b4ed2bed9326b88c22181ca70fcff518bad3ac4b31eb12be4fe height=152
+2025-12-26T21:49:39Z UpdateTip: new best=31eecd788e258b4ed2bed9326b88c22181ca70fcff518bad3ac4b31eb12be4fe height=152 version=0x30000000 log2_work=8.257388 tx=155 date='2025-12-26T21:49:46Z' progress=1.000000 cache=0.0MiB(155txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=14fdcc4e85f85ac5d418c3b14744f62c1a64d854019956823fdabf26022ef67d height=153
+2025-12-26T21:49:39Z UpdateTip: new best=14fdcc4e85f85ac5d418c3b14744f62c1a64d854019956823fdabf26022ef67d height=153 version=0x30000000 log2_work=8.266787 tx=156 date='2025-12-26T21:49:46Z' progress=1.000000 cache=0.0MiB(156txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=4fe17172090106769350aefcfbf23ce139ab724d2235fe4a737353c2f35f76e5 height=154
+2025-12-26T21:49:39Z UpdateTip: new best=4fe17172090106769350aefcfbf23ce139ab724d2235fe4a737353c2f35f76e5 height=154 version=0x30000000 log2_work=8.276124 tx=157 date='2025-12-26T21:49:46Z' progress=1.000000 cache=0.0MiB(157txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=393591454fbd1c0e7e251e7ac50f29bbdd004a370eb2599ad52aaed179f228a6 height=155
+2025-12-26T21:49:39Z UpdateTip: new best=393591454fbd1c0e7e251e7ac50f29bbdd004a370eb2599ad52aaed179f228a6 height=155 version=0x30000000 log2_work=8.285402 tx=158 date='2025-12-26T21:49:46Z' progress=1.000000 cache=0.0MiB(158txo)
+2025-12-26T21:49:39Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:39Z Saw new header hash=5d65bd482eba0e8402417f93adc0e923cfaeb857ccb5665ee01fefd5a0a72604 height=156
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 9911ce1d216894322db203467f7fed3ccfc588354928bc503c7399085e376b0a  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet b9bc6d7184d8586d35d6d7ca5d4ab60621acccd472d5fdf8714d52e0901b5bf4  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet 08956a21a8bd51495cb26b322375f9be857e64a83cc65e92738024716323671f  new
+2025-12-26T21:49:39Z [regtestwallet] AddToWallet fadf0fce0786791fc2388713888adf899a0d746bf7eb0cfab9ecce924c242cbf  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 02c491bb3feaf17dd5b1525bcb698650b65af0315127a098813ddcacdec94791  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 2014fde606d34e9b5afe0981e20a3da82d6da603afc1f6d8d53d839862dc3927  new
+2025-12-26T21:49:40Z UpdateTip: new best=5d65bd482eba0e8402417f93adc0e923cfaeb857ccb5665ee01fefd5a0a72604 height=156 version=0x30000000 log2_work=8.294621 tx=159 date='2025-12-26T21:49:47Z' progress=1.000000 cache=0.0MiB(159txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=3a8bf388e006a67a4447577c2eeb972b4e0d1f07494f350584ef40accc3e0568 height=157
+2025-12-26T21:49:40Z UpdateTip: new best=3a8bf388e006a67a4447577c2eeb972b4e0d1f07494f350584ef40accc3e0568 height=157 version=0x30000000 log2_work=8.303781 tx=160 date='2025-12-26T21:49:47Z' progress=1.000000 cache=0.0MiB(160txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=0ca2aefacd0c2a159264fdc82bf92b05b36425db8fa9a867112942fc25122052 height=158
+2025-12-26T21:49:40Z UpdateTip: new best=0ca2aefacd0c2a159264fdc82bf92b05b36425db8fa9a867112942fc25122052 height=158 version=0x30000000 log2_work=8.312883 tx=161 date='2025-12-26T21:49:47Z' progress=1.000000 cache=0.0MiB(161txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=677cc8dfaf1d5b4b9c47197f5dc0d3791e2cc42ddc95b98f33c73d902c04e03e height=159
+2025-12-26T21:49:40Z UpdateTip: new best=677cc8dfaf1d5b4b9c47197f5dc0d3791e2cc42ddc95b98f33c73d902c04e03e height=159 version=0x30000000 log2_work=8.321928 tx=162 date='2025-12-26T21:49:47Z' progress=1.000000 cache=0.0MiB(162txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=0bd30b3bb702bf6cb44555c26b9437c071c9360b3d1db1a4650e427e358604ef height=160
+2025-12-26T21:49:40Z UpdateTip: new best=0bd30b3bb702bf6cb44555c26b9437c071c9360b3d1db1a4650e427e358604ef height=160 version=0x30000000 log2_work=8.330917 tx=163 date='2025-12-26T21:49:47Z' progress=1.000000 cache=0.0MiB(163txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=237b2e7c3d10f70b61c06c96b06d01875ac2e212557373fe58a8c2eb7892e641 height=161
+2025-12-26T21:49:40Z UpdateTip: new best=237b2e7c3d10f70b61c06c96b06d01875ac2e212557373fe58a8c2eb7892e641 height=161 version=0x30000000 log2_work=8.339850 tx=164 date='2025-12-26T21:49:47Z' progress=1.000000 cache=0.0MiB(164txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=795137c7ca89a07a18e00a79c41f75d5c119eeb1eeb14b41dec4e7ac6b46a205 height=162
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 0c10f3e91f8a2929a03b12b5c451c8c9fac1f4e3e9c5421acb5a5bbb49434afd  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 1e71a27e17f5b75d6671613bcaabf7d46afef1e6727efa03a95dc48694f25422  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet f4b20eba7f9552d7d08f305cbfdd56e41d8bfb6064933ea96bb0176b7d2646cf  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet f840fa195674cb7b55b3d4de868604d205003e8aa181e0cdc61ec5422707e79e  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet cad379f192827370324197f5fdebf7fb8bbe1e0799ba647be3930045980b3645  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 04d5c70bce4fcaa4ff1ea260b9ebef6eceec76273685d1ab77e15b86bad84c44  new
+2025-12-26T21:49:40Z UpdateTip: new best=795137c7ca89a07a18e00a79c41f75d5c119eeb1eeb14b41dec4e7ac6b46a205 height=162 version=0x30000000 log2_work=8.348728 tx=165 date='2025-12-26T21:49:48Z' progress=1.000000 cache=0.0MiB(165txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=706efac0c55ff70036a21d43001d2da4d5fd0757fb8baa97ad1cebdf9db63c34 height=163
+2025-12-26T21:49:40Z UpdateTip: new best=706efac0c55ff70036a21d43001d2da4d5fd0757fb8baa97ad1cebdf9db63c34 height=163 version=0x30000000 log2_work=8.357552 tx=166 date='2025-12-26T21:49:48Z' progress=1.000000 cache=0.0MiB(166txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=3cc45ea8569862bc7515826b8a51f333ecd2797a1e38d87ea1ed365b1558c450 height=164
+2025-12-26T21:49:40Z UpdateTip: new best=3cc45ea8569862bc7515826b8a51f333ecd2797a1e38d87ea1ed365b1558c450 height=164 version=0x30000000 log2_work=8.366322 tx=167 date='2025-12-26T21:49:48Z' progress=1.000000 cache=0.0MiB(167txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=395f7d72bb9c00207b92205a8775f682b3e73cad33dd305dbed08aa3b3e316c6 height=165
+2025-12-26T21:49:40Z UpdateTip: new best=395f7d72bb9c00207b92205a8775f682b3e73cad33dd305dbed08aa3b3e316c6 height=165 version=0x30000000 log2_work=8.375039 tx=168 date='2025-12-26T21:49:48Z' progress=1.000000 cache=0.0MiB(168txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=1375e47c7a8f1ab7bed6b8f779488316b8b62f48fb37625b0b141ed42f0f7331 height=166
+2025-12-26T21:49:40Z UpdateTip: new best=1375e47c7a8f1ab7bed6b8f779488316b8b62f48fb37625b0b141ed42f0f7331 height=166 version=0x30000000 log2_work=8.383704 tx=169 date='2025-12-26T21:49:48Z' progress=1.000000 cache=0.0MiB(169txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=7bd5778c9d76aad66b3630d7af7b21f6f491524026c7ee4bac1ac5445d07166e height=167
+2025-12-26T21:49:40Z UpdateTip: new best=7bd5778c9d76aad66b3630d7af7b21f6f491524026c7ee4bac1ac5445d07166e height=167 version=0x30000000 log2_work=8.392317 tx=170 date='2025-12-26T21:49:48Z' progress=1.000000 cache=0.0MiB(170txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=4e4ad7d53d57f50b7a2a6d2e3ad77cb2565aee847f56b2bc0d7a585b9d760ba3 height=168
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet ceb324abfec93735ccfd27b7b9436f6571d4f3905c1bb57057b718c14938de99  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 8d7606b2fd0c380f4f201e47ba5bffc1f51b3bf6ff1313d47add6fb70da5851a  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet d4f9add5bccbe281387bb18a8437c50e850efccdd4a26621452123962fb8adaf  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet ef8bc7d1587b3c4bf55d8428de855ab02582eb108652f94e2684d95396f24586  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 4ed8b5e4f2259949284f136081825073d52994269952f9af2fea24790b6abe8e  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 446887283eb832c56e254dae73f6fc34354d56b1b5df2c476dbd5d63d5fcd02d  new
+2025-12-26T21:49:40Z UpdateTip: new best=4e4ad7d53d57f50b7a2a6d2e3ad77cb2565aee847f56b2bc0d7a585b9d760ba3 height=168 version=0x30000000 log2_work=8.400879 tx=171 date='2025-12-26T21:49:49Z' progress=1.000000 cache=0.0MiB(171txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=6c54cdcb2670230f698217d67ae4013cfe1ebea570abf08f6ae044519d94eb74 height=169
+2025-12-26T21:49:40Z UpdateTip: new best=6c54cdcb2670230f698217d67ae4013cfe1ebea570abf08f6ae044519d94eb74 height=169 version=0x30000000 log2_work=8.409391 tx=172 date='2025-12-26T21:49:49Z' progress=1.000000 cache=0.0MiB(172txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=65352f88fcc0af9cccbe2c51d7a4b375910ae5fd01d51d91898503949de60657 height=170
+2025-12-26T21:49:40Z UpdateTip: new best=65352f88fcc0af9cccbe2c51d7a4b375910ae5fd01d51d91898503949de60657 height=170 version=0x30000000 log2_work=8.417853 tx=173 date='2025-12-26T21:49:49Z' progress=1.000000 cache=0.0MiB(173txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=47889d2bacf3afd0fd910b85dc77b230d0c1ab1af56df8f15bce66e4930fdbdf height=171
+2025-12-26T21:49:40Z UpdateTip: new best=47889d2bacf3afd0fd910b85dc77b230d0c1ab1af56df8f15bce66e4930fdbdf height=171 version=0x30000000 log2_work=8.426265 tx=174 date='2025-12-26T21:49:49Z' progress=1.000000 cache=0.0MiB(174txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=226005460a1e7380edf448331ffc655bbe52aa707bbce2631fd551e7fd21b363 height=172
+2025-12-26T21:49:40Z UpdateTip: new best=226005460a1e7380edf448331ffc655bbe52aa707bbce2631fd551e7fd21b363 height=172 version=0x30000000 log2_work=8.434628 tx=175 date='2025-12-26T21:49:49Z' progress=1.000000 cache=0.0MiB(175txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=172653f6556a119a6673d84c26a0428051d91db2361c5084461d329841b462e4 height=173
+2025-12-26T21:49:40Z UpdateTip: new best=172653f6556a119a6673d84c26a0428051d91db2361c5084461d329841b462e4 height=173 version=0x30000000 log2_work=8.442943 tx=176 date='2025-12-26T21:49:49Z' progress=1.000000 cache=0.0MiB(176txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=320f9a58e4bd3e8ec431dd8f093f604b4375c939372f18c9b9db4c0f8cbfe291 height=174
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 738874f1d06aa77e23ccf6b6a5131d48924faf6208252e0a6c258fcd28b99b3a  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 48fb8f05e74183d22d19b81bf57f06c40ed019ff0c49da7860bbcd1d46836724  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet d0ce232a249c92c67e72d858570d21e88895ded73e6b155e8693581ca0f79a15  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet a5ad947387c69213656674635ad6ee8244bfc72a6baa6c30b549f1b7b6f3fe20  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 09021159755a795296656b618d8d1833ed429496839110ce839e2aa33627e581  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 01b202ae6e32131831f2a0818bebae16092b92df6243cab363f9d5f37e8efd71  new
+2025-12-26T21:49:40Z UpdateTip: new best=320f9a58e4bd3e8ec431dd8f093f604b4375c939372f18c9b9db4c0f8cbfe291 height=174 version=0x30000000 log2_work=8.451211 tx=177 date='2025-12-26T21:49:50Z' progress=1.000000 cache=0.0MiB(177txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=0bf4edef58c5a526c16451eed5705a25a249196b7818cadfc65a91498cf32bea height=175
+2025-12-26T21:49:40Z UpdateTip: new best=0bf4edef58c5a526c16451eed5705a25a249196b7818cadfc65a91498cf32bea height=175 version=0x30000000 log2_work=8.459432 tx=178 date='2025-12-26T21:49:50Z' progress=1.000000 cache=0.0MiB(178txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=08ec750f41ac4cf8bf7bbf09aa0ccc3c9aa1f122f609552ca107719951baae45 height=176
+2025-12-26T21:49:40Z UpdateTip: new best=08ec750f41ac4cf8bf7bbf09aa0ccc3c9aa1f122f609552ca107719951baae45 height=176 version=0x30000000 log2_work=8.467606 tx=179 date='2025-12-26T21:49:50Z' progress=1.000000 cache=0.0MiB(179txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=4bd77b1643da13af17edc37b37337fc4b6172fe2b1f50e40d23d956ac949ebc1 height=177
+2025-12-26T21:49:40Z UpdateTip: new best=4bd77b1643da13af17edc37b37337fc4b6172fe2b1f50e40d23d956ac949ebc1 height=177 version=0x30000000 log2_work=8.475733 tx=180 date='2025-12-26T21:49:50Z' progress=1.000000 cache=0.0MiB(180txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=477f9b6f793e657064754c5a7bbb0ced03661a3b5ba716acdba2f7ace0c24212 height=178
+2025-12-26T21:49:40Z UpdateTip: new best=477f9b6f793e657064754c5a7bbb0ced03661a3b5ba716acdba2f7ace0c24212 height=178 version=0x30000000 log2_work=8.483816 tx=181 date='2025-12-26T21:49:50Z' progress=1.000000 cache=0.0MiB(181txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=48b0d1aaddff894d22f42e3307d6d1b1a53105d7f4347372303bdfa18372e5ea height=179
+2025-12-26T21:49:40Z UpdateTip: new best=48b0d1aaddff894d22f42e3307d6d1b1a53105d7f4347372303bdfa18372e5ea height=179 version=0x30000000 log2_work=8.491853 tx=182 date='2025-12-26T21:49:50Z' progress=1.000000 cache=0.0MiB(182txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=087f34c3333feae0542bfd80cba64fe3b40f08aebe5a5701be3afab06454cdae height=180
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 9d40062e381e6377259a9d900428376a0c50e934c31bcd3c1681574fbabb504d  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 2cfeac5e166f813e3d995d36249b7f129a6d51e00a6eedbe9c1c374cc92fc529  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet c43e1b9618428ea5abfb896409f5596fc777440437ba9066b0d86238f209156f  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 3ff1f4279999fdaa18c46e824ba67b59a5d96f5a63d7d1525fc2e4201898e994  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet d818763c2737e1e1d19b0fa60245bd302e59cc5eda8e7e14a759913cdd10451c  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet ad3e5e544bb3103816fda5339575859b52c0fab90902245a3fab8c155c8b413c  new
+2025-12-26T21:49:40Z UpdateTip: new best=087f34c3333feae0542bfd80cba64fe3b40f08aebe5a5701be3afab06454cdae height=180 version=0x30000000 log2_work=8.499846 tx=183 date='2025-12-26T21:49:51Z' progress=1.000000 cache=0.0MiB(183txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=2c10c1964faf4911916cfa94f3f09414815bb82b006f8ae5c8674f97a2869bc1 height=181
+2025-12-26T21:49:40Z UpdateTip: new best=2c10c1964faf4911916cfa94f3f09414815bb82b006f8ae5c8674f97a2869bc1 height=181 version=0x30000000 log2_work=8.507795 tx=184 date='2025-12-26T21:49:51Z' progress=1.000000 cache=0.0MiB(184txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=122e91d049d8f410c11cd265e66098e82785ef6339ddd6bfb4e7f7f95da1ef83 height=182
+2025-12-26T21:49:40Z UpdateTip: new best=122e91d049d8f410c11cd265e66098e82785ef6339ddd6bfb4e7f7f95da1ef83 height=182 version=0x30000000 log2_work=8.515700 tx=185 date='2025-12-26T21:49:51Z' progress=1.000000 cache=0.0MiB(185txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=1d61a11d322be9db66b3c5b315303767778fe5d755bd4372773665ed6fe61a29 height=183
+2025-12-26T21:49:40Z UpdateTip: new best=1d61a11d322be9db66b3c5b315303767778fe5d755bd4372773665ed6fe61a29 height=183 version=0x30000000 log2_work=8.523562 tx=186 date='2025-12-26T21:49:51Z' progress=1.000000 cache=0.0MiB(186txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=4d901b93afeef389fa8c4f5aece6779863c4ba8ed9cc59e49c4be43a3169c6bb height=184
+2025-12-26T21:49:40Z UpdateTip: new best=4d901b93afeef389fa8c4f5aece6779863c4ba8ed9cc59e49c4be43a3169c6bb height=184 version=0x30000000 log2_work=8.531381 tx=187 date='2025-12-26T21:49:51Z' progress=1.000000 cache=0.0MiB(187txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=15279dc884f4e23b84366da4497d16d5ae99ae1c34b865741385ea4fc8d855fa height=185
+2025-12-26T21:49:40Z UpdateTip: new best=15279dc884f4e23b84366da4497d16d5ae99ae1c34b865741385ea4fc8d855fa height=185 version=0x30000000 log2_work=8.539159 tx=188 date='2025-12-26T21:49:51Z' progress=1.000000 cache=0.0MiB(188txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=2060e50b5a05d2dafe4d84b356dd5e28721359afbfeb2d08391fcebf9d33d61c height=186
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 1c49ac3d680b2b8dd5d41dcecb4cdb45d6cb050b48eeb384f2e8e6da617eb949  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 16ee55bf4059356acf8bcd11568e64253bb07c2568ce719e17c7861e71541fa9  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet bdd592f36180d4c19b39a6284fdd8c9bae08e9a43d637ba7adeae6b4ce6d76f5  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 837751366510ef15c54aff09e60f49ee53dd8f2ee2b3fb64135f5fc221932543  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet c3fb6f260c7cd77e0977b2c301e9cb54d452380f4376af6d8b8fd809db61c82e  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet d0dfd4bfd657692e301591fbde22774eaecd715847d96c3e82944bff692eff6f  new
+2025-12-26T21:49:40Z UpdateTip: new best=2060e50b5a05d2dafe4d84b356dd5e28721359afbfeb2d08391fcebf9d33d61c height=186 version=0x30000000 log2_work=8.546894 tx=189 date='2025-12-26T21:49:52Z' progress=1.000000 cache=0.0MiB(189txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=488f2f9cb2d447518bf4050e6fdefbda9f752f3e8c01834e0a660364776b4d22 height=187
+2025-12-26T21:49:40Z UpdateTip: new best=488f2f9cb2d447518bf4050e6fdefbda9f752f3e8c01834e0a660364776b4d22 height=187 version=0x30000000 log2_work=8.554589 tx=190 date='2025-12-26T21:49:52Z' progress=1.000000 cache=0.0MiB(190txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=27d64ff0cedf440ab284a7153c8b5c92b72a6077415c75134140d826f1169120 height=188
+2025-12-26T21:49:40Z UpdateTip: new best=27d64ff0cedf440ab284a7153c8b5c92b72a6077415c75134140d826f1169120 height=188 version=0x30000000 log2_work=8.562242 tx=191 date='2025-12-26T21:49:52Z' progress=1.000000 cache=0.0MiB(191txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=58d8ef27ce2ec05ba4e5e63c193eff5eb55ac6c4f2c759ba9bb0305c7a11fcaf height=189
+2025-12-26T21:49:40Z UpdateTip: new best=58d8ef27ce2ec05ba4e5e63c193eff5eb55ac6c4f2c759ba9bb0305c7a11fcaf height=189 version=0x30000000 log2_work=8.569856 tx=192 date='2025-12-26T21:49:52Z' progress=1.000000 cache=0.0MiB(192txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=14134a64faa7b1eca770a15be09c51673169f88cf9908f8b9c829c61c495273e height=190
+2025-12-26T21:49:40Z UpdateTip: new best=14134a64faa7b1eca770a15be09c51673169f88cf9908f8b9c829c61c495273e height=190 version=0x30000000 log2_work=8.577429 tx=193 date='2025-12-26T21:49:52Z' progress=1.000000 cache=0.0MiB(193txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=24b663524053ed4a1f912803210b19550d51950479cdaae7738398ac467b07b5 height=191
+2025-12-26T21:49:40Z UpdateTip: new best=24b663524053ed4a1f912803210b19550d51950479cdaae7738398ac467b07b5 height=191 version=0x30000000 log2_work=8.584963 tx=194 date='2025-12-26T21:49:52Z' progress=1.000000 cache=0.0MiB(194txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=07a2fe423010ff1eaad6505a4983689c89204ddcdeeee1e2c6d0c111f5cba16a height=192
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet ace94c8c500373e745e704a3beaf417062421ff6064deb109a7589c8c758816e  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 9c46a3aa69c3914161f6cabd5d710f516024d4e298973cd5c526e7726c3d38a7  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 014658f90eab2b661d22b7c54464616bfc35a4570fb1b4edc6085f4a0021de59  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 7f0d96949da181699297e6cbeac4e64d9c61181af345e2183334f08cbcd20915  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet e6520630eee12f74be86fb3a94f5c691f63e3770c9fa7663d01943a4b1342f56  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet a31a7ac1ad117f355a10403df45a82e68bc93637e2282e7cae365fdfb181f173  new
+2025-12-26T21:49:40Z UpdateTip: new best=07a2fe423010ff1eaad6505a4983689c89204ddcdeeee1e2c6d0c111f5cba16a height=192 version=0x30000000 log2_work=8.592457 tx=195 date='2025-12-26T21:49:53Z' progress=1.000000 cache=0.0MiB(195txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=39abb71b3dd65549bdcbf4790680062c2478b6719af5471a912e46f2c04695e1 height=193
+2025-12-26T21:49:40Z UpdateTip: new best=39abb71b3dd65549bdcbf4790680062c2478b6719af5471a912e46f2c04695e1 height=193 version=0x30000000 log2_work=8.599913 tx=196 date='2025-12-26T21:49:53Z' progress=1.000000 cache=0.0MiB(196txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=663bc4167e6b980c06222e8abf769f9728efd91eca727b1741f76d27a882d47a height=194
+2025-12-26T21:49:40Z UpdateTip: new best=663bc4167e6b980c06222e8abf769f9728efd91eca727b1741f76d27a882d47a height=194 version=0x30000000 log2_work=8.607330 tx=197 date='2025-12-26T21:49:53Z' progress=1.000000 cache=0.0MiB(197txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=4a1a622306157b241c656d497352ba99b7647e285e23556372c779ee11032a69 height=195
+2025-12-26T21:49:40Z UpdateTip: new best=4a1a622306157b241c656d497352ba99b7647e285e23556372c779ee11032a69 height=195 version=0x30000000 log2_work=8.614710 tx=198 date='2025-12-26T21:49:53Z' progress=1.000000 cache=0.0MiB(198txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=2ffd66cbeb12fbd8c9aa291b116e7d4c5afc6c36ba8c9d6c42251d6aefe2a3d1 height=196
+2025-12-26T21:49:40Z UpdateTip: new best=2ffd66cbeb12fbd8c9aa291b116e7d4c5afc6c36ba8c9d6c42251d6aefe2a3d1 height=196 version=0x30000000 log2_work=8.622052 tx=199 date='2025-12-26T21:49:53Z' progress=1.000000 cache=0.0MiB(199txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=334a5e1f08110bd1d3f6442213e39ba7c512a9be536dad9902d55be061569197 height=197
+2025-12-26T21:49:40Z UpdateTip: new best=334a5e1f08110bd1d3f6442213e39ba7c512a9be536dad9902d55be061569197 height=197 version=0x30000000 log2_work=8.629357 tx=200 date='2025-12-26T21:49:53Z' progress=1.000000 cache=0.0MiB(200txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=369100aad556949f4ab42fdc274af7b985888ce17f699102e46a89e275854010 height=198
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet c8d0f7afeac2128b830ebe9e9f0a831f4acf381c7cfd29ac74d813eca2d3a0c3  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet c4d20243b1cb87f5e0af2ee08e815001dfc974439787f561b48788ccdf469fd9  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet e6604febb7fe2d70ebaf712be42d3f289fae3583fea855abc9c33eb9b3b016cd  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 7af54303a62dcd77bd6d8e247bb59d176f3c9207b0afd76123ad0a4b51e663e8  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet a5c933648c3b51565809566dfb48a08aadf0494610538483e4fedce2bd26e409  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 170b091d22b3875162423bd14f73b055d5fcdec302b6191ff0435fb8957f7817  new
+2025-12-26T21:49:40Z UpdateTip: new best=369100aad556949f4ab42fdc274af7b985888ce17f699102e46a89e275854010 height=198 version=0x30000000 log2_work=8.636625 tx=201 date='2025-12-26T21:49:54Z' progress=1.000000 cache=0.0MiB(201txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=775c588ae337b635a09a40dc3be02111a055753ff1b75c08e6191e2cf2cee03b height=199
+2025-12-26T21:49:40Z UpdateTip: new best=775c588ae337b635a09a40dc3be02111a055753ff1b75c08e6191e2cf2cee03b height=199 version=0x30000000 log2_work=8.643856 tx=202 date='2025-12-26T21:49:54Z' progress=1.000000 cache=0.0MiB(202txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=7068c3dbb4eee2a962ce0101b99d1e664c0c58dc5180cf86277e2b7442d51b93 height=200
+2025-12-26T21:49:40Z UpdateTip: new best=7068c3dbb4eee2a962ce0101b99d1e664c0c58dc5180cf86277e2b7442d51b93 height=200 version=0x30000000 log2_work=8.651052 tx=203 date='2025-12-26T21:49:54Z' progress=1.000000 cache=0.0MiB(203txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=155f7bc20159cef0323125448eb2eb361392c7fa5c41f3c8df3b2b74d5029c3e height=201
+2025-12-26T21:49:40Z UpdateTip: new best=155f7bc20159cef0323125448eb2eb361392c7fa5c41f3c8df3b2b74d5029c3e height=201 version=0x30000000 log2_work=8.658211 tx=204 date='2025-12-26T21:49:54Z' progress=1.000000 cache=0.0MiB(204txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=23bdc4ec928c428793366fb547f638600735fc1d052e3b8340c9085653e8215c height=202
+2025-12-26T21:49:40Z UpdateTip: new best=23bdc4ec928c428793366fb547f638600735fc1d052e3b8340c9085653e8215c height=202 version=0x30000000 log2_work=8.665336 tx=205 date='2025-12-26T21:49:54Z' progress=1.000000 cache=0.0MiB(205txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=0a897e9a805031dfe29e28bf5ec8db4148ffdf0ee09e59a25058562764485459 height=203
+2025-12-26T21:49:40Z UpdateTip: new best=0a897e9a805031dfe29e28bf5ec8db4148ffdf0ee09e59a25058562764485459 height=203 version=0x30000000 log2_work=8.672425 tx=206 date='2025-12-26T21:49:54Z' progress=1.000000 cache=0.0MiB(206txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=348fe94a2ba3140fac05540caeb3ef478f43160a739450b5d29c280df5b423f9 height=204
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 0aff1d83d22e2b1d811bac666eb37e97df260b9a72646d192b71d4080f94cfff  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 7774700778eaa5eceb8bf6a77b0c5f9dad7249c8237ddd2b6a853260c2b39f48  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 2fa6775140361e9662a71dc493324aaec3d4e7c9975a8b5cb299089c98824130  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet abf13fecbe66c161d87544939d0a4bfd30adbcab60f9a2d681e9b25ff01b1bb5  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet d493de2306cbaa7d59d7fba29e627c8162b5672e9a92153b74f939412bc49c68  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 6afe5c9f5e3de50f42f33ebb05ec5227e28ae2a0ff417f42642b09a5c40f0dc5  new
+2025-12-26T21:49:40Z UpdateTip: new best=348fe94a2ba3140fac05540caeb3ef478f43160a739450b5d29c280df5b423f9 height=204 version=0x30000000 log2_work=8.679480 tx=207 date='2025-12-26T21:49:55Z' progress=1.000000 cache=0.0MiB(207txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=467ba3bec90b96c396a75093f578d02f1bb5148d7f4a7bcd10ae7124fc336b08 height=205
+2025-12-26T21:49:40Z UpdateTip: new best=467ba3bec90b96c396a75093f578d02f1bb5148d7f4a7bcd10ae7124fc336b08 height=205 version=0x30000000 log2_work=8.686501 tx=208 date='2025-12-26T21:49:55Z' progress=1.000000 cache=0.0MiB(208txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=0f8d5ffbff76ba4bedd1db5bcd1e6968f03fa83ad277667e4d92a9756ada6f72 height=206
+2025-12-26T21:49:40Z UpdateTip: new best=0f8d5ffbff76ba4bedd1db5bcd1e6968f03fa83ad277667e4d92a9756ada6f72 height=206 version=0x30000000 log2_work=8.693487 tx=209 date='2025-12-26T21:49:55Z' progress=1.000000 cache=0.0MiB(209txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=6888a5ff50689ff3c4c73a1fdc08647829c2c4425319a4808a4d6f96587e16cf height=207
+2025-12-26T21:49:40Z UpdateTip: new best=6888a5ff50689ff3c4c73a1fdc08647829c2c4425319a4808a4d6f96587e16cf height=207 version=0x30000000 log2_work=8.700440 tx=210 date='2025-12-26T21:49:55Z' progress=1.000000 cache=0.0MiB(210txo)
+2025-12-26T21:49:40Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:49:40Z Saw new header hash=0e5ed3776bb5d2334e94871c378d38595281299384f928dcfe2bc2fc5a18a0ef height=208
+2025-12-26T21:49:40Z UpdateTip: new best=0e5ed3776bb5d2334e94871c378d38595281299384f928dcfe2bc2fc5a18a0ef height=208 version=0x30000000 log2_work=8.707359 tx=211 date='2025-12-26T21:49:55Z' progress=1.000000 cache=0.0MiB(211txo)
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 3029541b3043668359a2ba8523055a03188de30947eaf302cf049d37a2a6f346  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 544a112de0e4c066ba04869b32d36f9ab606f8527726a4634444b0d99117eb33  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet c529706e8601a0d7c6aea0462187c031b77b0622eb93ee2d3c469d81029aee73  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet e1ef7ab0ec23dd1afc67efdc3f039a9fc7267a51fad23c2024d143145abb7b4b  new
+2025-12-26T21:49:40Z [regtestwallet] AddToWallet 56864076ac062387156d916589875f49522527c2035a7321f4271d917b4343f9  new
+2025-12-26T21:51:00Z [regtestwallet] Fee Calculation: Fee:1410 Bytes:110 Tgt:0 (requested 0) Reason:"PayTxFee set" Decay 0.00000: Estimation: (-1 - -1) 0.00% 0.0/(0.0 0 mem 0.0 out) Fail: (-1 - -1) 0.00% 0.0/(0.0 0 mem 0.0 out)
+2025-12-26T21:51:00Z [regtestwallet] Fee Calculation: Fee:1410 Bytes:110 Tgt:0 (requested 0) Reason:"PayTxFee set" Decay 0.00000: Estimation: (-1 - -1) 0.00% 0.0/(0.0 0 mem 0.0 out) Fail: (-1 - -1) 0.00% 0.0/(0.0 0 mem 0.0 out)
+2025-12-26T21:51:00Z [regtestwallet] Fee non-grouped = 1410, grouped = 1410, using grouped
+2025-12-26T21:51:00Z [regtestwallet] CommitTransaction:
+CTransaction(hash=2274a7bd18, ver=2, vin.size=1, vout.size=1, nLockTime=208)
+    CTxIn(COutPoint(c3dc108215, 0), scriptSig=, nSequence=4294967293)
+    CScriptWitness(304402207b1d0dbb122a333370f5575ef0f95e4babe5edbb453974f29c8fff84165ed636022031efb59326486186c0dcc00a6524c989c6605732b314a9e4c1ff8bf55dd164a601, 03c1623bc68dd0cbe5b14ceb4e6a235a096bd50829fa35d11340cbd7623993abde)
+    CTxOut(nValue=50.00000000, scriptPubKey=001462ddd88d238851920e2221b138)
+2025-12-26T21:51:00Z [regtestwallet] AddToWallet 2274a7bd186c29015d194b83ac6a89cecb63e50ee3eb4039ece27f0817f7b7ce  newupdate
+2025-12-26T21:51:00Z [regtestwallet] Submitting wtx 2274a7bd186c29015d194b83ac6a89cecb63e50ee3eb4039ece27f0817f7b7ce to mempool for relay
+2025-12-26T21:51:00Z [regtestwallet] AddToWallet 2274a7bd186c29015d194b83ac6a89cecb63e50ee3eb4039ece27f0817f7b7ce  
+2025-12-26T21:51:06Z CreateNewBlock(): block weight: 1329 txs: 1 fees: 1410 sigops 401
+2025-12-26T21:51:06Z Saw new header hash=0c06284115fc954042d72161a54226e68347a04c79c00b79b08bd304b8841f20 height=209
+2025-12-26T21:51:06Z UpdateTip: new best=0c06284115fc954042d72161a54226e68347a04c79c00b79b08bd304b8841f20 height=209 version=0x30000000 log2_work=8.714246 tx=213 date='2025-12-26T21:51:06Z' progress=1.000000 cache=0.0MiB(213txo)
+2025-12-26T21:51:06Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:51:06Z Saw new header hash=730b72a102c298a279e20f878db597e8a06fc5e704cb93370e6a666b9e4c94be height=210
+2025-12-26T21:51:06Z UpdateTip: new best=730b72a102c298a279e20f878db597e8a06fc5e704cb93370e6a666b9e4c94be height=210 version=0x30000000 log2_work=8.721099 tx=214 date='2025-12-26T21:51:06Z' progress=1.000000 cache=0.0MiB(214txo)
+2025-12-26T21:51:06Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:51:06Z Saw new header hash=794c2da8557babf841f66f9c0d855a615b8cbc25f477365af07d99409139cd0b height=211
+2025-12-26T21:51:06Z UpdateTip: new best=794c2da8557babf841f66f9c0d855a615b8cbc25f477365af07d99409139cd0b height=211 version=0x30000000 log2_work=8.727920 tx=215 date='2025-12-26T21:51:06Z' progress=1.000000 cache=0.0MiB(215txo)
+2025-12-26T21:51:06Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:51:06Z Saw new header hash=17d4d1b020643fa6cad605cb73254802c3fff2aabf707d84b9d7b1b4cea92375 height=212
+2025-12-26T21:51:06Z UpdateTip: new best=17d4d1b020643fa6cad605cb73254802c3fff2aabf707d84b9d7b1b4cea92375 height=212 version=0x30000000 log2_work=8.734710 tx=216 date='2025-12-26T21:51:06Z' progress=1.000000 cache=0.0MiB(216txo)
+2025-12-26T21:51:06Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:51:06Z Saw new header hash=26c4bfb18aad3040c41e0f3cbc0e67f5904a520e2617db4185da9a5f4dc744fd height=213
+2025-12-26T21:51:06Z UpdateTip: new best=26c4bfb18aad3040c41e0f3cbc0e67f5904a520e2617db4185da9a5f4dc744fd height=213 version=0x30000000 log2_work=8.741467 tx=217 date='2025-12-26T21:51:06Z' progress=1.000000 cache=0.0MiB(217txo)
+2025-12-26T21:51:06Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:51:06Z Saw new header hash=3ee59d7a6f8c8f704255645997ecc31dbc595b7cb22f63b631de0299bd0695ef height=214
+2025-12-26T21:51:06Z UpdateTip: new best=3ee59d7a6f8c8f704255645997ecc31dbc595b7cb22f63b631de0299bd0695ef height=214 version=0x30000000 log2_work=8.748193 tx=218 date='2025-12-26T21:51:06Z' progress=1.000000 cache=0.0MiB(218txo)
+2025-12-26T21:51:06Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:51:06Z Saw new header hash=770a351be7d0696ff45fa8c7e5bbfc6a1fd7df4de47b2c4de9a1997cfda0ae7d height=215
+2025-12-26T21:51:06Z [regtestwallet] AddToWallet d151e805128ec42a55e6ed8f8a1580b6a66d0b34f4592d290ab3c20b19e362a0  new
+2025-12-26T21:51:06Z [regtestwallet] AddToWallet 2274a7bd186c29015d194b83ac6a89cecb63e50ee3eb4039ece27f0817f7b7ce  update
+2025-12-26T21:51:06Z [regtestwallet] AddToWallet d7cd932327e0fc1018fc52d2b4c4399bf0d28939683c82981908a7fac0ab5895  new
+2025-12-26T21:51:06Z [regtestwallet] AddToWallet cb13fb233ec9ad68ddc66c08c27e96f7b8f9e5edddb9e6e73af522d0c0573e73  new
+2025-12-26T21:51:06Z [regtestwallet] AddToWallet ad0fe09eac5b9294c8b2d7b08390c80dedbf55d8f84ceed90ffef0e8e06fb0df  new
+2025-12-26T21:51:06Z [regtestwallet] AddToWallet 1ae2e045d25e38e367745dd20a31e97168db7585d73efca85d553dd4a2a5c869  new
+2025-12-26T21:51:06Z [regtestwallet] AddToWallet 73b810a386260f06fa1cb3ef3e08d96292efa5f81507437808769b478d142611  new
+2025-12-26T21:51:06Z UpdateTip: new best=770a351be7d0696ff45fa8c7e5bbfc6a1fd7df4de47b2c4de9a1997cfda0ae7d height=215 version=0x30000000 log2_work=8.754888 tx=219 date='2025-12-26T21:51:07Z' progress=1.000000 cache=0.0MiB(219txo)
+2025-12-26T21:51:06Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:51:06Z Saw new header hash=4c6613936ba4b206bf2427deda509808bd19bb3fa89e84b8d593b23064f29e88 height=216
+2025-12-26T21:51:06Z UpdateTip: new best=4c6613936ba4b206bf2427deda509808bd19bb3fa89e84b8d593b23064f29e88 height=216 version=0x30000000 log2_work=8.761551 tx=220 date='2025-12-26T21:51:07Z' progress=1.000000 cache=0.0MiB(220txo)
+2025-12-26T21:51:06Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:51:06Z Saw new header hash=4e4d6c3c629a2463649dcf6ed9f29bb31d4d68c6e772c51c468be7065e6b5036 height=217
+2025-12-26T21:51:06Z UpdateTip: new best=4e4d6c3c629a2463649dcf6ed9f29bb31d4d68c6e772c51c468be7065e6b5036 height=217 version=0x30000000 log2_work=8.768184 tx=221 date='2025-12-26T21:51:07Z' progress=1.000000 cache=0.0MiB(221txo)
+2025-12-26T21:51:06Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:51:06Z Saw new header hash=510634e61826319985ce5619dfb675bff93d1d653380af213489fc12cffba8fc height=218
+2025-12-26T21:51:06Z UpdateTip: new best=510634e61826319985ce5619dfb675bff93d1d653380af213489fc12cffba8fc height=218 version=0x30000000 log2_work=8.774787 tx=222 date='2025-12-26T21:51:07Z' progress=1.000000 cache=0.0MiB(222txo)
+2025-12-26T21:51:06Z [regtestwallet] AddToWallet 3deabaeed61c392d77401e1d550a0658f9996233080c97b82df00be0ace59828  new
+2025-12-26T21:51:06Z [regtestwallet] AddToWallet fd6e571fd77c62c33a0bf63b52ebdd538acb2c5f619fd4588f74d940d3ebdb80  new
+2025-12-26T21:51:06Z [regtestwallet] AddToWallet 565d97b4ebf935ca0b6c22939eecdc827e13201eabf36933b72783509cc2a06b  new
+2025-12-26T21:51:06Z [regtestwallet] AddToWallet a930e275e68261d3808ec47ccb27406795185e1ef3b5182086f60331f4ab3e73  new
+2025-12-26T21:52:58Z CreateNewBlock(): block weight: 1549 txs: 1 fees: 166 sigops 401
+2025-12-26T21:52:58Z Saw new header hash=79082ae3e56063590ff69f7a4a7c4581ff581286d3190b310842bc82e6559f76 height=219
+2025-12-26T21:52:58Z UpdateTip: new best=79082ae3e56063590ff69f7a4a7c4581ff581286d3190b310842bc82e6559f76 height=219 version=0x30000000 log2_work=8.781360 tx=224 date='2025-12-26T21:52:58Z' progress=1.000000 cache=0.0MiB(224txo)
+2025-12-26T21:52:58Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:52:58Z Saw new header hash=7c02e8a6f209c6fb797a340552e212f8cad3c547c43cc236339152bb829b4312 height=220
+2025-12-26T21:52:58Z UpdateTip: new best=7c02e8a6f209c6fb797a340552e212f8cad3c547c43cc236339152bb829b4312 height=220 version=0x30000000 log2_work=8.787903 tx=225 date='2025-12-26T21:52:58Z' progress=1.000000 cache=0.0MiB(225txo)
+2025-12-26T21:52:58Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:52:58Z Saw new header hash=46589039871531dc385e495583aaf9e3a9913a3987f4c017136e5ae00ff1991c height=221
+2025-12-26T21:52:58Z UpdateTip: new best=46589039871531dc385e495583aaf9e3a9913a3987f4c017136e5ae00ff1991c height=221 version=0x30000000 log2_work=8.794416 tx=226 date='2025-12-26T21:52:58Z' progress=1.000000 cache=0.0MiB(226txo)
+2025-12-26T21:52:58Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:52:58Z Saw new header hash=7d707d7b42cea27496fad68969a5cd87e29449abcf5fb7d89bc6e2dbb0cd1457 height=222
+2025-12-26T21:52:58Z UpdateTip: new best=7d707d7b42cea27496fad68969a5cd87e29449abcf5fb7d89bc6e2dbb0cd1457 height=222 version=0x30000000 log2_work=8.800900 tx=227 date='2025-12-26T21:52:58Z' progress=1.000000 cache=0.0MiB(227txo)
+2025-12-26T21:52:58Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:52:58Z Saw new header hash=2fc36a58007cad3c6cc02ac760a7d875c47e2e15b3b2cc310a07f5a344f4509e height=223
+2025-12-26T21:52:58Z UpdateTip: new best=2fc36a58007cad3c6cc02ac760a7d875c47e2e15b3b2cc310a07f5a344f4509e height=223 version=0x30000000 log2_work=8.807355 tx=228 date='2025-12-26T21:52:58Z' progress=1.000000 cache=0.0MiB(228txo)
+2025-12-26T21:52:58Z CreateNewBlock(): block weight: 892 txs: 0 fees: 0 sigops 400
+2025-12-26T21:52:58Z Saw new header hash=77f40e419458253a9c46a4c4930b284106c259d6b0724841b2305fb2304dfbf8 height=224
+2025-12-26T21:52:58Z UpdateTip: new best=77f40e419458253a9c46a4c4930b284106c259d6b0724841b2305fb2304dfbf8 height=224 version=0x30000000 log2_work=8.813781 tx=229 date='2025-12-26T21:52:58Z' progress=1.000000 cache=0.0MiB(229txo)
+2025-12-26T21:52:58Z [regtestwallet] AddToWallet c5566531d793dc790f2c166535cd1c2d5d9346bbaf9ae35a5f8be8db8ecd6afe  new
+2025-12-26T21:52:58Z [regtestwallet] AddToWallet e28e4a68d37b9cf4faa5f67180954c69b618eecd409f528bbec67d274146f066  new
+2025-12-26T21:52:58Z [regtestwallet] AddToWallet 399b8c0a16f39bf842b10caa272e00305db953ef0eace5e21d1425ea326b1828  new
+2025-12-26T21:52:58Z [regtestwallet] AddToWallet 5b6a16ec2ce5b538f320b56dfe05628f951ff65ac0ff88979174ac3f587e2a50  new
+2025-12-26T21:52:58Z [regtestwallet] AddToWallet b52ba17bb5b4996894312a603ce2a0509c44023befb3a0d032225cf11371b6fb  new
+2025-12-26T21:52:58Z [regtestwallet] AddToWallet 17fd49f28a0425cefa34a4842d0dccf6299b53fb8355dcb58e3007e2a889d562  new

@@ -1,0 +1,45 @@
+Flamingo Wallet: Architecture & Backup Strategy Overview
+
+1. Ecosystem Overview: How Accounts Relate
+
+To understand the setup, it helps to view the Core Lightning Node not just as a processor, but as the central Manager for the user's entire financial identity.
+
+• The Identity: This is the user's root identity, derived from the 12-Word Mnemonic Phrase. It serves as the master key for everything.
+
+• The Wallet: We do not need two separate apps or wallets for Bitcoin and Lightning. The Lightning Node software automatically manages two distinct balances for the user:
+    - On-Chain Wallet (Layer 1): This works like a standard Bitcoin wallet. It interacts directly with the blockchain for slower, secure storage.
+    - Lightning Wallet (Layer 2): This manages funds locked in payment channels for instant transactions.
+
+• The Bitcoin Node: This acts as the underlying infrastructure. The Lightning Node connects to it to read the blockchain's history and broadcast transactions. The user does not need to manage this directly, it runs in the background or on the server side to support the Lightning Node.
+
+Conclusion: The Core Lightning Node acts as the unified wallet for both networks. The user interacts with one interface, while the node handles the complexity of moving funds between Layer 1 (Bitcoin) and Layer 2 (Lightning).
+
+--------------------------------------------------------------------------------
+
+2. Backup Requirements for Full Migration
+
+Because Lightning Network funds live in active channels rather than just on the blockchain, restoring a node requires more than just the seed phrase. A complete backup strategy consists of two parts:
+
+Part A: The Identity & On-Chain Funds
+• Source: The 12-Word Mnemonic Phrase (which generates the hsm_secret).
+• Function: This restores the user's identity, their public node ID, and fully recovers all On-Chain Bitcoin balances.
+• Storage: The user writes this down on paper or saves it securely offline.
+
+Part B: The Off-Chain (Lightning) Funds
+• Source: The Static Channel Backup (SCB) file
+• Function: This file contains the latest location of the user's Lightning funds. It does not store the full transaction history, but it tells the network, "I have funds in these channels, please close them and send the balances to my On-Chain wallet."
+• Storage: This file is tiny and should be automatically synced to the user's cloud storage (like iCloud/Google Drive) or our P2P storage whenever a channel is opened or closed.
+
+--------------------------------------------------------------------------------
+
+3. Migration Workflow (Moving to a New Computer)
+
+When a user switches computers or needs to restore their node, the process combines the two backups above to ensure no funds are lost:
+
+1. Initialize Identity: The user enters their 12-Word Mnemonic. This recreates their hsm_secret key, instantly restoring their Node ID and Bitcoin Wallet balance.
+
+2. Trigger Recovery: The user provides the SCB File (from their cloud/storage backup).
+
+3. Fund Recovery: The node uses the SCB file to contact peers. It automatically closes active channels and sweeps the funds back to the user's On-Chain Wallet.
+
+Summary: By securing both the Mnemonic (for identity/on-chain) and the SCB file (for off-chain channel recovery), we ensure users can safely migrate their entire financial state to a new device.

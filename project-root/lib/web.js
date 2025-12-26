@@ -307,6 +307,34 @@ document.body.innerHTML = `
             <button id="btn-import-wallet" style="width:100%; background:#dc3545; color:white; opacity:0.6; pointer-events:none;">Recover & Reset Node</button>
             <div id="import-wallet-res" style="margin-top:10px;"></div>
         </section>
+
+        <!-- BACKUP & RECOVERY -->
+        <section>
+            <h2>💾 Backup & Recovery (Off-Chain)</h2>
+            <p style="font-size:0.9em; color:#666; margin-top:0;">Safeguard your lightning funds.</p>
+
+            <!-- Export -->
+            <div style="border-bottom:1px solid #eee; padding-bottom:10px; margin-bottom:10px;">
+                <label style="font-weight:bold; font-size:0.9em;">Export Channel Backup (SCB)</label>
+                <div style="font-size:0.85em; color:#555; margin-bottom:5px;">Download this file whenever you open new channels.</div>
+                <button id="btn-export-scb" style="width:100%; background:#17a2b8; color:white;">⬇️ Download my-channels.scb</button>
+            </div>
+
+            <!-- Import -->
+            <div>
+                <label style="font-weight:bold; font-size:0.9em; color:#d63384;">RESTORE FUNDS from Backup</label>
+                <div style="font-size:0.85em; color:#555; margin-bottom:5px;">Upload your SCB file to close channels and sweep funds.</div>
+                
+                <input type="file" id="scb-file-upload" style="margin-bottom:5px; width:100%;">
+                
+                <div style="background:#fff3cd; color:#856404; padding:5px; border-radius:4px; font-size:0.8em; margin-bottom:5px;">
+                    <strong>Note:</strong> This will STOP the node, restore the backup file, and RESTART it to trigger the closing process.
+                </div>
+
+                <button id="btn-recover-funds" style="width:100%; background:#fd7e14; color:white;">⬆️ Restore & Recover Funds</button>
+                <div id="recover-scb-res" style="margin-top:10px;"></div>
+            </div>
+        </section>
     </div>
     <span class="raw-label">Raw Output (Wallet)</span>
     <pre id="raw-wallet" class="raw-log"></pre>
@@ -1964,6 +1992,71 @@ function setupButtons() {
           document.getElementById('import-wallet-res').innerHTML = `<span style="color:red; font-weight:bold;">❌ Error: ${payload ? payload.error : 'Unknown error'}</span>`;
         }
       });
+    });
+  }
+
+  // --- BACKUP & RECOVERY LISTENERS ---
+  const btnExportScb = document.getElementById('btn-export-scb');
+  if (btnExportScb) {
+    btnExportScb.addEventListener('click', () => {
+      const out = getActiveRaw();
+      out.textContent = 'Requesting SCB export...';
+
+      send('export_scb', {}, (res) => {
+        out.textContent = JSON.stringify(res, null, 2);
+        if (res.data.status === 'success') {
+          const { hex, filename } = res.data.data;
+
+          // Convert hex to binary blob
+          const buffer = new Uint8Array(hex.match(/.{1,2}/g).map(byte => parseInt(byte, 16)));
+          const blob = new Blob([buffer], { type: 'application/octet-stream' });
+
+          // Create download link
+          const url = window.URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = filename || 'emergency.recover';
+          document.body.appendChild(a);
+          a.click();
+          window.URL.revokeObjectURL(url);
+          document.body.removeChild(a);
+        } else {
+          alert('Export failed: ' + res.data.error);
+        }
+      });
+    });
+  }
+
+  const btnRecoverFunds = document.getElementById('btn-recover-funds');
+  if (btnRecoverFunds) {
+    btnRecoverFunds.addEventListener('click', () => {
+      const fileInput = document.getElementById('scb-file-upload');
+      const file = fileInput.files[0];
+      if (!file) { alert('Please select a file first.'); return; }
+
+      if (!confirm('Proceed with Fund Recovery? This will restart the node.')) return;
+
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        // ArrayBuffer -> Hex
+        const buffer = new Uint8Array(e.target.result);
+        const hex = Array.from(buffer).map(b => b.toString(16).padStart(2, '0')).join('');
+
+        const out = getActiveRaw();
+        out.textContent = 'Uploading SCB and initiating recovery... please wait...';
+        document.getElementById('recover-scb-res').textContent = 'Processing...';
+
+        send('recover_funds', { hex_data: hex }, (res) => {
+          out.textContent = JSON.stringify(res, null, 2);
+          const d = res.data;
+          if (d.status === 'success') {
+            document.getElementById('recover-scb-res').innerHTML = `<span style="color:green; font-weight:bold;">✅ ${d.data.message}</span><div style="font-size:0.9em">${d.data.note}</div>`;
+          } else {
+            document.getElementById('recover-scb-res').innerHTML = `<span style="color:red; font-weight:bold;">❌ Error: ${d.error}</span>`;
+          }
+        });
+      };
+      reader.readAsArrayBuffer(file);
     });
   }
 }
