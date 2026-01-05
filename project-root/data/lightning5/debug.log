@@ -1,308 +1,48 @@
-2025-12-23T19:22:46.338Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-23T19:22:46.342Z INFO    lightningd: Creating database
-2025-12-23T19:22:46.368Z UNUSUAL hsmd: HSM: created new hsm_secret file
-2025-12-23T19:22:46.374Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-23T19:22:46.382Z INFO    plugin-chanbackup: Creating Emergency Recovery
-2025-12-23T19:22:46.385Z INFO    plugin-bookkeeper: Creating database
-2025-12-23T19:22:46.385Z INFO    lightningd: --------------------------------------------------
-2025-12-23T19:22:46.385Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-2025-12-23T19:22:46.473Z INFO    plugin-bookkeeper: account wallet not found, adding along with new balance
+2026-01-05T12:14:42.663Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-05T12:14:42.667Z INFO    lightningd: Creating database
+2026-01-05T12:14:42.694Z UNUSUAL hsmd: HSM: created new hsm_secret file
+2026-01-05T12:14:42.700Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-05T12:14:42.712Z INFO    plugin-chanbackup: Creating Emergency Recovery
+2026-01-05T12:14:42.714Z INFO    plugin-bookkeeper: Creating database
+2026-01-05T12:14:42.714Z INFO    lightningd: --------------------------------------------------
+2026-01-05T12:14:42.714Z INFO    lightningd: Server started with public key 039bfa3cb36d08d99f288dea1d1349be5625ee365e282c6a8b5d887a5681ff4944, alias JUNIORSPATULA (color #039bfa) and lightningd v23.08.1
+2026-01-05T12:14:42.804Z INFO    plugin-bookkeeper: account wallet not found, adding along with new balance
+2026-01-05T12:26:34.895Z UNUSUAL 03a26d026eb87742caebf1415dd09a743bedaa72e79ce6cf17a754e2cc9d2683b6-chan#1: Ignoring fee limits!
+2026-01-05T12:26:34.898Z INFO    plugin-chanbackup: Updating the SCB
+2026-01-05T12:28:27.179Z INFO    03a26d026eb87742caebf1415dd09a743bedaa72e79ce6cf17a754e2cc9d2683b6-chan#1: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
 
 
 
 
-2025-12-23T19:33:21.003Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-23T19:33:21.015Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-23T19:33:21.030Z INFO    lightningd: --------------------------------------------------
-2025-12-23T19:33:21.030Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-2025-12-23T19:33:21.122Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+0msat/-0msat) (account wallet) Logging journal entry.
+2026-01-05T12:32:55.227Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-05T12:32:55.238Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-05T12:32:55.249Z INFO    lightningd: --------------------------------------------------
+2026-01-05T12:32:55.249Z INFO    lightningd: Server started with public key 039bfa3cb36d08d99f288dea1d1349be5625ee365e282c6a8b5d887a5681ff4944, alias JUNIORSPATULA (color #039bfa) and lightningd v23.08.1
+2026-01-05T12:32:55.353Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+0msat/-0msat) (account wallet) Logging journal entry.
+2026-01-05T12:34:02.771Z UNUSUAL 03996fa4650d6fec84538054549026d051303331918e804b25a9109dfdd9938f18-chan#2: Ignoring fee limits!
+2026-01-05T12:34:02.777Z INFO    plugin-chanbackup: Updating the SCB
+2026-01-05T12:34:25.407Z INFO    03996fa4650d6fec84538054549026d051303331918e804b25a9109dfdd9938f18-chan#2: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
 
 
 
 
-2025-12-23T19:37:14.019Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-23T19:37:14.030Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-23T19:37:14.040Z INFO    lightningd: --------------------------------------------------
-2025-12-23T19:37:14.040Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-2025-12-23T19:37:14.081Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+1100000000000msat/-0msat) (account wallet) Logging journal entry.
+2026-01-05T12:35:24.584Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-05T12:35:24.595Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-05T12:35:24.607Z INFO    lightningd: --------------------------------------------------
+2026-01-05T12:35:24.607Z INFO    lightningd: Server started with public key 039bfa3cb36d08d99f288dea1d1349be5625ee365e282c6a8b5d887a5681ff4944, alias JUNIORSPATULA (color #039bfa) and lightningd v23.08.1
+2026-01-05T12:35:24.714Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+0msat/-0msat) (account wallet) Logging journal entry.
 
 
 
 
-2025-12-23T19:39:02.811Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-23T19:39:02.822Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-23T19:39:02.831Z INFO    lightningd: --------------------------------------------------
-2025-12-23T19:39:02.831Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-2025-12-23T19:39:02.870Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+1100000000000msat/-0msat) (account wallet) Logging journal entry.
-
-
-
-
-2025-12-23T19:41:47.370Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-23T19:41:47.380Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-23T19:41:47.390Z INFO    lightningd: --------------------------------------------------
-2025-12-23T19:41:47.390Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-2025-12-23T19:41:47.429Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+1100000000000msat/-0msat) (account wallet) Logging journal entry.
-
-
-
-
-2025-12-23T19:44:35.977Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-23T19:44:35.988Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-23T19:44:36.001Z INFO    lightningd: --------------------------------------------------
-2025-12-23T19:44:36.001Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-23T19:45:52.985Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-23T19:45:52.996Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-23T19:45:53.006Z INFO    lightningd: --------------------------------------------------
-2025-12-23T19:45:53.006Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-23T19:49:25.611Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-23T19:49:25.623Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-23T19:49:25.637Z INFO    lightningd: --------------------------------------------------
-2025-12-23T19:49:25.637Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-23T19:50:49.562Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-23T19:50:49.574Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-23T19:50:49.583Z INFO    lightningd: --------------------------------------------------
-2025-12-23T19:50:49.583Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-23T19:57:49.720Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-23T19:57:49.731Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-23T19:57:49.745Z INFO    lightningd: --------------------------------------------------
-2025-12-23T19:57:49.745Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-23T19:59:39.819Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-23T19:59:39.830Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-23T19:59:39.839Z INFO    lightningd: --------------------------------------------------
-2025-12-23T19:59:39.839Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-23T20:03:27.233Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-23T20:03:27.245Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-23T20:03:27.258Z INFO    lightningd: --------------------------------------------------
-2025-12-23T20:03:27.258Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-24T02:19:09.263Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-24T02:19:09.277Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-24T02:19:09.288Z INFO    lightningd: --------------------------------------------------
-2025-12-24T02:19:09.288Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-24T02:31:18.089Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-24T02:31:18.102Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-24T02:31:18.115Z INFO    lightningd: --------------------------------------------------
-2025-12-24T02:31:18.115Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-24T02:45:37.845Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-24T02:45:37.859Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-24T02:45:37.875Z INFO    lightningd: --------------------------------------------------
-2025-12-24T02:45:37.875Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-24T02:47:01.658Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-24T02:47:01.671Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-24T02:47:01.683Z INFO    lightningd: --------------------------------------------------
-2025-12-24T02:47:01.683Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-24T02:48:07.546Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-24T02:48:07.559Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-24T02:48:07.570Z INFO    lightningd: --------------------------------------------------
-2025-12-24T02:48:07.570Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-24T02:48:31.393Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-24T02:48:31.406Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-24T02:48:31.415Z INFO    lightningd: --------------------------------------------------
-2025-12-24T02:48:31.415Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-24T02:49:51.328Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-24T02:49:51.341Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-24T02:49:51.352Z INFO    lightningd: --------------------------------------------------
-2025-12-24T02:49:51.352Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-24T02:52:41.657Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-24T02:52:41.671Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-24T02:52:41.682Z INFO    lightningd: --------------------------------------------------
-2025-12-24T02:52:41.682Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-24T02:53:07.972Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-24T02:53:07.984Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-24T02:53:07.995Z INFO    lightningd: --------------------------------------------------
-2025-12-24T02:53:07.995Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-24T02:53:50.750Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-24T02:53:50.763Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-24T02:53:50.773Z INFO    lightningd: --------------------------------------------------
-2025-12-24T02:53:50.773Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-24T02:54:24.807Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-24T02:54:24.820Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-24T02:54:24.832Z INFO    lightningd: --------------------------------------------------
-2025-12-24T02:54:24.832Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-24T02:54:41.111Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-24T02:54:41.124Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-24T02:54:41.134Z INFO    lightningd: --------------------------------------------------
-2025-12-24T02:54:41.134Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-24T02:55:57.721Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-24T02:55:57.734Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-24T02:55:57.746Z INFO    lightningd: --------------------------------------------------
-2025-12-24T02:55:57.746Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-24T02:56:15.777Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-24T02:56:15.790Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-24T02:56:15.799Z INFO    lightningd: --------------------------------------------------
-2025-12-24T02:56:15.800Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-24T03:43:37.864Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-24T03:43:37.875Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-24T03:43:37.885Z INFO    lightningd: --------------------------------------------------
-2025-12-24T03:43:37.885Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-24T03:45:18.177Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-24T03:45:18.188Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-24T03:45:18.198Z INFO    lightningd: --------------------------------------------------
-2025-12-24T03:45:18.198Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-24T03:47:40.609Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-24T03:47:40.621Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-24T03:47:40.632Z INFO    lightningd: --------------------------------------------------
-2025-12-24T03:47:40.632Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-24T03:49:35.118Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-24T03:49:35.130Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-24T03:49:35.140Z INFO    lightningd: --------------------------------------------------
-2025-12-24T03:49:35.140Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-24T03:50:02.621Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-24T03:50:02.632Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-24T03:50:02.642Z INFO    lightningd: --------------------------------------------------
-2025-12-24T03:50:02.642Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-26T21:38:32.202Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-26T21:38:32.226Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-26T21:38:32.228Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
-2025-12-26T21:38:32.245Z INFO    lightningd: --------------------------------------------------
-2025-12-26T21:38:32.245Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-26T21:41:50.939Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-26T21:41:50.961Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-26T21:41:50.965Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
-2025-12-26T21:41:50.985Z INFO    lightningd: --------------------------------------------------
-2025-12-26T21:41:50.985Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-26T21:48:48.306Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-26T21:48:48.326Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-26T21:48:48.329Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
-2025-12-26T21:48:48.345Z INFO    lightningd: --------------------------------------------------
-2025-12-26T21:48:48.345Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-2025-12-26T21:49:40.917Z UNUSUAL lightningd: Bitcoin backend now synced.
-2025-12-26T21:52:40.410Z UNUSUAL 02fb94f71708c752af5587d2b337f13cd4bf633042ca14339188d81d6ea7b8b71b-chan#1: Ignoring fee limits!
-2025-12-26T21:52:40.416Z INFO    plugin-chanbackup: Updating the SCB
-2025-12-26T21:53:19.316Z INFO    02fb94f71708c752af5587d2b337f13cd4bf633042ca14339188d81d6ea7b8b71b-chan#1: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
-
-
-
-
-2025-12-26T21:54:22.229Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-26T21:54:22.249Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-26T21:54:22.269Z INFO    lightningd: --------------------------------------------------
-2025-12-26T21:54:22.269Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-26T21:54:50.242Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-26T21:54:50.262Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-26T21:54:50.285Z INFO    lightningd: --------------------------------------------------
-2025-12-26T21:54:50.285Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
-
-
-
-
-2025-12-26T21:55:23.051Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-26T21:55:23.071Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-26T21:55:23.092Z INFO    lightningd: --------------------------------------------------
-2025-12-26T21:55:23.092Z INFO    lightningd: Server started with public key 031e5a77b00892310cf5548cb3f34fcd8973b9024911b6082820d9e1ec69fac09a, alias SOMBERYARD (color #031e5a) and lightningd v23.08.1
+2026-01-05T12:35:44.302Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-05T12:35:44.315Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-05T12:35:44.328Z INFO    lightningd: --------------------------------------------------
+2026-01-05T12:35:44.328Z INFO    lightningd: Server started with public key 039bfa3cb36d08d99f288dea1d1349be5625ee365e282c6a8b5d887a5681ff4944, alias JUNIORSPATULA (color #039bfa) and lightningd v23.08.1
+2026-01-05T12:35:44.439Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+0msat/-0msat) (account wallet) Logging journal entry.
+2026-01-05T12:36:31.790Z UNUSUAL 03996fa4650d6fec84538054549026d051303331918e804b25a9109dfdd9938f18-chan#2: Ignoring fee limits!
+2026-01-05T12:36:31.830Z UNUSUAL 03996fa4650d6fec84538054549026d051303331918e804b25a9109dfdd9938f18-chan#2: Peer permanent failure in CHANNELD_NORMAL: channeld: received ERROR error channel 1938ed9c3ff57fa177db7ddd6d052c105fe6a3acb43b2c99f967adb96105746a: Unknown channel for WIRE_CHANNEL_REESTABLISH
+2026-01-05T12:36:31.832Z INFO    03996fa4650d6fec84538054549026d051303331918e804b25a9109dfdd9938f18-chan#2: State changed from CHANNELD_NORMAL to AWAITING_UNILATERAL
+2026-01-05T12:36:44.482Z UNUSUAL 03996fa4650d6fec84538054549026d051303331918e804b25a9109dfdd9938f18-chan#2: Peer permanent failure in AWAITING_UNILATERAL: Funding transaction spent
+2026-01-05T12:36:44.483Z INFO    03996fa4650d6fec84538054549026d051303331918e804b25a9109dfdd9938f18-chan#2: State changed from AWAITING_UNILATERAL to FUNDING_SPEND_SEEN
+2026-01-05T12:36:44.488Z INFO    03996fa4650d6fec84538054549026d051303331918e804b25a9109dfdd9938f18-chan#2: State changed from FUNDING_SPEND_SEEN to ONCHAIN

@@ -1,15 +1,18 @@
-2025-12-26T21:54:50.049Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-26T21:54:50.055Z INFO    lightningd: Creating database
-2025-12-26T21:54:50.121Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-26T21:54:50.135Z INFO    plugin-chanbackup: Creating Emergency Recovery
-2025-12-26T21:54:50.139Z INFO    plugin-bookkeeper: Creating database
-2025-12-26T21:54:50.139Z INFO    lightningd: --------------------------------------------------
-2025-12-26T21:54:50.139Z INFO    lightningd: Server started with public key 02fb94f71708c752af5587d2b337f13cd4bf633042ca14339188d81d6ea7b8b71b, alias PEEVEDNIGHT (color #02fb94) and lightningd v23.08.1
+2026-01-05T12:35:44.199Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-05T12:35:44.203Z INFO    lightningd: Creating database
+2026-01-05T12:35:44.234Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-05T12:35:44.241Z INFO    plugin-chanbackup: Creating Emergency Recovery
+2026-01-05T12:35:44.244Z INFO    plugin-bookkeeper: Creating database
+2026-01-05T12:35:44.244Z INFO    lightningd: --------------------------------------------------
+2026-01-05T12:35:44.244Z INFO    lightningd: Server started with public key 03996fa4650d6fec84538054549026d051303331918e804b25a9109dfdd9938f18, alias SLIMYSPAWN (color #03996f) and lightningd v23.08.1
 
 
 
 
-2025-12-26T21:55:22.902Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2025-12-26T21:55:22.925Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2025-12-26T21:55:22.943Z INFO    lightningd: --------------------------------------------------
-2025-12-26T21:55:22.943Z INFO    lightningd: Server started with public key 02fb94f71708c752af5587d2b337f13cd4bf633042ca14339188d81d6ea7b8b71b, alias PEEVEDNIGHT (color #02fb94) and lightningd v23.08.1
+2026-01-05T12:36:26.724Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-05T12:36:26.729Z INFO    lightningd: Creating database
+2026-01-05T12:36:26.760Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-05T12:36:26.769Z INFO    plugin-bookkeeper: Creating database
+2026-01-05T12:36:26.769Z INFO    lightningd: --------------------------------------------------
+2026-01-05T12:36:26.769Z INFO    lightningd: Server started with public key 03996fa4650d6fec84538054549026d051303331918e804b25a9109dfdd9938f18, alias SLIMYSPAWN (color #03996f) and lightningd v23.08.1
+2026-01-05T12:36:31.830Z UNUSUAL 039bfa3cb36d08d99f288dea1d1349be5625ee365e282c6a8b5d887a5681ff4944-lightningd: Unknown channel 1938ed9c3ff57fa177db7ddd6d052c105fe6a3acb43b2c99f967adb96105746a for WIRE_CHANNEL_REESTABLISH
