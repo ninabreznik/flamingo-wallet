@@ -1,48 +1,48 @@
-2026-01-05T12:14:42.663Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2026-01-05T12:14:42.667Z INFO    lightningd: Creating database
-2026-01-05T12:14:42.694Z UNUSUAL hsmd: HSM: created new hsm_secret file
-2026-01-05T12:14:42.700Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2026-01-05T12:14:42.712Z INFO    plugin-chanbackup: Creating Emergency Recovery
-2026-01-05T12:14:42.714Z INFO    plugin-bookkeeper: Creating database
-2026-01-05T12:14:42.714Z INFO    lightningd: --------------------------------------------------
-2026-01-05T12:14:42.714Z INFO    lightningd: Server started with public key 039bfa3cb36d08d99f288dea1d1349be5625ee365e282c6a8b5d887a5681ff4944, alias JUNIORSPATULA (color #039bfa) and lightningd v23.08.1
-2026-01-05T12:14:42.804Z INFO    plugin-bookkeeper: account wallet not found, adding along with new balance
-2026-01-05T12:26:34.895Z UNUSUAL 03a26d026eb87742caebf1415dd09a743bedaa72e79ce6cf17a754e2cc9d2683b6-chan#1: Ignoring fee limits!
-2026-01-05T12:26:34.898Z INFO    plugin-chanbackup: Updating the SCB
-2026-01-05T12:28:27.179Z INFO    03a26d026eb87742caebf1415dd09a743bedaa72e79ce6cf17a754e2cc9d2683b6-chan#1: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+2026-01-17T12:11:51.430Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-17T12:11:51.434Z INFO    lightningd: Creating database
+2026-01-17T12:11:51.461Z UNUSUAL hsmd: HSM: created new hsm_secret file
+2026-01-17T12:11:51.468Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-17T12:11:51.469Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-17T12:11:51.477Z INFO    plugin-chanbackup: Creating Emergency Recovery
+2026-01-17T12:11:51.480Z INFO    plugin-bookkeeper: Creating database
+2026-01-17T12:11:51.480Z INFO    lightningd: --------------------------------------------------
+2026-01-17T12:11:51.481Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-17T12:11:51.567Z INFO    plugin-bookkeeper: account wallet not found, adding along with new balance
+2026-01-17T12:12:59.046Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-01-17T12:14:04.061Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-17T12:14:04.063Z INFO    plugin-pay: cmd 34 partid 0: Destination 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277 is not reachable directly and all routehints were unusable.
 
 
 
 
-2026-01-05T12:32:55.227Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2026-01-05T12:32:55.238Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2026-01-05T12:32:55.249Z INFO    lightningd: --------------------------------------------------
-2026-01-05T12:32:55.249Z INFO    lightningd: Server started with public key 039bfa3cb36d08d99f288dea1d1349be5625ee365e282c6a8b5d887a5681ff4944, alias JUNIORSPATULA (color #039bfa) and lightningd v23.08.1
-2026-01-05T12:32:55.353Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+0msat/-0msat) (account wallet) Logging journal entry.
-2026-01-05T12:34:02.771Z UNUSUAL 03996fa4650d6fec84538054549026d051303331918e804b25a9109dfdd9938f18-chan#2: Ignoring fee limits!
-2026-01-05T12:34:02.777Z INFO    plugin-chanbackup: Updating the SCB
-2026-01-05T12:34:25.407Z INFO    03996fa4650d6fec84538054549026d051303331918e804b25a9109dfdd9938f18-chan#2: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+2026-01-17T12:21:50.284Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-17T12:21:50.296Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-17T12:21:50.298Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-17T12:21:50.308Z INFO    lightningd: --------------------------------------------------
+2026-01-17T12:21:50.308Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-17T12:21:50.384Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+5000000000000msat/-0msat) (account wallet) Logging journal entry.
+2026-01-17T12:22:27.856Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-01-17T12:23:14.806Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 2500msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-17T12:23:14.808Z INFO    plugin-pay: cmd 34 partid 0: Destination 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277 is not reachable directly and all routehints were unusable.
+2026-01-17T12:23:50.938Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 2500msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-17T12:23:50.939Z INFO    plugin-pay: cmd 34 partid 0: Destination 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277 is not reachable directly and all routehints were unusable.
+2026-01-17T12:23:52.088Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 2500msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-17T12:23:52.089Z INFO    plugin-pay: cmd 34 partid 0: Destination 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277 is not reachable directly and all routehints were unusable.
 
 
 
 
-2026-01-05T12:35:24.584Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2026-01-05T12:35:24.595Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2026-01-05T12:35:24.607Z INFO    lightningd: --------------------------------------------------
-2026-01-05T12:35:24.607Z INFO    lightningd: Server started with public key 039bfa3cb36d08d99f288dea1d1349be5625ee365e282c6a8b5d887a5681ff4944, alias JUNIORSPATULA (color #039bfa) and lightningd v23.08.1
-2026-01-05T12:35:24.714Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+0msat/-0msat) (account wallet) Logging journal entry.
-
-
-
-
-2026-01-05T12:35:44.302Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2026-01-05T12:35:44.315Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2026-01-05T12:35:44.328Z INFO    lightningd: --------------------------------------------------
-2026-01-05T12:35:44.328Z INFO    lightningd: Server started with public key 039bfa3cb36d08d99f288dea1d1349be5625ee365e282c6a8b5d887a5681ff4944, alias JUNIORSPATULA (color #039bfa) and lightningd v23.08.1
-2026-01-05T12:35:44.439Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+0msat/-0msat) (account wallet) Logging journal entry.
-2026-01-05T12:36:31.790Z UNUSUAL 03996fa4650d6fec84538054549026d051303331918e804b25a9109dfdd9938f18-chan#2: Ignoring fee limits!
-2026-01-05T12:36:31.830Z UNUSUAL 03996fa4650d6fec84538054549026d051303331918e804b25a9109dfdd9938f18-chan#2: Peer permanent failure in CHANNELD_NORMAL: channeld: received ERROR error channel 1938ed9c3ff57fa177db7ddd6d052c105fe6a3acb43b2c99f967adb96105746a: Unknown channel for WIRE_CHANNEL_REESTABLISH
-2026-01-05T12:36:31.832Z INFO    03996fa4650d6fec84538054549026d051303331918e804b25a9109dfdd9938f18-chan#2: State changed from CHANNELD_NORMAL to AWAITING_UNILATERAL
-2026-01-05T12:36:44.482Z UNUSUAL 03996fa4650d6fec84538054549026d051303331918e804b25a9109dfdd9938f18-chan#2: Peer permanent failure in AWAITING_UNILATERAL: Funding transaction spent
-2026-01-05T12:36:44.483Z INFO    03996fa4650d6fec84538054549026d051303331918e804b25a9109dfdd9938f18-chan#2: State changed from AWAITING_UNILATERAL to FUNDING_SPEND_SEEN
-2026-01-05T12:36:44.488Z INFO    03996fa4650d6fec84538054549026d051303331918e804b25a9109dfdd9938f18-chan#2: State changed from FUNDING_SPEND_SEEN to ONCHAIN
+2026-01-17T12:26:53.638Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-17T12:26:53.649Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-17T12:26:53.651Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-17T12:26:53.660Z INFO    lightningd: --------------------------------------------------
+2026-01-17T12:26:53.660Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-17T12:26:53.732Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+5000000000000msat/-0msat) (account wallet) Logging journal entry.
+2026-01-17T12:27:31.205Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-01-17T12:28:21.254Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 2500msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-17T12:28:21.255Z INFO    plugin-pay: cmd 34 partid 0: Destination 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277 is not reachable directly and all routehints were unusable.
+2026-01-17T12:28:21.327Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+2026-01-17T12:28:21.332Z INFO    plugin-chanbackup: Updating the SCB
+2026-01-17T12:28:23.795Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+2026-01-17T12:28:24.367Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 2500msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-17T12:50:25.587Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 500msat is below exemption threshold, allowing a maximum fee of 5000msat

@@ -1,36 +1,33 @@
-2026-01-05T12:14:42.857Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2026-01-05T12:14:42.861Z INFO    lightningd: Creating database
-2026-01-05T12:14:42.887Z UNUSUAL hsmd: HSM: created new hsm_secret file
-2026-01-05T12:14:42.893Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2026-01-05T12:14:42.903Z INFO    plugin-chanbackup: Creating Emergency Recovery
-2026-01-05T12:14:42.905Z INFO    plugin-bookkeeper: Creating database
-2026-01-05T12:14:42.905Z INFO    lightningd: --------------------------------------------------
-2026-01-05T12:14:42.905Z INFO    lightningd: Server started with public key 02ed04219a987c78b3a5115c1d55e1e825a7af91d3ebcffa3d42cebdb6787ff320, alias LOUDTROUGH (color #02ed04) and lightningd v23.08.1
-2026-01-05T12:14:42.990Z INFO    plugin-bookkeeper: account wallet not found, adding along with new balance
+2026-01-17T12:11:51.617Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-17T12:11:51.621Z INFO    lightningd: Creating database
+2026-01-17T12:11:51.648Z UNUSUAL hsmd: HSM: created new hsm_secret file
+2026-01-17T12:11:51.654Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-17T12:11:51.655Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-17T12:11:51.663Z INFO    plugin-chanbackup: Creating Emergency Recovery
+2026-01-17T12:11:51.665Z INFO    plugin-bookkeeper: Creating database
+2026-01-17T12:11:51.665Z INFO    lightningd: --------------------------------------------------
+2026-01-17T12:11:51.665Z INFO    lightningd: Server started with public key 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d, alias SLEEPYENTOURAGE (color #03b19d) and lightningd v23.08.1
+2026-01-17T12:11:51.748Z INFO    plugin-bookkeeper: account wallet not found, adding along with new balance
+2026-01-17T12:12:59.242Z UNUSUAL lightningd: Bitcoin backend now synced.
 
 
 
 
-2026-01-05T12:32:55.314Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2026-01-05T12:32:55.327Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2026-01-05T12:32:55.342Z INFO    lightningd: --------------------------------------------------
-2026-01-05T12:32:55.342Z INFO    lightningd: Server started with public key 02ed04219a987c78b3a5115c1d55e1e825a7af91d3ebcffa3d42cebdb6787ff320, alias LOUDTROUGH (color #02ed04) and lightningd v23.08.1
-2026-01-05T12:32:55.424Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+0msat/-0msat) (account wallet) Logging journal entry.
+2026-01-17T12:21:50.376Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-17T12:21:50.388Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-17T12:21:50.390Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-17T12:21:50.398Z INFO    lightningd: --------------------------------------------------
+2026-01-17T12:21:50.398Z INFO    lightningd: Server started with public key 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d, alias SLEEPYENTOURAGE (color #03b19d) and lightningd v23.08.1
+2026-01-17T12:21:50.470Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+0msat/-0msat) (account wallet) Logging journal entry.
+2026-01-17T12:22:27.930Z UNUSUAL lightningd: Bitcoin backend now synced.
 
 
 
 
-2026-01-05T12:35:24.664Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2026-01-05T12:35:24.677Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2026-01-05T12:35:24.691Z INFO    lightningd: --------------------------------------------------
-2026-01-05T12:35:24.691Z INFO    lightningd: Server started with public key 02ed04219a987c78b3a5115c1d55e1e825a7af91d3ebcffa3d42cebdb6787ff320, alias LOUDTROUGH (color #02ed04) and lightningd v23.08.1
-2026-01-05T12:35:24.776Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+0msat/-0msat) (account wallet) Logging journal entry.
-
-
-
-
-2026-01-05T12:35:44.388Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2026-01-05T12:35:44.400Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2026-01-05T12:35:44.415Z INFO    lightningd: --------------------------------------------------
-2026-01-05T12:35:44.415Z INFO    lightningd: Server started with public key 02ed04219a987c78b3a5115c1d55e1e825a7af91d3ebcffa3d42cebdb6787ff320, alias LOUDTROUGH (color #02ed04) and lightningd v23.08.1
-2026-01-05T12:35:44.500Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+0msat/-0msat) (account wallet) Logging journal entry.
+2026-01-17T12:26:53.719Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-17T12:26:53.731Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-17T12:26:53.733Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-17T12:26:53.741Z INFO    lightningd: --------------------------------------------------
+2026-01-17T12:26:53.741Z INFO    lightningd: Server started with public key 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d, alias SLEEPYENTOURAGE (color #03b19d) and lightningd v23.08.1
+2026-01-17T12:26:53.812Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+0msat/-0msat) (account wallet) Logging journal entry.
+2026-01-17T12:27:31.272Z UNUSUAL lightningd: Bitcoin backend now synced.

@@ -60,6 +60,34 @@ window.handleHistoryClick = function (el, id, type) {
   }, 100);
 };
 
+// 🔔 Show Payment Success Overlay
+window.showPaymentSuccess = function (data) {
+  console.log('showing success', data);
+  const amt = data.amount_received_msat || data.amount_msat || 0;
+  const desc = data.description || 'No description';
+
+  // 1. Update the UI Area if visible
+  const contentEl = document.getElementById('create-ln-content');
+  if (contentEl) {
+    contentEl.innerHTML = `
+        <div style="background:#d4edda; color:#155724; padding:20px; text-align:center; border-radius:8px; border:2px solid #c3e6cb; animation: fadeIn 0.5s;">
+           <div style="font-size:3em;">✅</div>
+           <h3 style="margin:10px 0;">Payment Received!</h3>
+           <div style="font-size:1.5em; font-weight:bold;">${Math.floor(amt / 1000).toLocaleString()} sats</div>
+           <div style="color:#555; margin-top:5px;">${desc}</div>
+        </div>
+      `;
+  }
+
+  // 2. Play a sound (optional/fun) - Removed for now to keep it simple
+
+  // 3. Auto-refresh balances
+  const btnFund = document.getElementById('btn-listfunds');
+  if (btnFund) btnFund.click();
+  const btnBtc = document.getElementById('btn-getbalance');
+  if (btnBtc) btnBtc.click();
+}
+
 document.body.innerHTML = `
   <style>
     /* --- GENERAL LAYOUT --- */
@@ -513,6 +541,14 @@ document.body.innerHTML = `
           <div id="create-ln-content" style="margin-top: 10px; word-break: break-all; font-size:0.85em;">
             <i>Invoice will appear here...</i>
           </div>
+          
+          <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+          
+          <div style="background: #f8f9fa; padding: 10px; border-radius: 6px;">
+             <div style="font-size: 0.8em; font-weight: bold; color: #666; margin-bottom: 5px;">🧪 TESTING ONLY</div>
+             <button id="btn-simulate-pay" style="width: 100%; background: #6610f2; color: white; border: none;">Simulate Payment (Node 5 Pay)</button>
+             <div id="simulate-pay-res" style="font-size: 0.8em; margin-top: 5px;"></div>
+          </div>
         </section>
       </div>
 
@@ -837,7 +873,11 @@ function connect() {
   ws.onopen = () => {
     statusEl.textContent = `✅ Connected to ${wsUrl}`
     statusEl.style.color = 'green'
+    statusEl.textContent += ' (Listening for payments...)'
     setupButtons()
+
+    // 🔔 Subscribe to payment updates
+    send('subscribe_invoices', {});
   }
 
   ws.onclose = () => {
@@ -859,6 +899,11 @@ function connect() {
       const handler = wait.get(key)
       wait.delete(key)
       handler(m)
+    }
+
+    // 🔥 Handle Push Notifications
+    if (m.type === 'payment_received') {
+      showPaymentSuccess(m.data);
     }
   }
 }
@@ -1320,6 +1365,7 @@ function setupButtons() {
         `;
         document.getElementById('new-inv').onclick = (e) => {
           payInputEl.value = d.data.bolt11;
+          window.lastGeneratedInvoice = d.data.bolt11; // Save for testing
           copyToClipboard(d.data.bolt11, e.target);
         };
       } else {
@@ -1348,6 +1394,33 @@ function setupButtons() {
       document.getElementById('raw-lightning').textContent = JSON.stringify(m, null, 2);
     });
   };
+
+  // 🧪 Simulate Payment Button
+  const btnSimulate = document.getElementById('btn-simulate-pay');
+  if (btnSimulate) {
+    btnSimulate.onclick = () => {
+      const resEl = document.getElementById('simulate-pay-res');
+
+      if (!window.lastGeneratedInvoice) {
+        const val = document.getElementById('ln-pay-string').value;
+        if (val && val.startsWith('lnbc')) {
+          window.lastGeneratedInvoice = val;
+        } else {
+          resEl.innerHTML = '<span style="color:orange">⚠️ Please create an invoice above first.</span>';
+          return;
+        }
+      }
+
+      resEl.innerHTML = 'Simulating pay...';
+      send('simulate_incoming_payment', { bolt11: window.lastGeneratedInvoice }, (m) => {
+        if (m.data.status === 'success') {
+          resEl.innerHTML = '<span style="color:green">Sent! Watch for update...</span>';
+        } else {
+          resEl.innerHTML = `<span style="color:red">Error: ${m.data.error}</span>`;
+        }
+      });
+    };
+  }
 
   document.getElementById('btn-ln-newaddr').onclick = () => {
     const data = { userId: document.querySelector('input[name="node-channel"]:checked').value };

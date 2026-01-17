@@ -1,18 +1,38 @@
-2026-01-05T12:35:44.199Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2026-01-05T12:35:44.203Z INFO    lightningd: Creating database
-2026-01-05T12:35:44.234Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2026-01-05T12:35:44.241Z INFO    plugin-chanbackup: Creating Emergency Recovery
-2026-01-05T12:35:44.244Z INFO    plugin-bookkeeper: Creating database
-2026-01-05T12:35:44.244Z INFO    lightningd: --------------------------------------------------
-2026-01-05T12:35:44.244Z INFO    lightningd: Server started with public key 03996fa4650d6fec84538054549026d051303331918e804b25a9109dfdd9938f18, alias SLIMYSPAWN (color #03996f) and lightningd v23.08.1
+2026-01-17T12:11:51.224Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-17T12:11:51.229Z INFO    lightningd: Creating database
+2026-01-17T12:11:51.260Z UNUSUAL hsmd: HSM: created new hsm_secret file
+2026-01-17T12:11:51.266Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-17T12:11:51.267Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-17T12:11:51.280Z INFO    plugin-chanbackup: Creating Emergency Recovery
+2026-01-17T12:11:51.282Z INFO    plugin-bookkeeper: Creating database
+2026-01-17T12:11:51.282Z INFO    lightningd: --------------------------------------------------
+2026-01-17T12:11:51.282Z INFO    lightningd: Server started with public key 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277, alias VIOLETSOUFFLE (color #0280eb) and lightningd v23.08.1
+2026-01-17T12:11:51.382Z INFO    plugin-bookkeeper: account wallet not found, adding along with new balance
+2026-01-17T12:12:58.816Z UNUSUAL lightningd: Bitcoin backend now synced.
 
 
 
 
-2026-01-05T12:36:26.724Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2026-01-05T12:36:26.729Z INFO    lightningd: Creating database
-2026-01-05T12:36:26.760Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2026-01-05T12:36:26.769Z INFO    plugin-bookkeeper: Creating database
-2026-01-05T12:36:26.769Z INFO    lightningd: --------------------------------------------------
-2026-01-05T12:36:26.769Z INFO    lightningd: Server started with public key 03996fa4650d6fec84538054549026d051303331918e804b25a9109dfdd9938f18, alias SLIMYSPAWN (color #03996f) and lightningd v23.08.1
-2026-01-05T12:36:31.830Z UNUSUAL 039bfa3cb36d08d99f288dea1d1349be5625ee365e282c6a8b5d887a5681ff4944-lightningd: Unknown channel 1938ed9c3ff57fa177db7ddd6d052c105fe6a3acb43b2c99f967adb96105746a for WIRE_CHANNEL_REESTABLISH
+2026-01-17T12:21:50.171Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-17T12:21:50.194Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-17T12:21:50.196Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-17T12:21:50.207Z INFO    lightningd: --------------------------------------------------
+2026-01-17T12:21:50.207Z INFO    lightningd: Server started with public key 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277, alias VIOLETSOUFFLE (color #0280eb) and lightningd v23.08.1
+2026-01-17T12:21:50.286Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+0msat/-0msat) (account wallet) Logging journal entry.
+2026-01-17T12:22:27.736Z UNUSUAL lightningd: Bitcoin backend now synced.
+
+
+
+
+2026-01-17T12:26:53.555Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-17T12:26:53.565Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-17T12:26:53.568Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-17T12:26:53.576Z INFO    lightningd: --------------------------------------------------
+2026-01-17T12:26:53.576Z INFO    lightningd: Server started with public key 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277, alias VIOLETSOUFFLE (color #0280eb) and lightningd v23.08.1
+2026-01-17T12:26:53.649Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+0msat/-0msat) (account wallet) Logging journal entry.
+2026-01-17T12:27:31.097Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-01-17T12:28:21.319Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#1: Ignoring fee limits!
+2026-01-17T12:28:21.324Z INFO    plugin-chanbackup: Updating the SCB
+2026-01-17T12:28:23.800Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#1: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+2026-01-17T12:28:25.071Z INFO    lightningd: Resolved invoice 'flamingo-node4-1768652897463' with amount 500000msat in 1 htlcs
+2026-01-17T12:50:26.292Z INFO    lightningd: Resolved invoice 'flamingo-node4-1768654206924' with amount 100000msat in 1 htlcs
