@@ -46,3 +46,164 @@
 2026-01-17T12:28:23.795Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
 2026-01-17T12:28:24.367Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 2500msat is below exemption threshold, allowing a maximum fee of 5000msat
 2026-01-17T12:50:25.587Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 500msat is below exemption threshold, allowing a maximum fee of 5000msat
+
+
+
+
+2026-01-18T13:38:16.632Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-18T13:38:16.644Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-18T13:38:16.646Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-18T13:38:16.656Z INFO    lightningd: --------------------------------------------------
+2026-01-18T13:38:16.656Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-18T13:38:16.718Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+998999834000msat/-0msat) (account wallet) Logging journal entry.
+2026-01-18T13:38:18.291Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+
+
+
+
+2026-01-18T13:41:58.138Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-18T13:41:58.150Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-18T13:41:58.152Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-18T13:41:58.167Z INFO    lightningd: --------------------------------------------------
+2026-01-18T13:41:58.168Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-18T13:41:59.512Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+
+
+
+
+2026-01-18T13:59:46.993Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-18T13:59:47.006Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-18T13:59:47.009Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-18T13:59:47.021Z INFO    lightningd: --------------------------------------------------
+2026-01-18T13:59:47.021Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-18T13:59:48.108Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+
+
+
+
+2026-01-18T14:01:47.744Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-18T14:01:47.757Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-18T14:01:47.759Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-18T14:01:47.772Z INFO    lightningd: --------------------------------------------------
+2026-01-18T14:01:47.772Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-18T14:01:49.428Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+2026-01-18T14:15:06.269Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 25msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-18T14:15:06.272Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Attempt to send HTLC but still syncing with bitcoin network
+2026-01-18T14:15:06.272Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b\",\"erring_channel\":\"277x1x0\",\"erring_direction\":1}}
+2026-01-18T14:15:06.272Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (5000msat < 100000msat), not splitting further.
+2026-01-18T14:18:18.395Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 25msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-18T14:18:18.399Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Attempt to send HTLC but still syncing with bitcoin network
+2026-01-18T14:18:18.399Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b\",\"erring_channel\":\"277x1x0\",\"erring_direction\":1}}
+2026-01-18T14:18:18.400Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (5000msat < 100000msat), not splitting further.
+2026-01-18T14:20:19.270Z UNUSUAL lightningd: Bitcoin backend now synced.
+
+
+
+
+2026-01-18T14:27:50.946Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-18T14:27:50.957Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-18T14:27:50.959Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-18T14:27:50.968Z INFO    lightningd: --------------------------------------------------
+2026-01-18T14:27:50.968Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-18T14:27:52.637Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+2026-01-18T14:28:36.025Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-01-18T14:32:00.426Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+
+
+
+
+2026-01-18T14:35:27.754Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-18T14:35:27.766Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-18T14:35:27.770Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-18T14:35:27.783Z INFO    lightningd: --------------------------------------------------
+2026-01-18T14:35:27.783Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-18T14:35:29.732Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+2026-01-18T14:35:57.801Z UNUSUAL lightningd: Bitcoin backend now synced.
+
+
+
+
+2026-01-18T14:37:39.184Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-18T14:37:39.198Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-18T14:37:39.202Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-18T14:37:39.216Z INFO    lightningd: --------------------------------------------------
+2026-01-18T14:37:39.216Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-18T14:37:40.456Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+2026-01-18T14:39:08.354Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-18T14:39:08.357Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Attempt to send HTLC but still syncing with bitcoin network
+2026-01-18T14:39:08.357Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b\",\"erring_channel\":\"277x1x0\",\"erring_direction\":1}}
+2026-01-18T14:39:08.358Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-01-18T14:39:13.953Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-18T14:39:13.955Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Attempt to send HTLC but still syncing with bitcoin network
+2026-01-18T14:39:13.956Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b\",\"erring_channel\":\"277x1x0\",\"erring_direction\":1}}
+2026-01-18T14:39:13.956Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-01-18T14:39:14.857Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-18T14:39:14.860Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Attempt to send HTLC but still syncing with bitcoin network
+2026-01-18T14:39:14.861Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b\",\"erring_channel\":\"277x1x0\",\"erring_direction\":1}}
+2026-01-18T14:39:14.861Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-01-18T14:39:15.053Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-18T14:39:15.056Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Attempt to send HTLC but still syncing with bitcoin network
+2026-01-18T14:39:15.056Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b\",\"erring_channel\":\"277x1x0\",\"erring_direction\":1}}
+2026-01-18T14:39:15.057Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-01-18T14:39:15.406Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-18T14:39:15.408Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Attempt to send HTLC but still syncing with bitcoin network
+2026-01-18T14:39:15.409Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b\",\"erring_channel\":\"277x1x0\",\"erring_direction\":1}}
+2026-01-18T14:39:15.409Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-01-18T14:39:15.587Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-18T14:39:15.589Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Attempt to send HTLC but still syncing with bitcoin network
+2026-01-18T14:39:15.589Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b\",\"erring_channel\":\"277x1x0\",\"erring_direction\":1}}
+2026-01-18T14:39:15.589Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-01-18T14:39:15.770Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-18T14:39:15.772Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Attempt to send HTLC but still syncing with bitcoin network
+2026-01-18T14:39:15.772Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b\",\"erring_channel\":\"277x1x0\",\"erring_direction\":1}}
+2026-01-18T14:39:15.773Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-01-18T14:39:15.920Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-18T14:39:15.922Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Attempt to send HTLC but still syncing with bitcoin network
+2026-01-18T14:39:15.922Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b\",\"erring_channel\":\"277x1x0\",\"erring_direction\":1}}
+2026-01-18T14:39:15.923Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-01-18T14:39:16.104Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-18T14:39:16.106Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Attempt to send HTLC but still syncing with bitcoin network
+2026-01-18T14:39:16.106Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b\",\"erring_channel\":\"277x1x0\",\"erring_direction\":1}}
+2026-01-18T14:39:16.107Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+
+
+
+
+2026-01-18T14:41:43.836Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-18T14:41:43.847Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-18T14:41:43.850Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-18T14:41:43.863Z INFO    lightningd: --------------------------------------------------
+2026-01-18T14:41:43.863Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-18T14:41:45.355Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+
+
+
+
+2026-01-18T14:42:45.099Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-18T14:42:45.111Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-18T14:42:45.113Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-18T14:42:45.127Z INFO    lightningd: --------------------------------------------------
+2026-01-18T14:42:45.127Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-18T14:42:46.767Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+
+
+
+
+2026-01-18T14:43:56.372Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-18T14:43:56.383Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-18T14:43:56.386Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-18T14:43:56.399Z INFO    lightningd: --------------------------------------------------
+2026-01-18T14:43:56.399Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-18T14:43:57.515Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+
+
+
+
+2026-01-18T14:45:08.496Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-18T14:45:08.510Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-18T14:45:08.513Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-18T14:45:08.525Z INFO    lightningd: --------------------------------------------------
+2026-01-18T14:45:08.525Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-18T14:45:09.895Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+2026-01-18T14:45:46.064Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-01-18T15:02:44.453Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 25msat is below exemption threshold, allowing a maximum fee of 5000msat
