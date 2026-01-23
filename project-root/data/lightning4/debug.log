@@ -165,3 +165,13 @@
 2026-01-18T14:45:09.895Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#1: Ignoring fee limits!
 2026-01-18T14:45:45.962Z UNUSUAL lightningd: Bitcoin backend now synced.
 2026-01-18T15:02:45.166Z INFO    lightningd: Resolved invoice 'flamingo-node4-1768748540093' with amount 5000msat in 1 htlcs
+
+
+
+
+2026-01-23T11:18:20.621Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-23T11:18:20.898Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-23T11:18:20.903Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-23T11:18:20.922Z INFO    lightningd: --------------------------------------------------
+2026-01-23T11:18:20.922Z INFO    lightningd: Server started with public key 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277, alias VIOLETSOUFFLE (color #0280eb) and lightningd v23.08.1
+2026-01-23T11:18:22.571Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#1: Ignoring fee limits!

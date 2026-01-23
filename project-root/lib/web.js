@@ -3,6 +3,13 @@ const wsUrl = 'ws://localhost:8080'
 
 // --- GLOBAL HELPERS (Defined Top-Level) ---
 
+// 🌍 Global Account Context
+window.currentCtxUserId = 'node4'; // Default to User Wallet
+
+window.getCurrentNodeId = function () {
+  return window.currentCtxUserId;
+}
+
 function copyToClipboard(text, el) {
   // Check if API exists to prevent crash
   if (!navigator.clipboard) {
@@ -269,11 +276,66 @@ document.body.innerHTML = `
 
     .chat-meta { display:flex; justify-content:space-between; font-size: 0.75em; color: #666; margin-top:4px; }
     .badge { padding: 2px 6px; border-radius: 4px; color: white; font-weight: bold; font-size: 0.7em;}
+
+    /* ACCOUNT SWITCHER */
+    .profile-icon {
+      width: 36px; height: 36px; background: #ddd; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; font-weight: bold; color: #555; position: relative;
+      border: 2px solid #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .profile-icon:hover { opacity: 0.8; }
+    
+    .account-drawer-backdrop {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5); z-index: 998; display: none;
+    }
+    .account-drawer {
+      position: fixed; top: 0; right: -320px; width: 300px; height: 100%;
+      background: white; z-index: 999; box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+      transition: right 0.3s ease; padding: 20px; box-sizing: border-box;
+      display: flex; flex-direction: column;
+    }
+    .account-drawer.open { right: 0; }
+    
+    .account-card {
+      border: 1px solid #eee; border-radius: 8px; padding: 10px;
+      margin-bottom: 10px; cursor: pointer; transition: all 0.2s;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .account-card:hover { background: #f8f9fa; border-color: #ccc; }
+    .account-card.active { border: 2px solid #007bff; background: #f0f7ff; }
+    
+    .acct-avatar { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; flex-shrink: 0; font-size: 0.9em; }
+    .acct-info { flex: 1; }
+    .acct-name { font-weight: bold; display: block; font-size: 0.9em;}
+    .acct-role { font-size: 0.75em; color: #777; text-transform: uppercase; }
+    .acct-bal { font-weight: bold; font-size: 0.85em; margin-top: 2px; display: block; color: #333; }
+    .acct-status { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-left: 5px; }
+    .status-online { background: #28a745; }
+    .status-offline { background: #dc3545; }
+
   </style>
 
   <div style="display:flex; justify-content:space-between; align-items:center;">
     <h1>⚡ Flamingo Wallet Dashboard</h1>
-    <div id="status">Connecting...</div>
+    <div style="display:flex; align-items:center; gap:15px;">
+        <div id="status">Connecting...</div>
+        <div class="profile-icon" id="btn-profile" onclick="toggleDrawer()" style="background:#007bff; color:white;">N</div>
+    </div>
+  </div>
+
+  <!-- DRAWER -->
+  <div class="account-drawer-backdrop" id="drawer-backdrop" onclick="toggleDrawer()"></div>
+  <div class="account-drawer" id="account-drawer">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;">
+        <h2 style="margin:0; border:none;">👥 Switch Account</h2>
+        <button style="border:none; background:none; font-size:1.5em; cursor:pointer;" onclick="toggleDrawer()">×</button>
+      </div>
+      <div id="account-list" style="flex:1; overflow-y:auto;"></div>
+      <div style="margin-top:auto; font-size:0.8em; color:#999; text-align:center; padding-top:10px; border-top:1px solid #eee;">
+          Dev Mode Active
+      </div>
   </div>
 
   <div class="tab-nav">
@@ -294,11 +356,7 @@ document.body.innerHTML = `
       <div>
         <section id="node-info">
           <h2>ℹ️ Node Information</h2>
-          <div class="node-selector">
-            <label><input type="radio" name="node-getinfo" value="node4" checked> Node 4</label>
-            <label><input type="radio" name="node-getinfo" value="node5"> Node 5</label>
-            <label><input type="radio" name="node-getinfo" value="node6"> Node 6</label>
-          </div>
+
           <button id="btn-getinfo" style="width:100%">Refresh Info</button>
           <div id="info-content" style="margin-top:10px; padding:10px; background:#f9f9f9; border-radius:4px;"><i>No data yet</i></div>
         </section>
@@ -306,12 +364,7 @@ document.body.innerHTML = `
       <div>
         <section id="wallet-balance">
           <h2>💰 Balances</h2>
-          <div class="node-selector">
-            <small>Lightning Node:</small>
-            <label><input type="radio" name="node-ln-balance" value="node4" checked> N4</label>
-            <label><input type="radio" name="node-ln-balance" value="node5"> N5</label>
-            <label><input type="radio" name="node-ln-balance" value="node6"> N6</label>
-          </div>
+
           <button id="btn-listfunds" style="width:100%">Check LN Funds</button>
           <div id="balance-content" style="margin:10px 0; font-size:0.9em;"></div>
           <hr>
@@ -405,12 +458,7 @@ document.body.innerHTML = `
   <div id="tab-history" class="tab-content">
     
     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;">
-        <div class="radio-group" style="margin:0; max-width: 400px;">
-            <label style="font-weight:bold; margin-right:10px;">History For:</label>
-            <label><input type="radio" name="hist-user" value="node4" checked> Node 4</label>
-            <label><input type="radio" name="hist-user" value="node5"> Node 5</label>
-            <label><input type="radio" name="hist-user" value="node6"> Node 6</label>
-        </div>
+
         <button id="btn-refresh-all-hist" class="primary">🔄 Refresh All Data</button>
     </div>
 
@@ -576,12 +624,7 @@ document.body.innerHTML = `
       <div>
         <section id="ln-receive">
           <h2>📥 Receive (Create Invoice)</h2>
-          <div class="node-selector">
-            <label>Recipient Node:</label>
-            <label><input type="radio" name="node-create-inv" value="node4" checked> N4</label>
-            <label><input type="radio" name="node-create-inv" value="node5"> N5</label>
-            <label><input type="radio" name="node-create-inv" value="node6"> N6</label>
-          </div>
+
           <div class="input-group">
             <label for="ln-create-msat">Amount (msat):</label>
             <input type="number" id="ln-create-msat" placeholder="50000">
@@ -613,12 +656,7 @@ document.body.innerHTML = `
       <div>
         <section id="ln-send">
           <h2>💸 Send (Pay Invoice)</h2>
-          <div class="node-selector">
-            <label>Sender Node:</label>
-            <label><input type="radio" name="node-pay-inv" value="node4" checked> N4</label>
-            <label><input type="radio" name="node-pay-inv" value="node5"> N5</label>
-            <label><input type="radio" name="node-pay-inv" value="node6"> N6</label>
-          </div>
+
           <div class="input-group">
             <label for="ln-pay-string">Invoice (bolt11):</label>
             <input type="text" id="ln-pay-string" placeholder="lnbcrt500u..." style="font-family:monospace;">
@@ -631,12 +669,7 @@ document.body.innerHTML = `
 
         <section id="ln-keysend">
            <h2>💬 Chat Pay (Keysend)</h2>
-           <div class="node-selector">
-              <label>Sender Node:</label>
-              <label><input type="radio" name="node-keysend" value="node4" checked> N4</label>
-              <label><input type="radio" name="node-keysend" value="node5"> N5</label>
-              <label><input type="radio" name="node-keysend" value="node6"> N6</label>
-           </div>
+
            <div class="input-group">
               <label>Select Contact (Node ID):</label>
               <select id="keysend-contact-select" style="width:100%; padding:8px; margin-bottom:5px;">
@@ -663,12 +696,7 @@ document.body.innerHTML = `
           <div style="border-bottom:1px solid #eee; padding-bottom:10px; margin-bottom:10px;">
             <h3>Sign Message</h3>
             <div class="input-group">
-                <label>Node:</label>
-                <div class="radio-group">
-                  <label><input type="radio" name="node-sign" value="node4" checked> Node 4</label>
-                  <label><input type="radio" name="node-sign" value="node5"> Node 5</label>
-                  <label><input type="radio" name="node-sign" value="node6"> Node 6</label>
-                </div>
+
             </div>
             <div class="input-group">
               <input type="text" id="sign-msg-input" placeholder="Enter message to sign...">
@@ -694,11 +722,7 @@ document.body.innerHTML = `
         </div>
          <section>
             <h2>📖 Transaction List</h2>
-            <div class="node-selector">
-             <label><input type="radio" name="node-history" value="node4" checked> N4</label>
-             <label><input type="radio" name="node-history" value="node5"> N5</label>
-             <label><input type="radio" name="node-history" value="node6"> N6</label>
-            </div>
+
             <button id="btn-list-ln">Refresh List</button>
             <div id="ln-history-content" class="history-container"></div>
         </section>
@@ -711,12 +735,7 @@ document.body.innerHTML = `
   <div id="tab-channels" class="tab-content">
     <section id="channel-management">
       <h2>🔗 Channel Management</h2>
-      <div class="node-selector">
-        <label>Operating Node:</label>
-        <label><input type="radio" name="node-channel" value="node4" checked> N4</label>
-        <label><input type="radio" name="node-channel" value="node5"> N5</label>
-        <label><input type="radio" name="node-channel" value="node6"> N6</label>
-      </div>
+
       
       <div class="two-col-grid" style="margin-top:20px;">
         <div style="background: #f8f9fa; padding: 15px; border-radius: 6px;">
@@ -896,6 +915,84 @@ document.body.innerHTML = `
 
 // --- JAVASCRIPT ---
 
+// Drawer Logic
+window.toggleDrawer = function () {
+  const d = document.getElementById('account-drawer');
+  const b = document.getElementById('drawer-backdrop');
+  if (d.classList.contains('open')) {
+    d.classList.remove('open');
+    setTimeout(() => b.style.display = 'none', 300);
+  } else {
+    b.style.display = 'block';
+    window.renderAccountSwitcher();
+    setTimeout(() => d.classList.add('open'), 10);
+  }
+}
+
+window.renderAccountSwitcher = function () {
+  const container = document.getElementById('account-list');
+  container.innerHTML = '<i>Loading nodes...</i>';
+
+  send('list_all_accounts', {}, (m) => {
+    if (m.data.status === 'success') {
+      const nodes = m.data.data;
+      container.innerHTML = '';
+      nodes.forEach(n => {
+        const isActive = (n.id === window.currentCtxUserId);
+        const statusClass = n.status === 'online' ? 'status-online' : 'status-offline';
+
+        const card = document.createElement('div');
+        card.className = `account-card ${isActive ? 'active' : ''}`;
+        card.onclick = () => window.switchAccount(n.id);
+
+        card.innerHTML = `
+                  <div class="acct-avatar" style="background:${n.color}">${n.alias.charAt(0)}</div>
+                  <div class="acct-info">
+                      <span class="acct-name">${n.alias} <span class="acct-status ${statusClass}"></span></span>
+                      <span class="acct-role">${n.role}</span>
+                      <span class="acct-bal">${n.balance.sats.toLocaleString()} sats</span>
+                  </div>
+               `;
+        container.appendChild(card);
+
+        if (isActive) {
+          const pInfo = document.getElementById('btn-profile');
+          if (pInfo) {
+            pInfo.style.background = n.color;
+            pInfo.style.color = 'white';
+            pInfo.textContent = n.alias ? n.alias.charAt(0) : '?';
+          }
+        }
+      });
+    } else {
+      container.innerHTML = `<span style="color:red">Error: ${m.data.error}</span>`;
+    }
+  });
+}
+
+window.switchAccount = function (nodeId) {
+  if (window.currentCtxUserId === nodeId) return;
+
+  window.currentCtxUserId = nodeId;
+  window.toggleDrawer();
+
+  // Refresh common widgets
+  const btnFund = document.getElementById('btn-listfunds');
+  if (btnFund) btnFund.click();
+
+  const btnHist = document.getElementById('btn-refresh-all-hist');
+  if (btnHist) btnHist.click();
+
+  const btnInfo = document.getElementById('btn-getinfo');
+  if (btnInfo) btnInfo.click();
+
+  // Refresh Contacts if active
+  if (document.getElementById('tab-contacts').classList.contains('active')) {
+    const btn = document.getElementById('btn-refresh-contacts');
+    if (btn) btn.click();
+  }
+}
+
 // Tab Switching Logic
 window.openTab = function (tabName) {
   const contents = document.getElementsByClassName('tab-content');
@@ -1037,7 +1134,7 @@ function setupButtons() {
 
   // 1. Refresh All History Data
   document.getElementById('btn-refresh-all-hist').onclick = () => {
-    const userId = document.querySelector('input[name="hist-user"]:checked').value;
+    const userId = getCurrentNodeId();;
     const rawEl = document.getElementById('raw-history');
     const tableBody = document.getElementById('full-history-body');
 
@@ -1085,7 +1182,7 @@ function setupButtons() {
 
   // 2. Daily Logs Search
   document.getElementById('btn-get-daily').onclick = () => {
-    const userId = document.querySelector('input[name="hist-user"]:checked').value;
+    const userId = getCurrentNodeId();;
     const dateVal = document.getElementById('daily-date').value;
     const resDiv = document.getElementById('daily-res');
     const rawEl = document.getElementById('raw-history');
@@ -1160,7 +1257,7 @@ function setupButtons() {
 
   document.getElementById('btn-lookup-ln').onclick = () => {
     const payment_hash = document.getElementById('lookup-id').value;
-    const userId = document.querySelector('input[name="hist-user"]:checked').value;
+    const userId = getCurrentNodeId();;
     const resEl = document.getElementById('res-lookup');
     const rawEl = document.getElementById('raw-history');
 
@@ -1214,7 +1311,7 @@ function setupButtons() {
   document.getElementById('btn-validate-ln').onclick = () => {
     const payment_hash = document.getElementById('lookup-id').value;
     const amt = parseInt(document.getElementById('validate-amt').value, 10);
-    const userId = document.querySelector('input[name="hist-user"]:checked').value;
+    const userId = getCurrentNodeId();;
     const resEl = document.getElementById('res-lookup');
     const rawEl = document.getElementById('raw-history');
     resEl.style.display = 'block';
@@ -1271,7 +1368,7 @@ function setupButtons() {
   }
 
   document.getElementById('btn-getinfo').onclick = () => {
-    const nodeId = document.querySelector('input[name="node-getinfo"]:checked').value
+    const nodeId = getCurrentNodeId();
     send('lightning-getinfo', { nodeId }, (m) => {
       const d = m.data?.data || {}
       document.getElementById('info-content').innerHTML = `
@@ -1293,7 +1390,7 @@ function setupButtons() {
   }
 
   document.getElementById('btn-listfunds').onclick = () => {
-    const userId = document.querySelector('input[name="node-ln-balance"]:checked').value
+    const userId = getCurrentNodeId();
     send('get_ln_balance', { userId }, (m) => {
       const d = m.data?.data
       document.getElementById('balance-content').innerHTML = `
@@ -1560,7 +1657,7 @@ document.getElementById('btn-list-btc').onclick = () => {
 }
 
 document.getElementById('btn-list-ln').onclick = () => {
-  const userId = document.querySelector('input[name="node-history"]:checked').value
+  const userId = getCurrentNodeId();
   document.getElementById('ln-history-content').innerHTML = '<i>Loading...</i>'
   send('list_ln_invoices', { userId }, (m) => {
     const items = m.data?.data || []
@@ -1575,7 +1672,7 @@ document.getElementById('btn-list-ln').onclick = () => {
 
 document.getElementById('btn-create-ln-invoice').onclick = () => {
   const data = {
-    userId: document.querySelector('input[name="node-create-inv"]:checked').value,
+    userId: getCurrentNodeId(),
     amount_msat: parseInt(document.getElementById('ln-create-msat').value, 10),
     description: document.getElementById('ln-create-desc').value
   };
@@ -1612,7 +1709,7 @@ document.getElementById('btn-create-ln-invoice').onclick = () => {
 
 document.getElementById('btn-pay-ln-invoice').onclick = () => {
   const data = {
-    userId: document.querySelector('input[name="node-pay-inv"]:checked').value,
+    userId: getCurrentNodeId(),
     invoice_string: document.getElementById('ln-pay-string').value
   };
   const contentEl = document.getElementById('pay-ln-content');
@@ -1658,7 +1755,7 @@ if (btnSimulate) {
 }
 
 document.getElementById('btn-ln-newaddr').onclick = () => {
-  const data = { userId: document.querySelector('input[name="node-channel"]:checked').value };
+  const data = { userId: getCurrentNodeId() };
   const contentEl = document.getElementById('ln-address-content');
   contentEl.textContent = 'Getting address...';
   send('lightning_newaddress', data, (m) => {
@@ -1672,7 +1769,7 @@ document.getElementById('btn-ln-newaddr').onclick = () => {
 };
 
 document.getElementById('btn-list-peers').onclick = () => {
-  const data = { userId: document.querySelector('input[name="node-channel"]:checked').value };
+  const data = { userId: getCurrentNodeId() };
   const contentEl = document.getElementById('channel-content');
   contentEl.textContent = 'Listing peers...';
   send('list_peers', data, (m) => {
@@ -1685,7 +1782,7 @@ document.getElementById('btn-list-peers').onclick = () => {
 
 document.getElementById('btn-network-search').onclick = () => {
   const query = document.getElementById('net-search-query').value;
-  const userId = document.querySelector('input[name="node-channel"]:checked').value;
+  const userId = getCurrentNodeId();
   const resEl = document.getElementById('net-search-res');
 
   if (!query) { resEl.innerHTML = '<span style="color:red">Enter a search term.</span>'; return; }
@@ -1761,7 +1858,7 @@ document.getElementById('btn-network-search').onclick = () => {
 
 document.getElementById('btn-connect-peer').onclick = () => {
   const data = {
-    userId: document.querySelector('input[name="node-channel"]:checked').value,
+    userId: getCurrentNodeId(),
     peer_address: document.getElementById('peer-id').value
   };
   const contentEl = document.getElementById('channel-content');
@@ -1782,7 +1879,7 @@ document.getElementById('btn-fund-channel').onclick = () => {
   if (!peer_id_only) { contentEl.innerHTML = `❌ <b>Error:</b> Peer ID required.`; return; }
 
   const data = {
-    userId: document.querySelector('input[name="node-channel"]:checked').value,
+    userId: getCurrentNodeId(),
     peer_id: peer_id_only,
     amount_sats: parseInt(document.getElementById('fund-amount').value, 10)
   };
@@ -1886,7 +1983,7 @@ const signBtn = document.getElementById('btn-sign-msg');
 if (signBtn) {
   signBtn.onclick = () => {
     const msg = document.getElementById('sign-msg-input').value;
-    const userId = document.querySelector('input[name="node-sign"]:checked').value;
+    const userId = getCurrentNodeId();
     const resEl = document.getElementById('sign-msg-res');
 
     if (!msg) { alert('Please enter a message'); return; }
@@ -1978,7 +2075,7 @@ document.getElementById('btn-reset-world').onclick = () => {
 };
 
 document.getElementById('btn-refresh-liq').onclick = () => {
-  const userId = document.querySelector('input[name="node-liq"]:checked').value;
+  const userId = getCurrentNodeId();
   send('get_liquidity_report', { userId }, (m) => {
     const d = m.data.data;
     if (m.data.status === 'success') {
@@ -2153,7 +2250,7 @@ const btnKeysend = document.getElementById('btn-keysend');
 if (btnKeysend) {
   btnKeysend.onclick = () => {
     const data = {
-      userId: document.querySelector('input[name="node-keysend"]:checked').value,
+      userId: getCurrentNodeId(),
       destination_pubkey: document.getElementById('keysend-pubkey').value,
       amount_sats: parseInt(document.getElementById('keysend-amount').value, 10)
     };
