@@ -226,3 +226,16 @@ docker-compose exec app lightning-cli --version
 docker-compose up --build
 ```
 
+
+On regtest, we control everything. We can mint fake Bitcoin, mine blocks instantly, and force channels open using `init-network.sh`. We’re basically gods of the network.
+
+On Mainnet, that’s impossible. Real money is involved, and we can’t command the Bitcoin network to do anything.
+
+### How Mainnet Works Instead
+
+- **Configuration switch:** We change the network from `regtest` to `bitcoin` in `env.docker.json`.
+- **No init script:** `init-network.sh` is not used at all.
+- **Manual funding:** The app generates a deposit address, and you send real Bitcoin to it.
+- **Real waiting:** The system waits for actual Bitcoin confirmations (10–60 minutes). No forced blocks can be mined.
+
+As for backing up everything: because we are using the Docker setup, everything is stored in the `/data` folder. We can simply copy and save this folder to retain a full backup.
