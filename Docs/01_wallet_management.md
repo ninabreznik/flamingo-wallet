@@ -173,3 +173,5 @@ The process is executed in two phases:
 - `withdraw_txid`
   - Transaction ID of the final sweep transaction
 
+
+###  Video Explaination: https://youtu.be/CFQ2-dbvHBI?si=fFDxoe9qSSHII9e-&t=142
