@@ -269,3 +269,5 @@ This is essential for testing, as transactions in Regtest do not confirm automat
 - `block_hashes`
   - Array of newly mined block hashes
 
+
+###  Video Explaination: https://youtu.be/H4VaANbXYvA
