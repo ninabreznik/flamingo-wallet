@@ -230,3 +230,5 @@ User clicks the blue **"N"** profile icon.
   Alias: Flamingo Hub
   ```
 - Confirms user now controls the **Hub**
+
+### Video Explanation : https://youtu.be/fS7X1uzXkD4
