@@ -217,3 +217,40 @@
 2026-01-23T11:18:21.025Z INFO    lightningd: --------------------------------------------------
 2026-01-23T11:18:21.025Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
 2026-01-23T11:18:22.571Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+
+
+
+
+2026-02-18T19:06:34.402Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-18T19:06:34.417Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-18T19:06:34.419Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-18T19:06:34.434Z INFO    lightningd: --------------------------------------------------
+2026-02-18T19:06:34.434Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-02-18T19:06:35.936Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+
+
+
+
+2026-02-18T19:11:27.260Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-18T19:11:27.273Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-18T19:11:27.275Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-18T19:11:27.286Z INFO    lightningd: --------------------------------------------------
+2026-02-18T19:11:27.286Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+
+
+
+
+2026-02-18T19:12:56.368Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-18T19:12:56.380Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-18T19:12:56.382Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-18T19:12:56.394Z INFO    lightningd: --------------------------------------------------
+2026-02-18T19:12:56.394Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+
+
+
+
+2026-02-18T19:13:08.398Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-18T19:13:08.409Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-18T19:13:08.411Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-18T19:13:08.420Z INFO    lightningd: --------------------------------------------------
+2026-02-18T19:13:08.420Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
