@@ -254,3 +254,23 @@
 2026-02-18T19:13:08.411Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
 2026-02-18T19:13:08.420Z INFO    lightningd: --------------------------------------------------
 2026-02-18T19:13:08.420Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+
+
+
+
+2026-02-19T11:15:34.091Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-19T11:15:34.105Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-19T11:15:34.107Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-19T11:15:34.123Z INFO    lightningd: --------------------------------------------------
+2026-02-19T11:15:34.123Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-02-19T11:29:45.283Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 25msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-02-19T11:29:45.285Z INFO    plugin-pay: cmd 34 partid 0: Destination 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3 is not reachable directly and all routehints were unusable.
+2026-02-19T11:32:56.987Z INFO    lightningd: Self-resolved invoice 'flamingo-node5-1771500768777' with amount 1200msat
+2026-02-19T11:34:05.681Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-02-19T11:34:56.648Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 6msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-02-19T11:34:56.651Z INFO    plugin-pay: cmd 34 partid 0: Destination 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3 is not reachable directly and all routehints were unusable.
+2026-02-19T11:34:56.683Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#2: Ignoring fee limits!
+2026-02-19T11:34:56.688Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-19T11:34:59.724Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 6msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-02-19T11:34:59.726Z INFO    plugin-pay: cmd 34 partid 0: Destination 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3 is not reachable directly and all routehints were unusable.
+2026-02-19T11:35:04.530Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#2: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
