@@ -47,7 +47,6 @@ This module wraps the low-level networking RPCs of Core Lightning.
 
 #### API 5: fund_channel
 
-
 ## 5. Data Flow Scenario: Connecting to "Alice"
 
 This scenario demonstrates how the Search and Connect features work together.
