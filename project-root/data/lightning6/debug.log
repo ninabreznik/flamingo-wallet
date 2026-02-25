@@ -205,3 +205,73 @@
 2026-02-19T11:15:34.225Z INFO    lightningd: Server started with public key 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d, alias SLEEPYENTOURAGE (color #03b19d) and lightningd v23.08.1
 2026-02-19T11:15:34.322Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+0msat/-0msat) (account wallet) Logging journal entry.
 2026-02-19T11:34:05.868Z UNUSUAL lightningd: Bitcoin backend now synced.
+
+
+
+
+2026-02-25T22:06:44.908Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T22:06:44.922Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T22:06:44.925Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T22:06:44.938Z INFO    lightningd: --------------------------------------------------
+2026-02-25T22:06:44.938Z INFO    lightningd: Server started with public key 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d, alias SLEEPYENTOURAGE (color #03b19d) and lightningd v23.08.1
+2026-02-25T22:06:45.017Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+0msat/-0msat) (account wallet) Logging journal entry.
+2026-02-25T22:10:37.797Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-02-25T22:17:54.138Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#1: Ignoring fee limits!
+2026-02-25T22:17:54.143Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T22:18:15.271Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#1: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+2026-02-25T22:19:35.362Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#1: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
+2026-02-25T22:19:35.373Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#1: State changed from CHANNELD_SHUTTING_DOWN to CLOSINGD_SIGEXCHANGE
+2026-02-25T22:19:35.382Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-closingd-chan#1: performing quickclose in range 151sat-5000000sat
+2026-02-25T22:19:35.384Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#1: State changed from CLOSINGD_SIGEXCHANGE to CLOSINGD_COMPLETE
+2026-02-25T22:20:45.296Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#1: Peer permanent failure in CLOSINGD_COMPLETE: Funding transaction spent
+2026-02-25T22:20:45.296Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#1: State changed from CLOSINGD_COMPLETE to FUNDING_SPEND_SEEN
+2026-02-25T22:20:45.300Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#1: State changed from FUNDING_SPEND_SEEN to ONCHAIN
+
+
+
+
+2026-02-25T22:35:37.737Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T22:35:37.748Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T22:35:37.750Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T22:35:37.761Z INFO    lightningd: --------------------------------------------------
+2026-02-25T22:35:37.761Z INFO    lightningd: Server started with public key 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d, alias SLEEPYENTOURAGE (color #03b19d) and lightningd v23.08.1
+2026-02-25T22:35:37.774Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+0msat/-0msat) (account wallet) Logging journal entry.
+2026-02-25T22:37:07.870Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-02-25T22:42:08.662Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T22:42:08.667Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T22:42:37.898Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+
+
+
+
+2026-02-25T22:44:06.166Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T22:44:06.177Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T22:44:06.179Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T22:44:06.188Z INFO    lightningd: --------------------------------------------------
+2026-02-25T22:44:06.188Z INFO    lightningd: Server started with public key 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d, alias SLEEPYENTOURAGE (color #03b19d) and lightningd v23.08.1
+2026-02-25T22:44:06.254Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+1000000000000msat/-0msat) (account wallet) Logging journal entry.
+2026-02-25T22:44:07.751Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+
+
+
+
+2026-02-25T22:45:51.513Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T22:45:51.525Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T22:45:51.528Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T22:45:51.540Z INFO    lightningd: --------------------------------------------------
+2026-02-25T22:45:51.541Z INFO    lightningd: Server started with public key 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d, alias SLEEPYENTOURAGE (color #03b19d) and lightningd v23.08.1
+2026-02-25T22:45:53.046Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T22:47:21.631Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-02-25T22:47:30.511Z INFO    lightningd: Resolved invoice 'test_label_7' with amount 10000msat in 1 htlcs
+2026-02-25T22:51:02.753Z INFO    lightningd: Resolved invoice 'test-rev-1772059861319' with amount 50000msat in 1 htlcs
+2026-02-25T22:52:18.460Z INFO    lightningd: Resolved invoice 'test-rev-1772059937032' with amount 50000msat in 1 htlcs
+
+
+
+
+2026-02-25T22:56:31.934Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T22:56:31.951Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T22:56:31.956Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T22:56:31.970Z INFO    lightningd: --------------------------------------------------
+2026-02-25T22:56:31.970Z INFO    lightningd: Server started with public key 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d, alias SLEEPYENTOURAGE (color #03b19d) and lightningd v23.08.1
+2026-02-25T22:56:33.344Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!

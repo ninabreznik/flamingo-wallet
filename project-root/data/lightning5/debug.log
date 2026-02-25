@@ -274,3 +274,136 @@
 2026-02-19T11:34:59.724Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 6msat is below exemption threshold, allowing a maximum fee of 5000msat
 2026-02-19T11:34:59.726Z INFO    plugin-pay: cmd 34 partid 0: Destination 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3 is not reachable directly and all routehints were unusable.
 2026-02-19T11:35:04.530Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#2: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+
+
+
+
+2026-02-25T22:06:44.808Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T22:06:44.822Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T22:06:44.824Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T22:06:44.837Z INFO    lightningd: --------------------------------------------------
+2026-02-25T22:06:44.838Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-02-25T22:06:44.930Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+0msat/-1000166000msat) (account wallet) Logging journal entry.
+2026-02-25T22:06:46.742Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#2: Ignoring fee limits!
+2026-02-25T22:10:37.696Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-02-25T22:10:54.224Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#3: Ignoring fee limits!
+2026-02-25T22:10:54.230Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T22:11:22.637Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#4: Ignoring fee limits!
+2026-02-25T22:11:22.643Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T22:15:15.092Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#3: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+2026-02-25T22:15:15.093Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#4: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+2026-02-25T22:15:52.602Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#5: Ignoring fee limits!
+2026-02-25T22:15:52.607Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T22:17:45.014Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#6: Ignoring fee limits!
+2026-02-25T22:17:45.020Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T22:17:54.147Z UNUSUAL 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#7: Ignoring fee limits!
+2026-02-25T22:17:54.151Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T22:18:15.189Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#6: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+2026-02-25T22:18:15.189Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#5: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+2026-02-25T22:18:15.275Z INFO    03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#7: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+2026-02-25T22:19:35.082Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#2: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
+2026-02-25T22:19:35.095Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#2: State changed from CHANNELD_SHUTTING_DOWN to CLOSINGD_SIGEXCHANGE
+2026-02-25T22:19:35.145Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-closingd-chan#2: performing quickclose in range 151sat-1000000sat
+2026-02-25T22:19:35.147Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#2: State changed from CLOSINGD_SIGEXCHANGE to CLOSINGD_COMPLETE
+2026-02-25T22:19:35.182Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#3: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
+2026-02-25T22:19:35.194Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#3: State changed from CHANNELD_SHUTTING_DOWN to CLOSINGD_SIGEXCHANGE
+2026-02-25T22:19:35.207Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-closingd-chan#3: performing quickclose in range 151sat-20000sat
+2026-02-25T22:19:35.208Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#3: State changed from CLOSINGD_SIGEXCHANGE to CLOSINGD_COMPLETE
+2026-02-25T22:19:35.231Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#4: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
+2026-02-25T22:19:35.244Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#4: State changed from CHANNELD_SHUTTING_DOWN to CLOSINGD_SIGEXCHANGE
+2026-02-25T22:19:35.253Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-closingd-chan#4: performing quickclose in range 151sat-12000sat
+2026-02-25T22:19:35.254Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#4: State changed from CLOSINGD_SIGEXCHANGE to CLOSINGD_COMPLETE
+2026-02-25T22:19:35.276Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#5: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
+2026-02-25T22:19:35.289Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#5: State changed from CHANNELD_SHUTTING_DOWN to CLOSINGD_SIGEXCHANGE
+2026-02-25T22:19:35.297Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-closingd-chan#5: performing quickclose in range 151sat-200000sat
+2026-02-25T22:19:35.299Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#5: State changed from CLOSINGD_SIGEXCHANGE to CLOSINGD_COMPLETE
+2026-02-25T22:19:35.320Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#6: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
+2026-02-25T22:19:35.332Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#6: State changed from CHANNELD_SHUTTING_DOWN to CLOSINGD_SIGEXCHANGE
+2026-02-25T22:19:35.339Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-closingd-chan#6: performing quickclose in range 151sat-200000sat
+2026-02-25T22:19:35.340Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#6: State changed from CLOSINGD_SIGEXCHANGE to CLOSINGD_COMPLETE
+2026-02-25T22:19:35.348Z INFO    03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#7: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
+2026-02-25T22:19:35.377Z INFO    03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#7: State changed from CHANNELD_SHUTTING_DOWN to CLOSINGD_SIGEXCHANGE
+2026-02-25T22:19:35.385Z INFO    03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-closingd-chan#7: performing quickclose in range 151sat-5000000sat
+2026-02-25T22:19:35.387Z INFO    03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#7: State changed from CLOSINGD_SIGEXCHANGE to CLOSINGD_COMPLETE
+2026-02-25T22:19:35.391Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
+2026-02-25T22:20:45.214Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#4: Peer permanent failure in CLOSINGD_COMPLETE: Funding transaction spent
+2026-02-25T22:20:45.214Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#4: State changed from CLOSINGD_COMPLETE to FUNDING_SPEND_SEEN
+2026-02-25T22:20:45.216Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#3: Peer permanent failure in CLOSINGD_COMPLETE: Funding transaction spent
+2026-02-25T22:20:45.216Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#3: State changed from CLOSINGD_COMPLETE to FUNDING_SPEND_SEEN
+2026-02-25T22:20:45.217Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#5: Peer permanent failure in CLOSINGD_COMPLETE: Funding transaction spent
+2026-02-25T22:20:45.218Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#5: State changed from CLOSINGD_COMPLETE to FUNDING_SPEND_SEEN
+2026-02-25T22:20:45.218Z UNUSUAL 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#7: Peer permanent failure in CLOSINGD_COMPLETE: Funding transaction spent
+2026-02-25T22:20:45.219Z INFO    03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#7: State changed from CLOSINGD_COMPLETE to FUNDING_SPEND_SEEN
+2026-02-25T22:20:45.221Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#6: Peer permanent failure in CLOSINGD_COMPLETE: Funding transaction spent
+2026-02-25T22:20:45.221Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#6: State changed from CLOSINGD_COMPLETE to FUNDING_SPEND_SEEN
+2026-02-25T22:20:45.224Z INFO    03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#7: State changed from FUNDING_SPEND_SEEN to ONCHAIN
+2026-02-25T22:20:45.231Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#4: State changed from FUNDING_SPEND_SEEN to ONCHAIN
+2026-02-25T22:20:45.236Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#3: State changed from FUNDING_SPEND_SEEN to ONCHAIN
+2026-02-25T22:20:45.240Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#5: State changed from FUNDING_SPEND_SEEN to ONCHAIN
+2026-02-25T22:20:45.244Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#6: State changed from FUNDING_SPEND_SEEN to ONCHAIN
+2026-02-25T22:22:53.801Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#8: Ignoring fee limits!
+2026-02-25T22:22:53.806Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T22:23:15.351Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#8: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+
+
+
+
+2026-02-25T22:35:37.643Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T22:35:37.659Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T22:35:37.663Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T22:35:37.673Z INFO    lightningd: --------------------------------------------------
+2026-02-25T22:35:37.673Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-02-25T22:35:37.682Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+251999997852000msat/-0msat) (account wallet) Logging journal entry.
+2026-02-25T22:35:38.996Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#8: Ignoring fee limits!
+2026-02-25T22:37:07.768Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-02-25T22:37:41.744Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#9: Ignoring fee limits!
+2026-02-25T22:37:41.750Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T22:38:37.739Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#9: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+2026-02-25T22:39:06.909Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#10: Ignoring fee limits!
+2026-02-25T22:39:06.914Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T22:39:37.767Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#10: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+2026-02-25T22:42:08.671Z UNUSUAL 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#11: Ignoring fee limits!
+2026-02-25T22:42:08.678Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T22:42:37.903Z INFO    03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#11: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+
+
+
+
+2026-02-25T22:44:06.080Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T22:44:06.092Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T22:44:06.094Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T22:44:06.106Z INFO    lightningd: --------------------------------------------------
+2026-02-25T22:44:06.106Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-02-25T22:44:06.171Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+994999834000msat/-0msat) (account wallet) Logging journal entry.
+2026-02-25T22:44:07.531Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#8: Ignoring fee limits!
+2026-02-25T22:44:07.532Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#9: Ignoring fee limits!
+2026-02-25T22:44:07.533Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#10: Ignoring fee limits!
+2026-02-25T22:44:07.751Z UNUSUAL 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#11: Ignoring fee limits!
+
+
+
+
+2026-02-25T22:45:51.411Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T22:45:51.424Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T22:45:51.427Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T22:45:51.442Z INFO    lightningd: --------------------------------------------------
+2026-02-25T22:45:51.442Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-02-25T22:45:52.728Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#8: Ignoring fee limits!
+2026-02-25T22:45:52.730Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#9: Ignoring fee limits!
+2026-02-25T22:45:52.731Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#10: Ignoring fee limits!
+2026-02-25T22:45:53.045Z UNUSUAL 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#11: Ignoring fee limits!
+2026-02-25T22:47:21.542Z UNUSUAL lightningd: Bitcoin backend now synced.
+
+
+
+
+2026-02-25T22:56:31.822Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T22:56:31.834Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T22:56:31.836Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T22:56:31.854Z INFO    lightningd: --------------------------------------------------
+2026-02-25T22:56:31.854Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-02-25T22:56:31.993Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+15000052150000msat/-0msat) (account wallet) Logging journal entry.
+2026-02-25T22:56:33.344Z UNUSUAL 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#11: Ignoring fee limits!
+2026-02-25T22:56:33.546Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#8: Ignoring fee limits!
+2026-02-25T22:56:33.548Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#9: Ignoring fee limits!
+2026-02-25T22:56:33.550Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#10: Ignoring fee limits!
