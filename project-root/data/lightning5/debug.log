@@ -407,3 +407,202 @@
 2026-02-25T22:56:33.546Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#8: Ignoring fee limits!
 2026-02-25T22:56:33.548Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#9: Ignoring fee limits!
 2026-02-25T22:56:33.550Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#10: Ignoring fee limits!
+
+
+
+
+2026-02-25T23:16:17.990Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T23:16:18.004Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T23:16:18.007Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T23:16:18.025Z INFO    lightningd: --------------------------------------------------
+2026-02-25T23:16:18.025Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-02-25T23:16:19.432Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#8: Ignoring fee limits!
+2026-02-25T23:16:19.434Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#9: Ignoring fee limits!
+2026-02-25T23:16:19.436Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#10: Ignoring fee limits!
+2026-02-25T23:16:19.579Z UNUSUAL 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#11: Ignoring fee limits!
+2026-02-25T23:18:10.650Z UNUSUAL lightningd: Bitcoin backend now synced.
+
+
+
+
+2026-02-25T23:19:02.818Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T23:19:02.831Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T23:19:02.834Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T23:19:02.848Z INFO    lightningd: --------------------------------------------------
+2026-02-25T23:19:02.848Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-02-25T23:19:04.315Z UNUSUAL 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#11: Ignoring fee limits!
+2026-02-25T23:19:04.767Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#8: Ignoring fee limits!
+2026-02-25T23:19:04.769Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#9: Ignoring fee limits!
+2026-02-25T23:19:04.771Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#10: Ignoring fee limits!
+2026-02-25T23:19:17.852Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-02-25T23:23:55.287Z **BROKEN** lightningd: FATAL SIGNAL 6 (version v23.08.1)
+2026-02-25T23:23:55.287Z **BROKEN** lightningd: backtrace: common/daemon.c:38 (send_backtrace) 0xaaaab4706123
+2026-02-25T23:23:55.287Z **BROKEN** lightningd: backtrace: common/daemon.c:75 (crashdump) 0xaaaab4706183
+2026-02-25T23:23:55.287Z **BROKEN** lightningd: backtrace: (null):0 ((null)) 0xffff9c5877e7
+2026-02-25T23:23:55.287Z **BROKEN** lightningd: backtrace: (null):0 ((null)) 0xffff9c1c2008
+2026-02-25T23:23:55.287Z **BROKEN** lightningd: backtrace: (null):0 ((null)) 0xffff9c17a83b
+2026-02-25T23:23:55.287Z **BROKEN** lightningd: backtrace: (null):0 ((null)) 0xffff9c167133
+2026-02-25T23:23:55.288Z **BROKEN** lightningd: backtrace: (null):0 ((null)) 0xffff9c174113
+2026-02-25T23:23:55.288Z **BROKEN** lightningd: backtrace: (null):0 ((null)) 0xffff9c17418b
+2026-02-25T23:23:55.288Z **BROKEN** lightningd: backtrace: common/utxo.c:82 (utxo_is_immature) 0xaaaab471ba77
+2026-02-25T23:23:55.288Z **BROKEN** lightningd: backtrace: wallet/wallet.c:537 (deep_enough) 0xaaaab46e7563
+2026-02-25T23:23:55.288Z **BROKEN** lightningd: backtrace: wallet/wallet.c:599 (wallet_find_utxo) 0xaaaab46eb5a3
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: wallet/reservation.c:551 (json_fundpsbt) 0xaaaab46f6d13
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: lightningd/jsonrpc.c:658 (command_exec) 0xaaaab46a98cb
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: lightningd/jsonrpc.c:786 (rpc_command_hook_final) 0xaaaab46ab2ff
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: lightningd/plugin_hook.c:285 (plugin_hook_call_) 0xaaaab46d8147
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: lightningd/jsonrpc.c:874 (plugin_hook_call_rpc_command) 0xaaaab46aba43
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: lightningd/jsonrpc.c:984 (parse_request) 0xaaaab46aba43
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: lightningd/jsonrpc.c:1090 (read_json) 0xaaaab46abd7b
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: ccan/ccan/io/io.c:59 (next_plan) 0xaaaab47fb147
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: ccan/ccan/io/io.c:407 (do_plan) 0xaaaab47fb72f
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: ccan/ccan/io/io.c:417 (io_ready) 0xaaaab47fb7ef
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: ccan/ccan/io/poll.c:453 (io_loop) 0xaaaab47fcf07
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: lightningd/io_loop_with_timers.c:22 (io_loop_with_timers) 0xaaaab46a9627
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: lightningd/lightningd.c:1332 (main) 0xaaaab46ae267
+2026-02-25T23:23:55.290Z **BROKEN** lightningd: backtrace: (null):0 ((null)) 0xffff9c1673ff
+2026-02-25T23:23:55.290Z **BROKEN** lightningd: backtrace: (null):0 ((null)) 0xffff9c1674d7
+2026-02-25T23:23:55.290Z **BROKEN** lightningd: backtrace: (null):0 ((null)) 0xaaaab4686faf
+2026-02-25T23:23:55.290Z **BROKEN** lightningd: backtrace: (null):0 ((null)) 0xffffffffffffffff
+
+
+
+
+2026-02-25T23:26:12.222Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T23:26:12.234Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T23:26:12.248Z INFO    lightningd: --------------------------------------------------
+2026-02-25T23:26:12.248Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-02-25T23:26:13.634Z UNUSUAL 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#11: Ignoring fee limits!
+2026-02-25T23:26:55.629Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#12: Ignoring fee limits!
+2026-02-25T23:26:55.634Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T23:27:36.907Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#12: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_SHUTTING_DOWN
+2026-02-25T23:27:36.921Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#12: State changed from CHANNELD_SHUTTING_DOWN to CLOSINGD_SIGEXCHANGE
+2026-02-25T23:27:36.935Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-closingd-chan#12: performing quickclose in range 151sat-200000sat
+2026-02-25T23:27:36.937Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#12: State changed from CLOSINGD_SIGEXCHANGE to CLOSINGD_COMPLETE
+2026-02-25T23:27:36.951Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#8: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
+2026-02-25T23:27:38.303Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#9: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
+
+
+
+
+2026-02-25T23:32:57.832Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T23:32:57.845Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T23:32:57.847Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T23:32:57.862Z INFO    lightningd: --------------------------------------------------
+2026-02-25T23:32:57.862Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-02-25T23:32:59.545Z UNUSUAL 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#11: Ignoring fee limits!
+2026-02-25T23:33:27.877Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-02-25T23:33:55.527Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:33:55.532Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T23:36:58.029Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+2026-02-25T23:37:04.775Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: Disconnected
+2026-02-25T23:37:07.768Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:37:07.771Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:37:07.771Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:37:12.549Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:37:12.550Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:37:12.550Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:37:21.007Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:37:21.009Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:37:21.009Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:37:21.020Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:37:21.022Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:37:21.023Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:37:37.421Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:37:37.423Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:37:37.424Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:38:31.340Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:38:31.343Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:38:31.343Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:38:41.947Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:38:41.949Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:38:41.949Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+
+
+
+
+2026-02-25T23:39:47.138Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T23:39:47.153Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T23:39:47.156Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T23:39:47.175Z INFO    lightningd: --------------------------------------------------
+2026-02-25T23:39:47.175Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-02-25T23:39:48.267Z UNUSUAL 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#11: Ignoring fee limits!
+2026-02-25T23:39:48.457Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:39:48.459Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:39:48.459Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:39:51.119Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:39:51.122Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:39:51.122Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:39:55.288Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:39:55.291Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:39:55.291Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:40:03.960Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:40:03.963Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:40:03.963Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:40:20.388Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:40:20.392Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:40:20.392Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:40:53.134Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:40:53.139Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:40:53.139Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:41:58.132Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:41:58.137Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:41:58.138Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:44:06.565Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:44:06.571Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:44:06.571Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:45:17.716Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:45:17.722Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:45:17.722Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:48:22.713Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:48:22.715Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:48:22.715Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:48:25.353Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-02-25T23:53:22.836Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:53:22.839Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:53:22.840Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:58:23.504Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:58:23.507Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:58:23.508Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:03:24.401Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T00:03:24.404Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T00:03:24.404Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:08:25.209Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T00:08:25.212Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T00:08:25.213Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:13:25.617Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T00:13:25.620Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T00:13:25.621Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:18:26.350Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T00:18:26.353Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T00:18:26.354Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:23:26.937Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T00:23:26.942Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T00:23:26.942Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:28:27.227Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T00:28:27.229Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T00:28:27.230Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:33:27.775Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T00:33:27.780Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T00:33:27.780Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:38:27.907Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T00:38:27.911Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T00:38:27.911Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:43:27.960Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T00:43:27.965Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T00:43:27.966Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:48:28.320Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T00:48:28.324Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T00:48:28.324Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:53:29.222Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T00:53:29.226Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T00:53:29.226Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:58:29.992Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T00:58:29.997Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T00:58:29.997Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T01:03:30.133Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T01:03:30.136Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T01:03:30.136Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T01:08:30.584Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T01:08:30.588Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T01:08:30.589Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)

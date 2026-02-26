@@ -1,242 +1,229 @@
-2026-02-18T19:13:08.285Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2026-02-18T19:13:08.289Z INFO    lightningd: Creating database
-2026-02-18T19:13:08.321Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2026-02-18T19:13:08.322Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
-2026-02-18T19:13:08.329Z INFO    plugin-chanbackup: Creating Emergency Recovery
-2026-02-18T19:13:08.331Z INFO    plugin-bookkeeper: Creating database
-2026-02-18T19:13:08.331Z INFO    lightningd: --------------------------------------------------
-2026-02-18T19:13:08.331Z INFO    lightningd: Server started with public key 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3, alias SOMBERSPATULA (color #034cbf) and lightningd v23.08.1
-2026-02-18T19:13:08.400Z INFO    plugin-bookkeeper: account wallet not found, adding along with new balance
+2026-02-25T23:26:12.105Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T23:26:12.109Z INFO    lightningd: Creating database
+2026-02-25T23:26:12.142Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T23:26:12.151Z INFO    plugin-chanbackup: Creating Emergency Recovery
+2026-02-25T23:26:12.153Z INFO    plugin-bookkeeper: Creating database
+2026-02-25T23:26:12.153Z INFO    lightningd: --------------------------------------------------
+2026-02-25T23:26:12.153Z INFO    lightningd: Server started with public key 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97, alias IRATEARK (color #02a52d) and lightningd v23.08.1
+2026-02-25T23:26:12.222Z INFO    plugin-bookkeeper: account wallet not found, adding along with new balance
+2026-02-25T23:26:55.638Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#1: Ignoring fee limits!
+2026-02-25T23:26:55.642Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T23:27:20.220Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-02-25T23:27:20.222Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
+2026-02-25T23:27:20.222Z INFO    plugin-pay: cmd 34 partid 0: Unknown destination 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b
+2026-02-25T23:27:20.222Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-02-25T23:27:22.231Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-02-25T23:27:22.233Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
+2026-02-25T23:27:22.233Z INFO    plugin-pay: cmd 34 partid 0: Unknown destination 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b
+2026-02-25T23:27:22.234Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-02-25T23:27:24.244Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-02-25T23:27:24.245Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
+2026-02-25T23:27:24.246Z INFO    plugin-pay: cmd 34 partid 0: Unknown destination 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b
+2026-02-25T23:27:24.246Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-02-25T23:27:26.258Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-02-25T23:27:26.260Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
+2026-02-25T23:27:26.260Z INFO    plugin-pay: cmd 34 partid 0: Unknown destination 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b
+2026-02-25T23:27:26.260Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-02-25T23:27:28.269Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-02-25T23:27:28.270Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
+2026-02-25T23:27:28.270Z INFO    plugin-pay: cmd 34 partid 0: Unknown destination 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b
+2026-02-25T23:27:28.270Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-02-25T23:27:36.887Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#1: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_SHUTTING_DOWN
+2026-02-25T23:27:36.925Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#1: State changed from CHANNELD_SHUTTING_DOWN to CLOSINGD_SIGEXCHANGE
+2026-02-25T23:27:36.940Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-closingd-chan#1: performing quickclose in range 151sat-200000sat
+2026-02-25T23:27:36.942Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#1: State changed from CLOSINGD_SIGEXCHANGE to CLOSINGD_COMPLETE
 
 
 
 
-2026-02-19T11:15:33.736Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2026-02-19T11:15:33.987Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2026-02-19T11:15:33.992Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
-2026-02-19T11:15:34.011Z INFO    lightningd: --------------------------------------------------
-2026-02-19T11:15:34.011Z INFO    lightningd: Server started with public key 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3, alias SOMBERSPATULA (color #034cbf) and lightningd v23.08.1
-2026-02-19T11:15:34.123Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+0msat/-0msat) (account wallet) Logging journal entry.
-2026-02-19T11:29:57.504Z INFO    lightningd: Self-resolved invoice 'flamingo-node4-1771500580632' with amount 5000msat
-2026-02-19T11:34:04.978Z UNUSUAL lightningd: Bitcoin backend now synced.
-2026-02-19T11:34:56.676Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#1: Ignoring fee limits!
-2026-02-19T11:34:56.680Z INFO    plugin-chanbackup: Updating the SCB
-2026-02-19T11:35:04.534Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#1: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
-2026-02-19T11:35:06.987Z INFO    lightningd: Self-resolved invoice 'flamingo-node4-1771500881760' with amount 1200msat
-2026-02-19T11:39:29.021Z INFO    lightningd: Self-resolved invoice 'flamingo-node4-1771501147010' with amount 5000msat
+2026-02-25T23:32:57.714Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T23:32:57.739Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T23:32:57.741Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T23:32:57.755Z INFO    lightningd: --------------------------------------------------
+2026-02-25T23:32:57.755Z INFO    lightningd: Server started with public key 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97, alias IRATEARK (color #02a52d) and lightningd v23.08.1
+2026-02-25T23:32:57.837Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+1000000000000msat/-0msat) (account wallet) Logging journal entry.
+2026-02-25T23:33:27.772Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-02-25T23:33:55.536Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T23:33:55.541Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T23:34:05.119Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-02-25T23:34:05.121Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
+2026-02-25T23:34:05.121Z INFO    plugin-pay: cmd 34 partid 0: Unknown destination 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b
+2026-02-25T23:34:05.122Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-02-25T23:34:07.134Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-02-25T23:34:07.136Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
+2026-02-25T23:34:07.136Z INFO    plugin-pay: cmd 34 partid 0: Unknown destination 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b
+2026-02-25T23:34:07.136Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-02-25T23:34:09.149Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-02-25T23:34:09.152Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
+2026-02-25T23:34:09.152Z INFO    plugin-pay: cmd 34 partid 0: Unknown destination 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b
+2026-02-25T23:34:09.152Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-02-25T23:34:11.162Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-02-25T23:34:11.164Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
+2026-02-25T23:34:11.164Z INFO    plugin-pay: cmd 34 partid 0: Unknown destination 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b
+2026-02-25T23:34:11.164Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-02-25T23:34:13.175Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-02-25T23:34:13.176Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
+2026-02-25T23:34:13.176Z INFO    plugin-pay: cmd 34 partid 0: Unknown destination 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b
+2026-02-25T23:34:13.177Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-02-25T23:36:58.038Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+2026-02-25T23:37:02.368Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-02-25T23:37:02.368Z INFO    plugin-pay: cmd 34 partid 0: Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d is not reachable directly and all routehints were unusable.
+2026-02-25T23:37:03.047Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-25T23:37:03.048Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-25T23:37:03.048Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:37:04.378Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-02-25T23:37:04.378Z INFO    plugin-pay: cmd 34 partid 0: Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d is not reachable directly and all routehints were unusable.
+2026-02-25T23:37:04.777Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T23:37:04.779Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-25T23:37:04.779Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-25T23:37:04.780Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:37:06.387Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-02-25T23:37:06.388Z INFO    plugin-pay: cmd 34 partid 0: Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d is not reachable directly and all routehints were unusable.
+2026-02-25T23:37:07.769Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T23:37:07.770Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-25T23:37:07.770Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-25T23:37:07.771Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:37:08.396Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-02-25T23:37:08.398Z INFO    plugin-pay: cmd 34 partid 0: Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d is not reachable directly and all routehints were unusable.
+2026-02-25T23:37:10.411Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-02-25T23:37:10.411Z INFO    plugin-pay: cmd 34 partid 0: Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d is not reachable directly and all routehints were unusable.
+2026-02-25T23:37:12.549Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T23:37:12.550Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-25T23:37:12.550Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-25T23:37:12.550Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:37:21.006Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T23:37:21.008Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-25T23:37:21.009Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-25T23:37:21.009Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:37:21.020Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T23:37:21.021Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-25T23:37:21.022Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-25T23:37:21.022Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:37:37.421Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T23:37:37.422Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-25T23:37:37.423Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-25T23:37:37.424Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:38:31.340Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T23:38:31.342Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-25T23:38:31.342Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-25T23:38:31.343Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:38:41.947Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T23:38:41.949Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-25T23:38:41.949Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-25T23:38:41.950Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
 
 
 
 
-2026-02-25T22:06:44.597Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2026-02-25T22:06:44.707Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2026-02-25T22:06:44.710Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
-2026-02-25T22:06:44.724Z INFO    lightningd: --------------------------------------------------
-2026-02-25T22:06:44.724Z INFO    lightningd: Server started with public key 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3, alias SOMBERSPATULA (color #034cbf) and lightningd v23.08.1
-2026-02-25T22:06:44.819Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+250000000000000msat/-0msat) (account wallet) Logging journal entry.
-2026-02-25T22:06:46.742Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#1: Ignoring fee limits!
-2026-02-25T22:10:37.480Z UNUSUAL lightningd: Bitcoin backend now synced.
-2026-02-25T22:10:54.232Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
-2026-02-25T22:10:54.236Z INFO    plugin-chanbackup: Updating the SCB
-2026-02-25T22:11:22.646Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#3: Ignoring fee limits!
-2026-02-25T22:11:22.650Z INFO    plugin-chanbackup: Updating the SCB
-2026-02-25T22:15:15.099Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
-2026-02-25T22:15:15.106Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#3: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
-2026-02-25T22:15:52.612Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#4: Ignoring fee limits!
-2026-02-25T22:15:52.618Z INFO    plugin-chanbackup: Updating the SCB
-2026-02-25T22:17:45.023Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#5: Ignoring fee limits!
-2026-02-25T22:17:45.028Z INFO    plugin-chanbackup: Updating the SCB
-2026-02-25T22:18:15.196Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#4: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
-2026-02-25T22:18:15.201Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#5: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
-2026-02-25T22:18:22.061Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T22:18:22.062Z INFO    plugin-pay: cmd 34 partid 0: Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d is not reachable directly and all routehints were unusable.
-2026-02-25T22:18:24.074Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T22:18:24.074Z INFO    plugin-pay: cmd 34 partid 0: Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d is not reachable directly and all routehints were unusable.
-2026-02-25T22:18:26.089Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T22:18:26.089Z INFO    plugin-pay: cmd 34 partid 0: Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d is not reachable directly and all routehints were unusable.
-2026-02-25T22:18:28.103Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T22:18:28.104Z INFO    plugin-pay: cmd 34 partid 0: Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d is not reachable directly and all routehints were unusable.
-2026-02-25T22:18:30.118Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T22:18:30.118Z INFO    plugin-pay: cmd 34 partid 0: Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d is not reachable directly and all routehints were unusable.
-2026-02-25T22:19:35.063Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#1: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
-2026-02-25T22:19:35.100Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#1: State changed from CHANNELD_SHUTTING_DOWN to CLOSINGD_SIGEXCHANGE
-2026-02-25T22:19:35.140Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-closingd-chan#1: performing quickclose in range 151sat-1000000sat
-2026-02-25T22:19:35.142Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#1: State changed from CLOSINGD_SIGEXCHANGE to CLOSINGD_COMPLETE
-2026-02-25T22:19:35.150Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
-2026-02-25T22:19:35.198Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: State changed from CHANNELD_SHUTTING_DOWN to CLOSINGD_SIGEXCHANGE
-2026-02-25T22:19:35.210Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-closingd-chan#2: performing quickclose in range 151sat-20000sat
-2026-02-25T22:19:35.212Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: State changed from CLOSINGD_SIGEXCHANGE to CLOSINGD_COMPLETE
-2026-02-25T22:19:35.217Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#3: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
-2026-02-25T22:19:35.247Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#3: State changed from CHANNELD_SHUTTING_DOWN to CLOSINGD_SIGEXCHANGE
-2026-02-25T22:19:35.257Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-closingd-chan#3: performing quickclose in range 151sat-12000sat
-2026-02-25T22:19:35.259Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#3: State changed from CLOSINGD_SIGEXCHANGE to CLOSINGD_COMPLETE
-2026-02-25T22:19:35.262Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#4: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
-2026-02-25T22:19:35.292Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#4: State changed from CHANNELD_SHUTTING_DOWN to CLOSINGD_SIGEXCHANGE
-2026-02-25T22:19:35.300Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-closingd-chan#4: performing quickclose in range 151sat-200000sat
-2026-02-25T22:19:35.302Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#4: State changed from CLOSINGD_SIGEXCHANGE to CLOSINGD_COMPLETE
-2026-02-25T22:19:35.306Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#5: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
-2026-02-25T22:19:35.334Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#5: State changed from CHANNELD_SHUTTING_DOWN to CLOSINGD_SIGEXCHANGE
-2026-02-25T22:19:35.342Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-closingd-chan#5: performing quickclose in range 151sat-200000sat
-2026-02-25T22:19:35.344Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#5: State changed from CLOSINGD_SIGEXCHANGE to CLOSINGD_COMPLETE
-2026-02-25T22:20:45.131Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#3: Peer permanent failure in CLOSINGD_COMPLETE: Funding transaction spent
-2026-02-25T22:20:45.132Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#3: State changed from CLOSINGD_COMPLETE to FUNDING_SPEND_SEEN
-2026-02-25T22:20:45.139Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer permanent failure in CLOSINGD_COMPLETE: Funding transaction spent
-2026-02-25T22:20:45.140Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: State changed from CLOSINGD_COMPLETE to FUNDING_SPEND_SEEN
-2026-02-25T22:20:45.143Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#4: Peer permanent failure in CLOSINGD_COMPLETE: Funding transaction spent
-2026-02-25T22:20:45.144Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#4: State changed from CLOSINGD_COMPLETE to FUNDING_SPEND_SEEN
-2026-02-25T22:20:45.147Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#5: Peer permanent failure in CLOSINGD_COMPLETE: Funding transaction spent
-2026-02-25T22:20:45.147Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#5: State changed from CLOSINGD_COMPLETE to FUNDING_SPEND_SEEN
-2026-02-25T22:20:45.156Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#3: State changed from FUNDING_SPEND_SEEN to ONCHAIN
-2026-02-25T22:20:45.165Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: State changed from FUNDING_SPEND_SEEN to ONCHAIN
-2026-02-25T22:20:45.175Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#4: State changed from FUNDING_SPEND_SEEN to ONCHAIN
-2026-02-25T22:20:45.180Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#5: State changed from FUNDING_SPEND_SEEN to ONCHAIN
-2026-02-25T22:22:53.810Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#6: Ignoring fee limits!
-2026-02-25T22:22:53.814Z INFO    plugin-chanbackup: Updating the SCB
-2026-02-25T22:23:15.355Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#6: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
-2026-02-25T22:23:23.307Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T22:23:23.309Z INFO    plugin-pay: cmd 34 partid 0: Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d is not reachable directly and all routehints were unusable.
-2026-02-25T22:23:25.320Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T22:23:25.322Z INFO    plugin-pay: cmd 34 partid 0: Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d is not reachable directly and all routehints were unusable.
-2026-02-25T22:23:27.333Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T22:23:27.334Z INFO    plugin-pay: cmd 34 partid 0: Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d is not reachable directly and all routehints were unusable.
-2026-02-25T22:23:29.345Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T22:23:29.347Z INFO    plugin-pay: cmd 34 partid 0: Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d is not reachable directly and all routehints were unusable.
-2026-02-25T22:23:31.358Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T22:23:31.360Z INFO    plugin-pay: cmd 34 partid 0: Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d is not reachable directly and all routehints were unusable.
-
-
-
-
-2026-02-25T22:35:37.548Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2026-02-25T22:35:37.562Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2026-02-25T22:35:37.566Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
-2026-02-25T22:35:37.576Z INFO    lightningd: --------------------------------------------------
-2026-02-25T22:35:37.576Z INFO    lightningd: Server started with public key 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3, alias SOMBERSPATULA (color #034cbf) and lightningd v23.08.1
-2026-02-25T22:35:37.585Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+0msat/-249000200166000msat) (account wallet) Logging journal entry.
-2026-02-25T22:35:38.996Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#6: Ignoring fee limits!
-2026-02-25T22:37:07.643Z UNUSUAL lightningd: Bitcoin backend now synced.
-2026-02-25T22:37:41.754Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#7: Ignoring fee limits!
-2026-02-25T22:37:41.758Z INFO    plugin-chanbackup: Updating the SCB
-2026-02-25T22:38:37.745Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#7: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
-2026-02-25T22:39:06.918Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#8: Ignoring fee limits!
-2026-02-25T22:39:06.923Z INFO    plugin-chanbackup: Updating the SCB
-2026-02-25T22:39:37.772Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#8: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
-2026-02-25T22:42:34.399Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T22:42:34.402Z INFO    plugin-pay: cmd 34 partid 0: Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d is not reachable directly and all routehints were unusable.
-2026-02-25T22:42:36.412Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T22:42:36.413Z INFO    plugin-pay: cmd 34 partid 0: Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d is not reachable directly and all routehints were unusable.
-2026-02-25T22:42:38.422Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T22:42:38.422Z INFO    plugin-pay: cmd 34 partid 0: Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d is not reachable directly and all routehints were unusable.
-2026-02-25T22:42:40.437Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T22:42:40.437Z INFO    plugin-pay: cmd 34 partid 0: Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d is not reachable directly and all routehints were unusable.
-2026-02-25T22:42:42.448Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T22:42:42.448Z INFO    plugin-pay: cmd 34 partid 0: Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d is not reachable directly and all routehints were unusable.
-
-
-
-
-2026-02-25T22:44:05.979Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2026-02-25T22:44:05.993Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2026-02-25T22:44:05.996Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
-2026-02-25T22:44:06.007Z INFO    lightningd: --------------------------------------------------
-2026-02-25T22:44:06.007Z INFO    lightningd: Server started with public key 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3, alias SOMBERSPATULA (color #034cbf) and lightningd v23.08.1
-2026-02-25T22:44:06.077Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+999599668000msat/-0msat) (account wallet) Logging journal entry.
-2026-02-25T22:44:07.531Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#6: Ignoring fee limits!
-2026-02-25T22:44:07.532Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#7: Ignoring fee limits!
-2026-02-25T22:44:07.533Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#8: Ignoring fee limits!
-2026-02-25T22:44:43.785Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 50msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T22:44:43.787Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
-2026-02-25T22:44:43.788Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#6: Attempt to send HTLC but still syncing with bitcoin network
-2026-02-25T22:44:43.788Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3\",\"erring_channel\":\"294x1x0\",\"erring_direction\":0}}
-2026-02-25T22:44:43.788Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (10000msat < 100000msat), not splitting further.
-
-
-
-
-2026-02-25T22:45:51.308Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2026-02-25T22:45:51.325Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2026-02-25T22:45:51.328Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
-2026-02-25T22:45:51.340Z INFO    lightningd: --------------------------------------------------
-2026-02-25T22:45:51.340Z INFO    lightningd: Server started with public key 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3, alias SOMBERSPATULA (color #034cbf) and lightningd v23.08.1
-2026-02-25T22:45:52.728Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#6: Ignoring fee limits!
-2026-02-25T22:45:52.730Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#7: Ignoring fee limits!
-2026-02-25T22:45:52.731Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#8: Ignoring fee limits!
-2026-02-25T22:46:07.505Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 50msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T22:46:07.507Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
-2026-02-25T22:46:07.508Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#6: Attempt to send HTLC but still syncing with bitcoin network
-2026-02-25T22:46:07.508Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3\",\"erring_channel\":\"294x1x0\",\"erring_direction\":0}}
-2026-02-25T22:46:07.508Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (10000msat < 100000msat), not splitting further.
-2026-02-25T22:46:58.508Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 50msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T22:46:58.510Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
-2026-02-25T22:46:58.511Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#6: Attempt to send HTLC but still syncing with bitcoin network
-2026-02-25T22:46:58.511Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3\",\"erring_channel\":\"294x1x0\",\"erring_direction\":0}}
-2026-02-25T22:46:58.512Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (10000msat < 100000msat), not splitting further.
-2026-02-25T22:47:21.456Z UNUSUAL lightningd: Bitcoin backend now synced.
-2026-02-25T22:47:29.106Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 50msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T22:47:29.108Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
-2026-02-25T22:51:01.338Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T22:51:01.341Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
-2026-02-25T22:52:17.048Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T22:52:17.051Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
-
-
-
-
-2026-02-25T22:56:31.704Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
-2026-02-25T22:56:31.730Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
-2026-02-25T22:56:31.732Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
-2026-02-25T22:56:31.746Z INFO    lightningd: --------------------------------------------------
-2026-02-25T22:56:31.746Z INFO    lightningd: Server started with public key 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3, alias SOMBERSPATULA (color #034cbf) and lightningd v23.08.1
-2026-02-25T22:56:33.546Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#6: Ignoring fee limits!
-2026-02-25T22:56:33.548Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#7: Ignoring fee limits!
-2026-02-25T22:56:33.550Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#8: Ignoring fee limits!
-2026-02-25T23:01:03.826Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T23:01:03.829Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
-2026-02-25T23:01:03.830Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#6: Attempt to send HTLC but still syncing with bitcoin network
-2026-02-25T23:01:03.831Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3\",\"erring_channel\":\"294x1x0\",\"erring_direction\":0}}
-2026-02-25T23:01:03.831Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
-2026-02-25T23:01:05.843Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T23:01:05.845Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
-2026-02-25T23:01:05.847Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#6: Attempt to send HTLC but still syncing with bitcoin network
-2026-02-25T23:01:05.847Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3\",\"erring_channel\":\"294x1x0\",\"erring_direction\":0}}
-2026-02-25T23:01:05.848Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
-2026-02-25T23:01:07.858Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T23:01:07.861Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
-2026-02-25T23:01:07.863Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#6: Attempt to send HTLC but still syncing with bitcoin network
-2026-02-25T23:01:07.863Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3\",\"erring_channel\":\"294x1x0\",\"erring_direction\":0}}
-2026-02-25T23:01:07.863Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
-2026-02-25T23:01:09.872Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T23:01:09.876Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
-2026-02-25T23:01:09.878Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#6: Attempt to send HTLC but still syncing with bitcoin network
-2026-02-25T23:01:09.878Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3\",\"erring_channel\":\"294x1x0\",\"erring_direction\":0}}
-2026-02-25T23:01:09.879Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
-2026-02-25T23:01:11.888Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T23:01:11.892Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
-2026-02-25T23:01:11.894Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#6: Attempt to send HTLC but still syncing with bitcoin network
-2026-02-25T23:01:11.894Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3\",\"erring_channel\":\"294x1x0\",\"erring_direction\":0}}
-2026-02-25T23:01:11.894Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
-2026-02-25T23:01:24.342Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T23:01:24.345Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
-2026-02-25T23:01:24.346Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#6: Attempt to send HTLC but still syncing with bitcoin network
-2026-02-25T23:01:24.346Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3\",\"erring_channel\":\"294x1x0\",\"erring_direction\":0}}
-2026-02-25T23:01:24.346Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
-2026-02-25T23:01:26.360Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T23:01:26.364Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
-2026-02-25T23:01:26.366Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#6: Attempt to send HTLC but still syncing with bitcoin network
-2026-02-25T23:01:26.366Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3\",\"erring_channel\":\"294x1x0\",\"erring_direction\":0}}
-2026-02-25T23:01:26.366Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
-2026-02-25T23:01:28.380Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T23:01:28.383Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
-2026-02-25T23:01:28.385Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#6: Attempt to send HTLC but still syncing with bitcoin network
-2026-02-25T23:01:28.385Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3\",\"erring_channel\":\"294x1x0\",\"erring_direction\":0}}
-2026-02-25T23:01:28.386Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
-2026-02-25T23:01:30.396Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T23:01:30.399Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
-2026-02-25T23:01:30.401Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#6: Attempt to send HTLC but still syncing with bitcoin network
-2026-02-25T23:01:30.401Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3\",\"erring_channel\":\"294x1x0\",\"erring_direction\":0}}
-2026-02-25T23:01:30.401Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
-2026-02-25T23:01:32.415Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
-2026-02-25T23:01:32.419Z INFO    plugin-pay: cmd 34 partid 0: Initial limit on max HTLCs: 15, Destination 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d has 1 channels, assuming 15 HTLCs per channel
-2026-02-25T23:01:32.420Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#6: Attempt to send HTLC but still syncing with bitcoin network
-2026-02-25T23:01:32.421Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3\",\"erring_channel\":\"294x1x0\",\"erring_direction\":0}}
-2026-02-25T23:01:32.421Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-02-25T23:39:47.054Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T23:39:47.065Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T23:39:47.068Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T23:39:47.078Z INFO    lightningd: --------------------------------------------------
+2026-02-25T23:39:47.079Z INFO    lightningd: Server started with public key 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97, alias IRATEARK (color #02a52d) and lightningd v23.08.1
+2026-02-25T23:39:47.190Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+999799834000msat/-0msat) (account wallet) Logging journal entry.
+2026-02-25T23:39:48.458Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T23:39:48.459Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-25T23:39:48.460Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-25T23:39:48.460Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:39:51.119Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T23:39:51.121Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-25T23:39:51.122Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-25T23:39:51.122Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:39:55.288Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T23:39:55.290Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-25T23:39:55.291Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-25T23:39:55.291Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:40:03.960Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T23:40:03.962Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-25T23:40:03.963Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-25T23:40:03.963Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:40:20.388Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T23:40:20.390Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-25T23:40:20.393Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-25T23:40:20.393Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:40:53.134Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T23:40:53.138Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-25T23:40:53.140Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-25T23:40:53.141Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:41:58.132Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T23:41:58.135Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-25T23:41:58.138Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-25T23:41:58.138Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:44:06.565Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T23:44:06.570Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-25T23:44:06.571Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-25T23:44:06.571Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:45:17.716Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T23:45:17.720Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-25T23:45:17.722Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-25T23:45:17.722Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:46:37.123Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
+2026-02-25T23:48:22.713Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T23:48:22.714Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-25T23:48:22.715Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-25T23:48:22.716Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_SHUTTING_DOWN: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:48:25.033Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-02-25T23:53:22.836Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T23:53:22.838Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-25T23:53:22.839Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-25T23:53:22.840Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_SHUTTING_DOWN: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:58:23.504Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T23:58:23.507Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-25T23:58:23.507Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-25T23:58:23.508Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_SHUTTING_DOWN: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:03:24.401Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-26T00:03:24.403Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-26T00:03:24.404Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-26T00:03:24.405Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_SHUTTING_DOWN: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:08:25.209Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-26T00:08:25.212Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-26T00:08:25.213Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-26T00:08:25.213Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_SHUTTING_DOWN: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:13:25.616Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-26T00:13:25.620Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-26T00:13:25.620Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-26T00:13:25.621Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_SHUTTING_DOWN: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:18:26.350Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-26T00:18:26.352Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-26T00:18:26.353Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-26T00:18:26.354Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_SHUTTING_DOWN: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:23:26.937Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-26T00:23:26.941Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-26T00:23:26.942Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-26T00:23:26.942Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_SHUTTING_DOWN: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:28:27.227Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-26T00:28:27.229Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-26T00:28:27.229Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-26T00:28:27.230Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_SHUTTING_DOWN: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:33:27.775Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-26T00:33:27.779Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-26T00:33:27.781Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-26T00:33:27.781Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_SHUTTING_DOWN: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:38:27.908Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-26T00:38:27.910Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-26T00:38:27.911Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-26T00:38:27.912Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_SHUTTING_DOWN: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:43:27.960Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-26T00:43:27.964Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-26T00:43:27.965Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-26T00:43:27.966Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_SHUTTING_DOWN: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:48:28.320Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-26T00:48:28.323Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-26T00:48:28.324Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-26T00:48:28.324Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_SHUTTING_DOWN: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:53:29.222Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-26T00:53:29.225Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-26T00:53:29.226Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-26T00:53:29.226Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_SHUTTING_DOWN: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:58:29.992Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-26T00:58:29.995Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-26T00:58:29.996Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-26T00:58:29.996Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_SHUTTING_DOWN: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T01:03:30.133Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-26T01:03:30.135Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-26T01:03:30.136Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-26T01:03:30.136Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_SHUTTING_DOWN: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T01:08:30.584Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-26T01:08:30.588Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-connectd: Received WIRE_WARNING: warning: Bad signature for 3044022054cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c022010b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f3 hash f537a631bdac6e17a673844f71ae0dd0307d47e7bb6eba989e15be30b5226c55 on channel_update 010254cf979a66191dc8da1dd0c4f16c161768a17c417365ac4fbe7a244cd90eae3c10b6c79b05fda1a342a70677ff66664bf0aeb7bde75e23fb15033be1c314f2f306226e46111a0b59caaf126043eb5bbf28c34f3a5e332a1fc7b2b73cf188910f0001100000020000699f8673010000060000000000000000000000010000000a000000000bcd3d80
+2026-02-26T01:08:30.588Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-26T01:08:30.589Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_SHUTTING_DOWN: channeld: Owning subdaemon channeld died (62208)

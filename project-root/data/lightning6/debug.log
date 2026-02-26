@@ -275,3 +275,60 @@
 2026-02-25T22:56:31.970Z INFO    lightningd: --------------------------------------------------
 2026-02-25T22:56:31.970Z INFO    lightningd: Server started with public key 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d, alias SLEEPYENTOURAGE (color #03b19d) and lightningd v23.08.1
 2026-02-25T22:56:33.344Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+
+
+
+
+2026-02-25T23:16:18.093Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T23:16:18.106Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T23:16:18.109Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T23:16:18.127Z INFO    lightningd: --------------------------------------------------
+2026-02-25T23:16:18.127Z INFO    lightningd: Server started with public key 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d, alias SLEEPYENTOURAGE (color #03b19d) and lightningd v23.08.1
+2026-02-25T23:16:19.580Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T23:18:10.754Z UNUSUAL lightningd: Bitcoin backend now synced.
+
+
+
+
+2026-02-25T23:19:02.915Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T23:19:02.926Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T23:19:02.929Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T23:19:02.942Z INFO    lightningd: --------------------------------------------------
+2026-02-25T23:19:02.942Z INFO    lightningd: Server started with public key 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d, alias SLEEPYENTOURAGE (color #03b19d) and lightningd v23.08.1
+2026-02-25T23:19:04.315Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T23:19:17.949Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-02-25T23:21:49.619Z INFO    lightningd: Resolved invoice 'test-rev-1772061708177' with amount 50000msat in 1 htlcs
+2026-02-25T23:23:15.228Z INFO    lightningd: Resolved invoice 'test-rev-1772061793759' with amount 50000msat in 1 htlcs
+2026-02-25T23:23:55.470Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-channeld-chan#2: Peer connection lost
+2026-02-25T23:23:55.471Z INFO    035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+
+
+
+
+2026-02-25T23:26:12.313Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T23:26:12.325Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T23:26:12.342Z INFO    lightningd: --------------------------------------------------
+2026-02-25T23:26:12.342Z INFO    lightningd: Server started with public key 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d, alias SLEEPYENTOURAGE (color #03b19d) and lightningd v23.08.1
+2026-02-25T23:26:13.634Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+
+
+
+
+2026-02-25T23:32:57.935Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T23:32:57.947Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T23:32:57.950Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T23:32:57.960Z INFO    lightningd: --------------------------------------------------
+2026-02-25T23:32:57.960Z INFO    lightningd: Server started with public key 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d, alias SLEEPYENTOURAGE (color #03b19d) and lightningd v23.08.1
+2026-02-25T23:32:59.545Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T23:33:27.984Z UNUSUAL lightningd: Bitcoin backend now synced.
+
+
+
+
+2026-02-25T23:39:47.240Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T23:39:47.253Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T23:39:47.256Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T23:39:47.271Z INFO    lightningd: --------------------------------------------------
+2026-02-25T23:39:47.271Z INFO    lightningd: Server started with public key 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d, alias SLEEPYENTOURAGE (color #03b19d) and lightningd v23.08.1
+2026-02-25T23:39:48.267Z UNUSUAL 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b-chan#2: Ignoring fee limits!
+2026-02-25T23:48:25.521Z UNUSUAL lightningd: Bitcoin backend now synced.
