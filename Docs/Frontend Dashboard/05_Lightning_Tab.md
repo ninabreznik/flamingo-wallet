@@ -56,6 +56,8 @@ This tab interacts with the Core Lightning (CLN) node's invoice and routing subs
 
 #### API 5: sign_message / verify_message
 
+### Pending requests APIS Explanation : https://youtu.be/DhdWhl2lvng
+
 ## 4. Data Flow Scenario: Testing the "Receive" UI
 
 This scenario demonstrates the synergy between creation and simulation.

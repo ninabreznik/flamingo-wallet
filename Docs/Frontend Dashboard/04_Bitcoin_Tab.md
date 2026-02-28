@@ -53,6 +53,7 @@ This tab bridges the UI to the Bitcoin Core (bitcoind) RPC interface.
 
 #### API 6: btc_mine_blocks_regtest
 
+### Pending requests APIS Explanation : https://youtu.be/DhdWhl2lvng
 
 ## 4. Data Flow Scenario: Sending "Max" Funds
 
