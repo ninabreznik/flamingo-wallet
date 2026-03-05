@@ -1,0 +1,14 @@
+Suggested List of Functions for Transaction List Page
+
+Core Transaction Functions
+
+1. get_transaction_history(user_id, date_range) -> Fetch and display all transactions for a user within a specified time period
+2. get_daily_transactions(user_id, date) -> Get all transactions for a specific day (Today, Yesterday, specific date)
+3. get_transaction_summary(user_id, date) -> Show daily summary (total received, total sent, net balance change) (Maybe additional but could group transactions by date)
+
+Individual Transaction Functions
+
+4. get_contact_details(contact_name) -> Fetch profile info for contacts like "Luis fedrick", "Mark kevin"
+5. get_wallet_address_info(wallet_address) -> Get details for addresses like "3TgmbHfn...455p", "7RwmbHfn...455p"
+6. get_transaction_type(transaction_id) -> Determine if transaction is incoming or outgoing
+7. format_bitcoin_amount(amount) -> Format and display Bitcoin amounts 

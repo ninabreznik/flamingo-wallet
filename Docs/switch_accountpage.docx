@@ -1,0 +1,7 @@
+Suggested List of Functions for Switch Account Page
+
+1. get_available_accounts(user_id) -> Show all wallet accounts (e.g., BTC, Lightning) with their balances.
+2. get_selected_account(user_id) -> Show the currently active wallet account being used.
+3. switch_account(user_id, account_type) -> Switch the user’s active account to BTC or Lightning.
+4. refresh_account_balance(user_id, account_type) -> Refresh and display the latest balance for the selected account.
+5. open_switch_account_page(user_id) -> Open or reload the switch account modal/page with updated balances.

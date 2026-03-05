@@ -1,0 +1,11 @@
+Suggested List of Functions for Bitcoin Transaction Details Page
+
+1. get_transaction_details(transaction_id) -> Show complete details of a specific transaction (sender, recipient, amount, date, fees). (This could be the main functions calling all other functions in it.)
+2. get_sender_details(transaction_id) -> Fetch and display info about the sender (name, address, profile if available).
+3. get_recipient_details(transaction_id) -> Fetch and display info about the recipient (name, address, profile if available).
+4. get_transaction_fee(transaction_id) -> Show the exact fee paid for the transaction.
+5. get_transaction_amount(transaction_id) -> Show the total amount involved in the transaction.
+6. get_recipient_amount(transaction_id) -> Show the net amount the recipient actually received after fees.
+7. get_transaction_timestamp(transaction_id) -> Show the date and time when the transaction was confirmed.
+8. get_blockchain_explorer_link(transaction_id) -> Generate the URL to view this transaction on a blockchain explorer.
+9. notify_transaction_status(user_id, transaction_id) -> Notify the user if the transaction status changes (pending, confirmed, failed, etc.).

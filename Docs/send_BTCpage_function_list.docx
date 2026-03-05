@@ -1,0 +1,12 @@
+Suggested List of Functions for Send BTC Page
+
+1. validate_btc_address(address) -> Check if the entered Bitcoin address is valid before sending.
+2. get_user_balance(user_id) -> Show the user’s current Bitcoin balance to compare with the send amount.
+3. convert_currency(amount, from_currency, to_currency) -> Convert between BTC and USD (or other supported currencies).
+4. calculate_max_sendable_amount(user_id) -> Calculate the maximum amount of BTC the user can send based on their balance and fees.
+5. select_amount_option(option, user_id) -> Handle quick actions like "Half" or "All" balance selection.
+6. estimate_network_fee(amount, address) -> Show the estimated fee for sending BTC to a given address.
+7. create_transaction(user_id, address, amount) -> Create a pending transaction with the entered details.
+8. send_transaction(user_id, transaction_id) -> Finalize and broadcast the Bitcoin transaction to the network.
+9. show_insufficient_balance_error(user_id, required_amount) -> Display an error if the user’s balance is too low to complete the transaction.
+10. open_send_page(user_id) -> Reload or open the Send BTC page with the latest balance and exchange rate.

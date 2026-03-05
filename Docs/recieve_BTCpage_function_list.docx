@@ -1,0 +1,9 @@
+Suggested List of Functions for Receive BTC Page
+
+1. generate_new_btc_address(user_id) -> Create a fresh Bitcoin address for receiving funds.
+2. get_current_btc_address(user_id) -> Show the user’s active Bitcoin receiving address.
+3. get_qr_code_for_address(address) -> Generate a QR code image for the given Bitcoin address.
+4. copy_address_to_clipboard(address) -> Copy the displayed Bitcoin address to the user’s clipboard.
+5. track_incoming_transaction(address) -> Monitor the blockchain for incoming funds to the user’s receiving address.
+6. notify_on_receive(user_id, tx_id) -> Send a notification when BTC is received at the user’s address.
+7. open_receive_page(user_id) -> Reload or open the Receive BTC page with the latest address and QR code.

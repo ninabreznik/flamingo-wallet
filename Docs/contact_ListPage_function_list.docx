@@ -1,0 +1,15 @@
+Suggested List of Functions for Contact List Page
+
+Core Contact Management
+
+1. load_all_contacts(user_id) -> Show all contacts in the user's Bitcoin wallet address book
+2. search_contacts(query) -> Find contacts by name or recent activity when user types in the search bar
+3. add_new_contact() -> Open form to add a new contact (triggered by the + button)
+
+Contact Information & Status
+
+4. get_contact_profile(contact_name) -> Pull up someone's profile picture, name, and wallet details
+5. check_connection_status(contact_id) -> See if contact is "Connected", "Not connected", or show their online status
+6. get_last_interaction_time(contact_id) -> Show when you last exchanged payments ("10 min", "3 hr", "Mon")
+7. preview_recent_activity(contact_id) -> Display snippet like "Payment Re...", "You sent...", "Connected"
+8. open_chat_with_contact(contact_id) -> Start a conversation or view payment history with someone (when contact is clicked)

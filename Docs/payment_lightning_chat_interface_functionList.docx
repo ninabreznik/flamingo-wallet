@@ -1,0 +1,29 @@
+Suggested List of Functions for Payment Lightning Chat interface Page
+
+Payment Processing API functions
+
+1. create_lightning_invoice(user_id, amount, description) -> Generate Lightning Network invoice for payment request
+2. process_lightning_payment(invoice_id, payer_id) -> Execute Lightning payment and update balances
+3. get_payment_status(payment_id) -> Retrieve current status (pending, confirmed, expired, failed)
+4.update_payment_status(payment_id, status) -> Change payment status in database
+5. expire_pending_payments() -> Mark timed-out payments as expired
+
+Chat Message API functions
+
+7. save_chat_message(sender_id, recipient_id, message_type, payment_data) -> Store payment messages in database
+8. get_chat_history(user_id, contact_id, limit) -> Fetch conversation messages between two users
+9. create_payment_request_message(sender_id, recipient_id, amount, note) -> Save payment request to chat log
+10. update_message_status(message_id, status) -> Update message delivery/read status
+
+User Balance & Wallet API functions
+
+11. get_user_lightning_balance(user_id) -> Retrieve current Lightning wallet balance
+12. update_user_balance(user_id, amount, transaction_type) -> Add/subtract from user's balance
+13. validate_payment_amount(user_id, amount) -> Check if user has sufficient funds
+14. log_transaction_history(user_id, payment_id, amount, type) -> Record transaction to fetch in chat later
+
+Real-time Communication API functions
+
+15. send_push_notification(user_id, message_data) -> Notify user of new payment requests/confirmations
+16. broadcast_payment_update(payment_id, status_data) -> Send real-time status updates to connected clients
+17. authenticate_lightning_node_connection() -> Verify connection to Lightning Network node

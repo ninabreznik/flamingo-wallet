@@ -1,0 +1,142 @@
+2025-09-25T17:04:41.131Z INFO    lightningd: v24.05
+2025-09-25T17:04:41.166Z INFO    lightningd: Creating configuration directory /Users/a1707/Desktop/BTC-Lightning/flamingo-wallet/.lightning-data/node-2/regtest
+2025-09-25T17:04:41.167Z DEBUG   lightningd: Opened log file /Users/a1707/Desktop/BTC-Lightning/flamingo-wallet/.lightning-data/node-2/regtest/log
+2025-09-25T17:04:41.170Z DEBUG   plugin-manager: started(5138) /usr/local/libexec/c-lightning/plugins/autoclean
+2025-09-25T17:04:41.173Z DEBUG   plugin-manager: started(5139) /usr/local/libexec/c-lightning/plugins/chanbackup
+2025-09-25T17:04:41.176Z DEBUG   plugin-manager: started(5140) /usr/local/libexec/c-lightning/plugins/bcli
+2025-09-25T17:04:41.179Z DEBUG   plugin-manager: started(5141) /usr/local/libexec/c-lightning/plugins/commando
+2025-09-25T17:04:41.182Z DEBUG   plugin-manager: started(5142) /usr/local/libexec/c-lightning/plugins/fetchinvoice
+2025-09-25T17:04:41.185Z DEBUG   plugin-manager: started(5143) /usr/local/libexec/c-lightning/plugins/funder
+2025-09-25T17:04:41.188Z DEBUG   plugin-manager: started(5144) /usr/local/libexec/c-lightning/plugins/topology
+2025-09-25T17:04:41.192Z DEBUG   plugin-manager: started(5145) /usr/local/libexec/c-lightning/plugins/keysend
+2025-09-25T17:04:41.194Z DEBUG   plugin-manager: started(5146) /usr/local/libexec/c-lightning/plugins/offers
+2025-09-25T17:04:41.197Z DEBUG   plugin-manager: started(5147) /usr/local/libexec/c-lightning/plugins/pay
+2025-09-25T17:04:41.200Z DEBUG   plugin-manager: started(5148) /usr/local/libexec/c-lightning/plugins/recover
+2025-09-25T17:04:41.203Z DEBUG   plugin-manager: started(5149) /usr/local/libexec/c-lightning/plugins/txprepare
+2025-09-25T17:04:41.206Z DEBUG   plugin-manager: started(5150) /usr/local/libexec/c-lightning/plugins/cln-renepay
+2025-09-25T17:04:41.209Z DEBUG   plugin-manager: started(5151) /usr/local/libexec/c-lightning/plugins/spenderp
+2025-09-25T17:04:41.211Z DEBUG   plugin-manager: started(5152) /usr/local/libexec/c-lightning/plugins/sql
+2025-09-25T17:04:41.214Z DEBUG   plugin-manager: started(5153) /usr/local/libexec/c-lightning/plugins/bookkeeper
+2025-09-25T17:04:41.216Z DEBUG   plugin-manager: started(5154) /usr/local/libexec/c-lightning/plugins/clnrest/clnrest
+2025-09-25T17:04:41.217Z DEBUG   plugin-manager: started(5155) /usr/local/libexec/c-lightning/plugins/wss-proxy/wss-proxy
+2025-09-25T17:04:41.289Z INFO    plugin-wss-proxy: Killing plugin: disabled itself: No module named 'websockets'
+2025-09-25T17:04:41.292Z INFO    plugin-clnrest: Killing plugin: disabled itself: No module named 'gevent'
+2025-09-25T17:04:41.292Z DEBUG   lightningd: io_break: check_plugins_manifests
+2025-09-25T17:04:41.292Z DEBUG   lightningd: io_loop_with_timers: plugins_init
+2025-09-25T17:04:41.295Z DEBUG   lightningd: testing /usr/local/libexec/c-lightning/lightning_channeld
+2025-09-25T17:04:41.302Z DEBUG   lightningd: testing /usr/local/libexec/c-lightning/lightning_closingd
+2025-09-25T17:04:41.308Z DEBUG   lightningd: testing /usr/local/libexec/c-lightning/lightning_connectd
+2025-09-25T17:04:41.315Z DEBUG   lightningd: testing /usr/local/libexec/c-lightning/lightning_gossipd
+2025-09-25T17:04:41.321Z DEBUG   lightningd: testing /usr/local/libexec/c-lightning/lightning_hsmd
+2025-09-25T17:04:41.328Z DEBUG   lightningd: testing /usr/local/libexec/c-lightning/lightning_onchaind
+2025-09-25T17:04:41.334Z DEBUG   lightningd: testing /usr/local/libexec/c-lightning/lightning_openingd
+2025-09-25T17:04:41.341Z DEBUG   hsmd: pid 5163, msgfd 52
+2025-09-25T17:04:41.347Z DEBUG   hsmd: capability +WIRE_HSMD_CHECK_PUBKEY
+2025-09-25T17:04:41.347Z DEBUG   hsmd: capability +WIRE_HSMD_SIGN_ANY_DELAYED_PAYMENT_TO_US
+2025-09-25T17:04:41.347Z DEBUG   hsmd: capability +WIRE_HSMD_SIGN_ANCHORSPEND
+2025-09-25T17:04:41.348Z DEBUG   hsmd: capability +WIRE_HSMD_SIGN_HTLC_TX_MINGLE
+2025-09-25T17:04:41.348Z DEBUG   hsmd: capability +WIRE_HSMD_SIGN_SPLICE_TX
+2025-09-25T17:04:41.348Z DEBUG   hsmd: capability +WIRE_HSMD_CHECK_OUTPOINT
+2025-09-25T17:04:41.348Z DEBUG   hsmd: capability +WIRE_HSMD_FORGET_CHANNEL
+2025-09-25T17:04:41.348Z DEBUG   hsmd: capability +WIRE_HSMD_REVOKE_COMMITMENT_TX
+2025-09-25T17:04:41.348Z DEBUG   hsmd: capability +WIRE_HSMD_PREAPPROVE_INVOICE_CHECK
+2025-09-25T17:04:41.348Z DEBUG   hsmd: capability +WIRE_HSMD_PREAPPROVE_KEYSEND_CHECK
+2025-09-25T17:04:41.349Z INFO    lightningd: Creating database
+2025-09-25T17:04:41.473Z DEBUG   connectd: pid 5164, msgfd 56
+2025-09-25T17:04:41.474Z UNUSUAL hsmd: HSM: created new hsm_secret file
+2025-09-25T17:04:41.474Z DEBUG   hsmd: Client: Received message 27 from client
+2025-09-25T17:04:41.474Z DEBUG   hsmd: Client: Received message 27 from client
+2025-09-25T17:04:41.474Z DEBUG   hsmd: new_client: 0
+2025-09-25T17:04:41.482Z DEBUG   connectd: Created listener on 127.0.0.1:9736
+2025-09-25T17:04:41.482Z DEBUG   connectd: REPLY WIRE_CONNECTD_INIT_REPLY with 0 fds
+2025-09-25T17:04:41.482Z DEBUG   lightningd: io_break: connect_init_done
+2025-09-25T17:04:41.482Z DEBUG   lightningd: io_loop: connectd_init
+2025-09-25T17:04:41.503Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2025-09-25T17:04:41.504Z DEBUG   lightningd: io_break: plugin_config_cb
+2025-09-25T17:04:41.504Z DEBUG   lightningd: io_loop_with_timers: config_plugin
+2025-09-25T17:04:41.504Z DEBUG   lightningd: All Bitcoin plugin commands registered
+2025-09-25T17:04:41.516Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2025-09-25T17:04:41.544Z DEBUG   lightningd: Adding block 1385: 01d73c019609eae0efe0c54144af9f4b2f24b1fb2b7ecbb40dbe54d06cf14cc6
+2025-09-25T17:04:41.570Z DEBUG   lightningd: io_break: maybe_completed_init
+2025-09-25T17:04:41.570Z DEBUG   lightningd: io_loop_with_timers: setup_topology
+2025-09-25T17:04:41.571Z DEBUG   wallet: Loaded 0 channels from DB
+2025-09-25T17:04:41.574Z DEBUG   gossipd: pid 5175, msgfd 55
+2025-09-25T17:04:41.574Z DEBUG   hsmd: new_client: 0
+2025-09-25T17:04:41.578Z DEBUG   gossipd: Store compact time: 0 msec
+2025-09-25T17:04:41.578Z DEBUG   gossipd: gossip_store: Read 0/0/0/0 cannounce/cupdate/nannounce/delete from store in 0 bytes, now 1 bytes (populated=false)
+2025-09-25T17:04:41.578Z DEBUG   gossipd: seeker: state = STARTING_UP New seeker
+2025-09-25T17:04:41.578Z DEBUG   gossipd: REPLY WIRE_GOSSIPD_INIT_REPLY with 0 fds
+2025-09-25T17:04:41.578Z DEBUG   lightningd: io_break: gossipd_init_done
+2025-09-25T17:04:41.578Z DEBUG   lightningd: io_loop: gossip_init
+2025-09-25T17:04:41.580Z DEBUG   lightningd: Looking for [autoclean,succeededforwards,num]
+2025-09-25T17:04:41.581Z DEBUG   plugin-fetchinvoice: Killing plugin: disabled itself at init: offers not enabled in config
+2025-09-25T17:04:41.581Z DEBUG   lightningd: Looking for [autoclean,failedforwards,num]
+2025-09-25T17:04:41.583Z DEBUG   lightningd: Looking for [autoclean,succeededpays,num]
+2025-09-25T17:04:41.584Z DEBUG   hsmd: Client: Received message 27 from client
+2025-09-25T17:04:41.586Z DEBUG   lightningd: Looking for [autoclean,failedpays,num]
+2025-09-25T17:04:41.588Z DEBUG   plugin-chanbackup: Chanbackup Initialised!
+2025-09-25T17:04:41.588Z INFO    plugin-chanbackup: Creating Emergency Recovery
+2025-09-25T17:04:41.588Z DEBUG   lightningd: Looking for [autoclean,paidinvoices,num]
+2025-09-25T17:04:41.589Z DEBUG   plugin-recover: Recover Plugin Initialised!
+2025-09-25T17:04:41.589Z DEBUG   plugin-recover: Gossmap loaded!
+2025-09-25T17:04:41.589Z DEBUG   lightningd: Looking for [autoclean,expiredinvoices,num]
+2025-09-25T17:04:41.591Z DEBUG   plugin-bookkeeper: Setting up database at sqlite3://accounts.sqlite3
+2025-09-25T17:04:41.591Z INFO    plugin-bookkeeper: Creating database
+2025-09-25T17:04:41.602Z DEBUG   hsmd: Client: Received message 27 from client
+2025-09-25T17:04:41.603Z DEBUG   connectd: REPLY WIRE_CONNECTD_ACTIVATE_REPLY with 0 fds
+2025-09-25T17:04:41.603Z DEBUG   lightningd: io_break: connect_activate_done
+2025-09-25T17:04:41.603Z DEBUG   lightningd: io_loop: connectd_activate
+2025-09-25T17:04:41.603Z INFO    lightningd: --------------------------------------------------
+2025-09-25T17:04:41.603Z INFO    lightningd: Server started with public key 0225a7fcc6298f94136149ae962544af9e7b9224131b4f99c70a8a6ffa7cf662df, alias ANGRYWATER (color #0225a7) and lightningd v24.05
+2025-09-25T17:04:41.627Z DEBUG   lightningd: Adding block 1386: 7edcfe8e3365c1a0fc35ff1f3163a5f29de74edfeb42b6445b120b97ba9ce4c3
+2025-09-25T17:04:41.651Z DEBUG   lightningd: Adding block 1387: 250ebb6df6955e8e95c53eef5918ee6ee593da51b05dd904e271f8d80db08352
+2025-09-25T17:04:41.676Z DEBUG   lightningd: Adding block 1388: 3059c6a27a177dbe55027eb2aa31c3d2605a87c3081b32848dd60b7ac15983b2
+2025-09-25T17:04:41.704Z DEBUG   lightningd: Adding block 1389: 68c6548478752b6f678e6c70c3caf9c543d13276535305747e7ea900af4ba417
+2025-09-25T17:04:41.735Z DEBUG   lightningd: Adding block 1390: 0f2ca37ff9a3435f1481b560feb0236abc827c8aebe6ed68e8caf6a4f8c3ff0d
+2025-09-25T17:04:41.763Z DEBUG   lightningd: Adding block 1391: 0224b7540fa8eecf03a08112a8e40e065653447f35af9c69b1ce7d76bf3bd04d
+2025-09-25T17:04:41.793Z DEBUG   lightningd: Adding block 1392: 3898b3af67e4a9b0188ee8dd5de382d01bd955d0ee1732273f693fdbe450456e
+2025-09-25T17:04:41.821Z DEBUG   lightningd: Adding block 1393: 6d35de5b8ae177643a8b20d8ef2e9ec4465a30400a038bf727b7854a89961f85
+2025-09-25T17:04:41.846Z DEBUG   lightningd: Adding block 1394: 11c3ba78a0f0054e8d027051c29c641ba3e0cee18d21563f2c13f5032011d886
+2025-09-25T17:04:41.875Z DEBUG   lightningd: Adding block 1395: 4d18f1ecdfeaa25c07dbe72541ff4f71dd8061a82a6ee2ec1300c7bd2ba65553
+2025-09-25T17:04:41.903Z DEBUG   lightningd: Adding block 1396: 455071be24f59ce770a66b01983eea3a8b40784df1b880717dd5345304274a6f
+2025-09-25T17:04:41.929Z DEBUG   lightningd: Adding block 1397: 1437946a51d9541b6e1bb3f873d8df1812057ca0ffafd32094f904f1547d1d58
+2025-09-25T17:04:41.955Z DEBUG   lightningd: Adding block 1398: 7e026fcec389eafea268670a90f8b6ad18cc5043fd8d5f775027b226093f1151
+2025-09-25T17:04:41.979Z DEBUG   lightningd: Adding block 1399: 09dfeb0e24391dad71c46b6c73d4bef11e571b39b2d280d090d095788bb8112a
+2025-09-25T17:04:42.014Z DEBUG   lightningd: Adding block 1400: 1dfa7b44bd5d087477429a177b229bae95d518c8ea2bdcf0d61cc06a6f8da4bf
+2025-09-25T17:04:42.042Z DEBUG   lightningd: Adding block 1401: 1af12eb89390a28cb82d073952eaa6473ca1e1c1706b2b75b20a1b80de7ae085
+2025-09-25T17:04:42.067Z DEBUG   lightningd: Adding block 1402: 60daeb65a71b3967e7464ab52c2c52ae3d4f89122b5b248cbb7d09416e231f73
+2025-09-25T17:04:42.096Z DEBUG   lightningd: Adding block 1403: 656e5c3da20d9d8eace140b8709a4a6a72981a5deeb7f983bd89b897f1fe4c70
+2025-09-25T17:04:42.127Z DEBUG   lightningd: Adding block 1404: 4c3b1ffcc13051cfc99efa244fafbdeb15624a81c199533facf18c30ea9b210a
+2025-09-25T17:04:42.156Z DEBUG   lightningd: Adding block 1405: 2b5d944d09ff139f5c230b8eca4f1a084e8413a9dfd6ea07f12bf6a8c3c1d778
+2025-09-25T17:04:42.184Z DEBUG   lightningd: Adding block 1406: 6b55611b18a4d5f39a82b80aea2f3d0582a3feb6d61810b0550b72d93e67fcee
+2025-09-25T17:04:42.218Z DEBUG   lightningd: Adding block 1407: 5dadd165a518388a9df35be3963f21f7d846d1fd302c1510ae7a77a4599cc3bc
+2025-09-25T17:04:42.251Z DEBUG   lightningd: Adding block 1408: 749cfd9333ebf22379efc775c94c79fae30aa699cbed847e905999e565e6f4cd
+2025-09-25T17:04:42.278Z DEBUG   lightningd: Adding block 1409: 01b0cbdb5c755e9afd66a438765dd3545560efa2c6f7fbe8a91ab84068f0e0bc
+2025-09-25T17:04:42.301Z DEBUG   lightningd: Adding block 1410: 1d12c3f52326480e2fc75b5fbcec6460585c55b37e88469f8c04375f151c3bf0
+2025-09-25T17:04:42.325Z DEBUG   lightningd: Adding block 1411: 72d788cd05c593865adf32ae261dface19abcde7d480fd4347696a118f4823fd
+2025-09-25T17:04:42.351Z DEBUG   lightningd: Adding block 1412: 1ea401c086ccebf05446d8f17cadcf560e21f3a327c15e8c670d925efe119f83
+2025-09-25T17:04:42.380Z DEBUG   lightningd: Adding block 1413: 525d46436808184a57b697621ee7b6835c084a5dd6ac6e75cec6e0a6dbf78e58
+2025-09-25T17:04:42.406Z DEBUG   lightningd: Adding block 1414: 134fd2d666445f915d77c736c12db4178199683dcbf092977515906b5c410219
+2025-09-25T17:04:42.432Z DEBUG   lightningd: Adding block 1415: 180f76b25e5bc73bc6f5820d265e7657c5ea80fada55261a3fad82ab976e0252
+2025-09-25T17:04:42.448Z DEBUG   plugin-bookkeeper: account wallet has balance 0msat
+2025-09-25T17:04:42.448Z INFO    plugin-bookkeeper: account wallet not found, adding
+2025-09-25T17:04:42.448Z DEBUG   plugin-bookkeeper: Snapshot balances updated
+2025-09-25T17:04:49.029Z DEBUG   lightningd: Still waiting for initial block download
+2025-09-25T17:04:51.605Z DEBUG   lightningd: channel_gossip: no longer in startup mode
+2025-09-25T17:04:56.546Z DEBUG   lightningd: Still waiting for initial block download
+2025-09-25T17:05:04.061Z DEBUG   lightningd: Still waiting for initial block download
+2025-09-25T17:05:11.577Z DEBUG   lightningd: Still waiting for initial block download
+2025-09-25T17:05:19.089Z DEBUG   lightningd: Still waiting for initial block download
+2025-09-25T17:05:26.603Z DEBUG   lightningd: Still waiting for initial block download
+2025-09-25T17:05:34.117Z DEBUG   lightningd: Still waiting for initial block download
+2025-09-25T17:05:37.233Z INFO    plugin-autoclean: Killing plugin: exited during normal operation
+2025-09-25T17:05:37.234Z **BROKEN** plugin-autoclean: Plugin marked as important, shutting down lightningd!
+2025-09-25T17:05:37.234Z DEBUG   lightningd: io_break: lightningd_exit
+2025-09-25T17:05:37.234Z DEBUG   lightningd: io_loop_with_timers: main
+2025-09-25T17:05:37.234Z INFO    plugin-chanbackup: Killing plugin: exited during normal operation
+2025-09-25T17:05:37.234Z **BROKEN** plugin-chanbackup: Plugin marked as important, shutting down lightningd!
+2025-09-25T17:05:37.234Z DEBUG   lightningd: io_break: lightningd_exit
+2025-09-25T17:05:37.234Z INFO    plugin-bcli: Killing plugin: exited during normal operation
+2025-09-25T17:05:37.235Z **BROKEN** lightningd: The Bitcoin backend died.
+2025-09-25T17:05:37.262Z **BROKEN** lightningd: FATAL SIGNAL 6 (version v24.05)
+2025-09-25T17:05:37.262Z **BROKEN** lightningd: FATAL SIGNAL 11 (version v24.05)

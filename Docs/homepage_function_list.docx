@@ -1,0 +1,17 @@
+Suggested List of Functions for Homepage
+
+1. get_wallet_balance(user_id) -> Show the user’s current Bitcoin wallet balance.
+2. get_recent_transactions(user_id, limit=4) -> Display the user’s most recent transactions, including details like amount, type, and date.
+3. get_total_wealth(user_id) -> Show the user’s total Bitcoin holdings across all wallets, plus the equivalent value in USD.
+4. get_wallet_breakdown(user_id) -> Show how much Bitcoin the user has in each wallet type (like Lightning or regular Bitcoin).
+5. get_exchange_rate(currency="USD") -> Show the latest Bitcoin-to-USD exchange rate.
+6. get_transaction_details(transaction_id) -> Show all the details for a specific transaction when the user selects it.
+7. get_user_profile(user_id) -> Show the user’s profile information, such as their avatar and name (for use in transaction lists).
+8. get_all_transactions(user_id) -> Let the user view their entire transaction history.
+9. open_wallets_page(user_id) -> Take the user to a page listing all their wallets and balances.
+10. open_send_page(user_id) -> Open the page where the user can send Bitcoin, showing their available balance.
+11. open_receive_page(user_id) -> Open the page where the user can receive Bitcoin, with their QR code or wallet address.
+12. open_home_page(user_id) -> Reload or return to the main homepage dashboard.
+13. open_contacts_page(user_id) -> Open the user’s list of saved contacts for sending or receiving Bitcoin.
+14. open_details_page(user_id) -> Show account details and a summary of transaction history.
+15. open_more_page(user_id) -> Open the “More” page with additional options and settings.

@@ -1,0 +1,411 @@
+{
+   "peers": [
+      {
+         "id": "022ed960fb6b1d26b84b0e8b015e18c2cdec41281b8d34a9a11f9d8371c2dee3e9",
+         "connected": false,
+         "num_channels": 1,
+         "features": "08a0000a0269a2",
+         "channels": [
+            {
+               "state": "ONCHAIN",
+               "scratch_txid": "80bd9320ab2844aff812c6ba4431bd8e96f94f99464ca633158dad1d8fe2abbf",
+               "last_tx_fee_msat": 183000,
+               "feerate": {
+                  "perkw": 253,
+                  "perkb": 1012
+               },
+               "short_channel_id": "255x1x0",
+               "direction": 1,
+               "channel_id": "592a07a0c6a5e10d11355fc0e4b39fb487a6a9660b8f5a50b4cb6ef5ddaff654",
+               "funding_txid": "54f6afddf56ecbb4505a8f0b66a9a687b49fb3e4c05f35110de1a5c6a0072a59",
+               "funding_outnum": 0,
+               "close_to_addr": "bcrt1pd2kjlsu6y83hhdakm5z2cwzha2sfhzhhe222f63cvphku3xyqwcs4gpl0z",
+               "close_to": "51206aad2fc39a21e37bb7b6dd04ac3857eaa09b8af7ca94a4ea38606f6e44c403b1",
+               "private": false,
+               "opener": "remote",
+               "closer": "remote",
+               "alias": {
+                  "local": "11310266x11428521x30575",
+                  "remote": "4541171x10491778x13177"
+               },
+               "features": [
+                  "option_static_remotekey"
+               ],
+               "funding": {
+                  "local_funds_msat": 0,
+                  "remote_funds_msat": 5000000000,
+                  "pushed_msat": 0
+               },
+               "to_us_msat": 0,
+               "min_to_us_msat": 0,
+               "max_to_us_msat": 0,
+               "total_msat": 5000000000,
+               "fee_base_msat": 1,
+               "fee_proportional_millionths": 10,
+               "dust_limit_msat": 546000,
+               "max_total_htlc_in_msat": 18446744073709551615,
+               "their_reserve_msat": 50000000,
+               "our_reserve_msat": 50000000,
+               "spendable_msat": 0,
+               "receivable_msat": 4294967295,
+               "minimum_htlc_in_msat": 0,
+               "minimum_htlc_out_msat": 0,
+               "maximum_htlc_out_msat": 4950000000,
+               "their_to_self_delay": 6,
+               "our_to_self_delay": 6,
+               "max_accepted_htlcs": 483,
+               "state_changes": [
+                  {
+                     "timestamp": "2026-01-04T23:08:30.824Z",
+                     "old_state": "CHANNELD_AWAITING_LOCKIN",
+                     "new_state": "CHANNELD_NORMAL",
+                     "cause": "remote",
+                     "message": "Lockin complete"
+                  },
+                  {
+                     "timestamp": "2026-01-04T23:19:35.618Z",
+                     "old_state": "CHANNELD_NORMAL",
+                     "new_state": "AWAITING_UNILATERAL",
+                     "cause": "protocol",
+                     "message": "channeld: received ERROR error channel 592a07a0c6a5e10d11355fc0e4b39fb487a6a9660b8f5a50b4cb6ef5ddaff654: Unknown channel for WIRE_CHANNEL_REESTABLISH"
+                  },
+                  {
+                     "timestamp": "2026-01-04T23:20:23.084Z",
+                     "old_state": "AWAITING_UNILATERAL",
+                     "new_state": "FUNDING_SPEND_SEEN",
+                     "cause": "onchain",
+                     "message": "Onchain funding spend"
+                  },
+                  {
+                     "timestamp": "2026-01-04T23:20:23.090Z",
+                     "old_state": "FUNDING_SPEND_SEEN",
+                     "new_state": "ONCHAIN",
+                     "cause": "onchain",
+                     "message": "Onchain init reply"
+                  }
+               ],
+               "status": [
+                  "Loaded from database"
+               ],
+               "in_payments_offered": 0,
+               "in_offered_msat": 0,
+               "in_payments_fulfilled": 0,
+               "in_fulfilled_msat": 0,
+               "out_payments_offered": 0,
+               "out_offered_msat": 0,
+               "out_payments_fulfilled": 0,
+               "out_fulfilled_msat": 0,
+               "htlcs": []
+            }
+         ]
+      },
+      {
+         "id": "02ed13b6fcdacb10f8617efbd53ef81f85b802635a69662059107f99359be9563a",
+         "connected": false,
+         "num_channels": 1,
+         "features": "08a0000a0269a2",
+         "channels": [
+            {
+               "state": "CHANNELD_NORMAL",
+               "scratch_txid": "bdb57dbdbc9ca4dd72ba02bf7b1905e4822ec351f4d1472d1f4f05ffadd205db",
+               "last_tx_fee_msat": 183000,
+               "feerate": {
+                  "perkw": 253,
+                  "perkb": 1012
+               },
+               "short_channel_id": "210x1x0",
+               "direction": 0,
+               "channel_id": "85fd916864fb07b6d57dcbbb60a10e3a92ec98bd6e6da1cb30f5b907f0aeb014",
+               "funding_txid": "14b0aef007b9f530cba16d6ebd98ec923a0ea160bbcb7dd5b607fb646891fd85",
+               "funding_outnum": 0,
+               "close_to_addr": "bcrt1pledk8natu6zm57f8ew8euvfjeu5y3umg5te6xcefjrd2g4l82y9qrnl7fs",
+               "close_to": "5120fe5b63cfabe685ba7927cb8f9e3132cf2848f368a2f3a3632990daa457e7510a",
+               "private": false,
+               "opener": "remote",
+               "alias": {
+                  "local": "12340630x5698779x15054",
+                  "remote": "5956342x1947096x6310"
+               },
+               "features": [
+                  "option_static_remotekey"
+               ],
+               "funding": {
+                  "local_funds_msat": 0,
+                  "remote_funds_msat": 5000000000,
+                  "pushed_msat": 0
+               },
+               "to_us_msat": 0,
+               "min_to_us_msat": 0,
+               "max_to_us_msat": 0,
+               "total_msat": 5000000000,
+               "fee_base_msat": 1,
+               "fee_proportional_millionths": 10,
+               "dust_limit_msat": 546000,
+               "max_total_htlc_in_msat": 18446744073709551615,
+               "their_reserve_msat": 50000000,
+               "our_reserve_msat": 50000000,
+               "spendable_msat": 0,
+               "receivable_msat": 4294967295,
+               "minimum_htlc_in_msat": 0,
+               "minimum_htlc_out_msat": 0,
+               "maximum_htlc_out_msat": 4950000000,
+               "their_to_self_delay": 6,
+               "our_to_self_delay": 6,
+               "max_accepted_htlcs": 483,
+               "state_changes": [
+                  {
+                     "timestamp": "2026-01-04T22:29:48.846Z",
+                     "old_state": "CHANNELD_AWAITING_LOCKIN",
+                     "new_state": "CHANNELD_NORMAL",
+                     "cause": "remote",
+                     "message": "Lockin complete"
+                  }
+               ],
+               "status": [
+                  "CHANNELD_NORMAL:Will attempt reconnect in 128 seconds"
+               ],
+               "in_payments_offered": 0,
+               "in_offered_msat": 0,
+               "in_payments_fulfilled": 0,
+               "in_fulfilled_msat": 0,
+               "out_payments_offered": 0,
+               "out_offered_msat": 0,
+               "out_payments_fulfilled": 0,
+               "out_fulfilled_msat": 0,
+               "htlcs": []
+            }
+         ]
+      },
+      {
+         "id": "022a3e371881115587ad22cb30ce5eaf77af66d31ce90fd0ef72a1c6f843d21dd1",
+         "connected": false,
+         "num_channels": 2,
+         "features": "08a0000a0269a2",
+         "channels": [
+            {
+               "state": "ONCHAIN",
+               "scratch_txid": "81526d00c09b28f9a42483f646aacf16008285fe799c07c8796d5e581cbf7af3",
+               "last_tx_fee_msat": 183000,
+               "feerate": {
+                  "perkw": 253,
+                  "perkb": 1012
+               },
+               "owner": "onchaind",
+               "short_channel_id": "228x1x0",
+               "direction": 1,
+               "channel_id": "a5b9a2ea0f9696f717e2f44ac879b303bfc51c94624862d5f7b62ed6b8e398a1",
+               "funding_txid": "a198e3b8d62eb6f7d5624862941cc5bf03b379c84af4e217f796960feaa2b9a5",
+               "funding_outnum": 0,
+               "close_to_addr": "bcrt1pe4hhd8gk2c2a8e2qwmeez6pz8wj2ahjk248qxl8p7l906yykscdq52987g",
+               "close_to": "5120cd6f769d165615d3e54076f39168223ba4aede56554e037ce1f7cafd1096861a",
+               "private": false,
+               "opener": "remote",
+               "closer": "remote",
+               "alias": {
+                  "local": "1123805x3302964x120",
+                  "remote": "9542882x3688752x35779"
+               },
+               "features": [
+                  "option_static_remotekey"
+               ],
+               "funding": {
+                  "local_funds_msat": 0,
+                  "remote_funds_msat": 5000000000,
+                  "pushed_msat": 0
+               },
+               "to_us_msat": 0,
+               "min_to_us_msat": 0,
+               "max_to_us_msat": 0,
+               "total_msat": 5000000000,
+               "fee_base_msat": 1,
+               "fee_proportional_millionths": 10,
+               "dust_limit_msat": 546000,
+               "max_total_htlc_in_msat": 18446744073709551615,
+               "their_reserve_msat": 50000000,
+               "our_reserve_msat": 50000000,
+               "spendable_msat": 0,
+               "receivable_msat": 4294967295,
+               "minimum_htlc_in_msat": 0,
+               "minimum_htlc_out_msat": 0,
+               "maximum_htlc_out_msat": 4950000000,
+               "their_to_self_delay": 6,
+               "our_to_self_delay": 6,
+               "max_accepted_htlcs": 483,
+               "state_changes": [
+                  {
+                     "timestamp": "2026-01-04T22:34:51.372Z",
+                     "old_state": "CHANNELD_AWAITING_LOCKIN",
+                     "new_state": "CHANNELD_NORMAL",
+                     "cause": "remote",
+                     "message": "Lockin complete"
+                  },
+                  {
+                     "timestamp": "2026-01-04T22:41:31.627Z",
+                     "old_state": "CHANNELD_NORMAL",
+                     "new_state": "AWAITING_UNILATERAL",
+                     "cause": "protocol",
+                     "message": "channeld: received ERROR error channel a5b9a2ea0f9696f717e2f44ac879b303bfc51c94624862d5f7b62ed6b8e398a1: Unknown channel for WIRE_CHANNEL_REESTABLISH"
+                  },
+                  {
+                     "timestamp": "2026-01-04T23:02:21.933Z",
+                     "old_state": "AWAITING_UNILATERAL",
+                     "new_state": "FUNDING_SPEND_SEEN",
+                     "cause": "onchain",
+                     "message": "Onchain funding spend"
+                  },
+                  {
+                     "timestamp": "2026-01-04T23:02:21.942Z",
+                     "old_state": "FUNDING_SPEND_SEEN",
+                     "new_state": "ONCHAIN",
+                     "cause": "onchain",
+                     "message": "Onchain init reply"
+                  },
+                  {
+                     "timestamp": "2026-01-04T23:06:30.723Z",
+                     "old_state": "ONCHAIN",
+                     "new_state": "FUNDING_SPEND_SEEN",
+                     "cause": "onchain",
+                     "message": "Onchain funding spend"
+                  },
+                  {
+                     "timestamp": "2026-01-04T23:06:30.727Z",
+                     "old_state": "FUNDING_SPEND_SEEN",
+                     "new_state": "ONCHAIN",
+                     "cause": "onchain",
+                     "message": "Onchain init reply"
+                  },
+                  {
+                     "timestamp": "2026-01-04T23:10:43.028Z",
+                     "old_state": "ONCHAIN",
+                     "new_state": "FUNDING_SPEND_SEEN",
+                     "cause": "onchain",
+                     "message": "Onchain funding spend"
+                  },
+                  {
+                     "timestamp": "2026-01-04T23:10:43.033Z",
+                     "old_state": "FUNDING_SPEND_SEEN",
+                     "new_state": "ONCHAIN",
+                     "cause": "onchain",
+                     "message": "Onchain init reply"
+                  },
+                  {
+                     "timestamp": "2026-01-04T23:11:31.916Z",
+                     "old_state": "ONCHAIN",
+                     "new_state": "FUNDING_SPEND_SEEN",
+                     "cause": "onchain",
+                     "message": "Onchain funding spend"
+                  },
+                  {
+                     "timestamp": "2026-01-04T23:11:31.921Z",
+                     "old_state": "FUNDING_SPEND_SEEN",
+                     "new_state": "ONCHAIN",
+                     "cause": "onchain",
+                     "message": "Onchain init reply"
+                  },
+                  {
+                     "timestamp": "2026-01-04T23:12:22.879Z",
+                     "old_state": "ONCHAIN",
+                     "new_state": "FUNDING_SPEND_SEEN",
+                     "cause": "onchain",
+                     "message": "Onchain funding spend"
+                  },
+                  {
+                     "timestamp": "2026-01-04T23:12:22.884Z",
+                     "old_state": "FUNDING_SPEND_SEEN",
+                     "new_state": "ONCHAIN",
+                     "cause": "onchain",
+                     "message": "Onchain init reply"
+                  },
+                  {
+                     "timestamp": "2026-01-05T09:07:58.971Z",
+                     "old_state": "ONCHAIN",
+                     "new_state": "FUNDING_SPEND_SEEN",
+                     "cause": "onchain",
+                     "message": "Onchain funding spend"
+                  },
+                  {
+                     "timestamp": "2026-01-05T09:07:58.978Z",
+                     "old_state": "FUNDING_SPEND_SEEN",
+                     "new_state": "ONCHAIN",
+                     "cause": "onchain",
+                     "message": "Onchain init reply"
+                  }
+               ],
+               "status": [
+                  "ONCHAIN:Tracking our own unilateral close",
+                  "ONCHAIN:All outputs resolved: waiting 73 more blocks before forgetting channel"
+               ],
+               "in_payments_offered": 0,
+               "in_offered_msat": 0,
+               "in_payments_fulfilled": 0,
+               "in_fulfilled_msat": 0,
+               "out_payments_offered": 0,
+               "out_offered_msat": 0,
+               "out_payments_fulfilled": 0,
+               "out_fulfilled_msat": 0,
+               "htlcs": []
+            },
+            {
+               "state": "CHANNELD_AWAITING_LOCKIN",
+               "scratch_txid": "5fc2b31ea47454849294e5fdd24d2daf92093892526b4b19021f5762c46f506c",
+               "last_tx_fee_msat": 183000,
+               "feerate": {
+                  "perkw": 253,
+                  "perkb": 1012
+               },
+               "short_channel_id": "244x2x0",
+               "direction": 1,
+               "channel_id": "8bde8d145a7f43e45f3a6fcbacee94a5bddcc1ee74c64b8986a4b9b3582a750e",
+               "funding_txid": "0e752a58b3b9a486894bc674eec1dcbda594eeaccb6f3a5fe4437f5a148dde8b",
+               "funding_outnum": 0,
+               "close_to_addr": "bcrt1p4aru5f5zf6c9hh56avzsn2amjs079gxkcqt4lenchlsknvl8szqs7rf2y4",
+               "close_to": "5120af47ca26824eb05bde9aeb0509abbb941fe2a0d6c0175fe678bfe169b3e78081",
+               "private": false,
+               "opener": "remote",
+               "alias": {
+                  "local": "5126866x9751561x28518"
+               },
+               "features": [
+                  "option_static_remotekey"
+               ],
+               "funding": {
+                  "local_funds_msat": 0,
+                  "remote_funds_msat": 5000000000,
+                  "pushed_msat": 0
+               },
+               "to_us_msat": 0,
+               "min_to_us_msat": 0,
+               "max_to_us_msat": 0,
+               "total_msat": 5000000000,
+               "fee_base_msat": 1,
+               "fee_proportional_millionths": 10,
+               "dust_limit_msat": 546000,
+               "max_total_htlc_in_msat": 18446744073709551615,
+               "their_reserve_msat": 50000000,
+               "our_reserve_msat": 50000000,
+               "spendable_msat": 0,
+               "receivable_msat": 4294967295,
+               "minimum_htlc_in_msat": 0,
+               "minimum_htlc_out_msat": 0,
+               "maximum_htlc_out_msat": 4950000000,
+               "their_to_self_delay": 6,
+               "our_to_self_delay": 6,
+               "max_accepted_htlcs": 483,
+               "state_changes": [],
+               "status": [
+                  "CHANNELD_AWAITING_LOCKIN:Will attempt reconnect in 128 seconds"
+               ],
+               "in_payments_offered": 0,
+               "in_offered_msat": 0,
+               "in_payments_fulfilled": 0,
+               "in_fulfilled_msat": 0,
+               "out_payments_offered": 0,
+               "out_offered_msat": 0,
+               "out_payments_fulfilled": 0,
+               "out_fulfilled_msat": 0,
+               "htlcs": []
+            }
+         ]
+      }
+   ]
+}

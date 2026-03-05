@@ -1,0 +1,20 @@
+Suggested List of Functions for Contact Management Pages
+
+Add Contact Page 
+
+1.	generate_invite_code(user_id) ->  Generate a unique invite code for the user.
+2.	get_invite_code(user_id) -> Retrieve the user's existing invite code if already generated.
+
+Add New Contact Page (Using Invite Code)
+
+1.	validate_invite_code(invite_code) -> Validate if the entered invite code exists and is valid.
+2.	get_contact_info_by_invite_code(invite_code) -> Retrieve contact details associated with the invite code.
+3.	add_contact_by_invite_code(user_id, nickname, invite_code) -> Add a new contact using nickname and invite code.
+4.	check_contact_exists(user_id, invite_code) -> Check if contact already exists in user's contact list.
+5.	save_contact_connection(user_id, contact_id, nickname) -> Save the contact connection to the database.
+
+Generate Invite Code Page 
+
+1.	get_user_invite_code(user_id) -> Fetch the user's generated invite code for display.
+2.	copy_invite_code(invite_code) -> Copy the invite code to clipboard.
+3.	share_invite_code(user_id, invite_code, method) ->  Share invite code through various methods.

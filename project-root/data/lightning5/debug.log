@@ -1,0 +1,617 @@
+2026-01-17T12:11:51.430Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-17T12:11:51.434Z INFO    lightningd: Creating database
+2026-01-17T12:11:51.461Z UNUSUAL hsmd: HSM: created new hsm_secret file
+2026-01-17T12:11:51.468Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-17T12:11:51.469Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-17T12:11:51.477Z INFO    plugin-chanbackup: Creating Emergency Recovery
+2026-01-17T12:11:51.480Z INFO    plugin-bookkeeper: Creating database
+2026-01-17T12:11:51.480Z INFO    lightningd: --------------------------------------------------
+2026-01-17T12:11:51.481Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-17T12:11:51.567Z INFO    plugin-bookkeeper: account wallet not found, adding along with new balance
+2026-01-17T12:12:59.046Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-01-17T12:14:04.061Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-17T12:14:04.063Z INFO    plugin-pay: cmd 34 partid 0: Destination 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277 is not reachable directly and all routehints were unusable.
+
+
+
+
+2026-01-17T12:21:50.284Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-17T12:21:50.296Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-17T12:21:50.298Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-17T12:21:50.308Z INFO    lightningd: --------------------------------------------------
+2026-01-17T12:21:50.308Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-17T12:21:50.384Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+5000000000000msat/-0msat) (account wallet) Logging journal entry.
+2026-01-17T12:22:27.856Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-01-17T12:23:14.806Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 2500msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-17T12:23:14.808Z INFO    plugin-pay: cmd 34 partid 0: Destination 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277 is not reachable directly and all routehints were unusable.
+2026-01-17T12:23:50.938Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 2500msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-17T12:23:50.939Z INFO    plugin-pay: cmd 34 partid 0: Destination 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277 is not reachable directly and all routehints were unusable.
+2026-01-17T12:23:52.088Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 2500msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-17T12:23:52.089Z INFO    plugin-pay: cmd 34 partid 0: Destination 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277 is not reachable directly and all routehints were unusable.
+
+
+
+
+2026-01-17T12:26:53.638Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-17T12:26:53.649Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-17T12:26:53.651Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-17T12:26:53.660Z INFO    lightningd: --------------------------------------------------
+2026-01-17T12:26:53.660Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-17T12:26:53.732Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+5000000000000msat/-0msat) (account wallet) Logging journal entry.
+2026-01-17T12:27:31.205Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-01-17T12:28:21.254Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 2500msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-17T12:28:21.255Z INFO    plugin-pay: cmd 34 partid 0: Destination 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277 is not reachable directly and all routehints were unusable.
+2026-01-17T12:28:21.327Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+2026-01-17T12:28:21.332Z INFO    plugin-chanbackup: Updating the SCB
+2026-01-17T12:28:23.795Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+2026-01-17T12:28:24.367Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 2500msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-17T12:50:25.587Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 500msat is below exemption threshold, allowing a maximum fee of 5000msat
+
+
+
+
+2026-01-18T13:38:16.632Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-18T13:38:16.644Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-18T13:38:16.646Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-18T13:38:16.656Z INFO    lightningd: --------------------------------------------------
+2026-01-18T13:38:16.656Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-18T13:38:16.718Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+998999834000msat/-0msat) (account wallet) Logging journal entry.
+2026-01-18T13:38:18.291Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+
+
+
+
+2026-01-18T13:41:58.138Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-18T13:41:58.150Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-18T13:41:58.152Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-18T13:41:58.167Z INFO    lightningd: --------------------------------------------------
+2026-01-18T13:41:58.168Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-18T13:41:59.512Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+
+
+
+
+2026-01-18T13:59:46.993Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-18T13:59:47.006Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-18T13:59:47.009Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-18T13:59:47.021Z INFO    lightningd: --------------------------------------------------
+2026-01-18T13:59:47.021Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-18T13:59:48.108Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+
+
+
+
+2026-01-18T14:01:47.744Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-18T14:01:47.757Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-18T14:01:47.759Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-18T14:01:47.772Z INFO    lightningd: --------------------------------------------------
+2026-01-18T14:01:47.772Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-18T14:01:49.428Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+2026-01-18T14:15:06.269Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 25msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-18T14:15:06.272Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Attempt to send HTLC but still syncing with bitcoin network
+2026-01-18T14:15:06.272Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b\",\"erring_channel\":\"277x1x0\",\"erring_direction\":1}}
+2026-01-18T14:15:06.272Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (5000msat < 100000msat), not splitting further.
+2026-01-18T14:18:18.395Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 25msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-18T14:18:18.399Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Attempt to send HTLC but still syncing with bitcoin network
+2026-01-18T14:18:18.399Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b\",\"erring_channel\":\"277x1x0\",\"erring_direction\":1}}
+2026-01-18T14:18:18.400Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (5000msat < 100000msat), not splitting further.
+2026-01-18T14:20:19.270Z UNUSUAL lightningd: Bitcoin backend now synced.
+
+
+
+
+2026-01-18T14:27:50.946Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-18T14:27:50.957Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-18T14:27:50.959Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-18T14:27:50.968Z INFO    lightningd: --------------------------------------------------
+2026-01-18T14:27:50.968Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-18T14:27:52.637Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+2026-01-18T14:28:36.025Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-01-18T14:32:00.426Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+
+
+
+
+2026-01-18T14:35:27.754Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-18T14:35:27.766Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-18T14:35:27.770Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-18T14:35:27.783Z INFO    lightningd: --------------------------------------------------
+2026-01-18T14:35:27.783Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-18T14:35:29.732Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+2026-01-18T14:35:57.801Z UNUSUAL lightningd: Bitcoin backend now synced.
+
+
+
+
+2026-01-18T14:37:39.184Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-18T14:37:39.198Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-18T14:37:39.202Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-18T14:37:39.216Z INFO    lightningd: --------------------------------------------------
+2026-01-18T14:37:39.216Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-18T14:37:40.456Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+2026-01-18T14:39:08.354Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-18T14:39:08.357Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Attempt to send HTLC but still syncing with bitcoin network
+2026-01-18T14:39:08.357Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b\",\"erring_channel\":\"277x1x0\",\"erring_direction\":1}}
+2026-01-18T14:39:08.358Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-01-18T14:39:13.953Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-18T14:39:13.955Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Attempt to send HTLC but still syncing with bitcoin network
+2026-01-18T14:39:13.956Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b\",\"erring_channel\":\"277x1x0\",\"erring_direction\":1}}
+2026-01-18T14:39:13.956Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-01-18T14:39:14.857Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-18T14:39:14.860Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Attempt to send HTLC but still syncing with bitcoin network
+2026-01-18T14:39:14.861Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b\",\"erring_channel\":\"277x1x0\",\"erring_direction\":1}}
+2026-01-18T14:39:14.861Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-01-18T14:39:15.053Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-18T14:39:15.056Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Attempt to send HTLC but still syncing with bitcoin network
+2026-01-18T14:39:15.056Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b\",\"erring_channel\":\"277x1x0\",\"erring_direction\":1}}
+2026-01-18T14:39:15.057Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-01-18T14:39:15.406Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-18T14:39:15.408Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Attempt to send HTLC but still syncing with bitcoin network
+2026-01-18T14:39:15.409Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b\",\"erring_channel\":\"277x1x0\",\"erring_direction\":1}}
+2026-01-18T14:39:15.409Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-01-18T14:39:15.587Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-18T14:39:15.589Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Attempt to send HTLC but still syncing with bitcoin network
+2026-01-18T14:39:15.589Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b\",\"erring_channel\":\"277x1x0\",\"erring_direction\":1}}
+2026-01-18T14:39:15.589Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-01-18T14:39:15.770Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-18T14:39:15.772Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Attempt to send HTLC but still syncing with bitcoin network
+2026-01-18T14:39:15.772Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b\",\"erring_channel\":\"277x1x0\",\"erring_direction\":1}}
+2026-01-18T14:39:15.773Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-01-18T14:39:15.920Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-18T14:39:15.922Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Attempt to send HTLC but still syncing with bitcoin network
+2026-01-18T14:39:15.922Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b\",\"erring_channel\":\"277x1x0\",\"erring_direction\":1}}
+2026-01-18T14:39:15.923Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+2026-01-18T14:39:16.104Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 250msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-01-18T14:39:16.106Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Attempt to send HTLC but still syncing with bitcoin network
+2026-01-18T14:39:16.106Z INFO    plugin-pay: cmd 34 partid 0: Failing a partial payment due to a failed RPC call: {\"code\":204,\"message\":\"failed: WIRE_TEMPORARY_NODE_FAILURE (First peer not ready)\",\"data\":{\"erring_index\":0,\"failcode\":8194,\"failcodename\":\"WIRE_TEMPORARY_NODE_FAILURE\",\"erring_node\":\"035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b\",\"erring_channel\":\"277x1x0\",\"erring_direction\":1}}
+2026-01-18T14:39:16.107Z INFO    plugin-pay: cmd 34 partid 0: Lower limit of adaptive splitter reached (50000msat < 100000msat), not splitting further.
+
+
+
+
+2026-01-18T14:41:43.836Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-18T14:41:43.847Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-18T14:41:43.850Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-18T14:41:43.863Z INFO    lightningd: --------------------------------------------------
+2026-01-18T14:41:43.863Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-18T14:41:45.355Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+
+
+
+
+2026-01-18T14:42:45.099Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-18T14:42:45.111Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-18T14:42:45.113Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-18T14:42:45.127Z INFO    lightningd: --------------------------------------------------
+2026-01-18T14:42:45.127Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-18T14:42:46.767Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+
+
+
+
+2026-01-18T14:43:56.372Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-18T14:43:56.383Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-18T14:43:56.386Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-18T14:43:56.399Z INFO    lightningd: --------------------------------------------------
+2026-01-18T14:43:56.399Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-18T14:43:57.515Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+
+
+
+
+2026-01-18T14:45:08.496Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-18T14:45:08.510Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-18T14:45:08.513Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-18T14:45:08.525Z INFO    lightningd: --------------------------------------------------
+2026-01-18T14:45:08.525Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-18T14:45:09.895Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+2026-01-18T14:45:46.064Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-01-18T15:02:44.453Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 25msat is below exemption threshold, allowing a maximum fee of 5000msat
+
+
+
+
+2026-01-23T11:18:20.998Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-01-23T11:18:21.011Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-01-23T11:18:21.014Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-01-23T11:18:21.025Z INFO    lightningd: --------------------------------------------------
+2026-01-23T11:18:21.025Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-01-23T11:18:22.571Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+
+
+
+
+2026-02-18T19:06:34.402Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-18T19:06:34.417Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-18T19:06:34.419Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-18T19:06:34.434Z INFO    lightningd: --------------------------------------------------
+2026-02-18T19:06:34.434Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-02-18T19:06:35.936Z UNUSUAL 0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: Ignoring fee limits!
+
+
+
+
+2026-02-18T19:11:27.260Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-18T19:11:27.273Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-18T19:11:27.275Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-18T19:11:27.286Z INFO    lightningd: --------------------------------------------------
+2026-02-18T19:11:27.286Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+
+
+
+
+2026-02-18T19:12:56.368Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-18T19:12:56.380Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-18T19:12:56.382Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-18T19:12:56.394Z INFO    lightningd: --------------------------------------------------
+2026-02-18T19:12:56.394Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+
+
+
+
+2026-02-18T19:13:08.398Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-18T19:13:08.409Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-18T19:13:08.411Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-18T19:13:08.420Z INFO    lightningd: --------------------------------------------------
+2026-02-18T19:13:08.420Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+
+
+
+
+2026-02-19T11:15:34.091Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-19T11:15:34.105Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-19T11:15:34.107Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-19T11:15:34.123Z INFO    lightningd: --------------------------------------------------
+2026-02-19T11:15:34.123Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-02-19T11:29:45.283Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 25msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-02-19T11:29:45.285Z INFO    plugin-pay: cmd 34 partid 0: Destination 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3 is not reachable directly and all routehints were unusable.
+2026-02-19T11:32:56.987Z INFO    lightningd: Self-resolved invoice 'flamingo-node5-1771500768777' with amount 1200msat
+2026-02-19T11:34:05.681Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-02-19T11:34:56.648Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 6msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-02-19T11:34:56.651Z INFO    plugin-pay: cmd 34 partid 0: Destination 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3 is not reachable directly and all routehints were unusable.
+2026-02-19T11:34:56.683Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#2: Ignoring fee limits!
+2026-02-19T11:34:56.688Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-19T11:34:59.724Z INFO    plugin-pay: cmd 34 partid 0: Payment fee constraint 6msat is below exemption threshold, allowing a maximum fee of 5000msat
+2026-02-19T11:34:59.726Z INFO    plugin-pay: cmd 34 partid 0: Destination 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3 is not reachable directly and all routehints were unusable.
+2026-02-19T11:35:04.530Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#2: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+
+
+
+
+2026-02-25T22:06:44.808Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T22:06:44.822Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T22:06:44.824Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T22:06:44.837Z INFO    lightningd: --------------------------------------------------
+2026-02-25T22:06:44.838Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-02-25T22:06:44.930Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+0msat/-1000166000msat) (account wallet) Logging journal entry.
+2026-02-25T22:06:46.742Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#2: Ignoring fee limits!
+2026-02-25T22:10:37.696Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-02-25T22:10:54.224Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#3: Ignoring fee limits!
+2026-02-25T22:10:54.230Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T22:11:22.637Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#4: Ignoring fee limits!
+2026-02-25T22:11:22.643Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T22:15:15.092Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#3: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+2026-02-25T22:15:15.093Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#4: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+2026-02-25T22:15:52.602Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#5: Ignoring fee limits!
+2026-02-25T22:15:52.607Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T22:17:45.014Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#6: Ignoring fee limits!
+2026-02-25T22:17:45.020Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T22:17:54.147Z UNUSUAL 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#7: Ignoring fee limits!
+2026-02-25T22:17:54.151Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T22:18:15.189Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#6: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+2026-02-25T22:18:15.189Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#5: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+2026-02-25T22:18:15.275Z INFO    03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#7: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+2026-02-25T22:19:35.082Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#2: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
+2026-02-25T22:19:35.095Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#2: State changed from CHANNELD_SHUTTING_DOWN to CLOSINGD_SIGEXCHANGE
+2026-02-25T22:19:35.145Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-closingd-chan#2: performing quickclose in range 151sat-1000000sat
+2026-02-25T22:19:35.147Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#2: State changed from CLOSINGD_SIGEXCHANGE to CLOSINGD_COMPLETE
+2026-02-25T22:19:35.182Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#3: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
+2026-02-25T22:19:35.194Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#3: State changed from CHANNELD_SHUTTING_DOWN to CLOSINGD_SIGEXCHANGE
+2026-02-25T22:19:35.207Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-closingd-chan#3: performing quickclose in range 151sat-20000sat
+2026-02-25T22:19:35.208Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#3: State changed from CLOSINGD_SIGEXCHANGE to CLOSINGD_COMPLETE
+2026-02-25T22:19:35.231Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#4: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
+2026-02-25T22:19:35.244Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#4: State changed from CHANNELD_SHUTTING_DOWN to CLOSINGD_SIGEXCHANGE
+2026-02-25T22:19:35.253Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-closingd-chan#4: performing quickclose in range 151sat-12000sat
+2026-02-25T22:19:35.254Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#4: State changed from CLOSINGD_SIGEXCHANGE to CLOSINGD_COMPLETE
+2026-02-25T22:19:35.276Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#5: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
+2026-02-25T22:19:35.289Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#5: State changed from CHANNELD_SHUTTING_DOWN to CLOSINGD_SIGEXCHANGE
+2026-02-25T22:19:35.297Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-closingd-chan#5: performing quickclose in range 151sat-200000sat
+2026-02-25T22:19:35.299Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#5: State changed from CLOSINGD_SIGEXCHANGE to CLOSINGD_COMPLETE
+2026-02-25T22:19:35.320Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#6: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
+2026-02-25T22:19:35.332Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#6: State changed from CHANNELD_SHUTTING_DOWN to CLOSINGD_SIGEXCHANGE
+2026-02-25T22:19:35.339Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-closingd-chan#6: performing quickclose in range 151sat-200000sat
+2026-02-25T22:19:35.340Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#6: State changed from CLOSINGD_SIGEXCHANGE to CLOSINGD_COMPLETE
+2026-02-25T22:19:35.348Z INFO    03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#7: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
+2026-02-25T22:19:35.377Z INFO    03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#7: State changed from CHANNELD_SHUTTING_DOWN to CLOSINGD_SIGEXCHANGE
+2026-02-25T22:19:35.385Z INFO    03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-closingd-chan#7: performing quickclose in range 151sat-5000000sat
+2026-02-25T22:19:35.387Z INFO    03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#7: State changed from CLOSINGD_SIGEXCHANGE to CLOSINGD_COMPLETE
+2026-02-25T22:19:35.391Z INFO    0280eb0a2045add9b6349cecb16e0a911e05c5e4b6a972cd207ab113b254726277-chan#1: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
+2026-02-25T22:20:45.214Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#4: Peer permanent failure in CLOSINGD_COMPLETE: Funding transaction spent
+2026-02-25T22:20:45.214Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#4: State changed from CLOSINGD_COMPLETE to FUNDING_SPEND_SEEN
+2026-02-25T22:20:45.216Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#3: Peer permanent failure in CLOSINGD_COMPLETE: Funding transaction spent
+2026-02-25T22:20:45.216Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#3: State changed from CLOSINGD_COMPLETE to FUNDING_SPEND_SEEN
+2026-02-25T22:20:45.217Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#5: Peer permanent failure in CLOSINGD_COMPLETE: Funding transaction spent
+2026-02-25T22:20:45.218Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#5: State changed from CLOSINGD_COMPLETE to FUNDING_SPEND_SEEN
+2026-02-25T22:20:45.218Z UNUSUAL 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#7: Peer permanent failure in CLOSINGD_COMPLETE: Funding transaction spent
+2026-02-25T22:20:45.219Z INFO    03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#7: State changed from CLOSINGD_COMPLETE to FUNDING_SPEND_SEEN
+2026-02-25T22:20:45.221Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#6: Peer permanent failure in CLOSINGD_COMPLETE: Funding transaction spent
+2026-02-25T22:20:45.221Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#6: State changed from CLOSINGD_COMPLETE to FUNDING_SPEND_SEEN
+2026-02-25T22:20:45.224Z INFO    03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#7: State changed from FUNDING_SPEND_SEEN to ONCHAIN
+2026-02-25T22:20:45.231Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#4: State changed from FUNDING_SPEND_SEEN to ONCHAIN
+2026-02-25T22:20:45.236Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#3: State changed from FUNDING_SPEND_SEEN to ONCHAIN
+2026-02-25T22:20:45.240Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#5: State changed from FUNDING_SPEND_SEEN to ONCHAIN
+2026-02-25T22:20:45.244Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#6: State changed from FUNDING_SPEND_SEEN to ONCHAIN
+2026-02-25T22:22:53.801Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#8: Ignoring fee limits!
+2026-02-25T22:22:53.806Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T22:23:15.351Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#8: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+
+
+
+
+2026-02-25T22:35:37.643Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T22:35:37.659Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T22:35:37.663Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T22:35:37.673Z INFO    lightningd: --------------------------------------------------
+2026-02-25T22:35:37.673Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-02-25T22:35:37.682Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+251999997852000msat/-0msat) (account wallet) Logging journal entry.
+2026-02-25T22:35:38.996Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#8: Ignoring fee limits!
+2026-02-25T22:37:07.768Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-02-25T22:37:41.744Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#9: Ignoring fee limits!
+2026-02-25T22:37:41.750Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T22:38:37.739Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#9: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+2026-02-25T22:39:06.909Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#10: Ignoring fee limits!
+2026-02-25T22:39:06.914Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T22:39:37.767Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#10: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+2026-02-25T22:42:08.671Z UNUSUAL 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#11: Ignoring fee limits!
+2026-02-25T22:42:08.678Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T22:42:37.903Z INFO    03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#11: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+
+
+
+
+2026-02-25T22:44:06.080Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T22:44:06.092Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T22:44:06.094Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T22:44:06.106Z INFO    lightningd: --------------------------------------------------
+2026-02-25T22:44:06.106Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-02-25T22:44:06.171Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+994999834000msat/-0msat) (account wallet) Logging journal entry.
+2026-02-25T22:44:07.531Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#8: Ignoring fee limits!
+2026-02-25T22:44:07.532Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#9: Ignoring fee limits!
+2026-02-25T22:44:07.533Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#10: Ignoring fee limits!
+2026-02-25T22:44:07.751Z UNUSUAL 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#11: Ignoring fee limits!
+
+
+
+
+2026-02-25T22:45:51.411Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T22:45:51.424Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T22:45:51.427Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T22:45:51.442Z INFO    lightningd: --------------------------------------------------
+2026-02-25T22:45:51.442Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-02-25T22:45:52.728Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#8: Ignoring fee limits!
+2026-02-25T22:45:52.730Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#9: Ignoring fee limits!
+2026-02-25T22:45:52.731Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#10: Ignoring fee limits!
+2026-02-25T22:45:53.045Z UNUSUAL 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#11: Ignoring fee limits!
+2026-02-25T22:47:21.542Z UNUSUAL lightningd: Bitcoin backend now synced.
+
+
+
+
+2026-02-25T22:56:31.822Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T22:56:31.834Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T22:56:31.836Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T22:56:31.854Z INFO    lightningd: --------------------------------------------------
+2026-02-25T22:56:31.854Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-02-25T22:56:31.993Z UNUSUAL plugin-bookkeeper: Snapshot balance does not equal ondisk reported 0msat, off by (+15000052150000msat/-0msat) (account wallet) Logging journal entry.
+2026-02-25T22:56:33.344Z UNUSUAL 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#11: Ignoring fee limits!
+2026-02-25T22:56:33.546Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#8: Ignoring fee limits!
+2026-02-25T22:56:33.548Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#9: Ignoring fee limits!
+2026-02-25T22:56:33.550Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#10: Ignoring fee limits!
+
+
+
+
+2026-02-25T23:16:17.990Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T23:16:18.004Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T23:16:18.007Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T23:16:18.025Z INFO    lightningd: --------------------------------------------------
+2026-02-25T23:16:18.025Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-02-25T23:16:19.432Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#8: Ignoring fee limits!
+2026-02-25T23:16:19.434Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#9: Ignoring fee limits!
+2026-02-25T23:16:19.436Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#10: Ignoring fee limits!
+2026-02-25T23:16:19.579Z UNUSUAL 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#11: Ignoring fee limits!
+2026-02-25T23:18:10.650Z UNUSUAL lightningd: Bitcoin backend now synced.
+
+
+
+
+2026-02-25T23:19:02.818Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T23:19:02.831Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T23:19:02.834Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T23:19:02.848Z INFO    lightningd: --------------------------------------------------
+2026-02-25T23:19:02.848Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-02-25T23:19:04.315Z UNUSUAL 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#11: Ignoring fee limits!
+2026-02-25T23:19:04.767Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#8: Ignoring fee limits!
+2026-02-25T23:19:04.769Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#9: Ignoring fee limits!
+2026-02-25T23:19:04.771Z UNUSUAL 034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#10: Ignoring fee limits!
+2026-02-25T23:19:17.852Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-02-25T23:23:55.287Z **BROKEN** lightningd: FATAL SIGNAL 6 (version v23.08.1)
+2026-02-25T23:23:55.287Z **BROKEN** lightningd: backtrace: common/daemon.c:38 (send_backtrace) 0xaaaab4706123
+2026-02-25T23:23:55.287Z **BROKEN** lightningd: backtrace: common/daemon.c:75 (crashdump) 0xaaaab4706183
+2026-02-25T23:23:55.287Z **BROKEN** lightningd: backtrace: (null):0 ((null)) 0xffff9c5877e7
+2026-02-25T23:23:55.287Z **BROKEN** lightningd: backtrace: (null):0 ((null)) 0xffff9c1c2008
+2026-02-25T23:23:55.287Z **BROKEN** lightningd: backtrace: (null):0 ((null)) 0xffff9c17a83b
+2026-02-25T23:23:55.287Z **BROKEN** lightningd: backtrace: (null):0 ((null)) 0xffff9c167133
+2026-02-25T23:23:55.288Z **BROKEN** lightningd: backtrace: (null):0 ((null)) 0xffff9c174113
+2026-02-25T23:23:55.288Z **BROKEN** lightningd: backtrace: (null):0 ((null)) 0xffff9c17418b
+2026-02-25T23:23:55.288Z **BROKEN** lightningd: backtrace: common/utxo.c:82 (utxo_is_immature) 0xaaaab471ba77
+2026-02-25T23:23:55.288Z **BROKEN** lightningd: backtrace: wallet/wallet.c:537 (deep_enough) 0xaaaab46e7563
+2026-02-25T23:23:55.288Z **BROKEN** lightningd: backtrace: wallet/wallet.c:599 (wallet_find_utxo) 0xaaaab46eb5a3
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: wallet/reservation.c:551 (json_fundpsbt) 0xaaaab46f6d13
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: lightningd/jsonrpc.c:658 (command_exec) 0xaaaab46a98cb
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: lightningd/jsonrpc.c:786 (rpc_command_hook_final) 0xaaaab46ab2ff
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: lightningd/plugin_hook.c:285 (plugin_hook_call_) 0xaaaab46d8147
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: lightningd/jsonrpc.c:874 (plugin_hook_call_rpc_command) 0xaaaab46aba43
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: lightningd/jsonrpc.c:984 (parse_request) 0xaaaab46aba43
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: lightningd/jsonrpc.c:1090 (read_json) 0xaaaab46abd7b
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: ccan/ccan/io/io.c:59 (next_plan) 0xaaaab47fb147
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: ccan/ccan/io/io.c:407 (do_plan) 0xaaaab47fb72f
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: ccan/ccan/io/io.c:417 (io_ready) 0xaaaab47fb7ef
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: ccan/ccan/io/poll.c:453 (io_loop) 0xaaaab47fcf07
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: lightningd/io_loop_with_timers.c:22 (io_loop_with_timers) 0xaaaab46a9627
+2026-02-25T23:23:55.289Z **BROKEN** lightningd: backtrace: lightningd/lightningd.c:1332 (main) 0xaaaab46ae267
+2026-02-25T23:23:55.290Z **BROKEN** lightningd: backtrace: (null):0 ((null)) 0xffff9c1673ff
+2026-02-25T23:23:55.290Z **BROKEN** lightningd: backtrace: (null):0 ((null)) 0xffff9c1674d7
+2026-02-25T23:23:55.290Z **BROKEN** lightningd: backtrace: (null):0 ((null)) 0xaaaab4686faf
+2026-02-25T23:23:55.290Z **BROKEN** lightningd: backtrace: (null):0 ((null)) 0xffffffffffffffff
+
+
+
+
+2026-02-25T23:26:12.222Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T23:26:12.234Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T23:26:12.248Z INFO    lightningd: --------------------------------------------------
+2026-02-25T23:26:12.248Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-02-25T23:26:13.634Z UNUSUAL 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#11: Ignoring fee limits!
+2026-02-25T23:26:55.629Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#12: Ignoring fee limits!
+2026-02-25T23:26:55.634Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T23:27:36.907Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#12: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_SHUTTING_DOWN
+2026-02-25T23:27:36.921Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#12: State changed from CHANNELD_SHUTTING_DOWN to CLOSINGD_SIGEXCHANGE
+2026-02-25T23:27:36.935Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-closingd-chan#12: performing quickclose in range 151sat-200000sat
+2026-02-25T23:27:36.937Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#12: State changed from CLOSINGD_SIGEXCHANGE to CLOSINGD_COMPLETE
+2026-02-25T23:27:36.951Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#8: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
+2026-02-25T23:27:38.303Z INFO    034cbf6df585f5de1e0653de1a7384dc8be0ad7a71c12cb792d56acb1cce2224a3-chan#9: State changed from CHANNELD_NORMAL to CHANNELD_SHUTTING_DOWN
+
+
+
+
+2026-02-25T23:32:57.832Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T23:32:57.845Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T23:32:57.847Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T23:32:57.862Z INFO    lightningd: --------------------------------------------------
+2026-02-25T23:32:57.862Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-02-25T23:32:59.545Z UNUSUAL 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#11: Ignoring fee limits!
+2026-02-25T23:33:27.877Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-02-25T23:33:55.527Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:33:55.532Z INFO    plugin-chanbackup: Updating the SCB
+2026-02-25T23:36:58.029Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: State changed from CHANNELD_AWAITING_LOCKIN to CHANNELD_NORMAL
+2026-02-25T23:37:04.775Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: Disconnected
+2026-02-25T23:37:07.768Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:37:07.771Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:37:07.771Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:37:12.549Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:37:12.550Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:37:12.550Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:37:21.007Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:37:21.009Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:37:21.009Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:37:21.020Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:37:21.022Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:37:21.023Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:37:37.421Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:37:37.423Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:37:37.424Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:38:31.340Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:38:31.343Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:38:31.343Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:38:41.947Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:38:41.949Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:38:41.949Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+
+
+
+
+2026-02-25T23:39:47.138Z INFO    plugin-clnrest.py: Killing plugin: disabled itself: No module named 'gunicorn'
+2026-02-25T23:39:47.153Z INFO    plugin-bcli: bitcoin-cli initialized and connected to bitcoind.
+2026-02-25T23:39:47.156Z UNUSUAL lightningd: Waiting for initial block download (this can take a while!)
+2026-02-25T23:39:47.175Z INFO    lightningd: --------------------------------------------------
+2026-02-25T23:39:47.175Z INFO    lightningd: Server started with public key 035541060631351cbf5ac06e0a8857035b90f47ffc38811e30b6cb2dd3dfd51d4b, alias BIZARREGLEE (color #035541) and lightningd v23.08.1
+2026-02-25T23:39:48.267Z UNUSUAL 03b19daff0fb9292b0260dc16333ea6a98e92daa9418299e0c271574dfa525f13d-chan#11: Ignoring fee limits!
+2026-02-25T23:39:48.457Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:39:48.459Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:39:48.459Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:39:51.119Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:39:51.122Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:39:51.122Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:39:55.288Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:39:55.291Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:39:55.291Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:40:03.960Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:40:03.963Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:40:03.963Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:40:20.388Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:40:20.392Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:40:20.392Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:40:53.134Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:40:53.139Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:40:53.139Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:41:58.132Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:41:58.137Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:41:58.138Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:44:06.565Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:44:06.571Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:44:06.571Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:45:17.716Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:45:17.722Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:45:17.722Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:48:22.713Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:48:22.715Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:48:22.715Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:48:25.353Z UNUSUAL lightningd: Bitcoin backend now synced.
+2026-02-25T23:53:22.836Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:53:22.839Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:53:22.840Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-25T23:58:23.504Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-25T23:58:23.507Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-25T23:58:23.508Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:03:24.401Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T00:03:24.404Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T00:03:24.404Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:08:25.209Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T00:08:25.212Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T00:08:25.213Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:13:25.617Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T00:13:25.620Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T00:13:25.621Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:18:26.350Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T00:18:26.353Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T00:18:26.354Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:23:26.937Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T00:23:26.942Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T00:23:26.942Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:28:27.227Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T00:28:27.229Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T00:28:27.230Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:33:27.775Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T00:33:27.780Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T00:33:27.780Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:38:27.907Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T00:38:27.911Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T00:38:27.911Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:43:27.960Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T00:43:27.965Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T00:43:27.966Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:48:28.320Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T00:48:28.324Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T00:48:28.324Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:53:29.222Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T00:53:29.226Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T00:53:29.226Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T00:58:29.992Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T00:58:29.997Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T00:58:29.997Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T01:03:30.133Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T01:03:30.136Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T01:03:30.136Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T01:08:30.584Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T01:08:30.588Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T01:08:30.589Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T01:13:31.538Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T01:13:31.542Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T01:13:31.542Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T01:18:32.491Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T01:18:32.495Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T01:18:32.496Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
+2026-02-26T01:23:33.480Z UNUSUAL 02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Ignoring fee limits!
+2026-02-26T01:23:33.484Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-channeld-chan#13: Peer connection lost
+2026-02-26T01:23:33.485Z INFO    02a52df56c71b3782d1dba2276224de735dc6892e10a9024aa7699183261b7ee97-chan#13: Peer transient failure in CHANNELD_NORMAL: channeld: Owning subdaemon channeld died (62208)
